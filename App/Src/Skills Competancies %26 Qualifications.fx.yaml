@@ -2,7 +2,7 @@
 
     Button4 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =3
+        BorderThickness: =0
         DisabledBorderColor: =RGBA(0, 112, 173, 1)
         DisabledFill: =RGBA(215, 223, 240, 1)
         DisplayMode: =DisplayMode.Disabled
@@ -86,11 +86,11 @@
 
     Button4_1 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =3
+        BorderThickness: =0
         DisabledBorderColor: =RGBA(0, 112, 173, 1)
         DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(215, 223, 240, 1)
         Height: =295
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
@@ -104,7 +104,7 @@
 
     Button4_2 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =3
+        BorderThickness: =0
         DisabledBorderColor: =RGBA(0, 112, 173, 1)
         DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.Disabled
@@ -127,204 +127,6 @@
         X: =710
         Y: =207
         ZIndex: =23
-
-    Group1 As group:
-        Height: =5
-        Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =23
-
-        Skill1 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            Height: =31
-            HintText: ="Skill 1"
-            Width: =155
-            X: =44
-            Y: =212
-            ZIndex: =11
-
-        TextInput3 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            FontWeight: =FontWeight.Lighter
-            Height: =66
-            HintText: ="Evidence of Skill "
-            MaxLength: =150
-            Mode: =TextMode.MultiLine
-            Size: =10
-            Width: =431
-            X: =212
-            Y: =212
-            ZIndex: =12
-
-    Group2 As group:
-        Height: =5
-        Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =23
-
-        Skill2 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            Height: =31
-            HintText: ="Skill 2"
-            Width: =155
-            X: =45
-            Y: =297
-            ZIndex: =13
-
-        TextInput3_1 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            FontWeight: =FontWeight.Lighter
-            Height: =66
-            HintText: ="Evidence of Skill "
-            MaxLength: =150
-            Mode: =TextMode.MultiLine
-            Size: =10
-            Width: =431
-            X: =213
-            Y: =297
-            ZIndex: =14
-
-    Group3 As group:
-        Height: =5
-        Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =23
-
-        Skill3 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            Height: =31
-            HintText: ="Skill 3"
-            Width: =155
-            X: =45
-            Y: =384
-            ZIndex: =15
-
-        TextInput3_2 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            FontWeight: =FontWeight.Lighter
-            Height: =66
-            HintText: ="Evidence of Skill "
-            MaxLength: =150
-            Mode: =TextMode.MultiLine
-            Size: =10
-            Width: =431
-            X: =213
-            Y: =384
-            ZIndex: =16
-
-    Group4 As group:
-        Height: =5
-        Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =23
-
-        Skill4 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            Height: =31
-            HintText: ="Skill 4"
-            Width: =155
-            X: =45
-            Y: =470
-            ZIndex: =17
-
-        TextInput3_3 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            FontWeight: =FontWeight.Lighter
-            Height: =66
-            HintText: ="Evidence of Skill "
-            MaxLength: =150
-            Mode: =TextMode.MultiLine
-            Size: =10
-            Width: =431
-            X: =213
-            Y: =470
-            ZIndex: =18
-
-    Group5 As group:
-        Height: =5
-        Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =23
-
-        Skill5 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            Height: =31
-            HintText: ="Skill 5"
-            Width: =155
-            X: =45
-            Y: =556
-            ZIndex: =19
-
-        TextInput3_4 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            FontWeight: =FontWeight.Lighter
-            Height: =66
-            HintText: ="Evidence of Skill "
-            MaxLength: =150
-            Mode: =TextMode.MultiLine
-            Size: =10
-            Width: =431
-            X: =213
-            Y: =556
-            ZIndex: =20
-
-    Group6 As group:
-        Height: =5
-        Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =23
-
-        Skill6 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            Height: =31
-            HintText: ="Skill 6"
-            Width: =155
-            X: =45
-            Y: =643
-            ZIndex: =21
-
-        TextInput3_5 As text:
-            Align: =Align.Justify
-            Default: =""
-            Font: =Font.Verdana
-            FontWeight: =FontWeight.Lighter
-            Height: =66
-            HintText: ="Evidence of Skill "
-            MaxLength: =150
-            Mode: =TextMode.MultiLine
-            Size: =10
-            Width: =431
-            X: =213
-            Y: =643
-            ZIndex: =22
 
     Qualification2 As text:
         Default: =""
@@ -353,7 +155,6 @@
         ZIndex: =26
 
     Interests As text:
-        BorderThickness: =0
         Default: =""
         Height: =208
         Mode: =TextMode.MultiLine
