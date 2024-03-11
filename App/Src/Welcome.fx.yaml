@@ -205,16 +205,6 @@ Welcome As screen:
             Y: =499
             ZIndex: =13
 
-    Label1 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =63
-        Text: =Office365Users.MyProfile().JobTitle
-        Width: =282
-        X: =198
-        Y: =548
-        ZIndex: =17
-
     "'Update CV Button' As group":
         Height: =5
         Width: =5
@@ -258,12 +248,4 @@ Welcome As screen:
             X: =778
             Y: =242
             ZIndex: =16
-
-    Icon3 As icon.Add:
-        Height: =182
-        Icon: =Icon.Add
-        Width: =148
-        X: =1150
-        Y: =40
-        ZIndex: =18
 
