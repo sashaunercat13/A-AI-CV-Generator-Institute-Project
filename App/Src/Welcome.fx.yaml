@@ -259,3 +259,11 @@ Welcome As screen:
             Y: =242
             ZIndex: =16
 
+    Icon3 As icon.Add:
+        Height: =182
+        Icon: =Icon.Add
+        Width: =148
+        X: =1150
+        Y: =40
+        ZIndex: =18
+
