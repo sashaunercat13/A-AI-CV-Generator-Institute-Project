@@ -105,7 +105,7 @@ Create As screen:
         Color: =RGBA(0, 18, 107, 1)
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
-        Items: =["Please select role title","Associate Consultant", "Consultant", "Senior Consultant", "Managing Consultant", "Senior Manager", "Director", "Senior Director", "VP"]
+        Items: =["Please select your team","Applied Analytics", "Data Science & Platforms"]
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
