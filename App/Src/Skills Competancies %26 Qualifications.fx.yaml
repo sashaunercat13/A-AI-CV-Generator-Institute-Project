@@ -1,6 +1,7 @@
 "'Skills Competancies & Qualifications' As screen":
-    OnVisible: |
-        =ClearCollect(Education);
+    OnVisible: |-
+        =ClearCollect(Education, {});
+        ClearCollect(Qualifications, {})
 
     Button4_2 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
@@ -345,9 +346,8 @@
 
     AddSkill_2 As button:
         OnSelect: |
-            =Collect(Education, {University: ComboBoxUniversity.Selected.Value, Course: ComboBoxCourse.Selected.Value});
-            Reset(ComboBoxCourse);
-            Reset(ComboBoxUniversity);
+            =Collect(Qualifications, {Qualification: ComboBoxQual.Selected.Value});
+            Reset(ComboBoxQual);
         Size: =12
         Text: ="Add Qualification"
         X: =1155
@@ -385,5 +385,24 @@
             Size: =11
             Text: =ThisItem.University & " - " & ThisItem.Course
             Width: =583
+            ZIndex: =1
+
+    Gallery3 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =132
+        Items: =Qualifications
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =26
+        Width: =602
+        X: =713
+        Y: =565
+        ZIndex: =40
+
+        Label3 As label:
+            Height: =18
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Qualification
+            Width: =592
             ZIndex: =1
 
