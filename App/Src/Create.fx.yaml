@@ -71,14 +71,14 @@ Create As screen:
         Text: ="About you"
         Width: =217
         X: =720
-        Y: =338
+        Y: =299
         ZIndex: =10
 
     "'Profile box' As text":
         Default: =""
         EnableSpellCheck: =true
         Font: =Font.Verdana
-        Height: =291
+        Height: =192
         HintText: ="Please write a short profile description about you (Max 600 characters)"
         HoverFill: =RGBA(0, 0, 0, 0)
         MaxLength: =600
@@ -86,14 +86,14 @@ Create As screen:
         Size: =12
         Width: =607
         X: =720
-        Y: =382
+        Y: =347
         ZIndex: =11
 
     Button1_1 As button:
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |
             =Navigate('Skills Competancies & Qualifications');
-            Patch('CV Generator', Defaults('CV Generator'), {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text}) 
+            Patch('CV Generator', Defaults('CV Generator'), {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text }) 
         Text: ="Next Page"
         X: =1167
         Y: =710
@@ -170,4 +170,30 @@ Create As screen:
         X: =149
         Y: =647
         ZIndex: =21
+
+    Label5_6 As label:
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =22
+        Text: ="Iterests"
+        Width: =217
+        X: =720
+        Y: =563
+        ZIndex: =22
+
+    Interests As text:
+        Default: =""
+        EnableSpellCheck: =true
+        Font: =Font.Verdana
+        Height: =96
+        HintText: ="Please write a short profile description about you (Max 600 characters)"
+        HoverFill: =RGBA(0, 0, 0, 0)
+        MaxLength: =600
+        Mode: =TextMode.MultiLine
+        Size: =12
+        Width: =607
+        X: =720
+        Y: =608
+        ZIndex: =23
 
