@@ -139,28 +139,37 @@
         Items: =["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"]
         SearchFields: =["Value"]
         SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"],ComboBoxSkill.SearchText,"Value")
+        SelectMultiple: =false
         X: =68
         Y: =224
         ZIndex: =31
 
     AddSkill As button:
         OnSelect: |-
-            =Patch('CV Generator', Defaults('CV Generator'), {
-                    Skills: ComboBoxSkill.Selected.Value,
-            });
+            =Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
             Reset(ComboBoxSkill);
         Text: ="Add Skill"
         X: =441
         Y: =224
         ZIndex: =32
 
-    Label2 As label:
-        Height: =388
-        Text: =CurrentUserSkills
-        Width: =556
-        X: =45
-        Y: =281
+    Gallery1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =384
+        Items: =SkillsCollection
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =32
+        Width: =531
+        X: =68
+        Y: =288
         ZIndex: =33
+
+        Label3 As label:
+            Height: =32
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Skill
+            ZIndex: =1
 
     Label5_17 As label:
         Font: =Font.Verdana
