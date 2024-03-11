@@ -1,0 +1,69 @@
+{
+  "0fa35610-3dad-4a9b-9e62-152ac7a52071": {
+    "appActions": [
+      "MyProfile"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1672/1.0.1672.3545/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0fa35610-3dad-4a9b-9e62-152ac7a52071"
+  },
+  "6dfc64e3-2225-432e-945b-fa7298f7ceec": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "6dfc64e3-2225-432e-945b-fa7298f7ceec"
+  },
+  "f820e0ef-89ca-4bff-93dc-c2e95c68d321": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/alexsp/sporelease/1.0.1682.3673/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://capgemini-my.sharepoint.com/personal/sasha_unercat_capgemini_com": {
+        "dataSources": {
+          "CV Generator": {
+            "tableName": "9a5658bb-2b3e-4b26-843b-910aa2c426be"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "CV Generator"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f820e0ef-89ca-4bff-93dc-c2e95c68d321"
+  }
+}

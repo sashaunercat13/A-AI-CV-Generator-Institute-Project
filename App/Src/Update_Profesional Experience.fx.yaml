@@ -1,0 +1,475 @@
+"'Update_Profesional Experience' As screen":
+    OnVisible: |-
+        =UpdateContext({UContainer2Visible:false});
+        UpdateContext({UContainer3Visible:false});
+        UpdateContext({UContainer4Visible:false});
+        UpdateContext({UContainerVisible:true})
+
+    Rectangle2_3 As rectangle:
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =116
+        Width: =1366
+        ZIndex: =1
+
+    Image4_3 As image:
+        Height: =60
+        Image: ='Logo Blue'
+        Width: =52
+        X: =1288
+        Y: =29
+        ZIndex: =2
+
+    Label6_3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =39
+        Size: =24
+        Text: ="Professional Experience"
+        Width: =790
+        X: =84
+        Y: =37
+        ZIndex: =3
+
+    Icon8_1 As icon.CheckBadge:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.CheckBadge
+        X: =14
+        Y: =27
+        ZIndex: =5
+
+    Button6_1 As button:
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =562
+        HoverBorderColor: =
+        HoverFill: =
+        OnSelect: =
+        PressedBorderColor: =
+        Text: =""
+        Width: =327
+        X: =50
+        Y: =145
+        ZIndex: =6
+
+    Label13_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Size: =20
+        Text: ="Project Overview"
+        Width: =283
+        X: =64
+        Y: =174
+        ZIndex: =15
+
+    Button7_6 As button:
+        BorderThickness: =0
+        Color: =RGBA(0, 112, 173, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =52
+        OnSelect: |-
+            =UpdateContext({UContainerVisible:false}); UpdateContext({UContainer2Visible:false}); UpdateContext({UContainer3Visible:true});UpdateContext({UContainer4Visible:false})
+        Text: ="Project 3"
+        Width: =252
+        X: =139
+        Y: =449
+        ZIndex: =17
+
+    Button7_4 As button:
+        BorderThickness: =0
+        Color: =RGBA(0, 112, 173, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =52
+        OnSelect: |-
+            =UpdateContext({UContainerVisible:true}); UpdateContext({UContainer2Visible:false}); UpdateContext({UContainer3Visible:false});UpdateContext({UContainer4Visible:false})
+        Text: ="Project 1"
+        Width: =252
+        X: =139
+        Y: =301
+        ZIndex: =18
+
+    Button7_5 As button:
+        BorderThickness: =0
+        Color: =RGBA(0, 112, 173, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =52
+        OnSelect: |-
+            =UpdateContext({UContainerVisible:false}); UpdateContext({UContainer2Visible:true}); UpdateContext({UContainer3Visible:false});UpdateContext({UContainer4Visible:false})
+        Text: ="Project 2"
+        Width: =252
+        X: =139
+        Y: =375
+        ZIndex: =19
+
+    Button7_7 As button:
+        BorderThickness: =0
+        Color: =RGBA(0, 112, 173, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =52
+        OnSelect: |-
+            =UpdateContext({UContainerVisible:false}); UpdateContext({UContainer2Visible:false}); UpdateContext({UContainer3Visible:false});UpdateContext({UContainer4Visible:true})
+        Text: ="Project 4"
+        Width: =252
+        X: =139
+        Y: =524
+        ZIndex: =20
+
+    Experience1_1 As groupContainer:
+        Height: =562
+        Visible: =UContainerVisible
+        Width: =959
+        X: =395
+        Y: =145
+        ZIndex: =30
+
+        "'1ProjectDescription_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'1 Project Description'
+            Height: =246
+            HintText: ="Description (Max 600 characters) "
+            MaxLength: =600
+            Width: =848
+            X: =40
+            Y: =286
+            ZIndex: =1
+
+        "'1ProjectTitle_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'1 Project Title'
+            Font: =Font.Verdana
+            HintText: ="Project Title"
+            Width: =414
+            X: =40
+            Y: =40
+            ZIndex: =2
+
+        "'1ProjectRole_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'1 Project Role'
+            Font: =Font.Verdana
+            HintText: ="Role"
+            Width: =216
+            X: =703
+            Y: =41
+            ZIndex: =3
+
+        "'1ProjectStartDate_1' As datepicker":
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).'1 Project Start Date'
+            Format: ="dd/mm/yyyy"
+            X: =40
+            Y: =209
+            ZIndex: =4
+
+        "'1ProjectEndDate_1' As datepicker":
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).'1 Project End Date'
+            Format: |
+                ="dd/mm/yyyy"
+            X: =391
+            Y: =209
+            ZIndex: =5
+
+        Label12_8 As label:
+            Font: =Font.Verdana
+            Text: ="Start date"
+            X: =40
+            Y: =172
+            ZIndex: =6
+
+        Label12_9 As label:
+            Font: =Font.Verdana
+            Text: ="End date"
+            X: =391
+            Y: =172
+            ZIndex: =7
+
+        Label5_13 As label:
+            Font: =Font.Verdana
+            Height: =33
+            Size: =20
+            Text: ="When were you on this project?"
+            Width: =679
+            X: =40
+            Y: =139
+            ZIndex: =8
+
+        "'1ProjectClient_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'1 Project Client'
+            Font: =Font.Verdana
+            HintText: ="Client"
+            Width: =216
+            X: =474
+            Y: =41
+            ZIndex: =9
+
+    Experience2_1 As groupContainer:
+        Height: =562
+        Visible: =UContainer2Visible
+        Width: =959
+        X: =395
+        Y: =145
+        ZIndex: =31
+
+        "'2ProjectDescription_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'2 Project Description'
+            Fill: =RGBA(232, 244, 217, 1)
+            Height: =246
+            HintText: ="Description (Max 600 characters) "
+            MaxLength: =600
+            Width: =848
+            X: =40
+            Y: =286
+            ZIndex: =1
+
+        "'2ProjectTitle_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'2 Project Title'
+            Font: =Font.Verdana
+            HintText: ="Project Title"
+            Width: =414
+            X: =40
+            Y: =40
+            ZIndex: =2
+
+        "'2ProjectRole_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'2 Project Role'
+            Font: =Font.Verdana
+            HintText: ="Role"
+            Width: =216
+            X: =703
+            Y: =41
+            ZIndex: =3
+
+        "'2ProjectStartDate_1' As datepicker":
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).'2 Project Start Date'
+            Format: ="dd/mm/yyyy"
+            X: =40
+            Y: =209
+            ZIndex: =4
+
+        "'2ProjectEndDate_1' As datepicker":
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).'2 Project End Date'
+            Format: |
+                ="dd/mm/yyyy"
+            X: =391
+            Y: =209
+            ZIndex: =5
+
+        Label12_10 As label:
+            Font: =Font.Verdana
+            Text: ="Start date"
+            X: =40
+            Y: =172
+            ZIndex: =6
+
+        Label12_11 As label:
+            Font: =Font.Verdana
+            Text: ="End date"
+            X: =391
+            Y: =172
+            ZIndex: =7
+
+        Label5_14 As label:
+            Font: =Font.Verdana
+            Height: =33
+            Size: =20
+            Text: ="When were you on this project?"
+            Width: =679
+            X: =40
+            Y: =139
+            ZIndex: =8
+
+        "'2ProjectClient_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'2 Project Client'
+            Font: =Font.Verdana
+            HintText: ="Client"
+            Width: =216
+            X: =474
+            Y: =41
+            ZIndex: =9
+
+    Experience3_1 As groupContainer:
+        Height: =562
+        Visible: =UContainer3Visible
+        Width: =959
+        X: =395
+        Y: =145
+        ZIndex: =32
+
+        "'3ProjectDescription_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'3 Project Description'
+            Fill: =RGBA(253, 222, 207, 1)
+            Height: =246
+            HintText: ="Description (Max 600 characters) "
+            MaxLength: =600
+            Width: =848
+            X: =40
+            Y: =286
+            ZIndex: =1
+
+        "'3ProjectTitle_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'3 Project Title'
+            Font: =Font.Verdana
+            HintText: ="Project Title"
+            Width: =414
+            X: =40
+            Y: =40
+            ZIndex: =2
+
+        "'3ProjectRole_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'3 Project Client'
+            Font: =Font.Verdana
+            HintText: ="Role"
+            Width: =216
+            X: =703
+            Y: =41
+            ZIndex: =3
+
+        "'3ProjectStartDate_1' As datepicker":
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).'3 Project Start Date'
+            Format: ="dd/mm/yyyy"
+            X: =40
+            Y: =209
+            ZIndex: =4
+
+        "'3ProjectEndDate_1' As datepicker":
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).'3 Project End Date'
+            Format: |
+                ="dd/mm/yyyy"
+            X: =391
+            Y: =209
+            ZIndex: =5
+
+        Label12_12 As label:
+            Font: =Font.Verdana
+            Text: ="Start date"
+            X: =40
+            Y: =172
+            ZIndex: =6
+
+        Label12_13 As label:
+            Font: =Font.Verdana
+            Text: ="End date"
+            X: =391
+            Y: =172
+            ZIndex: =7
+
+        Label5_15 As label:
+            Font: =Font.Verdana
+            Height: =33
+            Size: =20
+            Text: ="When were you on this project?"
+            Width: =679
+            X: =40
+            Y: =139
+            ZIndex: =8
+
+        "'3ProjectClient_1' As text":
+            Default: =LookUp('CV Generator', Email = User().Email).'3 Project Client'
+            Font: =Font.Verdana
+            HintText: ="Client"
+            Width: =216
+            X: =474
+            Y: =41
+            ZIndex: =9
+
+    Experience4_1 As groupContainer:
+        Height: =562
+        Visible: =UContainer4Visible
+        Width: =959
+        X: =395
+        Y: =145
+        ZIndex: =33
+
+        TextInput7_4 As text:
+            Default: =""
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =246
+            HintText: ="Description (Max 600 characters) "
+            MaxLength: =600
+            Width: =848
+            X: =40
+            Y: =286
+            ZIndex: =1
+
+        TextInput8_12 As text:
+            Default: =""
+            Font: =Font.Verdana
+            HintText: ="Project Title"
+            Width: =414
+            X: =40
+            Y: =40
+            ZIndex: =2
+
+        TextInput8_14 As text:
+            Default: =""
+            Font: =Font.Verdana
+            HintText: ="Role"
+            Width: =216
+            X: =703
+            Y: =41
+            ZIndex: =3
+
+        DatePicker1_8 As datepicker:
+            Format: ="dd/mm/yyyy"
+            X: =40
+            Y: =209
+            ZIndex: =4
+
+        DatePicker1_9 As datepicker:
+            Format: |
+                ="dd/mm/yyyy"
+            X: =391
+            Y: =209
+            ZIndex: =5
+
+        Label12_14 As label:
+            Font: =Font.Verdana
+            Text: ="Start date"
+            X: =40
+            Y: =172
+            ZIndex: =6
+
+        Label12_15 As label:
+            Font: =Font.Verdana
+            Text: ="End date"
+            X: =391
+            Y: =172
+            ZIndex: =7
+
+        Label5_16 As label:
+            Font: =Font.Verdana
+            Height: =33
+            Size: =20
+            Text: ="When were you on this project?"
+            Width: =679
+            X: =40
+            Y: =139
+            ZIndex: =8
+
+        TextInput8_13 As text:
+            Default: =""
+            Font: =Font.Verdana
+            HintText: ="Client"
+            Width: =216
+            X: =474
+            Y: =41
+            ZIndex: =9
+
+    Button1_7 As button:
+        OnSelect: |-
+            =// Get the record associated with user
+            Patch('CV Generator', LookUp('CV Generator', Email = User().Email),
+            
+            // project 1
+            {'1 Project Title': '1ProjectTitle_1'.Text,'1 Project Client': '1ProjectClient_1'.Text, '1 Project Role': '1ProjectRole_1'.Text,'1 Project Start Date': '1ProjectStartDate_1'.SelectedDate, '1 Project End Date':'1ProjectEndDate_1'.SelectedDate, '1 Project Description':'1ProjectDescription_1'.Text,
+            
+            // project 2
+            '2 Project Title': '2ProjectTitle_1'.Text, '2 Project Client': '2ProjectClient_1'.Text, '2 Project Role': '2ProjectClient_1'.Text, '2 Project Start Date': '2ProjectStartDate_1'.SelectedDate, '2 Project End Date':'2ProjectEndDate_1'.SelectedDate, '2 Project Description':'2ProjectDescription_1'.Text,
+            
+            // project 3
+            '3 Project Title': '3ProjectTitle_1'.Text, '3 Project Client': '3ProjectClient_1'.Text, '3 Project Role': '3ProjectRole_1'.Text, '3 Project Start Date': '3ProjectStartDate_1'.SelectedDate, '3 Project End Date':'3ProjectEndDate_1'.SelectedDate, '3 Project Description':'3ProjectDescription_1'.Text
+            
+            })
+        Text: |-
+            ="Submit
+            "
+        X: =1168
+        Y: =699
+        ZIndex: =34
+

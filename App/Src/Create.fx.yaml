@@ -1,0 +1,166 @@
+Create As screen:
+
+    "'Background Rectangle_1' As rectangle":
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =768
+        Width: =657
+        ZIndex: =1
+
+    Image3_1 As image:
+        Height: =671
+        Image: ='Cap squiggle'
+        Width: =616
+        X: =25
+        Y: =96
+        ZIndex: =2
+
+    Name_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        Size: =18
+        Text: =User().FullName
+        Width: =572
+        X: =52
+        Y: =479
+        ZIndex: =3
+
+    Email_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        Size: =14
+        Text: =User().Email
+        Width: =572
+        X: =52
+        Y: =508
+        ZIndex: =4
+
+    ProfilePic_2 As image:
+        Height: =126
+        Image: |
+            =User().Image
+        RadiusBottomLeft: |
+            =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Width: =127
+        X: =275
+        Y: =340
+        ZIndex: =5
+
+    Label2_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        Size: =18
+        Text: =User().FullName
+        Width: =572
+        X: =52
+        Y: =479
+        ZIndex: =7
+
+    Label4_1 As label:
+        Color: =RGBA(39, 41, 54, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =122
+        Size: =36
+        Text: ="Your Profile"
+        Width: =397
+        X: =705
+        Y: =50
+        ZIndex: =8
+
+    Label5_1 As label:
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Size: =22
+        Text: ="About you"
+        Width: =217
+        X: =720
+        Y: =338
+        ZIndex: =10
+
+    "'Profile box' As text":
+        Default: =""
+        EnableSpellCheck: =true
+        Font: =Font.Verdana
+        Height: =291
+        HintText: ="Please write a short profile description about you (Max 600 characters)"
+        HoverFill: =RGBA(0, 0, 0, 0)
+        MaxLength: =600
+        Mode: =TextMode.MultiLine
+        Size: =12
+        Width: =607
+        X: =720
+        Y: =382
+        ZIndex: =11
+
+    Button1_1 As button:
+        Fill: =RGBA(39, 41, 54, 1)
+        OnSelect: |
+            =Navigate('Skills Competancies & Qualifications');
+            Patch('CV Generator', Defaults('CV Generator'), {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text}) 
+        Text: ="Next Page"
+        X: =1167
+        Y: =710
+        ZIndex: =12
+
+    RoleTitle As dropdown:
+        ChevronBackground: =RGBA(215, 223, 240, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        Fill: =RGBA(215, 223, 240, 1)
+        Font: =Font.Verdana
+        Items: =["Please select role title","Associate Consultant", "Consultant", "Senior Consultant", "Managing Consultant", "Senior Manager", "Director", "Senior Director", "VP"]
+        SelectionColor: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(215, 223, 240, 1)
+        Size: =12
+        X: =720
+        Y: =168
+        ZIndex: =13
+
+    Image2_1 As image:
+        Height: =184
+        Image: ='Screenshot 2024-03-04 120003'
+        Width: =552
+        X: =89
+        Y: =96
+        ZIndex: =14
+
+    Image1_2 As image:
+        Image: ='White Logo Capgemini Invent'
+        Width: =572
+        X: =52
+        Y: =72
+        ZIndex: =15
+
+    "'Primary Alignment' As dropdown":
+        ChevronBackground: =RGBA(215, 223, 240, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        Fill: =RGBA(215, 223, 240, 1)
+        Font: =Font.Verdana
+        Items: |
+            =["Primary Alignment","frog", "Intelligent Industry", "Corporate Experience", "W&O", "BT", "Analytics & AI", "Financial Service", "Manufacturing", "Automotive and Life Sciences", "Utilities & Energy", "TMTS", "Public Sector", "Consumer Products & Retail", "Sustainable Futures"]
+        SelectionColor: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(215, 223, 240, 1)
+        Size: =12
+        X: =720
+        Y: =236
+        ZIndex: =16
+
+    Icon4 As icon.LogJournal:
+        Height: =157
+        Icon: =Icon.LogJournal
+        Width: =161
+        X: =1102
+        Y: =133
+        ZIndex: =18
+
