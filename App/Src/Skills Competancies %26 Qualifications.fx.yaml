@@ -198,7 +198,7 @@
         Text: ="Qualifications"
         Width: =630
         X: =710
-        Y: =442
+        Y: =466
         ZIndex: =15
 
     Gallery1 As gallery.galleryVertical:
