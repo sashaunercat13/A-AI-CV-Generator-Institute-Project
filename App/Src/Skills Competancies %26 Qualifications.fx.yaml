@@ -169,6 +169,7 @@
             Height: =32
             OnSelect: =Select(Parent)
             Text: =ThisItem.Skill
+            Width: =517
             ZIndex: =1
 
     Label5_17 As label:
