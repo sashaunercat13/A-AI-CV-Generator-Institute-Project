@@ -3,7 +3,7 @@ Create As screen:
     "'Background Rectangle_1' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
         Height: =768
-        Width: =657
+        Width: =641
         ZIndex: =1
 
     Image3_1 As image:
@@ -70,7 +70,7 @@ Create As screen:
         Size: =22
         Text: ="About you"
         Width: =217
-        X: =720
+        X: =714
         Y: =299
         ZIndex: =10
 
@@ -85,7 +85,7 @@ Create As screen:
         Mode: =TextMode.MultiLine
         Size: =12
         Width: =607
-        X: =720
+        X: =714
         Y: =347
         ZIndex: =11
 
@@ -116,7 +116,7 @@ Create As screen:
     Image2_1 As image:
         Height: =184
         Image: ='Screenshot 2024-03-04 120003'
-        Width: =552
+        Width: =415
         X: =89
         Y: =96
         ZIndex: =14
@@ -178,7 +178,7 @@ Create As screen:
         Size: =22
         Text: ="Iterests"
         Width: =217
-        X: =720
+        X: =714
         Y: =563
         ZIndex: =22
 
@@ -193,7 +193,7 @@ Create As screen:
         Mode: =TextMode.MultiLine
         Size: =12
         Width: =607
-        X: =720
+        X: =714
         Y: =601
         ZIndex: =23
 
