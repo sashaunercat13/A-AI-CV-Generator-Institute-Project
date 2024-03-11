@@ -186,14 +186,14 @@ Create As screen:
         Default: =""
         EnableSpellCheck: =true
         Font: =Font.Verdana
-        Height: =96
-        HintText: ="Please write a short profile description about you (Max 600 characters)"
+        Height: =102
+        HintText: =""
         HoverFill: =RGBA(0, 0, 0, 0)
-        MaxLength: =600
+        MaxLength: =250
         Mode: =TextMode.MultiLine
         Size: =12
         Width: =607
         X: =720
-        Y: =608
+        Y: =601
         ZIndex: =23
 
