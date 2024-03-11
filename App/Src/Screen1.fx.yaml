@@ -113,11 +113,11 @@ Screen1 As screen:
                             DisplayName: User().FullName,
                             Email: User().Email
                         }
-                DisplayFields: =["DisplayName","Email","Picture"]
+                DisplayFields: =["Claims"]
                 DisplayMode: =Parent.DisplayMode
                 Items: =Choices([@'CV Generator'].'Microsoft Profile')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["DisplayName"]
+                SearchFields: =["Claims"]
                 SearchItems: =Choices('CV Generator'.'Microsoft Profile',DataCardValue2.SearchText)
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
@@ -630,7 +630,7 @@ Screen1 As screen:
         "'Skill 1 Evidence _DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill1Evidence"
-            Default: =ThisItem.'Skill 1 Evidence '
+            Default: =ThisItem.Skill1Evidence
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill1Evidence")
             Fill: =RGBA(0, 0, 0, 0)
@@ -698,7 +698,7 @@ Screen1 As screen:
         "'Skill 2_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill2"
-            Default: =ThisItem.'Skill 2'
+            Default: =ThisItem.Skill2
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill2")
             Fill: =RGBA(0, 0, 0, 0)
@@ -766,7 +766,7 @@ Screen1 As screen:
         "'Skill 2 Evidence_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill2Evidence"
-            Default: =ThisItem.'Skill 2 Evidence'
+            Default: =ThisItem.Skill2Evidence
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill2Evidence")
             Fill: =RGBA(0, 0, 0, 0)
@@ -834,7 +834,7 @@ Screen1 As screen:
         "'Skill 3_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill3"
-            Default: =ThisItem.'Skill 3'
+            Default: =ThisItem.Skill3
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill3")
             Fill: =RGBA(0, 0, 0, 0)
@@ -902,7 +902,7 @@ Screen1 As screen:
         "'Skill 3 Evidence_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill3Evidence"
-            Default: =ThisItem.'Skill 3 Evidence'
+            Default: =ThisItem.Skill3Evidence
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill3Evidence")
             Fill: =RGBA(0, 0, 0, 0)
@@ -970,7 +970,7 @@ Screen1 As screen:
         "'Skill 4_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill4"
-            Default: =ThisItem.'Skill 4'
+            Default: =ThisItem.Skill4
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill4")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1038,7 +1038,7 @@ Screen1 As screen:
         "'Skill 5_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill5"
-            Default: =ThisItem.'Skill 5'
+            Default: =ThisItem.Skill5
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill5")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1106,7 +1106,7 @@ Screen1 As screen:
         "'Skill 6_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill6"
-            Default: =ThisItem.'Skill 6'
+            Default: =ThisItem.Skill6
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill6")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1174,7 +1174,7 @@ Screen1 As screen:
         "'Skill 5 Evidence_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill5Evidence"
-            Default: =ThisItem.'Skill 5 Evidence'
+            Default: =ThisItem.Skill5Evidence
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill5Evidence")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1242,7 +1242,7 @@ Screen1 As screen:
         "'Skill 4 Evidence_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill4Evidence"
-            Default: =ThisItem.'Skill 4 Evidence'
+            Default: =ThisItem.Skill4Evidence
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill4Evidence")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1310,7 +1310,7 @@ Screen1 As screen:
         "'Skill 6 Evidence_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill6Evidence"
-            Default: =ThisItem.'Skill 6 Evidence'
+            Default: =ThisItem.Skill6Evidence
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill6Evidence")
             Fill: =RGBA(0, 0, 0, 0)

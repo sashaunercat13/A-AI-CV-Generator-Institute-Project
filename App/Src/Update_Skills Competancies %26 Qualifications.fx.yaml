@@ -170,7 +170,7 @@
 
         TextInput2_7 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 2'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill2
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 2"
@@ -203,7 +203,7 @@
 
         TextInput2_8 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 3'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill3
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 3"
@@ -236,7 +236,7 @@
 
         TextInput2_9 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 4'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill4
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 4"
@@ -269,7 +269,7 @@
 
         TextInput2_10 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 5'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill5
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 5"
@@ -302,7 +302,7 @@
 
         TextInput2_11 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 6'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill6
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 6"
