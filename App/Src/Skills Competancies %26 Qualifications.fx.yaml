@@ -88,8 +88,8 @@
         RadiusTopRight: =15
         Text: =""
         Width: =640
-        X: =700
-        Y: =135
+        X: =726
+        Y: =141
         ZIndex: =9
 
     Qualification1 As text:
@@ -191,24 +191,9 @@
         Items: =["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"]
         SearchFields: =["Value"]
         SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"],ComboBox1.SearchText,"Value")
-        X: =45
-        Y: =216
+        X: =68
+        Y: =224
         ZIndex: =31
-
-    ComboBoxSkill As combobox:
-        DisplayFields: =["Value"]
-        Items: =["Select Skill", "Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"]
-        SearchFields: =["Value"]
-        SearchItems: =Search(["Select Skill", "Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"],ComboBoxSkill.SearchText,"Value")
-        X: =45
-        Y: =281
-        ZIndex: =31
-
-    Button3 As button:
-        Text: ="Add Skills"
-        X: =475
-        Y: =216
-        ZIndex: =32
 
     AddSkill As button:
         OnSelect: |-
