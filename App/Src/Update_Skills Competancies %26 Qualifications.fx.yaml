@@ -137,7 +137,7 @@
 
         TextInput2_6 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 1'
+            Default: =LookUp('CV Generator', Email = User().Email).Skills
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 1"
@@ -369,7 +369,7 @@
             
             Patch('CV Generator', LookUp('CV Generator', Email = User().Email),
             
-            {'Skill 1': Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text, Interests:Interests.Text})
+            {Skills: Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text, Interests:Interests.Text})
         Text: ="Next Page"
         X: =1167
         Y: =710

@@ -562,7 +562,7 @@ Screen1 As screen:
         "'Skill 1_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Skill1"
-            Default: =ThisItem.'Skill 1'
+            Default: =ThisItem.Skills
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'CV Generator'],DataSourceInfo.DisplayName,"Skill1")
             Fill: =RGBA(0, 0, 0, 0)
