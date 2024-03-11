@@ -1,5 +1,5 @@
 "'Skills Competancies & Qualifications' As screen":
-    OnVisible: =Set(CurrentUserSkill, "")
+    OnVisible: =Set(CurrentUserSkills, "")
 
     Button4 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
@@ -184,29 +184,27 @@
         Y: =25
         ZIndex: =30
 
-    ComboBox1 As combobox:
+    ComboBoxSkill As combobox:
         DisplayFields: =["Value"]
         Font: =Font.Verdana
         InputTextPlaceholder: ="Search Skills"
         Items: =["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"]
         SearchFields: =["Value"]
-        SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"],ComboBox1.SearchText,"Value")
+        SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"],ComboBoxSkill.SearchText,"Value")
         X: =68
         Y: =224
         ZIndex: =31
 
     AddSkill As button:
         OnSelect: |-
-            =Patch('Example Skills', Defaults('Example Skills'), {
-                    UserID: CurrentUserID,
-                    Skill: ComboBoxSkill.Selected.Value,
-                    Rating: ComboBoxRating.Selected.Value
+            =Patch('CV Generator', Defaults('CV Generator'), {
+                    Skills: ComboBoxSkill.Selected.Value,
             });
+            CurrentUserSkills = CurrentUserSkills & ComboBoxSkill.Selected.Value;
             Reset(ComboBoxSkill);
-            Reset(ComboBoxRating);
         Text: ="Add Skill"
-        X: =475
-        Y: =281
+        X: =441
+        Y: =224
         ZIndex: =32
 
     Label2 As label:

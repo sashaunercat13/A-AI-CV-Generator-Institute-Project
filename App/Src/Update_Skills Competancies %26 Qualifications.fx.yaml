@@ -137,7 +137,7 @@
 
         TextInput2_6 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 1'
+            Default: =LookUp('CV Generator', Email = User().Email).Skills
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 1"
@@ -170,7 +170,7 @@
 
         TextInput2_7 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 2'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill2
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 2"
@@ -203,7 +203,7 @@
 
         TextInput2_8 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 3'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill3
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 3"
@@ -236,7 +236,7 @@
 
         TextInput2_9 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 4'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill4
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 4"
@@ -269,7 +269,7 @@
 
         TextInput2_10 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 5'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill5
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 5"
@@ -302,7 +302,7 @@
 
         TextInput2_11 As text:
             Align: =Align.Justify
-            Default: =LookUp('CV Generator', Email = User().Email).'Skill 6'
+            Default: =LookUp('CV Generator', Email = User().Email).Skill6
             Font: =Font.Verdana
             Height: =31
             HintText: ="Skill 6"
@@ -369,7 +369,7 @@
             
             Patch('CV Generator', LookUp('CV Generator', Email = User().Email),
             
-            {'Skill 1': Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text, Interests:Interests.Text})
+            {Skills: Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text, Interests:Interests.Text})
         Text: ="Next Page"
         X: =1167
         Y: =710
