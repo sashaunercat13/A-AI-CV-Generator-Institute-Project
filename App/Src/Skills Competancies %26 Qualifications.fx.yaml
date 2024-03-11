@@ -139,14 +139,14 @@
         Items: =["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"]
         SearchFields: =["Value"]
         SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"],ComboBoxSkill.SearchText,"Value")
-        SelectMultiple: =false
         X: =68
         Y: =224
         ZIndex: =31
 
     AddSkill As button:
         OnSelect: |-
-            =Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
+            =// Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
+            ForAll(ComboBoxSkill.SelectedItems, Collect(SkillsCollection, {Skill: Value}));
             Reset(ComboBoxSkill);
         Text: ="Add Skill"
         X: =441
