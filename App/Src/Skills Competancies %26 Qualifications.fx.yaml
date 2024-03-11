@@ -231,6 +231,17 @@
         Y: =224
         ZIndex: =31
 
+    ComboBox1 As combobox:
+        DisplayFields: =["Value"]
+        Font: =Font.Verdana
+        InputTextPlaceholder: ="Search Skills"
+        Items: =["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"]
+        SearchFields: =["Value"]
+        SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"],ComboBox1.SearchText,"Value")
+        X: =45
+        Y: =216
+        ZIndex: =31
+
     AddSkill As button:
         OnSelect: |-
             =Patch('Example Skills', Defaults('Example Skills'), {
@@ -243,6 +254,12 @@
         Text: ="Add Skill"
         X: =441
         Y: =224
+        ZIndex: =32
+
+    Button3 As button:
+        Text: ="Add Skills"
+        X: =475
+        Y: =216
         ZIndex: =32
 
     Label2 As label:
