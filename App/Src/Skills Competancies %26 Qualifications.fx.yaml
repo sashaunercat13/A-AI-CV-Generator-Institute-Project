@@ -229,7 +229,7 @@
         SearchItems: =Search(ComboBoxSample,ComboBox4.SearchText,"Value1")
         Width: =546
         X: =710
-        Y: =489
+        Y: =524
         ZIndex: =19
 
     ComboBoxUniversity As combobox:
