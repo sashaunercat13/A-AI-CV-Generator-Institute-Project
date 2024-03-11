@@ -109,8 +109,8 @@ Create As screen:
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
-        X: =720
-        Y: =168
+        X: =715
+        Y: =235
         ZIndex: =13
 
     Image2_1 As image:
@@ -139,8 +139,8 @@ Create As screen:
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
-        X: =720
-        Y: =236
+        X: =715
+        Y: =168
         ZIndex: =16
 
     Icon4 As icon.LogJournal:
