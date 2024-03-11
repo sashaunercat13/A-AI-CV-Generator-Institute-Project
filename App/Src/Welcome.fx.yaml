@@ -30,43 +30,6 @@ Welcome As screen:
         Y: =96
         ZIndex: =3
 
-    Name As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.Verdana
-        FontWeight: =FontWeight.Semibold
-        Height: =42
-        Size: =18
-        Text: =User().FullName
-        Width: =572
-        X: =52
-        Y: =479
-        ZIndex: =4
-
-    Email As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.Verdana
-        Size: =14
-        Text: =User().Email
-        Width: =572
-        X: =52
-        Y: =508
-        ZIndex: =5
-
-    ProfilePic As image:
-        Height: =126
-        Image: |
-            =User().Image
-        RadiusBottomLeft: =60
-        RadiusBottomRight: =60
-        RadiusTopLeft: =60
-        RadiusTopRight: =60
-        Width: =127
-        X: =275
-        Y: =340
-        ZIndex: =6
-
     Label4 As label:
         Align: =Align.Center
         Font: =Font.Verdana
