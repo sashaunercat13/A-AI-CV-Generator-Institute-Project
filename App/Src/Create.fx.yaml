@@ -24,7 +24,7 @@ Create As screen:
         Text: =User().FullName
         Width: =572
         X: =52
-        Y: =479
+        Y: =382
         ZIndex: =3
 
     Email_1 As label:
@@ -35,7 +35,7 @@ Create As screen:
         Text: =User().Email
         Width: =572
         X: =52
-        Y: =508
+        Y: =424
         ZIndex: =4
 
     ProfilePic_2 As image:
@@ -49,21 +49,8 @@ Create As screen:
         RadiusTopRight: =60
         Width: =127
         X: =275
-        Y: =340
+        Y: =250
         ZIndex: =5
-
-    Label2_1 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.Verdana
-        FontWeight: =FontWeight.Semibold
-        Height: =42
-        Size: =18
-        Text: =User().FullName
-        Width: =572
-        X: =52
-        Y: =479
-        ZIndex: =7
 
     Label4_1 As label:
         Color: =RGBA(39, 41, 54, 1)
@@ -163,4 +150,24 @@ Create As screen:
         X: =1102
         Y: =133
         ZIndex: =18
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =63
+        Text: =Office365Users.MyProfile().Department & " - " & Office365Users.MyProfile().JobTitle
+        Width: =378
+        X: =149
+        Y: =511
+        ZIndex: =19
+
+    Label1_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =63
+        Text: =Office365Users.MyProfile().OfficeLocation
+        Width: =378
+        X: =149
+        Y: =647
+        ZIndex: =21
 
