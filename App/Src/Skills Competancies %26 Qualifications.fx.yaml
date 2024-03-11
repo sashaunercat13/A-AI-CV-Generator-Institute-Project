@@ -1,5 +1,5 @@
 "'Skills Competancies & Qualifications' As screen":
-    OnVisible: =Set(CurrentUserSkills, "")
+    OnVisible: =ClearCollect(SkillsCollection);
 
     Button4 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
@@ -200,7 +200,6 @@
             =Patch('CV Generator', Defaults('CV Generator'), {
                     Skills: ComboBoxSkill.Selected.Value,
             });
-            CurrentUserSkills = CurrentUserSkills & ComboBoxSkill.Selected.Value;
             Reset(ComboBoxSkill);
         Text: ="Add Skill"
         X: =441
