@@ -1,64 +1,6 @@
 "'Skills Competancies & Qualifications' As screen":
     OnVisible: =
 
-    Gallery1 As gallery.galleryVertical:
-        DelayItemLoading: =true
-        Height: =384
-        Items: =SkillsCollection
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =384
-        Width: =531
-        X: =68
-        Y: =288
-        ZIndex: =1
-
-        Title1 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Skill
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 86
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =1
-
-        NextArrow1 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Color: =RGBA(166, 166, 166, 1)
-            Height: =50
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =12
-            PaddingLeft: =12
-            PaddingRight: =12
-            PaddingTop: =12
-            Tooltip: ="View item details"
-            Width: =50
-            X: =Parent.TemplateWidth - Self.Width - 12
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =2
-
-        Separator1 As rectangle:
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =3
-
-        Rectangle1 As rectangle:
-            Height: =Parent.TemplateHeight - Separator1.Height
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            ZIndex: =4
-
     Button4 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =0
@@ -235,6 +177,26 @@
         X: =710
         Y: =219
         ZIndex: =35
+
+    Gallery1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =418
+        Items: =SkillsCollection
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =30
+        Width: =531
+        X: =70
+        Y: =279
+        ZIndex: =36
+
+        Label2 As label:
+            Height: =32
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Skill
+            Width: =515
+            X: =5
+            ZIndex: =1
 
     ComboBox1_1 As combobox:
         DisplayFields: =["Value"]
