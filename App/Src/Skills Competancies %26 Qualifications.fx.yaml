@@ -300,6 +300,7 @@
             Font: =Font.Verdana
             OnSelect: =Select(Parent)
             Size: =11
-            Text: =ThisItem.Course
+            Text: =ThisItem.University & " - " & ThisItem.Course
+            Width: =583
             ZIndex: =1
 
