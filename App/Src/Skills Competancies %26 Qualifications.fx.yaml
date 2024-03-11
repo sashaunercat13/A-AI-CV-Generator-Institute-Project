@@ -162,7 +162,7 @@
         Text: ="Qualifications"
         Width: =630
         X: =710
-        Y: =430
+        Y: =466
         ZIndex: =34
 
     ComboBoxUniversity As combobox:
