@@ -74,17 +74,6 @@
         Y: =150
         ZIndex: =7
 
-    Label5_6 As label:
-        Font: =Font.Verdana
-        FontWeight: =FontWeight.Semibold
-        Height: =41
-        Size: =22
-        Text: ="Interests"
-        Width: =630
-        X: =710
-        Y: =453
-        ZIndex: =8
-
     Button4_1 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =0
@@ -102,24 +91,6 @@
         X: =726
         Y: =141
         ZIndex: =9
-
-    Button4_2 As button:
-        BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =295
-        RadiusBottomLeft: =15  
-        RadiusBottomRight: =15
-        RadiusTopLeft: =15
-        RadiusTopRight: =15
-        Text: =""
-        Width: =640
-        X: =700
-        Y: =440
-        ZIndex: =10
 
     Qualification1 As text:
         Default: =
@@ -154,15 +125,6 @@
         X: =1207
         Y: =384
         ZIndex: =26
-
-    Interests As text:
-        Default: =""
-        Height: =208
-        Mode: =TextMode.MultiLine
-        Width: =610
-        X: =710
-        Y: =501
-        ZIndex: =27
 
     Button1_2 As button:
         Fill: =RGBA(39, 41, 54, 1)
@@ -243,8 +205,8 @@
             Reset(ComboBoxSkill);
             Reset(ComboBoxRating);
         Text: ="Add Skill"
-        X: =441
-        Y: =224
+        X: =475
+        Y: =281
         ZIndex: =32
 
     Label2 As label:
