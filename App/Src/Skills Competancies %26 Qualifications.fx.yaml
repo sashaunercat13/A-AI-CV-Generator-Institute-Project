@@ -1,6 +1,6 @@
 "'Skills Competancies & Qualifications' As screen":
     OnVisible: |
-        =ClearCollect(Education)
+        =ClearCollect(Education);
 
     Button4_2 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
