@@ -19,7 +19,7 @@
         Y: =135
         ZIndex: =1
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+    Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =384
         Items: =SkillsCollection
