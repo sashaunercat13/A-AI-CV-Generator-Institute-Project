@@ -110,7 +110,7 @@ Create As screen:
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
         X: =715
-        Y: =235
+        Y: =240
         ZIndex: =13
 
     Image2_1 As image:
@@ -140,7 +140,7 @@ Create As screen:
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
         X: =715
-        Y: =168
+        Y: =172
         ZIndex: =16
 
     Icon4 As icon.LogJournal:
