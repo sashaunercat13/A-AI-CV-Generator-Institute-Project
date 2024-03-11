@@ -284,3 +284,20 @@
         Y: =231
         ZIndex: =39
 
+    Gallery2 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =143
+        Items: =Education
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =40
+        Width: =593
+        X: =710
+        Y: =282
+        ZIndex: =39
+
+        Label5 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Course
+            ZIndex: =1
+
