@@ -297,7 +297,9 @@
         ZIndex: =39
 
         Label5 As label:
+            Font: =Font.Verdana
             OnSelect: =Select(Parent)
+            Size: =11
             Text: =ThisItem.Course
             ZIndex: =1
 
