@@ -110,7 +110,7 @@ Create As screen:
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
         X: =715
-        Y: =190
+        Y: =184
         ZIndex: =13
 
     Image2_1 As image:
@@ -139,6 +139,7 @@ Create As screen:
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
+        Visible: =false
         X: =715
         Y: =154
         ZIndex: =16
@@ -176,7 +177,7 @@ Create As screen:
         FontWeight: =FontWeight.Semibold
         Height: =28
         Size: =22
-        Text: ="Iterests"
+        Text: ="Interests"
         Width: =217
         X: =714
         Y: =545
