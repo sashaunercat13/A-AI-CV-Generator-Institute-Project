@@ -91,6 +91,12 @@ Create As screen:
         ZIndex: =11
 
     Button1_1 As button:
+        DisplayMode: |-
+            =If( 
+                IsBlank(RoleTitle) Or IsBlank('Profile box') Or IsBlank(Interests), 
+            	DisplayMode.Disabled, 
+            	DisplayMode.Edit,DisplayMode.Disabled 
+            )
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
             =Navigate('Skills Competancies & Qualifications');
