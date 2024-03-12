@@ -3,24 +3,6 @@
         =ClearCollect(Education, {});
         ClearCollect(Qualifications, {})
 
-    Button4 As button:
-        BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(215, 223, 240, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =562
-        RadiusBottomLeft: =15  
-        RadiusBottomRight: =15
-        RadiusTopLeft: =15
-        RadiusTopRight: =15
-        Text: =""
-        Width: =640
-        X: =20
-        Y: =135
-        ZIndex: =1
-
     Button4_2 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =0
@@ -37,6 +19,24 @@
         Width: =640
         X: =687
         Y: =440
+        ZIndex: =1
+
+    Button4 As button:
+        BorderColor: =RGBA(18, 171, 219, 1)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 112, 173, 1)
+        DisabledFill: =RGBA(215, 223, 240, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =562
+        RadiusBottomLeft: =15  
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Text: =""
+        Width: =640
+        X: =20
+        Y: =135
         ZIndex: =2
 
     Button4_1 As button:
@@ -97,7 +97,7 @@
         Size: =22
         Text: ="Skills"
         Width: =630
-        X: =45
+        X: =44
         Y: =150
         ZIndex: =8
 
@@ -108,8 +108,8 @@
         Size: =22
         Text: ="Education"
         Width: =630
-        X: =710
-        Y: =150
+        X: =698
+        Y: =151
         ZIndex: =9
 
     Button1_2 As button:
@@ -284,8 +284,8 @@
         Size: =22
         Text: ="Qualifications"
         Width: =630
-        X: =710
-        Y: =466
+        X: =704
+        Y: =454
         ZIndex: =15
 
     Gallery1 As gallery.galleryVertical:
@@ -295,8 +295,8 @@
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =35
-        Width: =585
-        X: =50
+        Width: =601
+        X: =33
         Y: =258
         ZIndex: =16
 
@@ -307,7 +307,7 @@
             ZIndex: =1
 
         Label2 As label:
-            Height: =43
+            Height: =30
             OnSelect: =Select(Parent)
             Text: =ThisItem.Skill
             Width: =447
@@ -331,8 +331,8 @@
         SearchItems: |-
             =Search(["Microsoft Certified: Azure Solutions Architect Expert","Cisco Certified Network Associate (CCNA)","CompTIA A+","CompTIA Network+","CompTIA Security+","Certified Information Systems Security Professional (CISSP)","Certified Ethical Hacker (CEH)","AWS Certified Solutions Architect","Google Certified Professional Cloud Architect","Certified ScrumMaster (CSM)","Certified Scrum Product Owner (CSPO)","Project Management Professional (PMP)","ITIL Foundation Certification","Certified Information Security Manager (CISM)","Certified Information Systems Auditor (CISA)","VMware Certified Professional (VCP)","Red Hat Certified Engineer (RHCE)","Certified Kubernetes Administrator (CKA)","Certified Docker Associate (CDA)","Certified OpenStack Administrator (COA)","Microsoft Certified: Azure Administrator Associate","Microsoft Certified: Azure Developer Associate","Google Associate Cloud Engineer","Oracle Certified Professional (OCP)","Certified Information Privacy Professional (CIPP)","Certified Data Management Professional (CDMP)","Certified Analytics Professional (CAP)","Certified in Risk and Information Systems Control (CRISC)","Certified Wireless Network Professional (CWNP)","Certified Information Systems Security Officer (CISSO)","Offensive Security Certified Professional (OSCP)","Certified in Governance of Enterprise IT (CGEIT)","Amazon Web Services Certified Developer (AWS CD)","Certified Kubernetes Application Developer (CKAD)","Google Professional Data Engineer","Microsoft Certified: Data Analyst Associate","Salesforce Certified Administrator","Salesforce Certified Platform Developer","Certified Cloud Security Professional (CCSP)","Certified Cloud Architect (CCA)","Certified Blockchain Professional (CBP)","Certified Artificial Intelligence Professional (CAIP)","Microsoft Certified: Power Platform App Maker Associate","Microsoft Certified: Power Platform Developer Associate","Certified Machine Learning Engineer","Certified Big Data Professional (CBDP)","Certified DevOps Engineer (CDE)","Certified Cyber Forensics Professional (CCFP)","Certified Mobile App Developer (CMAD)","Certified 3D Printing Professional","Certified Professional in Human Resources (PHR)","Society for Human Resource Management Certified Professional (SHRM-CP)","Certified Management Accountant (CMA)","Certified Financial Planner (CFP)","Chartered Financial Analyst (CFA)","Six Sigma Green Belt","Six Sigma Black Belt","Certified Fraud Examiner (CFE)","Certified Internal Auditor (CIA)","Professional in Human Resources (PHRi)","Senior Professional in Human Resources (SPHR)","Certified Professional in Supply Management (CPSM)","Certified Associate in Project Management (CAPM)","Agile Certified Practitioner (PMI-ACP)","Professional Scrum Master (PSM)","Certified Product Manager (CPM)","Certified Professional in Healthcare Quality (CPHQ)","Certified Quality Engineer (CQE)","Certified Information Privacy Professional (CIPP)","Professional in Business Analysis (PMI-PBA)","Certified Risk Management Professional (CRMP)","Certified Compensation Professional (CCP)","Certified Employee Benefits Specialist (CEBS)","Professional Certified Marketer (PCM)","Certified Professional in Learning and Performance (CPLP)","Certified Professional Purchasing Manager (CPPM)","Certified Professional Contracts Manager (CPCM)","Certified Manager (CM)","Certified in the Governance of Enterprise IT (CGEIT)","Certified Supply Chain Professional (CSCP)","Certified Professional in Healthcare Information and Management Systems (CPHIMS)","Certified Manager of Quality/Organizational Excellence (CMQ/OE)","Professional in Project Management (PPM)","Certified Professional Logistician (CPL)","Certified Professional Medical Services Manager (CPMSM)","Certified Information Professional (CIP)","Certified Safety Professional (CSP)","Certified Professional Environmental Auditor (CPEA)","Certified Professional Ergonomist (CPE)","Certified Associate in Software Testing (CAST)","Certified Professional in Training Management (CPTM)","Certified Professional in Talent Development (CPTD)"],ComboBoxQual.SearchText,"Value")
         Width: =432
-        X: =713
-        Y: =525
+        X: =707
+        Y: =501
         ZIndex: =17
 
     ComboBoxUniversity As combobox:
@@ -350,6 +350,7 @@
         ZIndex: =18
 
     AddSkill_1 As button:
+        Height: =63
         OnSelect: |
             =Collect(Education, {University: ComboBoxUniversity.Selected.Value, Course: ComboBoxCourse.Selected.Value});
             Reset(ComboBoxCourse);
@@ -357,17 +358,18 @@
         Size: =12
         Text: ="Add Education"
         X: =1155
-        Y: =209
+        Y: =196
         ZIndex: =19
 
     AddSkill_2 As button:
+        Height: =28
         OnSelect: |
             =Collect(Qualifications, {Qualification: ComboBoxQual.Selected.Value});
             Reset(ComboBoxQual);
         Size: =12
         Text: ="Add Qualification"
         X: =1155
-        Y: =519
+        Y: =501
         ZIndex: =20
 
     Gallery2 As gallery.galleryVertical:
@@ -376,19 +378,33 @@
         Items: =Education
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =40
-        Width: =593
-        X: =710
-        Y: =282
+        TemplateSize: =42
+        Width: =641
+        X: =687
+        Y: =267
         ZIndex: =21
 
-        Label5 As label:
-            Font: =Font.Verdana
+        Icon6 As icon.DocumentwithContent:
+            Height: =40
+            Icon: =Icon.DocumentWithContent
             OnSelect: =Select(Parent)
-            Size: =11
-            Text: =ThisItem.University & " " & ThisItem.Course
-            Width: =583
             ZIndex: =1
+
+        Label5 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Course
+            Width: =455
+            X: =64
+            ZIndex: =2
+
+        Icon7 As icon.Trash:
+            Height: =27
+            Icon: =Icon.Trash
+            OnSelect: =Remove(Education, ThisItem)
+            Width: =49
+            X: =568
+            Y: =6
+            ZIndex: =3
 
     ComboBoxCourse As combobox:
         DisplayFields: =["Value"]
@@ -405,20 +421,42 @@
 
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =132
+        Height: =156
         Items: =Qualifications
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =26
-        Width: =602
-        X: =713
-        Y: =565
+        Width: =641
+        X: =687
+        Y: =541
         ZIndex: =23
 
         Label3 As label:
-            Height: =18
+            Height: =26
             OnSelect: =Select(Parent)
             Text: =ThisItem.Qualification
             Width: =592
             ZIndex: =1
+
+        Label7 As label:
+            Height: =26
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Qualification
+            X: =40
+            ZIndex: =3
+
+        Icon7_1 As icon.Trash:
+            Height: =26
+            Icon: =Icon.Trash
+            OnSelect: =Remove(Qualifications, ThisItem)
+            Width: =49
+            X: =582
+            ZIndex: =4
+
+        Icon9 As icon.Bookmark:
+            Height: =26
+            Icon: =Icon.Bookmark
+            OnSelect: =Select(Parent)
+            Width: =63
+            ZIndex: =5
 
