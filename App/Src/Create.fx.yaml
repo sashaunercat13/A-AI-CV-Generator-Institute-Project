@@ -95,11 +95,9 @@ Create As screen:
         OnSelect: |-
             =Navigate('Skills Competancies & Qualifications');
             
-            Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),
-             {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, 
-                Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text});
+            Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email), {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text, 'Security Clearance BPSS': BPSSchecked, 'Security Clearance SC': SCchecked});
             
-            If(
+            /* If(
                 BPSSchecked,  
                 Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance BPSS':true}), 
                 Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance BPSS':false}));
@@ -107,9 +105,9 @@ Create As screen:
             
              If (SCchecked,
                 Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance SC':true}),
-                Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance SC':false}))
+                Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance SC':false})) */
             
-             
+              
              
         Text: ="Next Page"
         X: =1167
