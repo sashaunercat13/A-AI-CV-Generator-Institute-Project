@@ -1,6 +1,5 @@
 Create As screen:
-    OnVisible: |-
-        =Patch('CV Generator', Defaults('CV Generator'), {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value})
+    OnVisible: =
 
     "'Background Rectangle_1' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
@@ -93,12 +92,25 @@ Create As screen:
 
     Button1_1 As button:
         Fill: =RGBA(39, 41, 54, 1)
-        OnSelect: |
+        OnSelect: |-
             =Navigate('Skills Competancies & Qualifications');
+            
             Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),
-             {
-                //Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, 
-                Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text }) 
+             {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, 
+                Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text});
+            
+            If(
+                BPSSchecked,  
+                Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance BPSS':true}), 
+                Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance BPSS':false}));
+            
+            
+             If (SCchecked,
+                Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance SC':true}),
+                Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance SC':false}))
+            
+             
+             
         Text: ="Next Page"
         X: =1167
         Y: =710
@@ -206,10 +218,8 @@ Create As screen:
     Checkbox_BPSS As checkbox:
         CheckboxSize: =30
         Height: =40
-        OnCheck: |-
-            =Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance BPSS':true})
-        OnUncheck: |-
-            =Patch('CV Generator', Defaults('CV Generator'),LookUp('CV Generator', Email = User().Email), {'Security Clearance BPSS':false})
+        OnCheck: =Set(BPSSchecked,true)
+        OnUncheck: =Set(BPSSchecked,false)
         Text: ="BPSS"
         Width: =121
         X: =714
@@ -219,10 +229,8 @@ Create As screen:
     Checkbox_SC As checkbox:
         CheckboxSize: =30
         Height: =40
-        OnCheck: |-
-            =Patch('CV Generator', Defaults('CV Generator'),LookUp('CV Generator', Email = User().Email), {'Security Clearance SC':true})
-        OnUncheck: |-
-            =Patch('CV Generator', Defaults('CV Generator'),LookUp('CV Generator', Email = User().Email), {'Security Clearance SC':false})
+        OnCheck: =Set( SCchecked, true) 
+        OnUncheck: =Set(SCchecked, false) 
         Text: ="SC"
         Width: =121
         X: =844
