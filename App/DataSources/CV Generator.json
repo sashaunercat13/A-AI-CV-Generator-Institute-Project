@@ -62,6 +62,9 @@
       "Qualification2": "Qualification 2",
       "Qualification3": "Qualification 3",
       "RoleTitle": "Role Title",
+      "SecurityClearance": "Security Clearance",
+      "SecurityClearance#Id": "Security Clearance Id",
+      "SecurityClearance@odata.type": "SecurityClearance (SecurityClearance@odata.type)",
       "Skill1": "Skills",
       "Title": "Title"
     },

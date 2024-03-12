@@ -61,7 +61,7 @@ Create As screen:
         Text: ="Your Profile"
         Width: =397
         X: =705
-        Y: =50
+        Y: =44
         ZIndex: =8
 
     Label5_1 As label:
@@ -110,7 +110,7 @@ Create As screen:
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
         X: =715
-        Y: =240
+        Y: =202
         ZIndex: =13
 
     Image2_1 As image:
@@ -140,7 +140,7 @@ Create As screen:
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
         X: =715
-        Y: =172
+        Y: =154
         ZIndex: =16
 
     Icon4 As icon.LogJournal:
@@ -196,4 +196,22 @@ Create As screen:
         X: =714
         Y: =601
         ZIndex: =23
+
+    Checkbox1 As checkbox:
+        CheckboxSize: =30
+        Height: =40
+        Text: ="BPSS"
+        Width: =121
+        X: =714
+        Y: =252
+        ZIndex: =24
+
+    Checkbox1_1 As checkbox:
+        CheckboxSize: =30
+        Height: =40
+        Text: ="SC"
+        Width: =121
+        X: =844
+        Y: =252
+        ZIndex: =25
 
