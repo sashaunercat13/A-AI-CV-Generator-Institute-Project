@@ -38,7 +38,7 @@ Welcome As screen:
         Size: =36
         Text: ="Menu"
         Width: =184
-        X: =778
+        X: =842
         Y: =113
         ZIndex: =10
 
@@ -207,8 +207,7 @@ Welcome As screen:
             Height: =57
             Icon: =Icon.ChevronUp
             Rotation: =90
-            Visible: =UserExistsInSP
             X: =778
-            Y: =242
+            Y: =244
             ZIndex: =16
 

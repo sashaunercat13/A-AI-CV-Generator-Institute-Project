@@ -24,7 +24,7 @@ Create As screen:
         Text: =User().FullName
         Width: =572
         X: =52
-        Y: =382
+        Y: =364
         ZIndex: =3
 
     Email_1 As label:
@@ -35,7 +35,7 @@ Create As screen:
         Text: =User().Email
         Width: =572
         X: =52
-        Y: =424
+        Y: =501
         ZIndex: =4
 
     ProfilePic_2 As image:
@@ -48,8 +48,8 @@ Create As screen:
         RadiusTopLeft: =60
         RadiusTopRight: =60
         Width: =127
-        X: =275
-        Y: =250
+        X: =274
+        Y: =225
         ZIndex: =5
 
     Label4_1 As label:
@@ -71,14 +71,14 @@ Create As screen:
         Text: ="About you"
         Width: =217
         X: =714
-        Y: =299
+        Y: =305
         ZIndex: =10
 
     "'Profile box' As text":
         Default: =""
         EnableSpellCheck: =true
         Font: =Font.Verdana
-        Height: =192
+        Height: =176
         HintText: ="Please write a short profile description about you (Max 600 characters)"
         HoverFill: =RGBA(0, 0, 0, 0)
         MaxLength: =600
@@ -110,7 +110,7 @@ Create As screen:
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
         X: =715
-        Y: =202
+        Y: =190
         ZIndex: =13
 
     Image2_1 As image:
@@ -147,8 +147,8 @@ Create As screen:
         Height: =157
         Icon: =Icon.LogJournal
         Width: =161
-        X: =1102
-        Y: =133
+        X: =1160
+        Y: =72
         ZIndex: =18
 
     Label1 As label:
@@ -158,7 +158,7 @@ Create As screen:
         Text: =Office365Users.MyProfile().Department & " - " & Office365Users.MyProfile().JobTitle
         Width: =378
         X: =149
-        Y: =511
+        Y: =534
         ZIndex: =19
 
     Label1_2 As label:
@@ -179,7 +179,7 @@ Create As screen:
         Text: ="Iterests"
         Width: =217
         X: =714
-        Y: =563
+        Y: =545
         ZIndex: =22
 
     Interests As text:
@@ -194,7 +194,7 @@ Create As screen:
         Size: =12
         Width: =607
         X: =714
-        Y: =601
+        Y: =583
         ZIndex: =23
 
     Checkbox1 As checkbox:
@@ -203,7 +203,7 @@ Create As screen:
         Text: ="BPSS"
         Width: =121
         X: =714
-        Y: =252
+        Y: =246
         ZIndex: =24
 
     Checkbox1_1 As checkbox:
@@ -212,6 +212,6 @@ Create As screen:
         Text: ="SC"
         Width: =121
         X: =844
-        Y: =252
+        Y: =246
         ZIndex: =25
 

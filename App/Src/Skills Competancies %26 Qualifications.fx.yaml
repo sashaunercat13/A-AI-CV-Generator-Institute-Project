@@ -3,6 +3,24 @@
         =ClearCollect(Education, {});
         ClearCollect(Qualifications, {})
 
+    Button4 As button:
+        BorderColor: =RGBA(18, 171, 219, 1)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 112, 173, 1)
+        DisabledFill: =RGBA(215, 223, 240, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =562
+        RadiusBottomLeft: =15  
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Text: =""
+        Width: =640
+        X: =20
+        Y: =135
+        ZIndex: =1
+
     Button4_2 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =0
@@ -10,7 +28,7 @@
         DisabledFill: =RGBA(215, 223, 240, 1)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =290
+        Height: =257
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -19,7 +37,7 @@
         Width: =640
         X: =687
         Y: =440
-        ZIndex: =1
+        ZIndex: =2
 
     Button4_1 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
@@ -36,24 +54,6 @@
         Text: =""
         Width: =640
         X: =687
-        Y: =135
-        ZIndex: =2
-
-    Button4 As button:
-        BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(215, 223, 240, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =600
-        RadiusBottomLeft: =15  
-        RadiusBottomRight: =15
-        RadiusTopLeft: =15
-        RadiusTopRight: =15
-        Text: =""
-        Width: =640
-        X: =20
         Y: =135
         ZIndex: =3
 
@@ -166,6 +166,7 @@
             Choices([@'CV Generator'].'Microsoft Profile')
         SearchFields: =["Claims"]
         SearchItems: =Choices('CV Generator'.'Microsoft Profile','Microsoft Profile'.SearchText)
+        Visible: =false
         X: =931
         Y: =25
         ZIndex: =12
@@ -260,8 +261,9 @@
             "Emotional resilience",
             "Change adaptation",
             "Constructive feedback delivery"],ComboBoxSkill.SearchText,"Value")
-        X: =68
-        Y: =224
+        Width: =440
+        X: =50
+        Y: =200
         ZIndex: =13
 
     AddSkill As button:
@@ -270,8 +272,9 @@
             ForAll(ComboBoxSkill.SelectedItems, Collect(SkillsCollection, {Skill: Value}));
             Reset(ComboBoxSkill);
         Text: ="Add Skill"
-        X: =441
-        Y: =224
+        Width: =120
+        X: =515
+        Y: =200
         ZIndex: =14
 
     Label5_17 As label:
@@ -291,19 +294,32 @@
         Items: =SkillsCollection
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =30
-        Width: =531
-        X: =70
-        Y: =279
-        ZIndex: =17
+        TemplateSize: =35
+        Width: =585
+        X: =50
+        Y: =258
+        ZIndex: =16
+
+        Icon3 As icon.ToolsWrench:
+            Height: =30
+            Icon: =Icon.ToolsWrench
+            OnSelect: =Select(Parent)
+            ZIndex: =1
 
         Label2 As label:
-            Height: =32
+            Height: =43
             OnSelect: =Select(Parent)
             Text: =ThisItem.Skill
-            Width: =515
-            X: =5
-            ZIndex: =1
+            Width: =447
+            X: =64
+            ZIndex: =2
+
+        Icon5 As icon.Trash:
+            Height: =30
+            Icon: =Icon.Trash
+            OnSelect: =Remove(SkillsCollection, ThisItem)
+            X: =511
+            ZIndex: =3
 
     ComboBoxQual As combobox:
         DisplayFields: =["Value"]
@@ -317,7 +333,7 @@
         Width: =432
         X: =713
         Y: =525
-        ZIndex: =19
+        ZIndex: =17
 
     ComboBoxUniversity As combobox:
         DisplayFields: =["Value"]
@@ -331,7 +347,7 @@
         Width: =432
         X: =707
         Y: =196
-        ZIndex: =35
+        ZIndex: =18
 
     AddSkill_1 As button:
         OnSelect: |
@@ -342,7 +358,7 @@
         Text: ="Add Education"
         X: =1155
         Y: =209
-        ZIndex: =37
+        ZIndex: =19
 
     AddSkill_2 As button:
         OnSelect: |
@@ -352,7 +368,27 @@
         Text: ="Add Qualification"
         X: =1155
         Y: =519
-        ZIndex: =38
+        ZIndex: =20
+
+    Gallery2 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =143
+        Items: =Education
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =40
+        Width: =593
+        X: =710
+        Y: =282
+        ZIndex: =21
+
+        Label5 As label:
+            Font: =Font.Verdana
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: =ThisItem.University & " " & ThisItem.Course
+            Width: =583
+            ZIndex: =1
 
     ComboBoxCourse As combobox:
         DisplayFields: =["Value"]
@@ -365,27 +401,7 @@
         Width: =432
         X: =707
         Y: =231
-        ZIndex: =39
-
-    Gallery2 As gallery.galleryVertical:
-        DelayItemLoading: =true
-        Height: =143
-        Items: =Education
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =40
-        Width: =593
-        X: =710
-        Y: =282
-        ZIndex: =39
-
-        Label5 As label:
-            Font: =Font.Verdana
-            OnSelect: =Select(Parent)
-            Size: =11
-            Text: =ThisItem.University & " - " & ThisItem.Course
-            Width: =583
-            ZIndex: =1
+        ZIndex: =22
 
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
@@ -397,7 +413,7 @@
         Width: =602
         X: =713
         Y: =565
-        ZIndex: =40
+        ZIndex: =23
 
         Label3 As label:
             Height: =18
