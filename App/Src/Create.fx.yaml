@@ -99,7 +99,7 @@ Create As screen:
         OnSelect: |-
             =Navigate('Skills Competancies & Qualifications');
             
-            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text, 'Security Clearance BPSS': BPSSchecked, 'Security Clearance SC': SCchecked});
+            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), {Photo: UserPhoto, Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text, 'Security Clearance BPSS': BPSSchecked, 'Security Clearance SC': SCchecked});
             
             /* If(
                 BPSSchecked,  

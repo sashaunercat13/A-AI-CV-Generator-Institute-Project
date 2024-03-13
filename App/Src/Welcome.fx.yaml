@@ -7,6 +7,10 @@ Welcome As screen:
         // Set the CurrentItem to the result of a LookUp of a CV associated with the current Microsoft User.
         Set(CurrentItem, LookUp('CV Generator', 'First Name' = CurrentUserFirstName && 'Last Name' = CurrentUserLastName));
         Set(UserExistsInSP, Not(IsBlank(CurrentItem)));
+        
+        // get the photo
+        Set(UserID, Office365Users.MyProfile().Id);
+        Set(UserPhoto, Office365Users.UserPhotoV2(UserID))
 
     "'Background Rectangle' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)

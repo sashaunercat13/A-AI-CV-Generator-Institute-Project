@@ -1,2 +1,28 @@
 Search As screen:
 
+    Gallery4 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Items: ='CV Generator'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =153
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        Image5 As image:
+            Image: =ThisItem.Photo
+            OnSelect: =Select(Parent)
+            X: =35
+            Y: =25
+            ZIndex: =1
+
+        Label10 As label:
+            Height: =41
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.FirstName & " " & ThisItem.LastName & ", " & ThisItem.'Role Title'
+            Width: =442
+            X: =152
+            Y: =55
+            ZIndex: =2
+
