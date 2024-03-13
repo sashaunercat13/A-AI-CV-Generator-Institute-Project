@@ -2,20 +2,7 @@ Search As screen:
 
     Gallery4 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Items: |
-            =Filter(
-                'CV Generator',
-                If(
-                    IsEmpty(ComboBoxSkills.SelectedItems),
-                    true,
-                    !IsBlankOrError(
-                        First(Filter(
-                            Split(Skills, ","),
-                            Skill in ComboBoxSkills.SelectedItems
-                        ))
-                    )
-                )
-            )
+        Items: ='CV Generator'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =153
