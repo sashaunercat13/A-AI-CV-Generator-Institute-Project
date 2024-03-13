@@ -99,7 +99,7 @@ Create As screen:
         OnSelect: |-
             =Navigate('Skills Competancies & Qualifications');
             
-            Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email), {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text, 'Security Clearance BPSS': BPSSchecked, 'Security Clearance SC': SCchecked});
+            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle.Selected.Value, Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text, 'Security Clearance BPSS': BPSSchecked, 'Security Clearance SC': SCchecked});
             
             /* If(
                 BPSSchecked,  
@@ -119,14 +119,14 @@ Create As screen:
         ZIndex: =12
 
     RoleTitle As dropdown:
-        AllowEmptySelection: =true
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
-        Default: =""
+        Default: =
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
-        Items: =["Applied Analytics", "Data Science & Platforms"]
+        Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        OnChange: =
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
