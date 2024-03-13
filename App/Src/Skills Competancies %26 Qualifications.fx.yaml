@@ -118,10 +118,10 @@
             =Navigate('Profesional Experience') ;
             // Convert collections to strings to save to a single column in List
             Set(SkillString, Concat(SkillsCollection, Skill & ", "));
-            //Set(EducationString, Concat(Education, University & ", "));
+            Set(EducationString, Concat(Education, DegreeType & ", " & University & ", " & Course & "; "));
             //Set(Qualification, Concat(Qualifications, Skill & ", "));
             
-            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { Skills: SkillString })
+            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { Skills: SkillString, Education: EducationString})
             
             
             /*
