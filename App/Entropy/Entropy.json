@@ -1,6 +1,6 @@
 {
   "ComponentIndexes": {
-    "Component1": 9
+    "Component1": 10
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -372,6 +372,7 @@
     "RoleTitle": 67,
     "RoleTitle_1": 395,
     "Screen1": 132,
+    "Search": 460,
     "Search CV Button": 57,
     "Skill 1 Evidence _DataCard1": 179,
     "Skill 1_DataCard1": 174,
@@ -464,7 +465,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "03/13/2024 14:36:16",
+  "HeaderLastSavedDateTimeUTC": "03/13/2024 15:22:24",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0fa35610-3dad-4a9b-9e62-152ac7a52071": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/f6a17c4141ec438b899d7afef9bc73df\"",
@@ -932,6 +933,7 @@
     "RoleTitle": {},
     "RoleTitle_1": {},
     "Screen1": {},
+    "Search": {},
     "Search CV Button": {},
     "Skill 1 Evidence _DataCard1": {},
     "Skill 1_DataCard1": {},
@@ -1393,6 +1395,7 @@
     "RoleTitle": 12,
     "RoleTitle_1": 340,
     "Screen1": 77,
+    "Search": 0,
     "Search CV Button": 453,
     "Skill 1 Evidence _DataCard1": 89,
     "Skill 1_DataCard1": 88,
