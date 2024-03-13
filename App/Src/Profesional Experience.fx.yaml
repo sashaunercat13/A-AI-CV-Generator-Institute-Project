@@ -5,13 +5,13 @@
         UpdateContext({Container4Visible:false});
         UpdateContext({ContainerVisible:true})
 
-    Rectangle2_1 As rectangle:
+    "'Rectangle - blue top panel' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
         Height: =116
         Width: =1366
         ZIndex: =1
 
-    Image4_1 As image:
+    "'Capgemini Logo' As image":
         Height: =60
         Image: ='Logo Blue'
         Width: =52
@@ -19,7 +19,7 @@
         Y: =29
         ZIndex: =2
 
-    Label6_1 As label:
+    "'Label - Professional Experience' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -31,14 +31,14 @@
         Y: =37
         ZIndex: =3
 
-    Icon8 As icon.CheckBadge:
+    "'Icon - Circle with tick' As icon.CheckBadge":
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.CheckBadge
         X: =14
         Y: =27
         ZIndex: =5
 
-    Button6 As button:
+    "'(Disabled Button) - blue background side panel' As button":
         Fill: =RGBA(39, 41, 54, 1)
         Height: =562
         HoverBorderColor: =
@@ -51,7 +51,7 @@
         Y: =145
         ZIndex: =6
 
-    Label13 As label:
+    "'Label-Project Overview title' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -69,10 +69,11 @@
         Height: =52
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:true});UpdateContext({Container4Visible:false})
+        Size: =12
         Text: =Project3ButtonText
         Width: =252
         X: =139
-        Y: =449
+        Y: =361
         ZIndex: =17
 
     "'Button-Project1' As button":
@@ -82,10 +83,11 @@
         Height: =52
         OnSelect: |-
             =UpdateContext({ContainerVisible:true}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false})
+        Size: =12
         Text: =Project1ButtonText
         Width: =252
         X: =139
-        Y: =301
+        Y: =236
         ZIndex: =18
 
     "'Button-Project2' As button":
@@ -95,10 +97,11 @@
         Height: =52
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:true}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false})
+        Size: =12
         Text: =Project2ButtonText
         Width: =252
         X: =139
-        Y: =375
+        Y: =294
         ZIndex: =19
 
     "'Button-Project4' As button":
@@ -108,10 +111,11 @@
         Height: =52
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:true})
+        Size: =12
         Text: ="Project 4"
         Width: =252
-        X: =139
-        Y: =524
+        X: =143
+        Y: =430
         ZIndex: =20
 
     Experience1 As groupContainer:
@@ -139,44 +143,8 @@
             OnChange: =Set(Project1ButtonText, '1ProjectTitle'.Text) 
             Width: =414
             X: =40
-            Y: =40
+            Y: =14
             ZIndex: =2
-
-        "'1ProjectRole' As text":
-            Default: =""
-            Font: =Font.Verdana
-            HintText: ="Role"
-            Width: =216
-            X: =703
-            Y: =41
-            ZIndex: =3
-
-        "'1ProjectStartDate' As datepicker":
-            Format: ="dd/mm/yyyy"
-            X: =40
-            Y: =209
-            ZIndex: =4
-
-        "'1ProjectEndDate' As datepicker":
-            Format: |
-                ="dd/mm/yyyy"
-            X: =391
-            Y: =209
-            ZIndex: =5
-
-        Label12 As label:
-            Font: =Font.Verdana
-            Text: ="Start date"
-            X: =40
-            Y: =172
-            ZIndex: =6
-
-        Label12_1 As label:
-            Font: =Font.Verdana
-            Text: ="End date"
-            X: =391
-            Y: =172
-            ZIndex: =7
 
         Label5_2 As label:
             Font: =Font.Verdana
@@ -184,18 +152,267 @@
             Size: =20
             Text: ="When were you on this project?"
             Width: =679
-            X: =40
-            Y: =139
+            X: =34
+            Y: =171
             ZIndex: =8
 
-        "'1ProjectClient' As text":
-            Default: =""
+        "'1ProjectManager' As combobox":
+            DefaultSelectedItems: |-
+                =/*{
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
+                        Claims: 
+                            User().Email
+                        ,
+                        DisplayName: User().FullName,
+                        Email: User().Email
+                    } */
+                {
+                
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.'CV Generator'",
+                
+                        Claims: Concatenate(
+                
+                            "i:0#.f|membership|",
+                
+                            User().Email
+                
+                        ),
+                
+                        DisplayName: User().FullName,
+                
+                        Email: User().Email
+                
+                    } 
+            DisplayFields: =["DisplayName","Email","Picture"]
+            InputTextPlaceholder: ="Please select your manager" 
+            Items: =Choices([@'CV Generator'].'Microsoft Profile')
+            SearchFields: =["DisplayName"]
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager'.SearchText)
+            SelectMultiple: |
+                =false
+            Template: =ListItemTemplate.Person
+            Visible: |
+                =true
+            X: =40
+            Y: =67
+            ZIndex: =10
+
+        "'1ProjectRole' As combobox":
+            DisplayFields: =["Value"]
+            Height: =38
+            InputTextPlaceholder: ="Role"
+            Items: |
+                =["Product Owner",
+                "Scrum Master",
+                "Agile Coach",
+                "Senior Business Analyst (BA)",
+                "Business Analyst (BA)",
+                "Product Manager",
+                "Technical Lead",
+                "Senior Developer",
+                "Developer",
+                "Junior Developer",
+                "Quality Assurance (QA) Lead",
+                "Quality Assurance (QA) Engineer",
+                "UX/UI Lead",
+                "UX/UI Designer",
+                "DevOps Lead",
+                "DevOps Engineer",
+                "Database Administrator (DBA)",
+                "Senior System Architect",
+                "System Architect",
+                "Release Manager",
+                "Stakeholder",
+                "Data Scientist",
+                "Senior Cybersecurity Analyst",
+                "Cybersecurity Analyst",
+                "Cloud Architect",
+                "Senior AI/Machine Learning Engineer",
+                "AI/Machine Learning Engineer",
+                "Blockchain Lead",
+                "Blockchain Developer",
+                "IoT Lead",
+                "IoT Specialist",
+                "Senior Environmental Sustainability Manager",
+                "Environmental Sustainability Manager",
+                "Carbon Emissions Lead Analyst",
+                "Carbon Emissions Analyst",
+                "Sustainable Design Lead Architect",
+                "Sustainable Design Architect",
+                "Senior Environmental Compliance Specialist",
+                "Environmental Compliance Specialist",
+                "Corporate Social Responsibility (CSR) Lead Manager",
+                "Corporate Social Responsibility (CSR) Manager"]
+            SearchFields: =["Value"]
+            SearchItems: |-
+                =Search(["Product Owner",
+                "Scrum Master",
+                "Agile Coach",
+                "Senior Business Analyst (BA)",
+                "Business Analyst (BA)",
+                "Product Manager",
+                "Technical Lead",
+                "Senior Developer",
+                "Developer",
+                "Junior Developer",
+                "Quality Assurance (QA) Lead",
+                "Quality Assurance (QA) Engineer",
+                "UX/UI Lead",
+                "UX/UI Designer",
+                "DevOps Lead",
+                "DevOps Engineer",
+                "Database Administrator (DBA)",
+                "Senior System Architect",
+                "System Architect",
+                "Release Manager",
+                "Stakeholder",
+                "Data Scientist",
+                "Senior Cybersecurity Analyst",
+                "Cybersecurity Analyst",
+                "Cloud Architect",
+                "Senior AI/Machine Learning Engineer",
+                "AI/Machine Learning Engineer",
+                "Blockchain Lead",
+                "Blockchain Developer",
+                "IoT Lead",
+                "IoT Specialist",
+                "Senior Environmental Sustainability Manager",
+                "Environmental Sustainability Manager",
+                "Carbon Emissions Lead Analyst",
+                "Carbon Emissions Analyst",
+                "Sustainable Design Lead Architect",
+                "Sustainable Design Architect",
+                "Senior Environmental Compliance Specialist",
+                "Environmental Compliance Specialist",
+                "Corporate Social Responsibility (CSR) Lead Manager",
+                "Corporate Social Responsibility (CSR) Manager"]
+                ,'1ProjectRole'.SearchText,"Value")
+            SelectMultiple: =false
+            Width: =212
+            X: =699
+            Y: =16
+            ZIndex: =11
+
+        "'Label&DatePicker - Start' As group":
+            Height: =5
+            Width: =5
+            X: =60
+            Y: =60
+            ZIndex: =11
+
+            "'1ProjectStartDate' As datepicker":
+                Format: ="dd/mm/yyyy"
+                StartOfWeek: =StartOfWeek.Monday
+                X: =40
+                Y: =239
+                ZIndex: =4
+
+            Label12 As label:
+                Font: =Font.Verdana
+                Text: ="Start date"
+                X: =40
+                Y: =202
+                ZIndex: =6
+
+        "'Label&DatePicker - End' As group":
+            Height: =5
+            Width: =5
+            X: =60
+            Y: =60
+            ZIndex: =11
+
+            "'1ProjectEndDate' As datepicker":
+                Format: |
+                    ="dd/mm/yyyy"
+                StartOfWeek: =StartOfWeek.Monday
+                Visible: =CurrentProject
+                X: =391
+                Y: =239
+                ZIndex: =5
+
+            Label12_1 As label:
+                Font: =Font.Verdana
+                Text: ="End date"
+                Visible: =CurrentProject
+                X: =391
+                Y: =202
+                ZIndex: =7
+
+        "'1ProjectClient' As combobox":
+            DisplayFields: =["Value"]
+            InputTextPlaceholder: ="Client"
+            Items: |-
+                =["HMRC (Her Majesty's Revenue and Customs)",
+                "NHS (National Health Service)",
+                "BAE (BAE Systems)",
+                "Home Office",
+                "MOD (Ministry of Defence)",
+                "Metropolitan Police Service (MPS)",
+                "Scottish Fire and Rescue Service",
+                "HMCTS (Her Majesty's Courts and Tribunals Service)",
+                "Veterinary Medicines Directorate",
+                "Heathrow Airport",
+                "Jaguar Land Rover",
+                "Burberry",
+                "Lloyd's Register",
+                "EDF (Électricité de France)",
+                "Bosch",
+                "Royal Mail",
+                "Met Search",
+                "London Ambulance Service",
+                "London Fire Brigade",
+                "Welsh Assembly Government",
+                "DWP (Department for Work and Pensions)",
+                "MoJ (Ministry of Justice)",
+                "DfE (Department for Education)",
+                "DEFRA (Department for Environment, Food and Rural Affairs)",
+                "Driver and Vehicle Standards Agency (DVSA)"
+                ]
+            SearchFields: =["Value"]
+            SearchItems: |-
+                =Search(["HMRC (Her Majesty's Revenue and Customs)",
+                "NHS (National Health Service)",
+                "BAE (BAE Systems)",
+                "Home Office",
+                "MOD (Ministry of Defence)",
+                "Metropolitan Police Service (MPS)",
+                "Scottish Fire and Rescue Service",
+                "HMCTS (Her Majesty's Courts and Tribunals Service)",
+                "Veterinary Medicines Directorate",
+                "Heathrow Airport",
+                "Jaguar Land Rover",
+                "Burberry",
+                "Lloyd's Register",
+                "EDF (Électricité de France)",
+                "Bosch",
+                "Royal Mail",
+                "Met Search",
+                "London Ambulance Service",
+                "London Fire Brigade",
+                "Welsh Assembly Government",
+                "DWP (Department for Work and Pensions)",
+                "MoJ (Ministry of Justice)",
+                "DfE (Department for Education)",
+                "DEFRA (Department for Environment, Food and Rural Affairs)",
+                "Driver and Vehicle Standards Agency (DVSA)"
+                ],'1ProjectClient'.SearchText,"Value")
+            SelectMultiple: =false
+            Width: =213
+            X: =470
+            Y: =14
+            ZIndex: =12
+
+        "'Checkbox - Current Project' As checkbox":
+            CheckboxSize: =30
             Font: =Font.Verdana
-            HintText: ="Client"
-            Width: =216
-            X: =474
-            Y: =41
-            ZIndex: =9
+            OnCheck: =Set(CurrentProject,false) 
+            OnUncheck: =Set(CurrentProject,true) 
+            Size: =11
+            Text: ="Are you currently on this project?"
+            Width: =265
+            X: =391
+            Y: =67
+            ZIndex: =13
 
     Experience2 As groupContainer:
         Height: =562
@@ -448,19 +665,19 @@
             Y: =41
             ZIndex: =9
 
-    Button1 As button:
+    "'Button-Submit' As button":
         OnSelect: |-
             =// Get the record associated with user
             Patch('CV Generator', LookUp('CV Generator', Email = User().Email),
             
             // project 1
-            {'1 Project Title': '1ProjectTitle'.Text,'1 Project Client': '1ProjectClient'.Text, '1 Project Role': '1ProjectRole'.Text,'1 Project Start Date': '1ProjectStartDate'.SelectedDate, '1 Project End Date':'1ProjectEndDate'.SelectedDate, '1 Project Description':'1ProjectDescription'.Text,
+            {'1 Project Title': '1ProjectTitle'.Text,'1 Project Client': '1ProjectClient'.Selected.Value, '1 Project Role': '1ProjectRole'.Selected.Value,'1 Project Start Date': '1ProjectStartDate'.SelectedDate, '1 Project End Date':'1ProjectEndDate'.SelectedDate, '1 Project Description':'1ProjectDescription'.Text
             
-            // project 2
-            '2 Project Title': '2ProjectTitle'.Text, '2 Project Client': '2ProjectClient'.Text, '2 Project Role': '2ProjectClient'.Text, '2 Project Start Date': '2ProjectStartDate'.SelectedDate, '2 Project End Date':'2ProjectEndDate'.SelectedDate, '2 Project Description':'2ProjectDescription'.Text,
+            /* project 2
+            '2 Project Title': '2ProjectTitle'.Text, '2 Project Client': '2ProjectClient'.Text, '2 Project Role': '2ProjectClient'.Selected.Value, '2 Project Start Date': '2ProjectStartDate'.SelectedDate, '2 Project End Date':'2ProjectEndDate'.SelectedDate, '2 Project Description':'2ProjectDescription'.Text,
             
-            // project 3
-            '3 Project Title': '3ProjectTitle'.Text, '3 Project Client': '3ProjectClient'.Text, '3 Project Role': '3ProjectRole'.Text, '3 Project Start Date': '3ProjectStartDate'.SelectedDate, '3 Project End Date':'3ProjectEndDate'.SelectedDate, '3 Project Description':'3ProjectDescription'.Text
+            //project 3
+            '3 Project Title': '3ProjectTitle'.Text, '3 Project Client': '3ProjectClient'.Text, '3 Project Role': '3ProjectRole'.Selected.Value, '3 Project Start Date': '3ProjectStartDate'.SelectedDate, '3 Project End Date':'3ProjectEndDate'.SelectedDate, '3 Project Description':'3ProjectDescription'.Text */
             
             })
         Text: |-

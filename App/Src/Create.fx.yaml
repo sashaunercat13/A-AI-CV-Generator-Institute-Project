@@ -241,3 +241,27 @@ Create As screen:
         Y: =246
         ZIndex: =25
 
+    Icon7 As icon.Hamburger:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Icon: =Icon.Hamburger
+        OnSelect: =Navigate(Welcome)
+        Width: =25
+        X: =11
+        Y: =17
+        ZIndex: =26
+
+    Button3 As button:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =27
+        HoverFill: =
+        OnSelect: =Navigate(Welcome) 
+        PressedColor: =RGBA(18, 171, 219, 1)
+        PressedFill: =
+        Size: =11
+        Text: ="Menu"
+        Width: =51
+        X: =38
+        Y: =17
+        ZIndex: =27
+
