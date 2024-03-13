@@ -115,11 +115,17 @@
     Button1_2 As button:
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
-            =Navigate('Profesional Experience') ; 
+            =Navigate('Profesional Experience') ;
+            // Convert collection to a string to save to a single column in List
+            Set(SkillsString, Concat(SkillsCollection, Skill & ";"));
+            
             
             Patch('CV Generator', LookUp('CV Generator', Email = User().Email),
+                Skills: SkillString
+            {})
             
-            {Skills: Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text})
+            /*
+            {Skills: Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text}) */
         Text: ="Next Page"
         X: =1167
         Y: =710
@@ -453,7 +459,7 @@
             Height: =44
             OnSelect: =Select(Parent)
             Text: =ThisItem.Qualification
-            Width: =514
+            Width: =494
             X: =52
             ZIndex: =2
 
@@ -461,7 +467,7 @@
             Height: =30
             Icon: =Icon.Trash
             OnSelect: =Remove(Qualifications, ThisItem)
-            X: =566
-            Y: =5
+            X: =546
+            Y: =4
             ZIndex: =3
 
