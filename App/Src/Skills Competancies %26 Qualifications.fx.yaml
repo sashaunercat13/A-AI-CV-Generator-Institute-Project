@@ -117,12 +117,15 @@
         OnSelect: |-
             =Navigate('Profesional Experience') ;
             // Convert collection to a string to save to a single column in List
-            Set(SkillsString, Concat(SkillsCollection, Skill & ";"));
+            Set(SkillString, Concat(SkillsCollection, Skill & ","));
+            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { Skills: SkillString })
             
             
-            Patch('CV Generator', LookUp('CV Generator', Email = User().Email),
+            /*
+            Patch('CV Generator', LookUp('CV Generator', Email = User().Email),{
                 Skills: SkillString
-            {})
+            })
+            */
             
             /*
             {Skills: Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text}) */
