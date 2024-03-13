@@ -180,11 +180,11 @@
             
                 } 
         DisplayFields: =["Claims"]
-        Items: |-
-            =
-            Choices([@'CV Generator'].'Microsoft Profile')
+        Items: =Choices([@'CV Generator'].'Microsoft Profile')
         SearchFields: =["Claims"]
         SearchItems: =Choices('CV Generator'.'Microsoft Profile','Microsoft Profile'.SearchText)
+        Visible: |
+            =true
         X: =931
         Y: =25
         ZIndex: =12
