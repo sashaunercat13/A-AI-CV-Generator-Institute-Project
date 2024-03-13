@@ -168,6 +168,13 @@ Welcome As screen:
             Y: =499
             ZIndex: =13
 
+    Button3 As button:
+        OnSelect: =Navigate('Skills Competancies & Qualifications');
+        Text: ="skil"
+        X: =1097
+        Y: =253
+        ZIndex: =17
+
     "'Update CV Button' As group":
         Height: =5
         Width: =5
