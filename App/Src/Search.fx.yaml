@@ -20,7 +20,7 @@ Search As screen:
         Label10 As label:
             Height: =41
             OnSelect: =Select(Parent)
-            Text: =ThisItem.FirstName & " " & ThisItem.LastName & ", " & ThisItem.'Role Title'
+            Text: =ThisItem.'First Name' & " " & ThisItem.'Last Name' & ", " & ThisItem.'Role Title'
             Width: =442
             X: =152
             Y: =55
