@@ -1,7 +1,14 @@
 "'Skills Competancies & Qualifications' As screen":
-    OnVisible: |-
-        =ClearCollect(Education, {});
-        ClearCollect(Qualifications, {})
+    OnVisible: |
+        =// initialise the collections
+        ClearCollect(Education, {});
+        ClearCollect(Qualifications, {});
+        ClearCollect(SkillsCollection, {});
+        
+        // Clear the collections form any previous entries
+        Clear(Education);
+        Clear(SkillsCollection);
+        Clear(Qualifications)
 
     Rectangle2 As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
@@ -116,9 +123,12 @@
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
             =Navigate('Profesional Experience') ;
-            // Convert collection to a string to save to a single column in List
-            Set(SkillString, Concat(SkillsCollection, Skill & ","));
-            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { Skills: SkillString })
+            // Convert collections to strings to save to a single column in List
+            Set(SkillString, Concat(SkillsCollection, Skill & ", "));
+            Set(EducationString, Concat(Education, DegreeType & ", " & University & ", " & Course & "; "));
+            Set(QualificationString, Concat(Qualifications, Qualification & ", "));
+            
+            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { Skills: SkillString, Education: EducationString, Qualifications:QualificationString})
             
             
             /*
@@ -279,6 +289,7 @@
             =// Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
             ForAll(ComboBoxSkill.SelectedItems, Collect(SkillsCollection, {Skill: Value}));
             Reset(ComboBoxSkill);
+        Size: =12
         Text: ="Add Skill(s)"
         Width: =120
         X: =515
@@ -374,8 +385,9 @@
             =Collect(Qualifications, {Qualification: ComboBoxQual.Selected.Value});
             Reset(ComboBoxQual);
         Size: =12
-        Text: ="Add Qualification"
-        X: =1155
+        Text: ="Add Qualification(s)"
+        Width: =172
+        X: =1149
         Y: =501
         ZIndex: =20
 
@@ -399,7 +411,7 @@
 
         Label5 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.DegreeType & " " & ThisItem.Course
+            Text: =ThisItem.DegreeType & " " & ThisItem.Course & ", " & ThisItem.University
             Width: =504
             X: =64
             ZIndex: =2
@@ -407,7 +419,7 @@
         Icon5_1 As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
-            OnSelect: =Remove(SkillsCollection, ThisItem)
+            OnSelect: =Remove(Education, ThisItem)
             X: =567
             Y: =5
             ZIndex: =3
@@ -472,4 +484,16 @@
             X: =546
             Y: =4
             ZIndex: =3
+
+    Label3 As label:
+        Text: ="Text"
+        X: =40
+        Y: =40
+        ZIndex: =25
+
+    Label8 As label:
+        Text: ="Text"
+        X: =60
+        Y: =60
+        ZIndex: =26
 
