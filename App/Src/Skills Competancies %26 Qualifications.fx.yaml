@@ -178,7 +178,6 @@
             Choices([@'CV Generator'].'Microsoft Profile')
         SearchFields: =["Claims"]
         SearchItems: =Choices('CV Generator'.'Microsoft Profile','Microsoft Profile'.SearchText)
-        Visible: =false
         X: =931
         Y: =25
         ZIndex: =12
@@ -403,7 +402,7 @@
 
         Label5 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.DegreeType & " " & ThisItem.Course
+            Text: =ThisItem.DegreeType & " " & ThisItem.Course & ", " & ThisItem.University
             Width: =504
             X: =64
             ZIndex: =2
@@ -476,4 +475,16 @@
             X: =546
             Y: =4
             ZIndex: =3
+
+    Label3 As label:
+        Text: ="Text"
+        X: =40
+        Y: =40
+        ZIndex: =25
+
+    Label8 As label:
+        Text: ="Text"
+        X: =60
+        Y: =60
+        ZIndex: =26
 
