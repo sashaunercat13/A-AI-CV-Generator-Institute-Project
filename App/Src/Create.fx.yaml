@@ -122,7 +122,7 @@ Create As screen:
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
-        Default: =
+        Default: ="false"
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
         Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
