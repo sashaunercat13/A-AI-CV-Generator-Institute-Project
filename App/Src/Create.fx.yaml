@@ -93,7 +93,7 @@ Create As screen:
     Button1_1 As button:
         DisplayMode: |
             = If(
-                IsBlank(RoleTitle.Selected)Or IsBlank('Profile box'.Text) Or IsBlank(Interests.Text), 
+                IsBlank(RoleTitle.Selected.Value)Or IsBlank('Profile box'.Text) Or IsBlank(Interests.Text), 
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
@@ -264,4 +264,11 @@ Create As screen:
         X: =38
         Y: =17
         ZIndex: =27
+
+    Label9 As label:
+        Font: =Font.Verdana
+        Text: ="Your Team "
+        X: =709
+        Y: =144
+        ZIndex: =28
 
