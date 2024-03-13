@@ -116,8 +116,11 @@
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
             =Navigate('Profesional Experience') ;
-            // Convert collection to a string to save to a single column in List
-            Set(SkillString, Concat(SkillsCollection, Skill & ","));
+            // Convert collections to strings to save to a single column in List
+            Set(SkillString, Concat(SkillsCollection, Skill & ", "));
+            //Set(EducationString, Concat(Education, University & ", "));
+            //Set(Qualification, Concat(Qualifications, Skill & ", "));
+            
             Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { Skills: SkillString })
             
             
@@ -408,7 +411,7 @@
         Icon5_1 As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
-            OnSelect: =Remove(SkillsCollection, ThisItem)
+            OnSelect: =Remove(Education, ThisItem)
             X: =567
             Y: =5
             ZIndex: =3
