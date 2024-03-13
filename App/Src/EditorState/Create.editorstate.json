@@ -5234,13 +5234,19 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Default",
-        "AllowEmptySelection",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "false",
-          "InvariantPropertyName": "OnChange",
+          "InvariantPropertyName": "AllowEmptySelection",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -5268,7 +5274,7 @@
         {
           "Category": "Data",
           "PropertyName": "Default",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -5474,11 +5480,6 @@
           "Category": "Design",
           "PropertyName": "SelectionColor",
           "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Behavior",
-          "PropertyName": "OnChange",
-          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultDropdownStyle",
