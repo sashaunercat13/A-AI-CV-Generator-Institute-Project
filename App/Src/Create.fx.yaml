@@ -93,7 +93,7 @@ Create As screen:
     Button1_1 As button:
         DisplayMode: |
             = If(
-                IsBlank(RoleTitle.Selected) Or IsBlank('Profile box'.Text) Or IsBlank(Interests.Text), 
+                IsBlank(RoleTitle.Selected)Or IsBlank('Profile box'.Text) Or IsBlank(Interests.Text), 
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
@@ -125,7 +125,7 @@ Create As screen:
         Default: ="false"
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
-        Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        Items: =["","Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
         OnChange: =
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
