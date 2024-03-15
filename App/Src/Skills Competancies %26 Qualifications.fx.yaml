@@ -10,11 +10,29 @@
         Clear(SkillsCollection);
         Clear(Qualifications)
 
+    Button4 As button:
+        BorderColor: =RGBA(18, 171, 219, 1)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 112, 173, 1)
+        DisabledFill: =RGBA(215, 223, 240, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =562
+        RadiusBottomLeft: =15  
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Text: =""
+        Width: =640
+        X: =20
+        Y: =135
+        ZIndex: =1
+
     Rectangle2 As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =116
         Width: =1366
-        ZIndex: =1
+        ZIndex: =2
 
     Button4_2 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
@@ -32,24 +50,6 @@
         Width: =640
         X: =687
         Y: =440
-        ZIndex: =2
-
-    Button4 As button:
-        BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(215, 223, 240, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =562
-        RadiusBottomLeft: =15  
-        RadiusBottomRight: =15
-        RadiusTopLeft: =15
-        RadiusTopRight: =15
-        Text: =""
-        Width: =640
-        X: =20
-        Y: =135
         ZIndex: =3
 
     Button4_1 As button:
