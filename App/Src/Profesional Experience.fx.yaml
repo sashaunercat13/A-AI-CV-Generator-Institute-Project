@@ -157,7 +157,7 @@
             Y: =79
             ZIndex: =8
 
-        "'1ProjectRole_10' As combobox":
+        "'10ProjectRole' As combobox":
             DisplayFields: =["Value"]
             Font: =Font.Verdana
             Height: =38
@@ -247,14 +247,14 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
-                ,'1ProjectRole_10'.SearchText,"Value")
+                ,'10ProjectRole'.SearchText,"Value")
             SelectMultiple: =false
             Width: =212
             X: =699
             Y: =16
             ZIndex: =9
 
-        "'1ProjectClient_10' As combobox":
+        "'10ProjectClient' As combobox":
             DisplayFields: =["Value"]
             FocusedBorderThickness: |
                 =4
@@ -314,18 +314,18 @@
                 "DfE (Department for Education)",
                 "DEFRA (Department for Environment, Food and Rural Affairs)",
                 "Driver and Vehicle Standards Agency (DVSA)"
-                ],'1ProjectClient_10'.SearchText,"Value")
+                ],'10ProjectClient'.SearchText,"Value")
             SelectMultiple: =false
             Width: =213
             X: =470
             Y: =14
             ZIndex: =10
 
-        "'1ProjectTitle_10' As text":
+        "'10ProjectTitle' As text":
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '1ProjectTitle_10'.Text) 
+            OnChange: =Set(Project1ButtonText, '10ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
@@ -460,7 +460,7 @@
             Y: =79
             ZIndex: =8
 
-        "'1ProjectRole_9' As combobox":
+        "'9ProjectRole' As combobox":
             DisplayFields: =["Value"]
             Font: =Font.Verdana
             Height: =38
@@ -550,14 +550,14 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
-                ,'1ProjectRole_9'.SearchText,"Value")
+                ,'9ProjectRole'.SearchText,"Value")
             SelectMultiple: =false
             Width: =212
             X: =699
             Y: =16
             ZIndex: =9
 
-        "'1ProjectClient_9' As combobox":
+        "'9ProjectClient' As combobox":
             DisplayFields: =["Value"]
             FocusedBorderThickness: |
                 =4
@@ -617,18 +617,18 @@
                 "DfE (Department for Education)",
                 "DEFRA (Department for Environment, Food and Rural Affairs)",
                 "Driver and Vehicle Standards Agency (DVSA)"
-                ],'1ProjectClient_9'.SearchText,"Value")
+                ],'9ProjectClient'.SearchText,"Value")
             SelectMultiple: =false
             Width: =213
             X: =470
             Y: =14
             ZIndex: =10
 
-        "'1ProjectTitle_9' As text":
+        "'9ProjectTitle' As text":
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '1ProjectTitle_9'.Text) 
+            OnChange: =Set(Project1ButtonText, '9ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
@@ -763,7 +763,7 @@
             Y: =79
             ZIndex: =8
 
-        "'1ProjectRole_2' As combobox":
+        "'8ProjectRole' As combobox":
             DisplayFields: =["Value"]
             Font: =Font.Verdana
             Height: =38
@@ -853,14 +853,14 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
-                ,'1ProjectRole_2'.SearchText,"Value")
+                ,'8ProjectRole'.SearchText,"Value")
             SelectMultiple: =false
             Width: =212
             X: =699
             Y: =16
             ZIndex: =9
 
-        "'1ProjectClient_2' As combobox":
+        "'8ProjectClient' As combobox":
             DisplayFields: =["Value"]
             FocusedBorderThickness: |
                 =4
@@ -920,18 +920,18 @@
                 "DfE (Department for Education)",
                 "DEFRA (Department for Environment, Food and Rural Affairs)",
                 "Driver and Vehicle Standards Agency (DVSA)"
-                ],'1ProjectClient_2'.SearchText,"Value")
+                ],'8ProjectClient'.SearchText,"Value")
             SelectMultiple: =false
             Width: =213
             X: =470
             Y: =14
             ZIndex: =10
 
-        "'1ProjectTitle_2' As text":
+        "'8ProjectTitle' As text":
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '1ProjectTitle_2'.Text) 
+            OnChange: =Set(Project1ButtonText, '8ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
@@ -1066,7 +1066,7 @@
             Y: =79
             ZIndex: =8
 
-        "'1ProjectRole_3' As combobox":
+        "'7ProjectRole' As combobox":
             DisplayFields: =["Value"]
             Font: =Font.Verdana
             Height: =38
@@ -1156,14 +1156,14 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
-                ,'1ProjectRole_3'.SearchText,"Value")
+                ,'7ProjectRole'.SearchText,"Value")
             SelectMultiple: =false
             Width: =212
             X: =699
             Y: =16
             ZIndex: =9
 
-        "'1ProjectClient_3' As combobox":
+        "'7ProjectClient' As combobox":
             DisplayFields: =["Value"]
             FocusedBorderThickness: |
                 =4
@@ -1223,18 +1223,18 @@
                 "DfE (Department for Education)",
                 "DEFRA (Department for Environment, Food and Rural Affairs)",
                 "Driver and Vehicle Standards Agency (DVSA)"
-                ],'1ProjectClient_3'.SearchText,"Value")
+                ],'7ProjectClient'.SearchText,"Value")
             SelectMultiple: =false
             Width: =213
             X: =470
             Y: =14
             ZIndex: =10
 
-        "'1ProjectTitle_3' As text":
+        "'7ProjectTitle' As text":
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '1ProjectTitle_3'.Text) 
+            OnChange: =Set(Project1ButtonText, '7ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
@@ -1369,7 +1369,7 @@
             Y: =79
             ZIndex: =8
 
-        "'1ProjectRole_4' As combobox":
+        "'6ProjectRole' As combobox":
             DisplayFields: =["Value"]
             Font: =Font.Verdana
             Height: =38
@@ -1459,14 +1459,14 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
-                ,'1ProjectRole_4'.SearchText,"Value")
+                ,'6ProjectRole'.SearchText,"Value")
             SelectMultiple: =false
             Width: =212
             X: =699
             Y: =16
             ZIndex: =9
 
-        "'1ProjectClient_4' As combobox":
+        "'6ProjectClient' As combobox":
             DisplayFields: =["Value"]
             FocusedBorderThickness: |
                 =4
@@ -1526,18 +1526,18 @@
                 "DfE (Department for Education)",
                 "DEFRA (Department for Environment, Food and Rural Affairs)",
                 "Driver and Vehicle Standards Agency (DVSA)"
-                ],'1ProjectClient_4'.SearchText,"Value")
+                ],'6ProjectClient'.SearchText,"Value")
             SelectMultiple: =false
             Width: =213
             X: =470
             Y: =14
             ZIndex: =10
 
-        "'1ProjectTitle_4' As text":
+        "'6ProjectTitle' As text":
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '1ProjectTitle_4'.Text) 
+            OnChange: =Set(Project1ButtonText, '6ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
@@ -1672,7 +1672,7 @@
             Y: =79
             ZIndex: =8
 
-        "'1ProjectRole_5' As combobox":
+        "'5ProjectRole' As combobox":
             DisplayFields: =["Value"]
             Font: =Font.Verdana
             Height: =38
@@ -1762,14 +1762,14 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
-                ,'1ProjectRole_5'.SearchText,"Value")
+                ,'5ProjectRole'.SearchText,"Value")
             SelectMultiple: =false
             Width: =212
             X: =699
             Y: =16
             ZIndex: =9
 
-        "'1ProjectClient_5' As combobox":
+        "'5ProjectClient' As combobox":
             DisplayFields: =["Value"]
             FocusedBorderThickness: |
                 =4
@@ -1829,18 +1829,18 @@
                 "DfE (Department for Education)",
                 "DEFRA (Department for Environment, Food and Rural Affairs)",
                 "Driver and Vehicle Standards Agency (DVSA)"
-                ],'1ProjectClient_5'.SearchText,"Value")
+                ],'5ProjectClient'.SearchText,"Value")
             SelectMultiple: =false
             Width: =213
             X: =470
             Y: =14
             ZIndex: =10
 
-        "'1ProjectTitle_5' As text":
+        "'5ProjectTitle' As text":
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '1ProjectTitle_5'.Text) 
+            OnChange: =Set(Project1ButtonText, '5ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
@@ -1975,7 +1975,7 @@
             Y: =79
             ZIndex: =8
 
-        "'1ProjectRole_6' As combobox":
+        "'4ProjectRole' As combobox":
             DisplayFields: =["Value"]
             Font: =Font.Verdana
             Height: =38
@@ -2065,14 +2065,14 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
-                ,'1ProjectRole_6'.SearchText,"Value")
+                ,'4ProjectRole'.SearchText,"Value")
             SelectMultiple: =false
             Width: =212
             X: =699
             Y: =16
             ZIndex: =9
 
-        "'1ProjectClient_6' As combobox":
+        "'4ProjectClient' As combobox":
             DisplayFields: =["Value"]
             FocusedBorderThickness: |
                 =4
@@ -2132,18 +2132,18 @@
                 "DfE (Department for Education)",
                 "DEFRA (Department for Environment, Food and Rural Affairs)",
                 "Driver and Vehicle Standards Agency (DVSA)"
-                ],'1ProjectClient_6'.SearchText,"Value")
+                ],'4ProjectClient'.SearchText,"Value")
             SelectMultiple: =false
             Width: =213
             X: =470
             Y: =14
             ZIndex: =10
 
-        "'1ProjectTitle_6' As text":
+        "'4ProjectTitle' As text":
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '1ProjectTitle_6'.Text) 
+            OnChange: =Set(Project1ButtonText, '4ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
@@ -2204,7 +2204,7 @@
         Y: =145
         ZIndex: =14
 
-        "'1ProjectDescription_7' As text":
+        "'3ProjectDescription' As text":
             Default: =""
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -2214,7 +2214,7 @@
             Y: =286
             ZIndex: =1
 
-        "'Label-Project dates_6' As label":
+        "'Label-Project dates3' As label":
             Font: =Font.Verdana
             Height: =33
             Size: =20
@@ -2224,7 +2224,7 @@
             Y: =150
             ZIndex: =6
 
-        "'Checkbox - Current Project_6' As checkbox":
+        "'Checkbox - Current Project3' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
             OnCheck: =Set(CurrentProject,false) 
@@ -2236,7 +2236,7 @@
             Y: =74
             ZIndex: =7
 
-        "'1ProjectManager_6' As combobox":
+        "'3ProjectManager' As combobox":
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -2268,7 +2268,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_6'.SearchText)
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','3ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -2278,7 +2278,7 @@
             Y: =79
             ZIndex: =8
 
-        "'1ProjectRole_7' As combobox":
+        "'3ProjectRole' As combobox":
             DisplayFields: =["Value"]
             Font: =Font.Verdana
             Height: =38
@@ -2368,14 +2368,14 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
-                ,'1ProjectRole_7'.SearchText,"Value")
+                ,'3ProjectRole'.SearchText,"Value")
             SelectMultiple: =false
             Width: =212
             X: =699
             Y: =16
             ZIndex: =9
 
-        "'1ProjectClient_7' As combobox":
+        "'3ProjectClient' As combobox":
             DisplayFields: =["Value"]
             FocusedBorderThickness: |
                 =4
@@ -2435,31 +2435,31 @@
                 "DfE (Department for Education)",
                 "DEFRA (Department for Environment, Food and Rural Affairs)",
                 "Driver and Vehicle Standards Agency (DVSA)"
-                ],'1ProjectClient_7'.SearchText,"Value")
+                ],'3ProjectClient'.SearchText,"Value")
             SelectMultiple: =false
             Width: =213
             X: =470
             Y: =14
             ZIndex: =10
 
-        "'1ProjectTitle_7' As text":
+        "'3ProjectTitle' As text":
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '1ProjectTitle_7'.Text) 
+            OnChange: =Set(Project3ButtonText, '3ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
             ZIndex: =11
 
-        "'Label&DatePicker - Start_6' As group":
+        "'Label&DatePicker - Start3' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectStartDate_7' As datepicker":
+            "'3ProjectStartDate' As datepicker":
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -2467,21 +2467,21 @@
                 Y: =232
                 ZIndex: =2
 
-            "'Label-StartDate_6' As label":
+            "'Label-StartDate3' As label":
                 Font: =Font.Verdana
                 Text: ="Start date"
                 X: =40
                 Y: =195
                 ZIndex: =4
 
-        "'Label&DatePicker - End_6' As group":
+        "'Label&DatePicker - End3' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_7' As datepicker":
+            "'3ProjectEndDate' As datepicker":
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -2491,7 +2491,7 @@
                 Y: =232
                 ZIndex: =3
 
-            "'Label-EndDate_6' As label":
+            "'Label-EndDate3' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
                 Visible: =CurrentProject
@@ -2507,7 +2507,7 @@
         Y: =145
         ZIndex: =15
 
-        "'1ProjectDescription_8' As text":
+        "'2ProjectDescription' As text":
             Default: =""
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -2517,7 +2517,7 @@
             Y: =286
             ZIndex: =1
 
-        "'Label-Project dates_7' As label":
+        "'Label-Project dates2' As label":
             Font: =Font.Verdana
             Height: =33
             Size: =20
@@ -2527,7 +2527,7 @@
             Y: =150
             ZIndex: =6
 
-        "'Checkbox - Current Project_7' As checkbox":
+        "'Checkbox - Current Project2' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
             OnCheck: =Set(CurrentProject,false) 
@@ -2539,7 +2539,7 @@
             Y: =74
             ZIndex: =7
 
-        "'1ProjectManager_7' As combobox":
+        "'2ProjectManager' As combobox":
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -2571,7 +2571,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_7'.SearchText)
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','2ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -2581,7 +2581,7 @@
             Y: =79
             ZIndex: =8
 
-        "'1ProjectRole_8' As combobox":
+        "'2ProjectRole' As combobox":
             DisplayFields: =["Value"]
             Font: =Font.Verdana
             Height: =38
@@ -2671,14 +2671,14 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
-                ,'1ProjectRole_8'.SearchText,"Value")
+                ,'2ProjectRole'.SearchText,"Value")
             SelectMultiple: =false
             Width: =212
             X: =699
             Y: =16
             ZIndex: =9
 
-        "'1ProjectClient_8' As combobox":
+        "'2ProjectClient' As combobox":
             DisplayFields: =["Value"]
             FocusedBorderThickness: |
                 =4
@@ -2738,31 +2738,31 @@
                 "DfE (Department for Education)",
                 "DEFRA (Department for Environment, Food and Rural Affairs)",
                 "Driver and Vehicle Standards Agency (DVSA)"
-                ],'1ProjectClient_8'.SearchText,"Value")
+                ],'2ProjectClient'.SearchText,"Value")
             SelectMultiple: =false
             Width: =213
             X: =470
             Y: =14
             ZIndex: =10
 
-        "'1ProjectTitle_8' As text":
+        "'2ProjectTitle' As text":
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '1ProjectTitle_8'.Text) 
+            OnChange: =Set(Project2ButtonText, '2ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
             ZIndex: =11
 
-        "'Label&DatePicker - Start_7' As group":
+        "'Label&DatePicker - Start2' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectStartDate_8' As datepicker":
+            "'2ProjectStartDate' As datepicker":
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -2770,21 +2770,21 @@
                 Y: =232
                 ZIndex: =2
 
-            "'Label-StartDate_7' As label":
+            "'Label-StartDate2' As label":
                 Font: =Font.Verdana
                 Text: ="Start date"
                 X: =40
                 Y: =195
                 ZIndex: =4
 
-        "'Label&DatePicker - End_7' As group":
+        "'Label&DatePicker - End2' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_8' As datepicker":
+            "'2ProjectEndDate' As datepicker":
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -2794,7 +2794,7 @@
                 Y: =232
                 ZIndex: =3
 
-            "'Label-EndDate_7' As label":
+            "'Label-EndDate2' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
                 Visible: =CurrentProject
