@@ -142,11 +142,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','10ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
@@ -445,11 +445,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','9ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
@@ -748,11 +748,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','8ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
@@ -1051,11 +1051,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','7ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
@@ -1354,11 +1354,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','6ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
@@ -1657,11 +1657,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','5ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
@@ -1960,11 +1960,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','4ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
@@ -2263,11 +2263,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','3ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
@@ -2566,11 +2566,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','2ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
@@ -2869,11 +2869,11 @@
                         Email: User().Email
                 
                     } 
-            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager'.SearchText)
             SelectMultiple: |
                 =false

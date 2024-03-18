@@ -182,41 +182,37 @@ Search As screen:
             ZIndex: =2
 
     ButtonFilterCVs_1 As button:
-        OnSelect: |-
+        OnSelect: |
             =Clear(FinalFilteredCVs); // Clear the collection to start fresh
             
-            // Collect CVs that have any of the selected skills
+            // Conditional logic to handle both skills and qualifications
             If(
-                IsEmpty(ComboBoxSkillSearch_1.SelectedItems),
+                IsEmpty(ComboBoxSkillSearch_1.SelectedItems) && IsEmpty(ComboBoxQualSearch_1.SelectedItems),
                 Collect(FinalFilteredCVs, 'CV Generator'),
                 Collect(
                     FinalFilteredCVs,
                     Filter(
                         'CV Generator',
-                        CountIf(
-                            ComboBoxSkillSearch_1.SelectedItems,
-                            !IsBlank(Find(Text(Title), SkillsString))
-                        ) > 0
+                        // Skill filter - only apply if there are selected skills
+                        (IsEmpty(ComboBoxSkillSearch_1.SelectedItems) || 
+                            CountIf(
+                                ComboBoxSkillSearch_1.SelectedItems,
+                                !IsBlank(Find(Text(Title), SkillsString))
+                            ) > 0),
+                        // Qualification filter - only apply if there are selected qualifications
+                        (IsEmpty(ComboBoxQualSearch_1.SelectedItems) || 
+                            CountIf(
+                                ComboBoxQualSearch_1.SelectedItems,
+                                !IsBlank(Find(Text(Title), QualificationsString))
+                            ) > 0),
+                        (IsEmpty(ComboBoxRole_1.SelectedItems) || 'Role Title' in ComboBoxRole_1.SelectedItems),
+                        // Apply Security Clearance SC filter based on checkbox
+                        (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
+                        // Apply Security Clearance BPSS filter based on checkbox
+                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
                     )
                 )
             );
-            
-            
-            
-            
-            /*
-            Clear(FinalFilteredCVs);
-            Collect(FinalFilteredCVs, 
-                Filter(
-                'Example CVs V3',
-                //(IsEmpty(ComboBoxRole.SelectedItems) || 'Role Title' in ComboBoxRole.SelectedItems),
-                (IsEmpty(ComboBoxQualSearch.SelectedItems) || ID in Filter(
-                        'Example Qualifications',
-                        QualificationID in ComboBoxQualSearch.SelectedItems.ID
-                    ).CVID)
-                )
-            );
-            */
         Text: |-
             ="Search
             "
@@ -242,8 +238,8 @@ Search As screen:
             DisplayFields: =["Title"]
             InputTextPlaceholder: ="Filter skills"
             Items: =SkillsCollection
-            SearchFields: =["Skill"]
-            SearchItems: =Search(SkillsCollection,ComboBoxSkillSearch_1.SearchText,"Skill")
+            SearchFields: =["Title"]
+            SearchItems: =Search(SkillsCollection,ComboBoxSkillSearch_1.SearchText,"Title")
             X: =130
             Y: =260
             ZIndex: =6
