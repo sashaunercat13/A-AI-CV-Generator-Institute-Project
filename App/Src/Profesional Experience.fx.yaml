@@ -83,7 +83,7 @@
         Y: =145
         ZIndex: =7
 
-        "'1ProjectDescription_10' As text":
+        "'10ProjectDescription' As text":
             Default: =""
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -93,7 +93,7 @@
             Y: =286
             ZIndex: =1
 
-        "'Label-Project dates_9' As label":
+        "'Label-Project dates10' As label":
             Font: =Font.Verdana
             Height: =33
             Size: =20
@@ -103,7 +103,7 @@
             Y: =150
             ZIndex: =6
 
-        "'Checkbox - Current Project_9' As checkbox":
+        "'Checkbox - Current Project10' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
             OnCheck: =Set(CurrentProject,false) 
@@ -115,7 +115,7 @@
             Y: =74
             ZIndex: =7
 
-        "'1ProjectManager_9' As combobox":
+        "'10ProjectManager' As combobox":
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -147,7 +147,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_9'.SearchText)
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','10ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -325,20 +325,20 @@
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '10ProjectTitle'.Text) 
+            OnChange: =Set(Project10ButtonText, '10ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
             ZIndex: =11
 
-        "'Label&DatePicker - Start_9' As group":
+        "'Label&DatePicker - Start10' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectStartDate_10' As datepicker":
+            "'10ProjectStartDate' As datepicker":
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -346,21 +346,21 @@
                 Y: =232
                 ZIndex: =2
 
-            "'Label-StartDate_9' As label":
+            "'Label-StartDate10' As label":
                 Font: =Font.Verdana
                 Text: ="Start date"
                 X: =40
                 Y: =195
                 ZIndex: =4
 
-        "'Label&DatePicker - End_9' As group":
+        "'Label&DatePicker - End10' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_10' As datepicker":
+            "'10ProjectEndDate' As datepicker":
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -370,7 +370,7 @@
                 Y: =232
                 ZIndex: =3
 
-            "'Label-EndDate_9' As label":
+            "'Label-EndDate10' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
                 Visible: =CurrentProject
@@ -386,7 +386,7 @@
         Y: =145
         ZIndex: =8
 
-        "'1ProjectDescription_9' As text":
+        "'9ProjectDescription' As text":
             Default: =""
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -396,7 +396,7 @@
             Y: =286
             ZIndex: =1
 
-        "'Label-Project dates_8' As label":
+        "'Label-Project dates9' As label":
             Font: =Font.Verdana
             Height: =33
             Size: =20
@@ -406,7 +406,7 @@
             Y: =150
             ZIndex: =6
 
-        "'Checkbox - Current Project_8' As checkbox":
+        "'Checkbox - Current Project9' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
             OnCheck: =Set(CurrentProject,false) 
@@ -418,7 +418,7 @@
             Y: =74
             ZIndex: =7
 
-        "'1ProjectManager_8' As combobox":
+        "'9ProjectManager' As combobox":
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -450,7 +450,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_8'.SearchText)
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','9ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -628,20 +628,20 @@
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '9ProjectTitle'.Text) 
+            OnChange: =Set(Project9ButtonText, '9ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
             ZIndex: =11
 
-        "'Label&DatePicker - Start_8' As group":
+        "'Label&DatePicker - Start9' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectStartDate_9' As datepicker":
+            "'9ProjectStartDate' As datepicker":
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -649,21 +649,21 @@
                 Y: =232
                 ZIndex: =2
 
-            "'Label-StartDate_8' As label":
+            "'Label-StartDate9' As label":
                 Font: =Font.Verdana
                 Text: ="Start date"
                 X: =40
                 Y: =195
                 ZIndex: =4
 
-        "'Label&DatePicker - End_8' As group":
+        "'Label&DatePicker - End9' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_9' As datepicker":
+            "'9ProjectEndDate' As datepicker":
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -673,7 +673,7 @@
                 Y: =232
                 ZIndex: =3
 
-            "'Label-EndDate_8' As label":
+            "'Label-EndDate9' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
                 Visible: =CurrentProject
@@ -689,7 +689,7 @@
         Y: =145
         ZIndex: =9
 
-        "'1ProjectDescription_2' As text":
+        "'8ProjectDescription' As text":
             Default: =""
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -699,7 +699,7 @@
             Y: =286
             ZIndex: =1
 
-        "'Label-Project dates_1' As label":
+        "'Label-Project dates8' As label":
             Font: =Font.Verdana
             Height: =33
             Size: =20
@@ -709,7 +709,7 @@
             Y: =150
             ZIndex: =6
 
-        "'Checkbox - Current Project_1' As checkbox":
+        "'Checkbox - Current Project8' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
             OnCheck: =Set(CurrentProject,false) 
@@ -721,7 +721,7 @@
             Y: =74
             ZIndex: =7
 
-        "'1ProjectManager_1' As combobox":
+        "'8ProjectManager' As combobox":
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -753,7 +753,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_1'.SearchText)
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','8ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -931,20 +931,20 @@
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '8ProjectTitle'.Text) 
+            OnChange: =Set(Project8ButtonText, '8ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
             ZIndex: =11
 
-        "'Label&DatePicker - Start_1' As group":
+        "'Label&DatePicker - Start8' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectStartDate_2' As datepicker":
+            "'8ProjectStartDate' As datepicker":
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -952,21 +952,21 @@
                 Y: =232
                 ZIndex: =2
 
-            "'Label-StartDate_1' As label":
+            "'Label-StartDate8' As label":
                 Font: =Font.Verdana
                 Text: ="Start date"
                 X: =40
                 Y: =195
                 ZIndex: =4
 
-        "'Label&DatePicker - End_1' As group":
+        "'Label&DatePicker - End8' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_2' As datepicker":
+            "'8ProjectEndDate' As datepicker":
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -976,7 +976,7 @@
                 Y: =232
                 ZIndex: =3
 
-            "'Label-EndDate_1' As label":
+            "'Label-EndDate8' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
                 Visible: =CurrentProject
@@ -992,7 +992,7 @@
         Y: =145
         ZIndex: =10
 
-        "'1ProjectDescription_3' As text":
+        "'7ProjectDescription' As text":
             Default: =""
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -1002,7 +1002,7 @@
             Y: =286
             ZIndex: =1
 
-        "'Label-Project dates_2' As label":
+        "'Label-Project dates7' As label":
             Font: =Font.Verdana
             Height: =33
             Size: =20
@@ -1012,7 +1012,7 @@
             Y: =150
             ZIndex: =6
 
-        "'Checkbox - Current Project_2' As checkbox":
+        "'Checkbox - Current Project7' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
             OnCheck: =Set(CurrentProject,false) 
@@ -1024,7 +1024,7 @@
             Y: =74
             ZIndex: =7
 
-        "'1ProjectManager_2' As combobox":
+        "'7ProjectManager' As combobox":
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -1056,7 +1056,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_2'.SearchText)
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','7ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -1234,20 +1234,20 @@
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '7ProjectTitle'.Text) 
+            OnChange: =Set(Project7ButtonText, '7ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
             ZIndex: =11
 
-        "'Label&DatePicker - Start_2' As group":
+        "'Label&DatePicker - Start7' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectStartDate_3' As datepicker":
+            "'7ProjectStartDate' As datepicker":
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -1255,21 +1255,21 @@
                 Y: =232
                 ZIndex: =2
 
-            "'Label-StartDate_2' As label":
+            "'Label-StartDate7' As label":
                 Font: =Font.Verdana
                 Text: ="Start date"
                 X: =40
                 Y: =195
                 ZIndex: =4
 
-        "'Label&DatePicker - End_2' As group":
+        "'Label&DatePicker - End7' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_3' As datepicker":
+            "'7ProjectEndDate' As datepicker":
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -1279,7 +1279,7 @@
                 Y: =232
                 ZIndex: =3
 
-            "'Label-EndDate_2' As label":
+            "'Label-EndDate7' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
                 Visible: =CurrentProject
@@ -1295,7 +1295,7 @@
         Y: =145
         ZIndex: =11
 
-        "'1ProjectDescription_4' As text":
+        "'6ProjectDescription' As text":
             Default: =""
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -1305,7 +1305,7 @@
             Y: =286
             ZIndex: =1
 
-        "'Label-Project dates_3' As label":
+        "'Label-Project dates6' As label":
             Font: =Font.Verdana
             Height: =33
             Size: =20
@@ -1315,7 +1315,7 @@
             Y: =150
             ZIndex: =6
 
-        "'Checkbox - Current Project_3' As checkbox":
+        "'Checkbox - Current Project6' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
             OnCheck: =Set(CurrentProject,false) 
@@ -1327,7 +1327,7 @@
             Y: =74
             ZIndex: =7
 
-        "'1ProjectManager_3' As combobox":
+        "'6ProjectManager' As combobox":
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -1359,7 +1359,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_3'.SearchText)
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','6ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -1537,20 +1537,20 @@
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '6ProjectTitle'.Text) 
+            OnChange: =Set(Project6ButtonText, '6ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
             ZIndex: =11
 
-        "'Label&DatePicker - Start_3' As group":
+        "'Label&DatePicker - Start6' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectStartDate_4' As datepicker":
+            "'6ProjectStartDate' As datepicker":
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -1558,21 +1558,21 @@
                 Y: =232
                 ZIndex: =2
 
-            "'Label-StartDate_3' As label":
+            "'Label-StartDate6' As label":
                 Font: =Font.Verdana
                 Text: ="Start date"
                 X: =40
                 Y: =195
                 ZIndex: =4
 
-        "'Label&DatePicker - End_3' As group":
+        "'Label&DatePicker - End6' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_4' As datepicker":
+            "'6ProjectEndDate' As datepicker":
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -1582,7 +1582,7 @@
                 Y: =232
                 ZIndex: =3
 
-            "'Label-EndDate_3' As label":
+            "'Label-EndDate6' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
                 Visible: =CurrentProject
@@ -1598,7 +1598,7 @@
         Y: =145
         ZIndex: =12
 
-        "'1ProjectDescription_5' As text":
+        "'5ProjectDescription' As text":
             Default: =""
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -1608,7 +1608,7 @@
             Y: =286
             ZIndex: =1
 
-        "'Label-Project dates_4' As label":
+        "'Label-Project dates5' As label":
             Font: =Font.Verdana
             Height: =33
             Size: =20
@@ -1618,7 +1618,7 @@
             Y: =150
             ZIndex: =6
 
-        "'Checkbox - Current Project_4' As checkbox":
+        "'Checkbox - Current Project5' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
             OnCheck: =Set(CurrentProject,false) 
@@ -1630,7 +1630,7 @@
             Y: =74
             ZIndex: =7
 
-        "'1ProjectManager_4' As combobox":
+        "'5ProjectManager' As combobox":
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -1662,7 +1662,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_4'.SearchText)
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','5ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -1840,20 +1840,20 @@
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '5ProjectTitle'.Text) 
+            OnChange: =Set(Project5ButtonText, '5ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
             ZIndex: =11
 
-        "'Label&DatePicker - Start_4' As group":
+        "'Label&DatePicker - Start5' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectStartDate_5' As datepicker":
+            "'5ProjectStartDate' As datepicker":
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -1861,21 +1861,21 @@
                 Y: =232
                 ZIndex: =2
 
-            "'Label-StartDate_4' As label":
+            "'Label-StartDate5' As label":
                 Font: =Font.Verdana
                 Text: ="Start date"
                 X: =40
                 Y: =195
                 ZIndex: =4
 
-        "'Label&DatePicker - End_4' As group":
+        "'Label&DatePicker - End5' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_5' As datepicker":
+            "'5ProjectEndDate' As datepicker":
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -1885,7 +1885,7 @@
                 Y: =232
                 ZIndex: =3
 
-            "'Label-EndDate_4' As label":
+            "'Label-EndDate5' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
                 Visible: =CurrentProject
@@ -1901,7 +1901,7 @@
         Y: =145
         ZIndex: =13
 
-        "'1ProjectDescription_6' As text":
+        "'4ProjectDescription' As text":
             Default: =""
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -1911,7 +1911,7 @@
             Y: =286
             ZIndex: =1
 
-        "'Label-Project dates_5' As label":
+        "'Label-Project dates4' As label":
             Font: =Font.Verdana
             Height: =33
             Size: =20
@@ -1921,7 +1921,7 @@
             Y: =150
             ZIndex: =6
 
-        "'Checkbox - Current Project_5' As checkbox":
+        "'Checkbox - Current Project4' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
             OnCheck: =Set(CurrentProject,false) 
@@ -1933,7 +1933,7 @@
             Y: =74
             ZIndex: =7
 
-        "'1ProjectManager_5' As combobox":
+        "'4ProjectManager' As combobox":
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -1965,7 +1965,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_5'.SearchText)
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','4ProjectManager'.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -2143,20 +2143,20 @@
             Default: =""
             Font: =Font.Verdana
             HintText: ="Project Title"
-            OnChange: =Set(Project1ButtonText, '4ProjectTitle'.Text) 
+            OnChange: =Set(Project4ButtonText, '4ProjectTitle'.Text) 
             Width: =414
             X: =40
             Y: =14
             ZIndex: =11
 
-        "'Label&DatePicker - Start_5' As group":
+        "'Label&DatePicker - Start4' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectStartDate_6' As datepicker":
+            "'4ProjectStartDate' As datepicker":
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -2164,21 +2164,21 @@
                 Y: =232
                 ZIndex: =2
 
-            "'Label-StartDate_5' As label":
+            "'Label-StartDate4' As label":
                 Font: =Font.Verdana
                 Text: ="Start date"
                 X: =40
                 Y: =195
                 ZIndex: =4
 
-        "'Label&DatePicker - End_5' As group":
+        "'Label&DatePicker - End4' As group":
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_6' As datepicker":
+            "'4ProjectEndDate' As datepicker":
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -2188,7 +2188,7 @@
                 Y: =232
                 ZIndex: =3
 
-            "'Label-EndDate_5' As label":
+            "'Label-EndDate4' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
                 Visible: =CurrentProject
