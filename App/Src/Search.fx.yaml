@@ -190,7 +190,7 @@ Search As screen:
             
             // Conditional logic to handle both skills and qualifications
             If(
-                IsEmpty(ComboBoxSkillSearch_1.SelectedItems) && IsEmpty(ComboBoxQualSearch_1.SelectedItems) && IsEmpty(ComboBoxRole_1.SelectedItems),
+                IsEmpty(ComboBoxSkillSearch_1.SelectedItems) && IsEmpty(ComboBoxQualSearch_1.SelectedItems) && IsEmpty(ComboBoxRole_1.SelectedItems) && !SCcheckedSearch && !BPSScheckedSearch,
                 Collect(FinalFilteredCVs, 'CV Generator'),
                 Collect(
                     FinalFilteredCVs,
@@ -208,8 +208,7 @@ Search As screen:
                                 ComboBoxQualSearch_1.SelectedItems,
                                 !IsBlank(Find(Text(Title), QualificationsString))
                             ) > 0),
-                        (IsEmpty(ComboBoxRole_1.SelectedItems) || 
-                            'Role Title' in ComboBoxRole_1.SelectedItems),
+                        (IsEmpty(ComboBoxRole_1.SelectedItems) || 'Role Title' in ComboBoxRole_1.SelectedItems),
                         // Apply Security Clearance SC filter based on checkbox
                         (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox

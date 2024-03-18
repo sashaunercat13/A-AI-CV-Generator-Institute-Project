@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 145,
-                  "charOffset": 547,
+                  "charOffset": 589,
                   "snippet": {
                     "text": "CountIf(\n                    ComboBoxSkillSearch_1.SelectedItems,\n                    !IsBlank(Find(Text(Title), SkillsString))\n                )"
                   }
@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 693,
+                  "charOffset": 735,
                   "snippet": {
                     "text": ">"
                   }
@@ -104,7 +104,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 527,
+                  "charOffset": 569,
                   "snippet": {
                     "text": "||"
                   }
