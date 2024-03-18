@@ -1,6 +1,9 @@
 Search As screen:
     OnVisible: |-
-        =ClearCollect(SkillsCollection, 
+        =Clear(FinalFilteredCVs);
+        Collect(FinalFilteredCVs, 'CV Generator');
+        
+        ClearCollect(SkillsCollection, 
             //{Title: "Agile Concepts", ID: 1},
             {Title: "AWS", ID: 2},
             {Title: "Azure", ID: 3},
@@ -187,7 +190,7 @@ Search As screen:
             
             // Conditional logic to handle both skills and qualifications
             If(
-                IsEmpty(ComboBoxSkillSearch_1.SelectedItems) && IsEmpty(ComboBoxQualSearch_1.SelectedItems),
+                IsEmpty(ComboBoxSkillSearch_1.SelectedItems) && IsEmpty(ComboBoxQualSearch_1.SelectedItems) && IsEmpty(ComboBoxRole_1.SelectedItems),
                 Collect(FinalFilteredCVs, 'CV Generator'),
                 Collect(
                     FinalFilteredCVs,
@@ -206,11 +209,11 @@ Search As screen:
                                 !IsBlank(Find(Text(Title), QualificationsString))
                             ) > 0),
                         (IsEmpty(ComboBoxRole_1.SelectedItems) || 
-                            'Role Title' in ComboBoxRole_1.SelectedItems.Value)
+                            'Role Title' in ComboBoxRole_1.SelectedItems),
                         // Apply Security Clearance SC filter based on checkbox
-                        //(!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
+                        (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox
-                        //(!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
+                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
                     )
                 )
             );
