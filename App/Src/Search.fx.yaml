@@ -205,7 +205,8 @@ Search As screen:
                                 ComboBoxQualSearch_1.SelectedItems,
                                 !IsBlank(Find(Text(Title), QualificationsString))
                             ) > 0),
-                        (IsEmpty(ComboBoxRole_1.SelectedItems) || 'Role Title' in ComboBoxRole_1.SelectedItems)
+                        (IsEmpty(ComboBoxRole_1.SelectedItems) || 
+                            'Role Title' in ComboBoxRole_1.SelectedItems.Value)
                         // Apply Security Clearance SC filter based on checkbox
                         //(!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox
