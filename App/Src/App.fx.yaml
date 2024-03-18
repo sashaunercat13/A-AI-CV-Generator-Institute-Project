@@ -1,5 +1,17 @@
 App As appinfo:
     BackEnabled: =true
+    OnStart: |
+        =/*// Initialize context variables for each container
+        UpdateContext({ ShowExperience1: false });
+        UpdateContext({ ShowExperience2: false });
+        UpdateContext({ ShowExperience3: false });
+        UpdateContext({ ShowExperience4: false });
+        UpdateContext({ ShowExperience5: false });
+        UpdateContext({ ShowExperience6: false });
+        UpdateContext({ ShowExperience7: false });
+        UpdateContext({ ShowExperience8: false });
+        UpdateContext({ ShowExperience9: false });
+        UpdateContext({ ShowExperience10: false });*/
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
