@@ -3136,7 +3136,8 @@
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false});UpdateContext({Container5Visible:false});UpdateContext({Container6Visible:false});UpdateContext({Container7Visible:true});UpdateContext({Container8Visible:false});UpdateContext({Container9Visible:false});UpdateContext({Container10Visible:false})
         Size: =12
-        Text: ="Project 7"
+        Text: =Project7ButtonText
+        Visible: =false
         Width: =252
         X: =133
         Y: =511
@@ -3151,7 +3152,8 @@
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false});UpdateContext({Container5Visible:true});UpdateContext({Container6Visible:false});UpdateContext({Container7Visible:false});UpdateContext({Container8Visible:false});UpdateContext({Container9Visible:false});UpdateContext({Container10Visible:false})
         Size: =12
-        Text: ="Project 5"
+        Text: =Project5ButtonText
+        Visible: =false
         Width: =252
         X: =133
         Y: =417
@@ -3166,7 +3168,8 @@
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false});UpdateContext({Container5Visible:false});UpdateContext({Container6Visible:true});UpdateContext({Container7Visible:false});UpdateContext({Container8Visible:false});UpdateContext({Container9Visible:false});UpdateContext({Container10Visible:false})
         Size: =12
-        Text: ="Project 6"
+        Text: =Project6ButtonText
+        Visible: =false
         Width: =252
         X: =133
         Y: =464
@@ -3181,7 +3184,8 @@
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false});UpdateContext({Container5Visible:false});UpdateContext({Container6Visible:false});UpdateContext({Container7Visible:false});UpdateContext({Container8Visible:true});UpdateContext({Container9Visible:false});UpdateContext({Container10Visible:false})
         Size: =12
-        Text: ="Project 8"
+        Text: =Project8ButtonText
+        Visible: =false
         Width: =252
         X: =133
         Y: =558
@@ -3196,7 +3200,8 @@
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false});UpdateContext({Container5Visible:false});UpdateContext({Container6Visible:false});UpdateContext({Container7Visible:false});UpdateContext({Container8Visible:false});UpdateContext({Container9Visible:true});UpdateContext({Container10Visible:false})
         Size: =12
-        Text: ="Project 9"
+        Text: =Project9ButtonText
+        Visible: =false
         Width: =252
         X: =133
         Y: =605
@@ -3207,11 +3212,13 @@
         Color: =RGBA(0, 112, 173, 1)
         Fill: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
+        FontWeight: =FontWeight.Normal
         Height: =37
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false});UpdateContext({Container5Visible:false});UpdateContext({Container6Visible:false});UpdateContext({Container7Visible:false});UpdateContext({Container8Visible:false});UpdateContext({Container9Visible:false});UpdateContext({Container10Visible:true})
         Size: =12
-        Text: ="Project 10"
+        Text: =Project10ButtonText
+        Visible: =false
         Width: =252
         X: =133
         Y: =657
@@ -3226,7 +3233,8 @@
         OnSelect: |-
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:true});UpdateContext({Container5Visible:false});UpdateContext({Container6Visible:false});UpdateContext({Container7Visible:false});UpdateContext({Container8Visible:false});UpdateContext({Container9Visible:false});UpdateContext({Container10Visible:false})
         Size: =12
-        Text: ="Project 4"
+        Text: =Project4ButtonText
+        Visible: =false
         Width: =252
         X: =133
         Y: =370
@@ -3242,6 +3250,7 @@
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:true});UpdateContext({Container4Visible:false});UpdateContext({Container5Visible:false});UpdateContext({Container6Visible:false});UpdateContext({Container7Visible:false});UpdateContext({Container8Visible:false});UpdateContext({Container9Visible:false});UpdateContext({Container10Visible:false})
         Size: =12
         Text: =Project3ButtonText
+        Visible: =false
         Width: =252
         X: =133
         Y: =323
@@ -3257,6 +3266,7 @@
             =UpdateContext({ContainerVisible:false}); UpdateContext({Container2Visible:true}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false});UpdateContext({Container5Visible:false});UpdateContext({Container6Visible:false});UpdateContext({Container7Visible:false});UpdateContext({Container8Visible:false});UpdateContext({Container9Visible:false});UpdateContext({Container10Visible:false})
         Size: =12
         Text: =Project2ButtonText
+        Visible: =false
         Width: =252
         X: =133
         Y: =276
@@ -3269,11 +3279,37 @@
         Font: =Font.Verdana
         Height: =37
         OnSelect: |-
-            =UpdateContext({ContainerVisible:true}); UpdateContext({Container2Visible:false}); UpdateContext({Container3Visible:false});UpdateContext({Container4Visible:false});UpdateContext({Container5Visible:false});UpdateContext({Container6Visible:false});UpdateContext({Container7Visible:false});UpdateContext({Container8Visible:false});UpdateContext({Container9Visible:false});UpdateContext({Container10Visible:false})
+            =UpdateContext({ContainerVisible: true});
+            UpdateContext({Container2Visible: false});
+            UpdateContext({Container3Visible: false});
+            UpdateContext({Container4Visible: false});
+            UpdateContext({Container5Visible: false});
+            UpdateContext({Container6Visible: false});
+            UpdateContext({Container7Visible: false});
+            UpdateContext({Container8Visible: false});
+            UpdateContext({Container9Visible: false});
+            UpdateContext({Container10Visible: false})
         Size: =12
         Text: =Project1ButtonText
         Width: =252
         X: =133
         Y: =229
         ZIndex: =27
+
+    Button1 As button:
+        OnSelect: |-
+            =/*UpdateContext({ ShowExperience1: !ShowExperience1 });
+            UpdateContext({ ShowExperience2: !ShowExperience2 });
+            UpdateContext({ ShowExperience3: !ShowExperience3 });
+            UpdateContext({ ShowExperience4: !ShowExperience4 });
+            UpdateContext({ ShowExperience5: !ShowExperience5 });
+            UpdateContext({ ShowExperience6: !ShowExperience6 });
+            UpdateContext({ ShowExperience7: !ShowExperience7 });
+            UpdateContext({ ShowExperience8: !ShowExperience8 });
+            UpdateContext({ ShowExperience9: !ShowExperience9 });
+            UpdateContext({ ShowExperience10: !ShowExperience10 });*/
+        Text: ="Add Project "
+        X: =986
+        Y: =699
+        ZIndex: =28
 
