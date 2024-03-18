@@ -1,35 +1,231 @@
 Search As screen:
 
-    Gallery4 As gallery.galleryVertical:
-        DelayItemLoading: =true
-        Items: ='CV Generator'
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =153
-        X: =40
-        Y: =40
+    "'(Disabled Button) - blue background side panel_1' As button":
+        DisabledBorderColor: =RGBA(51, 51, 51, 1)
+        DisabledColor: =RGBA(51, 51, 51, 1)
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =562
+        HoverBorderColor: =
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =
+        OnSelect: =
+        PressedBorderColor: =
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =
+        Text: =""
+        Width: =367
+        X: =110
+        Y: =185
         ZIndex: =1
 
-        Image5 As image:
-            Image: =ThisItem.Photo
+    "'Rectangle - blue top panel_1' As rectangle":
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =116
+        Width: =1366
+        Y: =40
+        ZIndex: =2
+
+    "'Label - Professional Experience_1' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =39
+        Size: =24
+        Text: ="Search CVs"
+        Width: =790
+        X: =164
+        Y: =77
+        ZIndex: =3
+
+    "'Label-Project Overview title_1' As label":
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Size: =20
+        Text: ="Filter"
+        Width: =283
+        X: =151
+        Y: =188
+        ZIndex: =4
+
+    GalleryFilteredCVs_1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =504
+        Items: =FinalFilteredCVs
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =75
+        Width: =822
+        X: =532
+        Y: =188
+        ZIndex: =5
+
+        Label9_3 As label:
+            Height: =53
             OnSelect: =Select(Parent)
-            X: =35
-            Y: =25
+            Text: |-
+                =ThisItem.'First Name' & " " & ThisItem.'Last Name' & ", " & ThisItem.'Role Title'
+                // ThisItem.Photo & " " &
+                //& ThisItem.SkillID & " " & " " & LookUp('Example Skills', ThisId=ThisItem.SkillID).Title 
+            Width: =482
+            X: =148
             ZIndex: =1
 
-        Label10 As label:
-            Height: =41
+        Image1_1 As image:
+            Height: =75
+            Image: =ThisItem.Photo
             OnSelect: =Select(Parent)
-            Text: =ThisItem.'First Name' & " " & ThisItem.'Last Name' & ", " & ThisItem.'Role Title'
-            Width: =442
-            X: =152
-            Y: =55
+            X: =15
             ZIndex: =2
 
-    ComboBoxSkills As combobox:
-        Items: =ComboBoxSample
-        SearchItems: =Search(ComboBoxSample,ComboBoxSkills.SearchText,"Value1")
-        X: =910
-        Y: =105
-        ZIndex: =2
+    ButtonFilterCVs_1 As button:
+        OnSelect: |-
+            =Clear(FinalFilteredCVs); // Clear the collection to start fresh
+            
+            // Collect CVs that have any of the selected skills
+            Collect(
+                FinalFilteredCVs,
+                Filter(
+                    'CV Generator',
+                    Find(
+                        ComboBoxSkillSearch_1.SelectedItems,
+                        Concat(
+                            SkillString,
+                            Skill,
+                            ", "
+                        )
+                    )
+                )
+            );
+            
+            /*
+            Clear(FinalFilteredCVs);
+            Collect(FinalFilteredCVs, 
+                Filter(
+                'Example CVs V3',
+                //(IsEmpty(ComboBoxRole.SelectedItems) || 'Role Title' in ComboBoxRole.SelectedItems),
+                (IsEmpty(ComboBoxQualSearch.SelectedItems) || ID in Filter(
+                        'Example Qualifications',
+                        QualificationID in ComboBoxQualSearch.SelectedItems.ID
+                    ).CVID)
+                )
+            );
+            */
+        Text: |-
+            ="Search
+            "
+        X: =213
+        Y: =663
+        ZIndex: =10
+
+    Icon5_3 As icon.Search:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Search
+        X: =100
+        Y: =60
+        ZIndex: =15
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =60
+        ZIndex: =16
+
+        ComboBoxSkillSearch_1 As combobox:
+            DisplayFields: =["Skill"]
+            InputTextPlaceholder: ="Filter skills"
+            Items: =SkillsCollection
+            SearchFields: =["Skill"]
+            SearchItems: =Search(SkillsCollection,ComboBoxSkillSearch_1.SearchText,"Skill")
+            X: =130
+            Y: =260
+            ZIndex: =6
+
+        Label2_3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Text: ="Skills"
+            X: =130
+            Y: =220
+            ZIndex: =8
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =60
+        ZIndex: =17
+
+        ComboBoxRole_1 As combobox:
+            DisplayFields: =["Value"]
+            InputTextPlaceholder: ="Filter Role"
+            Items: =["Associate Consultant","Consultant", "Senior Consultant"]
+            SearchFields: =["Value"]
+            SearchItems: =Search(["Associate Consultant","Consultant", "Senior Consultant"],ComboBoxRole_1.SearchText,"Value")
+            X: =130
+            Y: =381
+            ZIndex: =7
+
+        Label2_4 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Text: ="Role"
+            X: =130
+            Y: =341
+            ZIndex: =9
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =60
+        ZIndex: =18
+
+        ComboBoxQualSearch_1 As combobox:
+            DisplayFields: =["Title"]
+            InputTextPlaceholder: ="Filter Qualifications"
+            Items: =QualificationsCollection
+            SearchFields: =["Title"]
+            SearchItems: =Search(QualificationsCollection,ComboBoxQualSearch_1.SearchText,"Title")
+            X: =129
+            Y: =502
+            ZIndex: =11
+
+        Label2_5 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Text: ="Qualifications"
+            X: =129
+            Y: =462
+            ZIndex: =12
+
+    Group4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =60
+        ZIndex: =19
+
+        Checkbox_BPSS_Search_1 As checkbox:
+            CheckboxSize: =30
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =40
+            OnCheck: =Set(BPSScheckedSearch,true)
+            OnUncheck: =Set(BPSScheckedSearch,false)
+            Text: ="BPSS"
+            Width: =121
+            X: =168
+            Y: =585
+            ZIndex: =13
+
+        Checkbox_SC_Search_1 As checkbox:
+            CheckboxSize: =30
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =40
+            OnCheck: =Set(SCcheckedSearch, true) 
+            OnUncheck: =Set(SCcheckedSearch, false) 
+            Text: ="SC"
+            Width: =121
+            X: =298
+            Y: =585
+            ZIndex: =14
 
