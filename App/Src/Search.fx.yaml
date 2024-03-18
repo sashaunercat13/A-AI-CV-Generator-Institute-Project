@@ -205,11 +205,11 @@ Search As screen:
                                 ComboBoxQualSearch_1.SelectedItems,
                                 !IsBlank(Find(Text(Title), QualificationsString))
                             ) > 0),
-                        (IsEmpty(ComboBoxRole_1.SelectedItems) || 'Role Title' in ComboBoxRole_1.SelectedItems),
+                        (IsEmpty(ComboBoxRole_1.SelectedItems) || 'Role Title' in ComboBoxRole_1.Selected.Value)
                         // Apply Security Clearance SC filter based on checkbox
-                        (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
+                        //(!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox
-                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
+                        //(!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
                     )
                 )
             );
@@ -264,6 +264,7 @@ Search As screen:
             Items: =["Associate Consultant","Consultant", "Senior Consultant"]
             SearchFields: =["Value"]
             SearchItems: =Search(["Associate Consultant","Consultant", "Senior Consultant"],ComboBoxRole_1.SearchText,"Value")
+            SelectMultiple: =false
             X: =130
             Y: =381
             ZIndex: =7
