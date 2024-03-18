@@ -128,7 +128,7 @@
             Set(EducationString, Concat(Education, DegreeType & ", " & University & ", " & Course & "; "));
             Set(QualificationString, Concat(Qualifications, Qualification & ", "));
             
-            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { Skills: SkillString, Education: EducationString, Qualifications:QualificationString})
+            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { SkillsString: SkillString, Education: EducationString, Qualifications:QualificationString})
             
             
             /*
