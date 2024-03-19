@@ -404,15 +404,3 @@
             Y: =4
             ZIndex: =3
 
-    Label3 As label:
-        Text: ="Text"
-        X: =40
-        Y: =40
-        ZIndex: =25
-
-    Label8 As label:
-        Text: ="Text"
-        X: =60
-        Y: =60
-        ZIndex: =26
-

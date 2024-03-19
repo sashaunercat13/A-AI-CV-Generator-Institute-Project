@@ -3,6 +3,10 @@ Search As screen:
         =Clear(FinalFilteredCVs);
         Collect(FinalFilteredCVs, 'CV Generator');
         
+        // Set checkboxes
+        Set(BPSScheckedSearch, false);
+        Set(SCcheckedSearch, false);
+        
         ClearCollect(SkillsCollection, 
             //{Title: "Agile Concepts", ID: 1},
             {Title: "AWS", ID: 2},
@@ -109,7 +113,7 @@ Search As screen:
         DisabledBorderColor: =RGBA(51, 51, 51, 1)
         DisabledColor: =RGBA(51, 51, 51, 1)
         Fill: =RGBA(39, 41, 54, 1)
-        Height: =562
+        Height: =594
         HoverBorderColor: =
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =
@@ -120,12 +124,12 @@ Search As screen:
         Text: =""
         Width: =367
         X: =110
-        Y: =185
+        Y: =152
         ZIndex: =1
 
     "'Rectangle - blue top panel_1' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
-        Height: =116
+        Height: =96
         Width: =1366
         Y: =40
         ZIndex: =2
@@ -142,35 +146,23 @@ Search As screen:
         Y: =77
         ZIndex: =3
 
-    "'Label-Project Overview title_1' As label":
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.Verdana
-        FontWeight: =FontWeight.Semibold
-        Size: =20
-        Text: ="Filter"
-        Width: =283
-        X: =151
-        Y: =188
-        ZIndex: =4
-
     GalleryFilteredCVs_1 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =504
+        Height: =397
         Items: =FinalFilteredCVs
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =75
-        Width: =822
-        X: =530
+        Width: =843
+        X: =508
         Y: =228
-        ZIndex: =5
+        ZIndex: =4
 
         Label9_3 As label:
             Height: =53
             OnSelect: =Select(Parent)
             Text: |-
-                =ThisItem.'First Name' & " " & ThisItem.'Last Name' & ", " & ThisItem.'Role Title'
+                =ThisItem.'First Name' & " " & ThisItem.'Last Name' & ", " & ThisItem.'Capability' & ", " & ThisItem.Hub
                 // ThisItem.Photo & " " &
                 //& ThisItem.SkillID & " " & " " & LookUp('Example Skills', ThisId=ThisItem.SkillID).Title 
             Width: =482
@@ -188,9 +180,17 @@ Search As screen:
         OnSelect: |
             =Clear(FinalFilteredCVs); // Clear the collection to start fresh
             
+            // Define variables for conditions
+            Set(varIsSkillsEmpty, IsEmpty(ComboBoxSkillSearch_1.SelectedItems));
+            Set(varIsQualificationsEmpty, IsEmpty(ComboBoxQualSearch_1.SelectedItems));
+            Set(varIsRoleEmpty, IsEmpty(ComboBoxRole_1.SelectedItems));
+            Set(varIsCapabilityEmpty, Len(DropdownCapabilitySearch.Selected.Value) = 0);
+            Set(varIsRadioHubsEmpty, Len(RadioHubsSearch.SelectedText.Value) = 0);
+            // Additional conditions can be set similarly
+            
             // Conditional logic to handle both skills and qualifications
             If(
-                IsEmpty(ComboBoxSkillSearch_1.SelectedItems) && IsEmpty(ComboBoxQualSearch_1.SelectedItems) && IsEmpty(ComboBoxRole_1.SelectedItems) && !SCcheckedSearch && !BPSScheckedSearch,
+                varIsSkillsEmpty && varIsQualificationsEmpty && varIsRoleEmpty && !SCcheckedSearch && !BPSScheckedSearch && varIsCapabilityEmpty && varIsRadioHubsEmpty,
                 Collect(FinalFilteredCVs, 'CV Generator'),
                 Collect(
                     FinalFilteredCVs,
@@ -212,7 +212,9 @@ Search As screen:
                         // Apply Security Clearance SC filter based on checkbox
                         (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox
-                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
+                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS')),
+                        //'Hub' = RadioHubsSearch.SelectedText.Value,
+                        'Capability' = DropdownCapabilitySearch.Selected.Value
                     )
                 )
             );
@@ -220,15 +222,44 @@ Search As screen:
             ="Search
             "
         X: =213
-        Y: =663
-        ZIndex: =10
+        Y: =687
+        ZIndex: =9
 
     Icon5_3 As icon.Search:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Search
         X: =100
         Y: =60
+        ZIndex: =14
+
+    Profile_1 As label:
+        Color: =RGBA(39, 41, 54, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =122
+        Size: =36
+        Text: ="Your Profile"
+        Visible: =false
+        Width: =397
+        X: =122
+        Y: =130
         ZIndex: =15
+
+    DropdownCapabilitySearch As dropdown:
+        ChevronBackground: =RGBA(215, 223, 240, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        Default: =""""""
+        Fill: =RGBA(215, 223, 240, 1)
+        Font: =Font.Verdana
+        Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        OnChange: =
+        SelectionColor: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(215, 223, 240, 1)
+        Size: =12
+        X: =129
+        Y: =212
+        ZIndex: =16
 
     Group2 As group:
         Height: =5
@@ -243,16 +274,32 @@ Search As screen:
             Items: =SkillsCollection
             SearchFields: =["Title"]
             SearchItems: =Search(SkillsCollection,ComboBoxSkillSearch_1.SearchText,"Title")
-            X: =130
-            Y: =260
-            ZIndex: =6
+            X: =129
+            Y: =424
+            ZIndex: =5
 
         Label2_3 As label:
             Color: =RGBA(255, 255, 255, 1)
             Text: ="Skills"
-            X: =130
-            Y: =220
-            ZIndex: =8
+            X: =129
+            Y: =384
+            ZIndex: =7
+
+    "'Primary Alignment_2' As dropdown":
+        ChevronBackground: =RGBA(215, 223, 240, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        Fill: =RGBA(215, 223, 240, 1)
+        Font: =Font.Verdana
+        Items: |
+            =["Primary Alignment","frog", "Intelligent Industry", "Corporate Experience", "W&O", "BT", "Analytics & AI", "Financial Service", "Manufacturing", "Automotive and Life Sciences", "Utilities & Energy", "TMTS", "Public Sector", "Consumer Products & Retail", "Sustainable Futures"]
+        SelectionColor: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(215, 223, 240, 1)
+        Size: =12
+        Visible: =false
+        X: =116
+        Y: =182
+        ZIndex: =17
 
     Group1 As group:
         Height: =5
@@ -268,16 +315,26 @@ Search As screen:
             SearchFields: =["Value"]
             SearchItems: =Search(["Associate Consultant","Consultant", "Senior Consultant"],ComboBoxRole_1.SearchText,"Value")
             SelectMultiple: =false
-            X: =130
-            Y: =381
-            ZIndex: =7
+            X: =129
+            Y: =500
+            ZIndex: =6
 
         Label2_4 As label:
             Color: =RGBA(255, 255, 255, 1)
             Text: ="Role"
-            X: =130
-            Y: =341
-            ZIndex: =9
+            X: =129
+            Y: =462
+            ZIndex: =8
+
+    Label9_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        Text: |-
+            ="Capability:"
+        Width: =334
+        X: =134
+        Y: =172
+        ZIndex: =18
 
     Group3 As group:
         Height: =5
@@ -293,15 +350,15 @@ Search As screen:
             SearchFields: =["Title"]
             SearchItems: =Search(QualificationsCollection,ComboBoxQualSearch_1.SearchText,"Title")
             X: =129
-            Y: =502
-            ZIndex: =11
+            Y: =580
+            ZIndex: =10
 
         Label2_5 As label:
             Color: =RGBA(255, 255, 255, 1)
             Text: ="Qualifications"
             X: =129
-            Y: =462
-            ZIndex: =12
+            Y: =540
+            ZIndex: =11
 
     Group4 As group:
         Height: =5
@@ -318,9 +375,9 @@ Search As screen:
             OnUncheck: =Set(BPSScheckedSearch,false)
             Text: ="BPSS"
             Width: =121
-            X: =168
-            Y: =585
-            ZIndex: =13
+            X: =174
+            Y: =633
+            ZIndex: =12
 
         Checkbox_SC_Search_1 As checkbox:
             CheckboxSize: =30
@@ -330,7 +387,57 @@ Search As screen:
             OnUncheck: =Set(SCcheckedSearch, false) 
             Text: ="SC"
             Width: =121
-            X: =298
-            Y: =585
-            ZIndex: =14
+            X: =304
+            Y: =633
+            ZIndex: =13
+
+    Label14 As label:
+        Color: =RGBA(141, 198, 63, 1)
+        Height: =223
+        Text: |-
+            ="Selected: " & DropdownCapabilitySearch.Selected.Value & " | Empty: " & Text(varIsCapabilityEmpty) & " | len: " & Len(Text(DropdownCapabilitySearch.Selected.Value))
+        Width: =628
+        X: =519
+        Y: =504
+        ZIndex: =21
+
+    Label16 As label:
+        Color: =RGBA(246, 88, 16, 1)
+        Height: =159
+        Text: |-
+            =RadioHubsSearch.SelectedText.Value & " | len: " & Len(Text(RadioHubsSearch.SelectedText.Value))
+        Width: =328
+        X: =996
+        Y: =540
+        ZIndex: =22
+
+    Group5_2 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =23
+
+        RadioHubsSearch As radio:
+            Color: =RGBA(255, 255, 255, 1)
+            HoverColor: =RGBA(219, 219, 219, 1)
+            Items: |-
+                =If(
+                    IsBlank(DropdownCapabilitySearch.Selected),
+                    [],
+                    LookUp(HubOptionSets, Capability = DropdownCapabilitySearch.Selected.Value).Options
+                )
+            Width: =371
+            X: =116
+            Y: =284
+            ZIndex: =19
+
+        Label11_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            Text: |-
+                ="Hub:"
+            X: =134
+            Y: =261
+            ZIndex: =20
 
