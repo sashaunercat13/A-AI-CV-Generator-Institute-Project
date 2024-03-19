@@ -1233,7 +1233,7 @@
                 },
                 "region": {
                   "charLength": 93,
-                  "charOffset": 121,
+                  "charOffset": 115,
                   "snippet": {
                     "text": "CountRows(Filter('CV Generator - Project Experience', Email = \"sasha.unercat@capgemini.com\"))"
                   }

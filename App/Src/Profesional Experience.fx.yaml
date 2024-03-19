@@ -3110,10 +3110,10 @@
                 =//Project counter
                 // look up the project list
                 //count the number of rows which have the user email
-                Set(counter, 
-                    CountRows(Filter('CV Generator - Project Experience', Email = "sasha.unercat@capgemini.com"))
-                )
+                Set(counter, CountRows(Filter('CV Generator - Project Experience', Email = "sasha.unercat@capgemini.com")))
+                
                 //Office365Users.MyProfile().Mail
+                //
             Text: ="count"
             X: =751
             Y: =74
@@ -3325,8 +3325,9 @@
         ZIndex: =28
 
     Label3 As label:
-        Text: =Text(counter)
-        X: =1161
-        Y: =274
+        Text: |-
+            ="Count: " & counter
+        X: =1138
+        Y: =276
         ZIndex: =29
 
