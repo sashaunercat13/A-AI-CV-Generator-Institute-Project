@@ -1,5 +1,5 @@
 "'Profesional Experience' As screen":
-    OnVisible: |+
+    OnVisible: |
         =Set(Project1ButtonText, "Project 1");
         Set(Project2ButtonText, "Project 2");
         Set(Project3ButtonText, "Project 3");
@@ -15,8 +15,6 @@
         UpdateContext({Container3Visible:false});
         UpdateContext({Container4Visible:false});
         UpdateContext({ContainerVisible:true});
-        
-        
 
     "'Rectangle - blue top panel' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
@@ -3108,7 +3106,7 @@
     "'Button-Submit' As button":
         OnSelect: |-
             =// Get the record associated with user
-            Patch('CV Generator', LookUp('CV Generator', Email = User().Email),
+            Patch('CV Generator - Project Experience', LookUp('CV Generator - Project Experience', Email = User().Email),
             
             // project 1
             {'1 Project Title': '1ProjectTitle'.Text,'1 Project Client': '1ProjectClient'.Selected.Value, '1 Project Role': '1ProjectRole'.Selected.Value,'1 Project Start Date': '1ProjectStartDate'.SelectedDate, '1 Project End Date':'1ProjectEndDate'.SelectedDate, '1 Project Description':'1ProjectDescription'.Text
@@ -3295,4 +3293,10 @@
         X: =133
         Y: =229
         ZIndex: =27
+
+    Button5 As button:
+        Text: ="Add project"
+        X: =1001
+        Y: =699
+        ZIndex: =28
 

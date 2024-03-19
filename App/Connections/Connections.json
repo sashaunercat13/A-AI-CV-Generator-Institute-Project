@@ -55,12 +55,16 @@
         "dataSources": {
           "CV Generator": {
             "tableName": "9a5658bb-2b3e-4b26-843b-910aa2c426be"
+          },
+          "CV Generator - Project Experience": {
+            "tableName": "73fb4c8f-0ca3-4d58-9c95-ff2318b97729"
           }
         }
       }
     },
     "dataSources": [
-      "CV Generator"
+      "CV Generator",
+      "CV Generator - Project Experience"
     ],
     "dependencies": {},
     "dependents": [],
