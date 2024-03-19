@@ -245,22 +245,6 @@ Search As screen:
         Y: =130
         ZIndex: =15
 
-    DropdownCapabilitySearch As dropdown:
-        ChevronBackground: =RGBA(215, 223, 240, 1)
-        ChevronFill: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 18, 107, 1)
-        Default: =""""""
-        Fill: =RGBA(215, 223, 240, 1)
-        Font: =Font.Verdana
-        Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
-        OnChange: =
-        SelectionColor: =RGBA(0, 18, 107, 1)
-        SelectionFill: =RGBA(215, 223, 240, 1)
-        Size: =12
-        X: =129
-        Y: =212
-        ZIndex: =16
-
     Group2 As group:
         Height: =5
         Width: =5
@@ -285,21 +269,21 @@ Search As screen:
             Y: =384
             ZIndex: =7
 
-    "'Primary Alignment_2' As dropdown":
+    DropdownCapabilitySearch As dropdown:
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
+        Default: =""""""
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
-        Items: |
-            =["Primary Alignment","frog", "Intelligent Industry", "Corporate Experience", "W&O", "BT", "Analytics & AI", "Financial Service", "Manufacturing", "Automotive and Life Sciences", "Utilities & Energy", "TMTS", "Public Sector", "Consumer Products & Retail", "Sustainable Futures"]
+        Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        OnChange: =
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
-        Visible: =false
-        X: =116
-        Y: =182
-        ZIndex: =17
+        X: =129
+        Y: =212
+        ZIndex: =16
 
     Group1 As group:
         Height: =5
@@ -326,15 +310,21 @@ Search As screen:
             Y: =462
             ZIndex: =8
 
-    Label9_1 As label:
-        Color: =RGBA(255, 255, 255, 1)
+    "'Primary Alignment_2' As dropdown":
+        ChevronBackground: =RGBA(215, 223, 240, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
-        Text: |-
-            ="Capability:"
-        Width: =334
-        X: =134
-        Y: =172
-        ZIndex: =18
+        Items: |
+            =["Primary Alignment","frog", "Intelligent Industry", "Corporate Experience", "W&O", "BT", "Analytics & AI", "Financial Service", "Manufacturing", "Automotive and Life Sciences", "Utilities & Energy", "TMTS", "Public Sector", "Consumer Products & Retail", "Sustainable Futures"]
+        SelectionColor: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(215, 223, 240, 1)
+        Size: =12
+        Visible: =false
+        X: =116
+        Y: =182
+        ZIndex: =17
 
     Group3 As group:
         Height: =5
@@ -359,6 +349,16 @@ Search As screen:
             X: =129
             Y: =540
             ZIndex: =11
+
+    Label9_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        Text: |-
+            ="Capability:"
+        Width: =334
+        X: =134
+        Y: =172
+        ZIndex: =18
 
     Group4 As group:
         Height: =5
