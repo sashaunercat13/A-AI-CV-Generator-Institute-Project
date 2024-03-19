@@ -102,7 +102,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 25,
+    "BindingErrorCount": 26,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -145,6 +145,7 @@
     "Update_Profesional Experience",
     "SuccessScreen",
     "Screen1",
-    "Search"
+    "Search",
+    "Screen2"
   ]
 }

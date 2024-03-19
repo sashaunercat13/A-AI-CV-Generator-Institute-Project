@@ -162,7 +162,7 @@ Search As screen:
             Height: =53
             OnSelect: =Select(Parent)
             Text: |-
-                =ThisItem.'First Name' & " " & ThisItem.'Last Name' & ", " & ThisItem.'Capability' & ", " & ThisItem.Hub
+                =ThisItem.'First Name' & " " & ThisItem.'Last Name' & ", " & ThisItem.Capability & ", " & ThisItem.Hub
                 // ThisItem.Photo & " " &
                 //& ThisItem.SkillID & " " & " " & LookUp('Example Skills', ThisId=ThisItem.SkillID).Title 
             Width: =482
@@ -212,9 +212,9 @@ Search As screen:
                         // Apply Security Clearance SC filter based on checkbox
                         (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox
-                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS')),
-                        //'Hub' = RadioHubsSearch.SelectedText.Value,
-                        'Capability' = DropdownCapabilitySearch.Selected.Value
+                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
+                        //'Hub' = RadioHubsSearch.SelectedText.Value
+                        //Capability = DropdownCapabilitySearch.Selected.Value
                     )
                 )
             );
@@ -245,6 +245,22 @@ Search As screen:
         Y: =130
         ZIndex: =15
 
+    DropdownCapabilitySearch As dropdown:
+        ChevronBackground: =RGBA(215, 223, 240, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        Default: =""""""
+        Fill: =RGBA(215, 223, 240, 1)
+        Font: =Font.Verdana
+        Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        OnChange: =
+        SelectionColor: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(215, 223, 240, 1)
+        Size: =12
+        X: =129
+        Y: =212
+        ZIndex: =16
+
     Group2 As group:
         Height: =5
         Width: =5
@@ -269,21 +285,21 @@ Search As screen:
             Y: =384
             ZIndex: =7
 
-    DropdownCapabilitySearch As dropdown:
+    "'Primary Alignment_2' As dropdown":
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
-        Default: =""""""
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
-        Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
-        OnChange: =
+        Items: |
+            =["Primary Alignment","frog", "Intelligent Industry", "Corporate Experience", "W&O", "BT", "Analytics & AI", "Financial Service", "Manufacturing", "Automotive and Life Sciences", "Utilities & Energy", "TMTS", "Public Sector", "Consumer Products & Retail", "Sustainable Futures"]
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
-        X: =129
-        Y: =212
-        ZIndex: =16
+        Visible: =false
+        X: =116
+        Y: =182
+        ZIndex: =17
 
     Group1 As group:
         Height: =5
@@ -310,21 +326,15 @@ Search As screen:
             Y: =462
             ZIndex: =8
 
-    "'Primary Alignment_2' As dropdown":
-        ChevronBackground: =RGBA(215, 223, 240, 1)
-        ChevronFill: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 18, 107, 1)
-        Fill: =RGBA(215, 223, 240, 1)
+    Label9_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
-        Items: |
-            =["Primary Alignment","frog", "Intelligent Industry", "Corporate Experience", "W&O", "BT", "Analytics & AI", "Financial Service", "Manufacturing", "Automotive and Life Sciences", "Utilities & Energy", "TMTS", "Public Sector", "Consumer Products & Retail", "Sustainable Futures"]
-        SelectionColor: =RGBA(0, 18, 107, 1)
-        SelectionFill: =RGBA(215, 223, 240, 1)
-        Size: =12
-        Visible: =false
-        X: =116
-        Y: =182
-        ZIndex: =17
+        Text: |-
+            ="Capability:"
+        Width: =334
+        X: =134
+        Y: =172
+        ZIndex: =18
 
     Group3 As group:
         Height: =5
@@ -349,16 +359,6 @@ Search As screen:
             X: =129
             Y: =540
             ZIndex: =11
-
-    Label9_1 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.Verdana
-        Text: |-
-            ="Capability:"
-        Width: =334
-        X: =134
-        Y: =172
-        ZIndex: =18
 
     Group4 As group:
         Height: =5
@@ -396,9 +396,10 @@ Search As screen:
         Height: =223
         Text: |-
             ="Selected: " & DropdownCapabilitySearch.Selected.Value & " | Empty: " & Text(varIsCapabilityEmpty) & " | len: " & Len(Text(DropdownCapabilitySearch.Selected.Value))
+        Visible: =false
         Width: =628
-        X: =519
-        Y: =504
+        X: =546
+        Y: =508
         ZIndex: =21
 
     Label16 As label:
@@ -406,6 +407,7 @@ Search As screen:
         Height: =159
         Text: |-
             =RadioHubsSearch.SelectedText.Value & " | len: " & Len(Text(RadioHubsSearch.SelectedText.Value))
+        Visible: =false
         Width: =328
         X: =996
         Y: =540

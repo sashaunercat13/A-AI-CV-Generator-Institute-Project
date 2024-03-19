@@ -12,6 +12,7 @@ App As appinfo:
         UpdateContext({ ShowExperience8: false });
         UpdateContext({ ShowExperience9: false });
         UpdateContext({ ShowExperience10: false });*/
+    StartScreen: =
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

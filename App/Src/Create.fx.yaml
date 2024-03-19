@@ -328,7 +328,7 @@ Create As screen:
             Text: ="BPSS"
             Width: =121
             X: =726
-            Y: =318
+            Y: =312
             ZIndex: =24
 
         Checkbox_SC As checkbox:
@@ -339,6 +339,6 @@ Create As screen:
             Text: ="SC"
             Width: =121
             X: =856
-            Y: =318
+            Y: =312
             ZIndex: =25
 

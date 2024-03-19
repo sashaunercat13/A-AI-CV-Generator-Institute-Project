@@ -125,10 +125,10 @@
             =Navigate('Profesional Experience') ;
             // Convert collections to strings to save to a single column in List
             Set(SkillsString, Concat(SkillsCollection, Skill & ", "));
+            //Set(QualificationsString, Concat(Qualifications, Qualification & ", "));
             Set(EducationString, Concat(Education, DegreeType & ", " & University & ", " & Course & "; "));
-            Set(QualificationsString, Concat(Qualifications, Qualification & ", "));
             
-            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { SkillsString: SkillsString, Education: EducationString, QualificationsString:QualificationsString})
+            //Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { SkillsString: SkillsString, Education: EducationString, QualificationsString:QualificationsString})
             
             
             /*
@@ -301,7 +301,8 @@
     AddSkill_2 As button:
         Height: =39
         OnSelect: |
-            =Collect(Qualifications, {Qualification: ComboBoxQual.Selected.Value});
+            =//Collect(Qualifications, {Qualification: ComboBoxQual.SelectedItems});
+            ForAll(ComboBoxQual.SelectedItems, Collect(QualificationsCollection, {Qualification: Value}));
             Reset(ComboBoxQual);
         Size: =12
         Text: ="Add Qualification(s)"

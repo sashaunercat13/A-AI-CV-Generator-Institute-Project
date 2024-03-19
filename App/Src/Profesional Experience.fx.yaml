@@ -3104,6 +3104,21 @@
                 Y: =195
                 ZIndex: =5
 
+        Button6 As button:
+            Fill: =RGBA(152, 208, 70, 1)
+            OnSelect: |-
+                =//Project counter
+                // look up the project list
+                //count the number of rows which have the user email
+                Set(counter, 
+                    CountRows(Filter('CV Generator - Project Experience', Email = "sasha.unercat@capgemini.com"))
+                )
+                //Office365Users.MyProfile().Mail
+            Text: ="count"
+            X: =751
+            Y: =74
+            ZIndex: =12
+
     "'Button-Submit' As button":
         OnSelect: |+
             =Patch('CV Generator - Project Experience', {Email: Office365Users.MyProfile().Mail,
@@ -3308,4 +3323,10 @@
         X: =1001
         Y: =699
         ZIndex: =28
+
+    Label3 As label:
+        Text: =Text(counter)
+        X: =1161
+        Y: =274
+        ZIndex: =29
 
