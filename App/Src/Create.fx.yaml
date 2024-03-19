@@ -111,6 +111,8 @@ Create As screen:
                             Picture: ""
                         }});
             
+                   
+            
             /* If(
                 BPSSchecked,  
                 Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance BPSS':true}), 

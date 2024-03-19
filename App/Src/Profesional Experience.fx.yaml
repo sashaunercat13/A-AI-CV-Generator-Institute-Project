@@ -2813,6 +2813,7 @@
             Height: =246
             HintText: ="Description (Max 600 characters) "
             MaxLength: =600
+            Mode: =TextMode.MultiLine
             Width: =848
             X: =40
             Y: =286
@@ -3104,20 +3105,28 @@
                 ZIndex: =5
 
     "'Button-Submit' As button":
-        OnSelect: |-
-            =// Get the record associated with user
-            Patch('CV Generator - Project Experience', LookUp('CV Generator - Project Experience', Email = User().Email),
+        OnSelect: |+
+            =Patch('CV Generator - Project Experience', {Email: Office365Users.MyProfile().Mail,
             
             // project 1
-            {'Project Title': '1ProjectTitle'.Text,'Project Client': '1ProjectClient'.Selected.Value, 'Project Role': '1ProjectRole'.Selected.Value,'Start Date': '1ProjectStartDate'.SelectedDate, 'End Date':'1ProjectEndDate'.SelectedDate, 'Project Description':'1ProjectDescription'.Text
+            'Project Title': '1ProjectTitle'.Text,'Project Client': '1ProjectClient'.Selected.Value, 'Project Role': '1ProjectRole'.Selected.Value,'Start Date': '1ProjectStartDate'.SelectedDate, 'End Date':'1ProjectEndDate'.SelectedDate, 'Project Description':'1ProjectDescription'.Text,
             
-            /* project 2
-            '2 Project Title': '2ProjectTitle'.Text, '2 Project Client': '2ProjectClient'.Text, '2 Project Role': '2ProjectClient'.Selected.Value, '2 Project Start Date': '2ProjectStartDate'.SelectedDate, '2 Project End Date':'2ProjectEndDate'.SelectedDate, '2 Project Description':'2ProjectDescription'.Text,
+             'Microsoft Profile': {
+                              Claims: Concatenate(
+                                "i:0#.f|membership|",
+                                User().Email
+                            ),
+                            Department: "",
+                            DisplayName: User().FullName,
+                            Email: User().Email,
+                            JobTitle: "",
+                            Picture: ""
+                        }});
             
-            //project 3
-            '3 Project Title': '3ProjectTitle'.Text, '3 Project Client': '3ProjectClient'.Text, '3 Project Role': '3ProjectRole'.Selected.Value, '3 Project Start Date': '3ProjectStartDate'.SelectedDate, '3 Project End Date':'3ProjectEndDate'.SelectedDate, '3 Project Description':'3ProjectDescription'.Text */
             
-            })
+            
+            
+            
         Text: |-
             ="Submit
             "
