@@ -3109,7 +3109,7 @@
             Patch('CV Generator - Project Experience', LookUp('CV Generator - Project Experience', Email = User().Email),
             
             // project 1
-            {'1 Project Title': '1ProjectTitle'.Text,'1 Project Client': '1ProjectClient'.Selected.Value, '1 Project Role': '1ProjectRole'.Selected.Value,'1 Project Start Date': '1ProjectStartDate'.SelectedDate, '1 Project End Date':'1ProjectEndDate'.SelectedDate, '1 Project Description':'1ProjectDescription'.Text
+            {'Project Title': '1ProjectTitle'.Text,'Project Client': '1ProjectClient'.Selected.Value, 'Project Role': '1ProjectRole'.Selected.Value,'Start Date': '1ProjectStartDate'.SelectedDate, 'End Date':'1ProjectEndDate'.SelectedDate, 'Project Description':'1ProjectDescription'.Text
             
             /* project 2
             '2 Project Title': '2ProjectTitle'.Text, '2 Project Client': '2ProjectClient'.Text, '2 Project Role': '2ProjectClient'.Selected.Value, '2 Project Start Date': '2ProjectStartDate'.SelectedDate, '2 Project End Date':'2ProjectEndDate'.SelectedDate, '2 Project Description':'2ProjectDescription'.Text,

@@ -143,10 +143,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1054,
+                  "charLength": 1026,
                   "charOffset": 39,
                   "snippet": {
-                    "text": "Patch('CV Generator - Project Experience', LookUp('CV Generator - Project Experience', Email = User().Email),\n\n// project 1\n{'1 Project Title': '1ProjectTitle'.Text,'1 Project Client': '1ProjectClient'.Selected.Value, '1 Project Role': '1ProjectRole'.Selected.Value,'1 Project Start Date': '1ProjectStartDate'.SelectedDate, '1 Project End Date':'1ProjectEndDate'.SelectedDate, '1 Project Description':'1ProjectDescription'.Text\n\n/* project 2\n'2 Project Title': '2ProjectTitle'.Text, '2 Project Client': '2ProjectClient'.Text, '2 Project Role': '2ProjectClient'.Selected.Value, '2 Project Start Date': '2ProjectStartDate'.SelectedDate, '2 Project End Date':'2ProjectEndDate'.SelectedDate, '2 Project Description':'2ProjectDescription'.Text,\n\n//project 3\n'3 Project Title': '3ProjectTitle'.Text, '3 Project Client': '3ProjectClient'.Text, '3 Project Role': '3ProjectRole'.Selected.Value, '3 Project Start Date': '3ProjectStartDate'.SelectedDate, '3 Project End Date':'3ProjectEndDate'.SelectedDate, '3 Project Description':'3ProjectDescription'.Text */\n\n})"
+                    "text": "Patch('CV Generator - Project Experience', LookUp('CV Generator - Project Experience', Email = User().Email),\n\n// project 1\n{'Project Title': '1ProjectTitle'.Text,'Project Client': '1ProjectClient'.Selected.Value, 'Project Role': '1ProjectRole'.Selected.Value,'Start Date': '1ProjectStartDate'.SelectedDate, 'End Date':'1ProjectEndDate'.SelectedDate, 'Project Description':'1ProjectDescription'.Text\n\n/* project 2\n'2 Project Title': '2ProjectTitle'.Text, '2 Project Client': '2ProjectClient'.Text, '2 Project Role': '2ProjectClient'.Selected.Value, '2 Project Start Date': '2ProjectStartDate'.SelectedDate, '2 Project End Date':'2ProjectEndDate'.SelectedDate, '2 Project Description':'2ProjectDescription'.Text,\n\n//project 3\n'3 Project Title': '3ProjectTitle'.Text, '3 Project Client': '3ProjectClient'.Text, '3 Project Role': '3ProjectRole'.Selected.Value, '3 Project Start Date': '3ProjectStartDate'.SelectedDate, '3 Project End Date':'3ProjectEndDate'.SelectedDate, '3 Project Description':'3ProjectDescription'.Text */\n\n})"
                   }
                 }
               },
@@ -183,10 +183,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 929,
+                  "charLength": 901,
                   "charOffset": 163,
                   "snippet": {
-                    "text": "{'1 Project Title': '1ProjectTitle'.Text,'1 Project Client': '1ProjectClient'.Selected.Value, '1 Project Role': '1ProjectRole'.Selected.Value,'1 Project Start Date': '1ProjectStartDate'.SelectedDate, '1 Project End Date':'1ProjectEndDate'.SelectedDate, '1 Project Description':'1ProjectDescription'.Text\n\n/* project 2\n'2 Project Title': '2ProjectTitle'.Text, '2 Project Client': '2ProjectClient'.Text, '2 Project Role': '2ProjectClient'.Selected.Value, '2 Project Start Date': '2ProjectStartDate'.SelectedDate, '2 Project End Date':'2ProjectEndDate'.SelectedDate, '2 Project Description':'2ProjectDescription'.Text,\n\n//project 3\n'3 Project Title': '3ProjectTitle'.Text, '3 Project Client': '3ProjectClient'.Text, '3 Project Role': '3ProjectRole'.Selected.Value, '3 Project Start Date': '3ProjectStartDate'.SelectedDate, '3 Project End Date':'3ProjectEndDate'.SelectedDate, '3 Project Description':'3ProjectDescription'.Text */\n\n}"
+                    "text": "{'Project Title': '1ProjectTitle'.Text,'Project Client': '1ProjectClient'.Selected.Value, 'Project Role': '1ProjectRole'.Selected.Value,'Start Date': '1ProjectStartDate'.SelectedDate, 'End Date':'1ProjectEndDate'.SelectedDate, 'Project Description':'1ProjectDescription'.Text\n\n/* project 2\n'2 Project Title': '2ProjectTitle'.Text, '2 Project Client': '2ProjectClient'.Text, '2 Project Role': '2ProjectClient'.Selected.Value, '2 Project Start Date': '2ProjectStartDate'.SelectedDate, '2 Project End Date':'2ProjectEndDate'.SelectedDate, '2 Project Description':'2ProjectDescription'.Text,\n\n//project 3\n'3 Project Title': '3ProjectTitle'.Text, '3 Project Client': '3ProjectClient'.Text, '3 Project Role': '3ProjectRole'.Selected.Value, '3 Project Start Date': '3ProjectStartDate'.SelectedDate, '3 Project End Date':'3ProjectEndDate'.SelectedDate, '3 Project Description':'3ProjectDescription'.Text */\n\n}"
                   }
                 }
               },
@@ -199,8 +199,8 @@
           ],
           "message": {
             "arguments": [
-              "1 Project Client",
-              "Project Client"
+              "End Date",
+              "End date"
             ],
             "id": "issue"
           },
