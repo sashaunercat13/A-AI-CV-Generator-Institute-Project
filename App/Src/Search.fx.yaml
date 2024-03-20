@@ -197,7 +197,16 @@ Search As screen:
                 Filter(
                     'CV Generator - Client/Industry',
                     Industry in ComboBoxIndustry.SelectedItems.Value
-                )
+                ).Client
+            );
+            
+            // Collect the emails of users who worked on a project with these clients
+            ClearCollect(
+                FilteredClientsInProjects,
+                Filter(
+                    'CV Generator - Project Experience',
+                    'Project Client' in FilteredClientsInIndustries
+                ).Email
             );
             
             // Define variables for conditions
@@ -490,7 +499,7 @@ Search As screen:
 
     Gallery5 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Items: =FilteredClientsInIndustries
+        Items: =FilteredClientsInProjects
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =95
@@ -501,8 +510,8 @@ Search As screen:
         Label18 As label:
             Height: =46
             OnSelect: =Select(Parent)
-            Text: =ThisItem.Test
-            Width: =261
+            Text: =ThisItem.Email
+            Width: =433
             X: =12
             Y: =24
             ZIndex: =1
@@ -517,7 +526,7 @@ Search As screen:
     ComboBoxIndustry As combobox:
         DisplayFields: =["Value"]
         Items: |
-            =["MALS","CPRD", "Govt", "FS", "ET&U", "TMTS", "Central Govt"]
+            =["MALS", "CPRD", "Govt", "FS", "ET&U", "TMTS"]
         SearchFields: =["Value"]
         SearchItems: |-
             =Search(["MALS","CPRD", "Govt", "FS", "ET&U", "TMTS", "Central Govt"]
