@@ -255,8 +255,8 @@ ProjectTest As screen:
                     {
                         Email: User().Email,
                         'Project Title': '1ProjectTitle_2'.Text,
-                        'Project Client': 'Dropdown3'.Selected.Value,
-                        'Project Role': 'Dropdown2'.Selected.Value,
+                        'Project Client': Dropdown3.Selected.Value,
+                        'Project Role': Dropdown2.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
                         'End Date': '1ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
@@ -279,8 +279,8 @@ ProjectTest As screen:
                     ),
                     {
                         'Project Title': '1ProjectTitle_2'.Text,
-                        'Project Client': 'Dropdown2'.Selected.Value,
-                        'Project Role': 'Dropdown3'.Selected.Value,
+                        'Project Client': Dropdown2.Selected.Value,
+                        'Project Role': Dropdown3.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
                         'End Date': '1ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,

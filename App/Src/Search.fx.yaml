@@ -540,3 +540,10 @@ Search As screen:
         Y: =7
         ZIndex: =28
 
+    Label14 As label:
+        Text: |-
+            ="# Rows: " & CountRows(Gallery5.AllItems)
+        X: =1074
+        Y: =706
+        ZIndex: =29
+
