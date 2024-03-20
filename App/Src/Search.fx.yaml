@@ -180,6 +180,8 @@ Search As screen:
             =Clear(FinalFilteredCVs); // Clear the collection to start fresh
             Clear(FilteredEmailsForClient);
             Clear(FilteredClientsInIndustries);
+            Clear(FilteredClientsInProjects);
+            Clear(emails);
             
             // Generate a collection of emails which have projects with the selected clients
             ClearCollect(
@@ -206,7 +208,14 @@ Search As screen:
                 Filter(
                     'CV Generator - Project Experience',
                     'Project Client' in FilteredClientsInIndustries
-                ).Email
+                )
+            );
+            
+            // make sure they are text
+            ClearCollect(emails,
+                ForAll('FilteredClientsInProjects', 
+                    {email: Text(Email)}
+                )
             );
             
             // Define variables for conditions
@@ -231,7 +240,11 @@ Search As screen:
                     FinalFilteredCVs,
                     Filter(
                         'CV Generator',
-                        // Skill filter - only apply if there are selected skills
+                        // Filter by the industries of the CVs projects
+                        //(IsEmpty(emails) || 
+                        Email="hhhh",
+                        //),
+                        // Skill filter - ony apply if there are selected skills
                         (IsEmpty(ComboBoxSkillSearch_1.SelectedItems) || 
                             CountIf(
                                 ComboBoxSkillSearch_1.SelectedItems,
@@ -243,12 +256,12 @@ Search As screen:
                                 ComboBoxQualSearch_1.SelectedItems,
                                 !IsBlank(Find(Text(Title), QualificationsString))
                             ) > 0),
+                        // Role Title filter - only apply if role title selected
                         (IsEmpty(ComboBoxRole_1.SelectedItems) || 'Role Title' in ComboBoxRole_1.SelectedItems),
                         // Apply Security Clearance SC filter based on checkbox
                         (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox
                         (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
-            
                         //(IsBlank(DropdownCapabilitySearch.Selected.Value) || Capability = Text(DropdownCapabilitySearch.Selected.Value))
                         //Hub = RadioHubsSearch.SelectedText.Value
                         
@@ -453,7 +466,10 @@ Search As screen:
         ZIndex: =22
 
     Label8 As label:
-        Text: =Text(IsBlank(DropdownCapabilitySearch.Selected.Value)) & " ..."
+        Height: =74
+        Text: |
+            =If(IsEmpty(emails), "The collection is empty", "The collection has data")
+        Width: =233
         X: =609
         Y: =625
         ZIndex: =23
@@ -499,7 +515,7 @@ Search As screen:
 
     Gallery5 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Items: =FilteredClientsInProjects
+        Items: =emails
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =95
@@ -510,7 +526,7 @@ Search As screen:
         Label18 As label:
             Height: =46
             OnSelect: =Select(Parent)
-            Text: =ThisItem.Email
+            Text: =ThisItem.email
             Width: =433
             X: =12
             Y: =24
