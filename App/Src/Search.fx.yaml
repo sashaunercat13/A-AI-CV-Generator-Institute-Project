@@ -195,9 +195,9 @@ Search As screen:
             ClearCollect(
                 FilteredClientsInIndustries,
                 Filter(
-                    'Client/Industry',
+                    'CV Generator - Client/Industry',
                     Industry in ComboBoxIndustry.SelectedItems.Value
-                ).Client
+                )
             );
             
             // Define variables for conditions
@@ -501,18 +501,16 @@ Search As screen:
         Label18 As label:
             Height: =46
             OnSelect: =Select(Parent)
-            Text: =ThisItem.'Industry (Client)'
+            Text: =ThisItem.Test
             Width: =261
             X: =12
             Y: =24
             ZIndex: =1
 
-        Label18_1 As label:
-            Height: =46
+        "Icon10 As icon.'3DPrinting'":
+            Icon: =Icon.Printing3D
             OnSelect: =Select(Parent)
-            Text: =ThisItem.'Client (Industry)'
-            Width: =261
-            X: =336
+            X: =540
             Y: =24
             ZIndex: =2
 

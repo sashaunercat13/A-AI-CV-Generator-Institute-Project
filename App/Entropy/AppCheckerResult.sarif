@@ -178,7 +178,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 571,
+                  "charOffset": 586,
                   "snippet": {
                     "text": "in"
                   }
@@ -218,7 +218,7 @@
                 },
                 "region": {
                   "charLength": 145,
-                  "charOffset": 1593,
+                  "charOffset": 1601,
                   "snippet": {
                     "text": "CountIf(\n                    ComboBoxSkillSearch_1.SelectedItems,\n                    !IsBlank(Find(Text(Title), SkillsString))\n                )"
                   }
@@ -258,7 +258,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1739,
+                  "charOffset": 1747,
                   "snippet": {
                     "text": ">"
                   }
@@ -298,7 +298,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1573,
+                  "charOffset": 1581,
                   "snippet": {
                     "text": "||"
                   }
@@ -1337,46 +1337,6 @@
           },
           "ruleId": "app-ErrTypeError-Arg-Expected-Found",
           "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Search.Gallery5.Label18_1.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Search.Gallery5.Label18_1.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 20,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".'Client (Industry)'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Search",
-                "type": "Search.Gallery5.Label18_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Client (Industry)"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
         },
         {
           "locations": [

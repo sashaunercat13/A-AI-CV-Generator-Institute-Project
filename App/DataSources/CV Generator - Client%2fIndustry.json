@@ -25,6 +25,7 @@
       "{VersionNumber}": "Version number",
       "Author": "Created By",
       "Author#Claims": "Created By Claims",
+      "bb": "bb",
       "Client": "Industry",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
@@ -33,7 +34,7 @@
       "ID": "ID",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
-      "Title": "Title"
+      "Title": "Test"
     },
     "DatasetName": "https://capgemini-my.sharepoint.com/personal/sasha_unercat_capgemini_com",
     "EncodeDataset": true,
