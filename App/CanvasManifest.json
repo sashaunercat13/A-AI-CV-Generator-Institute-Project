@@ -79,7 +79,7 @@
       "powerfxdecimal": false,
       "powerfxv1": false,
       "primaryoutputpropertycoerciondeprecated": true,
-      "projectionmapping": false,
+      "projectionmapping": true,
       "reactformulabar": true,
       "reliableconcurrent": true,
       "reservedkeywords": false,
