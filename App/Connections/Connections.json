@@ -37,6 +37,28 @@
     "dependents": [],
     "id": "6dfc64e3-2225-432e-945b-fa7298f7ceec"
   },
+  "a1f8889d-d323-4bb0-af94-99d7b2d80232": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/alexsp/sporelease/1.0.1682.3673/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://capgemini-my.sharepoint.com/personal/sasha_unercat_capgemini_com": {
+        "dataSources": {
+          "CV Generator - Project Experience": {
+            "tableName": "73fb4c8f-0ca3-4d58-9c95-ff2318b97729"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "CV Generator - Project Experience"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a1f8889d-d323-4bb0-af94-99d7b2d80232"
+  },
   "f820e0ef-89ca-4bff-93dc-c2e95c68d321": {
     "appActions": [
       "providers/PowerPlatform.Governance/Operations/Read",

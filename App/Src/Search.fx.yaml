@@ -219,7 +219,7 @@ Search As screen:
                         (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox
                         (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS')),
-                        (IsBlank(DropdownCapabilitySearch.Selected.Value) || 'Capability' = Text(DropdownCapabilitySearch.Selected.Value))
+                        (IsBlank(DropdownCapabilitySearch.Selected.Value) || Capability = Text(DropdownCapabilitySearch.Selected.Value))
                         //Hub = RadioHubsSearch.SelectedText.Value
                         
                     )
