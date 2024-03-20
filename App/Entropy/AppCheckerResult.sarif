@@ -138,7 +138,7 @@
                 },
                 "region": {
                   "charLength": 145,
-                  "charOffset": 1001,
+                  "charOffset": 1030,
                   "snippet": {
                     "text": "CountIf(\n                    ComboBoxSkillSearch_1.SelectedItems,\n                    !IsBlank(Find(Text(Title), SkillsString))\n                )"
                   }
@@ -178,7 +178,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1147,
+                  "charOffset": 1176,
                   "snippet": {
                     "text": ">"
                   }
@@ -218,7 +218,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 981,
+                  "charOffset": 1010,
                   "snippet": {
                     "text": "||"
                   }
@@ -5666,6 +5666,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Search.ComboBoxCapability.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Search.ComboBoxCapability.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Search",
+                "type": "Search.ComboBoxCapability"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varIsRadioHubsEmpty"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varIsRadioHubsEmpty",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varIsRadioHubsEmpty",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
         },
         {
           "locations": [

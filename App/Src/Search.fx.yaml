@@ -184,13 +184,19 @@ Search As screen:
             Set(varIsSkillsEmpty, IsEmpty(ComboBoxSkillSearch_1.SelectedItems));
             Set(varIsQualificationsEmpty, IsEmpty(ComboBoxQualSearch_1.SelectedItems));
             Set(varIsRoleEmpty, IsEmpty(ComboBoxRole_1.SelectedItems));
-            Set(varIsCapabilityEmpty, Len(DropdownCapabilitySearch.Selected.Value) = 0);
+            //Set(varIsCapabilityEmpty, Text(ComboBoxCapability.Selected.Value) = "All");
             Set(varIsRadioHubsEmpty, Len(RadioHubsSearch.SelectedText.Value) = 0);
             // Additional conditions can be set similarly
             
             // Conditional logic to handle both skills and qualifications
             If(
-                varIsSkillsEmpty && varIsQualificationsEmpty && varIsRoleEmpty && !SCcheckedSearch && !BPSScheckedSearch && varIsCapabilityEmpty && varIsRadioHubsEmpty,
+                varIsSkillsEmpty
+                && varIsQualificationsEmpty
+                && varIsRoleEmpty
+                && !SCcheckedSearch
+                && !BPSScheckedSearch,
+                //&& varIsCapabilityEmpty
+                //&& varIsRadioHubsEmpty
                 Collect(FinalFilteredCVs, 'CV Generator'),
                 Collect(
                     FinalFilteredCVs,
@@ -212,9 +218,10 @@ Search As screen:
                         // Apply Security Clearance SC filter based on checkbox
                         (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox
-                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
-                        //'Hub' = RadioHubsSearch.SelectedText.Value
-                        //Capability = DropdownCapabilitySearch.Selected.Value
+                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS')),
+                        (IsBlank(DropdownCapabilitySearch.Selected.Value) || 'Capability' = Text(DropdownCapabilitySearch.Selected.Value))
+                        //Hub = RadioHubsSearch.SelectedText.Value
+                        
                     )
                 )
             );
@@ -391,27 +398,27 @@ Search As screen:
             Y: =633
             ZIndex: =13
 
-    Label14 As label:
-        Color: =RGBA(141, 198, 63, 1)
-        Height: =223
-        Text: |-
-            ="Selected: " & DropdownCapabilitySearch.Selected.Value & " | Empty: " & Text(varIsCapabilityEmpty) & " | len: " & Len(Text(DropdownCapabilitySearch.Selected.Value))
-        Visible: =false
-        Width: =628
-        X: =546
-        Y: =508
-        ZIndex: =21
-
     Label16 As label:
         Color: =RGBA(246, 88, 16, 1)
         Height: =159
         Text: |-
             =RadioHubsSearch.SelectedText.Value & " | len: " & Len(Text(RadioHubsSearch.SelectedText.Value))
-        Visible: =false
         Width: =328
         X: =996
         Y: =540
         ZIndex: =22
+
+    ComboBoxCapability As combobox:
+        DisplayFields: =["Value"]
+        IsSearchable: =false
+        Items: =["All", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        SearchFields: =["Value"]
+        SearchItems: =Search(["All", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"],ComboBoxCapability.SearchText,"Value")
+        SelectMultiple: =false
+        Visible: =false
+        X: =985
+        Y: =190
+        ZIndex: =23
 
     Group5_2 As group:
         Height: =5
@@ -442,4 +449,10 @@ Search As screen:
             X: =134
             Y: =261
             ZIndex: =20
+
+    Label8 As label:
+        Text: =Text(IsBlank(DropdownCapabilitySearch.Selected.Value)) & " ..."
+        X: =609
+        Y: =625
+        ZIndex: =24
 
