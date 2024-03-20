@@ -1,0 +1,19 @@
+ProjectTest As screen:
+
+    Gallery4 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Items: ='CV Generator - Project Experience'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        Button8 As button:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Project Title'
+            X: =20
+            Y: =15
+            ZIndex: =1
+
