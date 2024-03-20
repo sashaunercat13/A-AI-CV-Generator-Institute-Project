@@ -59,6 +59,28 @@
     "dependents": [],
     "id": "a1f8889d-d323-4bb0-af94-99d7b2d80232"
   },
+  "f7962c18-93a0-47f2-b373-61748b339246": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/alexsp/sporelease/1.0.1682.3673/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://capgemini-my.sharepoint.com/personal/sasha_unercat_capgemini_com": {
+        "dataSources": {
+          "CV Generator - Client/Industry": {
+            "tableName": "b5f72da9-e6ec-41e4-bb56-4110de02237b"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "CV Generator - Client/Industry"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f7962c18-93a0-47f2-b373-61748b339246"
+  },
   "f820e0ef-89ca-4bff-93dc-c2e95c68d321": {
     "appActions": [
       "providers/PowerPlatform.Governance/Operations/Read",
@@ -73,6 +95,13 @@
       "parameterHintsV2": {}
     },
     "datasets": {
+      "https://capgemini-my.sharepoint.com/personal/lewis_bentley_capgemini_com": {
+        "dataSources": {
+          "Client/Industry": {
+            "tableName": "a59a20ff-36c0-4dd8-ae73-18657b514e55"
+          }
+        }
+      },
       "https://capgemini-my.sharepoint.com/personal/sasha_unercat_capgemini_com": {
         "dataSources": {
           "CV Generator": {
@@ -82,7 +111,8 @@
       }
     },
     "dataSources": [
-      "CV Generator"
+      "CV Generator",
+      "Client/Industry"
     ],
     "dependencies": {},
     "dependents": [],

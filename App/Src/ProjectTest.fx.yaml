@@ -204,7 +204,7 @@ ProjectTest As screen:
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
             Width: =212
-            X: =699
+            X: =713
             Y: =16
             ZIndex: =12
 
@@ -304,13 +304,13 @@ ProjectTest As screen:
 
     Gallery4 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =506
+        Height: =493
         Items: ='CV Generator - Project Experience'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =50
-        Width: =210
-        X: =205
+        Width: =296
+        X: =118
         Y: =214
         ZIndex: =21
 
@@ -318,9 +318,10 @@ ProjectTest As screen:
             BorderThickness: =0
             Color: =RGBA(0, 0, 0, 1)
             Fill: =RGBA(255, 255, 255, 1)
+            Height: =35
             OnSelect: =Set(varSelectedProjectID, ThisItem.ID)
             Text: =ThisItem.'Project Title'
-            X: =20
+            Width: =273
             Y: =15
             ZIndex: =1
 
@@ -339,4 +340,12 @@ ProjectTest As screen:
         X: =399
         Y: =699
         ZIndex: =23
+
+    Icon8 As icon.Trash:
+        Icon: =Icon.Trash
+        OnSelect: |
+            =RemoveIf('CV Generator - Project Experience', ID=varSelectedProjectID)
+        X: =1264
+        Y: =237
+        ZIndex: =24
 
