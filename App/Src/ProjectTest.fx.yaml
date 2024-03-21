@@ -262,10 +262,10 @@ ProjectTest As screen:
                         ,
                         DisplayName: User().FullName,
                         Email: User().Email
-                    } */
+                    } 
                 {
                 
-                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.'CV Generator'",
+                      /*  '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.'CV Generator'",
                 
                         Claims: Concatenate(
                 
@@ -280,6 +280,7 @@ ProjectTest As screen:
                         Email: User().Email
                 
                     } 
+                    */
             DisplayFields: =["Claims"]
             Font: =Font.Verdana
             InputTextPlaceholder: ="Please select your manager" 
