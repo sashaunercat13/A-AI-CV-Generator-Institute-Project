@@ -120,6 +120,10 @@
         ZIndex: =9
 
     Button1_2 As button:
+        DisplayMode: |-
+            = If(
+                IsEmpty(SkillsCollection)Or IsEmpty(Education) Or IsEmpty(Qualifications), 
+            	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
             =Navigate('Profesional Experience') ;
@@ -373,7 +377,7 @@
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =137
-        Items: =Qualifications
+        Items: =QualificationsCollection
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =44
@@ -400,7 +404,7 @@
         Icon5_2 As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
-            OnSelect: =Remove(Qualifications, ThisItem)
+            OnSelect: =Remove(QualificationsCollection, ThisItem)
             X: =546
             Y: =4
             ZIndex: =3
