@@ -8,7 +8,7 @@
         // Clear the collections form any previous entries
         Clear(Education);
         Clear(SkillsCollection);
-        Clear(Qualifications)
+        Clear(QualificationsCollection);
 
     Button4 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
