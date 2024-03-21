@@ -399,7 +399,7 @@ ProjectTest As screen:
             Reset('1ProjectStartDate_2');
             Reset('1ProjectEndDate_2');
             Reset('1ProjectDescription_2');
-            Reset('ComboBoxOneClient')
+            Reset(ComboBoxOneClient)
         Text: |-
             ="Submit
             "
@@ -470,7 +470,7 @@ ProjectTest As screen:
             // set this is selected button for colour
             //Set(selectedButtonID, 0);
         Text: ="New"
-        X: =399
+        X: =395
         Y: =699
         ZIndex: =23
 
@@ -508,7 +508,7 @@ ProjectTest As screen:
     Button6 As button:
         OnSelect: =Back()
         Text: ="Back"
-        X: =989
+        X: =14
         Y: =699
         ZIndex: =26
 

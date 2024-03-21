@@ -129,7 +129,7 @@
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
-            =Navigate('ProjectTest') ;
+            =Navigate(ProjectTest) ;
             // Convert collections to strings to save to a single column in List
             Set(SkillsString, Concat(SkillsCollection, Skill & ", "));
             Set(QualificationsString, Concat(QualificationsCollection, Qualification & ", "));
