@@ -428,7 +428,7 @@ ProjectTest As screen:
     Button9 As button:
         Fill: |
             =//RGBA(56, 96, 178, 1)
-        OnSelect: |-
+        OnSelect: |
             =// reset the current project button
             Set(varSelectedProjectID, 0)
             
