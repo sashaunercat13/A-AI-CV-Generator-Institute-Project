@@ -1,7 +1,8 @@
 ProjectTest As screen:
     OnVisible: |-
         =// set the button variable
-        UpdateContext({selectedItemId: Blank()});
+        //UpdateContext({selectedItemId: Blank()});
+        //Set(selectedButtonID, 0);
         
         // Initially set var to 0 so a new project is the default
         Set(varSelectedProjectID, 0);
@@ -289,12 +290,12 @@ ProjectTest As screen:
                 
                     } 
                     */
-            DisplayFields: =["DisplayName","JobTitle","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             Height: =33
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator - Project Experience'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator - Project Experience'.'Microsoft Profile','1ProjectManager_1'.SearchText)
             SelectMultiple: |
                 =false
@@ -400,17 +401,18 @@ ProjectTest As screen:
             Fill: |-
                 =//RGBA(255, 255, 255, 1);
                 If(
-                    ThisItem.ID = selectedItemId,
+                    ThisItem.ID = varSelectedProjectID,
                     ColorValue("#FF0000"), // Red for the selected item
                     ColorValue("#C8C8C8") // Light gray for unselected items
                 )
             Height: =35
             OnSelect: |-
                 =// maintain variable of this projects id
+                //Set(varSelectedProjectID, ThisItem.ID);
                 Set(varSelectedProjectID, ThisItem.ID);
                 
                 // maintain variable of this buttons id to change colour
-                UpdateContext({selectedItemId: ThisItem.ID});
+                //UpdateContext({selectedButtonID: ThisItem.ID});
             Text: =ThisItem.'Project Title'
             Width: =273
             Y: =15
@@ -426,13 +428,19 @@ ProjectTest As screen:
         ZIndex: =22
 
     Button9 As button:
-        Fill: |
+        Fill: |-
             =//RGBA(56, 96, 178, 1)
+            If(
+                0 = varSelectedProjectID,
+                ColorValue("#FF0000"), // Red for the selected item
+                ColorValue("#C8C8C8") // Light gray for unselected items
+            )
         OnSelect: |
             =// reset the current project button
-            Set(varSelectedProjectID, 0)
+            Set(varSelectedProjectID, 0);
             
             // set this is selected button for colour
+            //Set(selectedButtonID, 0);
         Text: ="New"
         X: =399
         Y: =699
@@ -454,6 +462,9 @@ ProjectTest As screen:
                     Email = User().Email
                 )
             );
+            
+            // Initially set var to 0 so a new project is the default
+            Set(varSelectedProjectID, 0);
         X: =1264
         Y: =237
         ZIndex: =24
