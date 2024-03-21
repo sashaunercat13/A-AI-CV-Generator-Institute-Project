@@ -1343,6 +1343,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.Label7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.Label7.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".Qualification"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Skills Competancies & Qualifications",
+                "type": "'Skills Competancies & Qualifications'.Gallery3.Label7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Qualification"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Update.RoleTitle_1.AccessibleLabel"
                 }
               ],
@@ -6273,6 +6313,66 @@
               },
               "properties": {
                 "member": "varIsRadioHubsEmpty",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.SkillsString"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.SkillsString",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "SkillsString",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.EducationString"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.EducationString",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "EducationString",
                 "module": "App",
                 "type": "App"
               }

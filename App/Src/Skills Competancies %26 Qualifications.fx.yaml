@@ -121,12 +121,12 @@
 
     Button1_2 As button:
         DisplayMode: |-
-            =/* If(
+            =If(
                 IsEmpty(SkillsCollection)Or 
                 IsEmpty(Education) Or 
-                IsEmpty(Qualifications),
+                IsEmpty(QualificationsCollection),
             
-            	DisplayMode.Disabled, DisplayMode.Edit) */
+            	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
             =Navigate('Profesional Experience') ;
