@@ -99,7 +99,7 @@ Create As screen:
     Button1_1 As button:
         DisplayMode: |
             = If(
-                IsBlank(DropdownCapability.Selected.Value)Or IsBlank('Profile box'.Text) Or IsBlank(Interests.Text), 
+                IsBlank(DropdownCapability.Selected.Value)Or IsBlank(RadioHubs) Or IsBlank('Profile box'.Text) Or IsBlank(Interests.Text), 
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
@@ -281,12 +281,6 @@ Create As screen:
         X: =720
         Y: =166
         ZIndex: =29
-
-    Label10 As label:
-        Text: ="Text"
-        X: =40
-        Y: =40
-        ZIndex: =30
 
     Label11 As label:
         Font: =Font.Verdana
