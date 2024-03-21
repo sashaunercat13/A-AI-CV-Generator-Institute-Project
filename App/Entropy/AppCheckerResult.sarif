@@ -4993,19 +4993,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProjectTest.Experience1_2.Dropdown2.AccessibleLabel"
+                  "fullyQualifiedName": "ProjectTest.Experience1_2.DropdownRole.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProjectTest.Experience1_2.Dropdown2.AccessibleLabel",
+                  "fullyQualifiedName": "ProjectTest.Experience1_2.DropdownRole.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ProjectTest",
-                "type": "ProjectTest.Experience1_2.Dropdown2"
+                "type": "ProjectTest.Experience1_2.DropdownRole"
               }
             }
           ],
@@ -6186,6 +6186,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProjectTest.Experience1_2.ComboBoxOneClient.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProjectTest.Experience1_2.ComboBoxOneClient.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ProjectTest",
+                "type": "ProjectTest.Experience1_2.ComboBoxOneClient"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
         },
         {
           "locations": [

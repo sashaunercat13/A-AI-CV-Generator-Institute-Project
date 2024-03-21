@@ -298,15 +298,6 @@ Create As screen:
         Y: =278
         ZIndex: =32
 
-    Label13 As label:
-        Color: =RGBA(127, 178, 57, 1)
-        Height: =85
-        Text: =RadioHubs.SelectedText.Value
-        Width: =244
-        X: =1017
-        Y: =310
-        ZIndex: =33
-
     Group6 As group:
         Height: =5
         Width: =5
