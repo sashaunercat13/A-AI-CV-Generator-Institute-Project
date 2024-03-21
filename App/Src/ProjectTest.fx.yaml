@@ -497,14 +497,6 @@ ProjectTest As screen:
         Y: =237
         ZIndex: =24
 
-    Label3 As label:
-        Height: =62
-        Text: =ComboBoxOneClient.Selected.Client
-        Width: =180
-        X: =1018
-        Y: =543
-        ZIndex: =25
-
     Button6 As button:
         OnSelect: =Back()
         Text: ="Back"
