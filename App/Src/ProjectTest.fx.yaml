@@ -101,7 +101,7 @@ ProjectTest As screen:
             Text: ="When were you on this project?"
             Width: =679
             X: =34
-            Y: =150
+            Y: =164
             ZIndex: =6
 
         "'Checkbox - Current Project_1' As checkbox":
@@ -295,12 +295,12 @@ ProjectTest As screen:
                 
                     } 
                     */
-            DisplayFields: =["Claims"]
+            DisplayFields: =["DisplayName","Department","Picture"]
             Font: =Font.Verdana
             Height: =33
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator - Project Experience'].'Microsoft Profile')
-            SearchFields: =["Claims"]
+            SearchFields: =["DisplayName"]
             SearchItems: =Choices('CV Generator - Project Experience'.'Microsoft Profile','1ProjectManager_1'.SearchText)
             SelectMultiple: |
                 =false
@@ -326,6 +326,17 @@ ProjectTest As screen:
             ZIndex: =15
 
     "'Button-Submit_1' As button":
+        DisplayMode: |-
+            =If(
+                IsBlank('1ProjectTitle_2'.Text) Or 
+                IsBlank(ComboBoxOneClient.SelectedItems) Or
+                IsBlank(DropdownRole.SelectedText) Or 
+                IsBlank('1ProjectManager_1'.SelectedItems) Or 
+                IsBlank('1ProjectEndDate_2'.SelectedDate) Or
+                IsBlank('1ProjectStartDate_2'.SelectedDate) Or
+                IsBlank('1ProjectDescription_2'.Text),
+            
+            	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 113, 194, 1)
         OnSelect: |-
             =If(
