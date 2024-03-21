@@ -1,7 +1,12 @@
 ProjectTest As screen:
     OnVisible: |-
-        =Clear(ProjectsOfThisUser);
+        =// Initially set var to 0 so a new project is the default
+        Set(varSelectedProjectID, 0);
         
+        // Clear the collection
+        Clear(ProjectsOfThisUser);
+        
+        // Create a collection of the user's projects
         ClearCollect(ProjectsOfThisUser,
             Filter(
                 'CV Generator - Project Experience',
@@ -354,6 +359,7 @@ ProjectTest As screen:
             // Add the new project to the list
             Clear(ProjectsOfThisUser);
             
+            // Update the collection
             ClearCollect(ProjectsOfThisUser,
                 Filter(
                     'CV Generator - Project Experience',
@@ -413,8 +419,20 @@ ProjectTest As screen:
 
     Icon8 As icon.Trash:
         Icon: =Icon.Trash
-        OnSelect: |
-            =RemoveIf('CV Generator - Project Experience', ID=varSelectedProjectID)
+        OnSelect: |-
+            =// Remove this project
+            RemoveIf('CV Generator - Project Experience', ID=varSelectedProjectID);
+            
+            // Refresh the List
+            //Refresh('CV Generator - Project Experience');
+            
+            // Update the collection
+            ClearCollect(ProjectsOfThisUser,
+                Filter(
+                    'CV Generator - Project Experience',
+                    Email = User().Email
+                )
+            );
         X: =1264
         Y: =237
         ZIndex: =24
