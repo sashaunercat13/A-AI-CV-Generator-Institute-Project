@@ -213,7 +213,7 @@ Search As screen:
             
             // make sure they are text
             ClearCollect(emails,
-                ForAll('FilteredClientsInProjects', 
+                ForAll(FilteredClientsInProjects, 
                     {email: Text(Email)}
                 )
             );

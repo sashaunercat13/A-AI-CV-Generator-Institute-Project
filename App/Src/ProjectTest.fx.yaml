@@ -89,7 +89,7 @@ ProjectTest As screen:
         "'Checkbox - Current Project_1' As checkbox":
             CheckboxSize: =30
             Font: =Font.Verdana
-            OnCheck: =true
+            OnUncheck: =true
             Size: =11
             Text: ="Are you currently on this project?"
             Width: =265
