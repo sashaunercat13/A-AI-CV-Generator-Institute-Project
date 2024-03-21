@@ -134,6 +134,9 @@ ProjectTest As screen:
             ZIndex: =11
 
             "'1ProjectStartDate_2' As datepicker":
+                DefaultDate: |-
+                    =If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Start Date'), Today())
+                    //Today()
                 Font: =Font.Verdana
                 Format: ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
@@ -157,7 +160,7 @@ ProjectTest As screen:
 
             "'1ProjectEndDate_2' As datepicker":
                 DefaultDate: |
-                    =If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Start Date'), Today())
+                    =If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'End Date'), Today())
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -175,7 +178,7 @@ ProjectTest As screen:
                 Y: =195
                 ZIndex: =5
 
-        Dropdown2 As dropdown:
+        DropdownRole As dropdown:
             Default: |
                 =If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Project Role'), "")
             Height: =45
@@ -227,42 +230,44 @@ ProjectTest As screen:
             ZIndex: =12
 
         Dropdown3 As dropdown:
-            Default: |
-                =If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Project Client'), "")
+            Default: =If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Project Client'), "")
             Height: =45
-            Items: |-
-                =["HMRC (Her Majesty's Revenue and Customs)",
-                "NHS (National Health Service)",
-                "BAE (BAE Systems)",
-                "Home Office",
-                "MOD (Ministry of Defence)",
-                "Metropolitan Police Service (MPS)",
-                "Scottish Fire and Rescue Service",
-                "HMCTS (Her Majesty's Courts and Tribunals Service)",
-                "Veterinary Medicines Directorate",
-                "Heathrow Airport",
-                "Jaguar Land Rover",
-                "Burberry",
-                "Lloyd's Register",
-                "EDF (Électricité de France)",
-                "Bosch",
-                "Royal Mail",
-                "Met Search",
-                "London Ambulance Service",
-                "London Fire Brigade",
-                "Welsh Assembly Government",
-                "DWP (Department for Work and Pensions)",
-                "MoJ (Ministry of Justice)",
-                "DfE (Department for Education)",
-                "DEFRA (Department for Environment, Food and Rural Affairs)",
-                "Driver and Vehicle Standards Agency (DVSA)"
-                ]
+            Items: ='CV Generator - Client/Industry'.Client
+            Visible: =false
             Width: =213
             X: =470
             Y: =16
             ZIndex: =13
 
         "'1ProjectManager_1' As combobox":
+            Default: |-
+                =If(
+                    varSelectedProjectID > 0,
+                    LookUp(
+                        'CV Generator - Project Experience',
+                        ID = varSelectedProjectID,
+                        {
+                            Claims: Concatenate(
+                                "i:0#.f|membership|",
+                                User().Email
+                            ),
+                            Department: "",
+                            DisplayName: "",
+                            Email: "Hello",
+                            JobTitle: "",
+                            Picture: ""
+                        }
+                    ),
+                    {
+                        Claims: "",
+                        Department: "",
+                        DisplayName: "",
+                        Email: "",
+                        JobTitle: "",
+                        Picture: ""
+                    }
+                )
+                //Today()
             DefaultSelectedItems: |-
                 =/*{
                         '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -306,7 +311,22 @@ ProjectTest As screen:
             Y: =80
             ZIndex: =14
 
+        ComboBoxOneClient As combobox:
+            Default: =//If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Project Client'), "")
+            DisplayFields: =["Client"]
+            Height: =45
+            InputTextPlaceholder: ="Search client"
+            Items: ='CV Generator - Client/Industry'.Client
+            SearchFields: =["Client"]
+            SearchItems: =Search('CV Generator - Client/Industry'.Client,ComboBoxOneClient.SearchText,"Client")
+            SelectMultiple: =false
+            Width: =230
+            X: =470
+            Y: =15
+            ZIndex: =15
+
     "'Button-Submit_1' As button":
+        Fill: =RGBA(39, 113, 194, 1)
         OnSelect: |-
             =If(
                 varSelectedProjectID = 0,
@@ -317,8 +337,8 @@ ProjectTest As screen:
                     {
                         Email: User().Email,
                         'Project Title': '1ProjectTitle_2'.Text,
-                        'Project Client': Dropdown3.Selected.Value,
-                        'Project Role': Dropdown2.Selected.Value,
+                        'Project Client': ComboBoxOneClient.Selected.Client,
+                        'Project Role': DropdownRole.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
                         'End Date': '1ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
@@ -341,8 +361,8 @@ ProjectTest As screen:
                     ),
                     {
                         'Project Title': '1ProjectTitle_2'.Text,
-                        'Project Client': Dropdown2.Selected.Value,
-                        'Project Role': Dropdown3.Selected.Value,
+                        'Project Client': ComboBoxOneClient.Selected.Client,
+                        'Project Role': DropdownRole.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
                         'End Date': '1ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
@@ -373,7 +393,13 @@ ProjectTest As screen:
             );
             
             //reset the form fields
-            Reset('1ProjectTitle_2')
+            Reset('1ProjectTitle_2');
+            Reset(DropdownRole);
+            //Reset('Dropdown3');
+            Reset('1ProjectStartDate_2');
+            Reset('1ProjectEndDate_2');
+            Reset('1ProjectDescription_2');
+            Reset('ComboBoxOneClient')
         Text: |-
             ="Submit
             "
@@ -402,8 +428,8 @@ ProjectTest As screen:
                 =//RGBA(255, 255, 255, 1);
                 If(
                     ThisItem.ID = varSelectedProjectID,
-                    ColorValue("#FF0000"), // Red for the selected item
-                    ColorValue("#C8C8C8") // Light gray for unselected items
+                    RGBA(39, 113, 194, 1), // Red for the selected item
+                    RGBA(255, 255, 255, 1) // Light gray for unselected items
                 )
             Height: =35
             OnSelect: |-
@@ -432,9 +458,11 @@ ProjectTest As screen:
             =//RGBA(56, 96, 178, 1)
             If(
                 0 = varSelectedProjectID,
-                ColorValue("#FF0000"), // Red for the selected item
+                RGBA(39, 113, 194, 1), // Red for the selected item
                 ColorValue("#C8C8C8") // Light gray for unselected items
             )
+            
+            //ColorValue("#C8C8C8") // Light gray for unselected items
         OnSelect: |
             =// reset the current project button
             Set(varSelectedProjectID, 0);
@@ -468,4 +496,19 @@ ProjectTest As screen:
         X: =1264
         Y: =237
         ZIndex: =24
+
+    Label3 As label:
+        Height: =62
+        Text: =ComboBoxOneClient.Selected.Client
+        Width: =180
+        X: =1018
+        Y: =543
+        ZIndex: =25
+
+    Button6 As button:
+        OnSelect: =Back()
+        Text: ="Back"
+        X: =989
+        Y: =699
+        ZIndex: =26
 
