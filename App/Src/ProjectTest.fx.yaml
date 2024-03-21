@@ -449,6 +449,8 @@ ProjectTest As screen:
         Height: =36
         Size: =26
         Text: =varSelectedProjectID
+        Visible: =false
+        Width: =33
         X: =64
         Y: =663
         ZIndex: =22
