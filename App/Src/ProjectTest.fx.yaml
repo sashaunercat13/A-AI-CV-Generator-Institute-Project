@@ -1,7 +1,15 @@
 ProjectTest As screen:
     OnVisible: |-
-        =Clear(ProjectsOfThisUser);
+        =// set the button variable
+        UpdateContext({selectedItemId: Blank()});
         
+        // Initially set var to 0 so a new project is the default
+        Set(varSelectedProjectID, 0);
+        
+        // Clear the collection
+        Clear(ProjectsOfThisUser);
+        
+        // Create a collection of the user's projects
         ClearCollect(ProjectsOfThisUser,
             Filter(
                 'CV Generator - Project Experience',
@@ -349,15 +357,22 @@ ProjectTest As screen:
                 )
             );
             
+            // Refresh the List
+            Refresh('CV Generator - Project Experience');
+            
             // Add the new project to the list
             Clear(ProjectsOfThisUser);
             
+            // Update the collection
             ClearCollect(ProjectsOfThisUser,
                 Filter(
                     'CV Generator - Project Experience',
                     Email = User().Email
                 )
-            )
+            );
+            
+            //reset the form fields
+            Reset('1ProjectTitle_2')
         Text: |-
             ="Submit
             "
@@ -382,9 +397,20 @@ ProjectTest As screen:
         Button8 As button:
             BorderThickness: =0
             Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(255, 255, 255, 1)
+            Fill: |-
+                =//RGBA(255, 255, 255, 1);
+                If(
+                    ThisItem.ID = selectedItemId,
+                    ColorValue("#FF0000"), // Red for the selected item
+                    ColorValue("#C8C8C8") // Light gray for unselected items
+                )
             Height: =35
-            OnSelect: =Set(varSelectedProjectID, ThisItem.ID)
+            OnSelect: |-
+                =// maintain variable of this projects id
+                Set(varSelectedProjectID, ThisItem.ID);
+                
+                // maintain variable of this buttons id to change colour
+                UpdateContext({selectedItemId: ThisItem.ID});
             Text: =ThisItem.'Project Title'
             Width: =273
             Y: =15
@@ -400,7 +426,13 @@ ProjectTest As screen:
         ZIndex: =22
 
     Button9 As button:
-        OnSelect: =Set(varSelectedProjectID, 0)
+        Fill: |
+            =//RGBA(56, 96, 178, 1)
+        OnSelect: |-
+            =// reset the current project button
+            Set(varSelectedProjectID, 0)
+            
+            // set this is selected button for colour
         Text: ="New"
         X: =399
         Y: =699
@@ -408,8 +440,20 @@ ProjectTest As screen:
 
     Icon8 As icon.Trash:
         Icon: =Icon.Trash
-        OnSelect: |
-            =RemoveIf('CV Generator - Project Experience', ID=varSelectedProjectID)
+        OnSelect: |-
+            =// Remove this project
+            RemoveIf('CV Generator - Project Experience', ID=varSelectedProjectID);
+            
+            // Refresh the List
+            //Refresh('CV Generator - Project Experience');
+            
+            // Update the collection
+            ClearCollect(ProjectsOfThisUser,
+                Filter(
+                    'CV Generator - Project Experience',
+                    Email = User().Email
+                )
+            );
         X: =1264
         Y: =237
         ZIndex: =24
