@@ -4903,36 +4903,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProjectTest.Experience1_2.ComboBoxOneClient.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProjectTest.Experience1_2.ComboBoxOneClient.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ProjectTest",
-                "type": "ProjectTest.Experience1_2.ComboBoxOneClient"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ProjectTest.Experience1_2.'1ProjectTitle_2'.AccessibleLabel"
                 }
               ],
@@ -4963,19 +4933,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProjectTest.Experience1_2.'1ProjectManager_1'.AccessibleLabel"
+                  "fullyQualifiedName": "ProjectTest.Experience1_2.ComboBoxOneClient.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProjectTest.Experience1_2.'1ProjectManager_1'.AccessibleLabel",
+                  "fullyQualifiedName": "ProjectTest.Experience1_2.ComboBoxOneClient.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ProjectTest",
-                "type": "ProjectTest.Experience1_2.'1ProjectManager_1'"
+                "type": "ProjectTest.Experience1_2.ComboBoxOneClient"
               }
             }
           ],
@@ -5036,6 +5006,36 @@
                 "member": "AccessibleLabel",
                 "module": "ProjectTest",
                 "type": "ProjectTest.Experience1_2.DropdownRole"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProjectTest.Experience1_2.'1ProjectManager_1'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProjectTest.Experience1_2.'1ProjectManager_1'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ProjectTest",
+                "type": "ProjectTest.Experience1_2.'1ProjectManager_1'"
               }
             }
           ],
