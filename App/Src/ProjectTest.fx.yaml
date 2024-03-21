@@ -454,15 +454,7 @@ ProjectTest As screen:
         ZIndex: =22
 
     Button9 As button:
-        Fill: |-
-            =//RGBA(56, 96, 178, 1)
-            If(
-                0 = varSelectedProjectID,
-                RGBA(39, 113, 194, 1), // Red for the selected item
-                ColorValue("#C8C8C8") // Light gray for unselected items
-            )
-            
-            //ColorValue("#C8C8C8") // Light gray for unselected items
+        Fill: =RGBA(39, 113, 194, 1)
         OnSelect: |
             =// reset the current project button
             Set(varSelectedProjectID, 0);
@@ -496,14 +488,6 @@ ProjectTest As screen:
         X: =1264
         Y: =237
         ZIndex: =24
-
-    Label3 As label:
-        Height: =62
-        Text: =ComboBoxOneClient.Selected.Client
-        Width: =180
-        X: =1018
-        Y: =543
-        ZIndex: =25
 
     Button6 As button:
         OnSelect: =Back()
