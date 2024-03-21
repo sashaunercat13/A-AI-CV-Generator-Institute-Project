@@ -348,6 +348,9 @@ ProjectTest As screen:
                 )
             );
             
+            // Refresh the List
+            Refresh('CV Generator - Project Experience');
+            
             // Add the new project to the list
             Clear(ProjectsOfThisUser);
             
@@ -356,7 +359,10 @@ ProjectTest As screen:
                     'CV Generator - Project Experience',
                     Email = User().Email
                 )
-            )
+            );
+            
+            //reset the form fields
+            Reset('1ProjectTitle_2')
         Text: |-
             ="Submit
             "
