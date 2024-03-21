@@ -1,4 +1,13 @@
 ProjectTest As screen:
+    OnVisible: |-
+        =Clear(ProjectsOfThisUser);
+        
+        ClearCollect(ProjectsOfThisUser,
+            Filter(
+                'CV Generator - Project Experience',
+                Email = User().Email
+            )
+        )
 
     "'Rectangle - blue top panel_2' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
@@ -305,7 +314,9 @@ ProjectTest As screen:
     Gallery4 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =493
-        Items: ='CV Generator - Project Experience'
+        Items: |-
+            =ProjectsOfThisUser
+            //Lookup('CV Generator - Project Experience', Email=User().Email);
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =50
