@@ -396,11 +396,11 @@ Search As screen:
         ZIndex: =18
 
         ComboBoxQualSearch_1 As combobox:
-            DisplayFields: =["Title"]
+            DisplayFields: =["Qualification"]
             InputTextPlaceholder: ="Filter Qualifications"
             Items: =QualificationsCollection
-            SearchFields: =["Title"]
-            SearchItems: =Search(QualificationsCollection,ComboBoxQualSearch_1.SearchText,"Title")
+            SearchFields: =["Qualification"]
+            SearchItems: =Search(QualificationsCollection,ComboBoxQualSearch_1.SearchText,"Qualification")
             X: =129
             Y: =580
             ZIndex: =10
