@@ -449,6 +449,8 @@ ProjectTest As screen:
         Height: =36
         Size: =26
         Text: =varSelectedProjectID
+        Visible: =false
+        Width: =33
         X: =64
         Y: =663
         ZIndex: =22
@@ -462,7 +464,7 @@ ProjectTest As screen:
             // set this is selected button for colour
             //Set(selectedButtonID, 0);
         Text: ="New"
-        X: =399
+        X: =395
         Y: =699
         ZIndex: =23
 
@@ -493,7 +495,7 @@ ProjectTest As screen:
         Fill: =RGBA(39, 113, 194, 1)
         OnSelect: =Back()
         Text: ="Back"
-        X: =989
+        X: =14
         Y: =699
         ZIndex: =26
 
