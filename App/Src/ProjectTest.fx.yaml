@@ -144,7 +144,7 @@ ProjectTest As screen:
                 Format: |
                     ="dd/mm/yyyy"
                 StartOfWeek: =StartOfWeek.Monday
-                Visible: ='Checkbox - Current Project_1'.Value
+                Visible: =!'Checkbox - Current Project_1'.Value
                 X: =391
                 Y: =232
                 ZIndex: =3
