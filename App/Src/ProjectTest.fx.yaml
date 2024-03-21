@@ -296,7 +296,7 @@ ProjectTest As screen:
             ZIndex: =14
 
     "'Button-Submit_1' As button":
-        OnSelect: |
+        OnSelect: |-
             =If(
                 varSelectedProjectID = 0,
                 // Creating a new record because varSelectedProjectID = 0
@@ -346,6 +346,16 @@ ProjectTest As screen:
                     }
                 )
             );
+            
+            // Add the new project to the list
+            Clear(ProjectsOfThisUser);
+            
+            ClearCollect(ProjectsOfThisUser,
+                Filter(
+                    'CV Generator - Project Experience',
+                    Email = User().Email
+                )
+            )
         Text: |-
             ="Submit
             "
