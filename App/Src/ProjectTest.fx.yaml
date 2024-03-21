@@ -503,6 +503,7 @@ ProjectTest As screen:
         ZIndex: =24
 
     Button6 As button:
+        Fill: =RGBA(39, 113, 194, 1)
         OnSelect: =Back()
         Text: ="Back"
         X: =14
