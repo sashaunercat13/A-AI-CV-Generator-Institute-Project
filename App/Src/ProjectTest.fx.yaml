@@ -102,8 +102,8 @@ ProjectTest As screen:
             Size: =11
             Text: ="Are you currently on this project?"
             Width: =265
-            X: =40
-            Y: =79
+            X: =391
+            Y: =80
             ZIndex: =7
 
         "'1ProjectTitle_2' As text":
@@ -161,7 +161,7 @@ ProjectTest As screen:
             "'Label-EndDate_1' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
-                Visible: ='Checkbox - Current Project_1'.Value
+                Visible: =!'Checkbox - Current Project_1'.Value
                 X: =391
                 Y: =195
                 ZIndex: =5
@@ -252,6 +252,48 @@ ProjectTest As screen:
             X: =470
             Y: =16
             ZIndex: =13
+
+        "'1ProjectManager_1' As combobox":
+            DefaultSelectedItems: |-
+                =/*{
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
+                        Claims: 
+                            User().Email
+                        ,
+                        DisplayName: User().FullName,
+                        Email: User().Email
+                    } */
+                {
+                
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.'CV Generator'",
+                
+                        Claims: Concatenate(
+                
+                            "i:0#.f|membership|",
+                
+                            User().Email
+                
+                        ),
+                
+                        DisplayName: User().FullName,
+                
+                        Email: User().Email
+                
+                    } 
+            DisplayFields: =["Claims"]
+            Font: =Font.Verdana
+            InputTextPlaceholder: ="Please select your manager" 
+            Items: =Choices([@'CV Generator'].'Microsoft Profile')
+            SearchFields: =["Claims"]
+            SearchItems: =Choices('CV Generator'.'Microsoft Profile','1ProjectManager_1'.SearchText)
+            SelectMultiple: |
+                =false
+            Template: =ListItemTemplate.Person
+            Visible: |
+                =true
+            X: =34
+            Y: =80
+            ZIndex: =14
 
     "'Button-Submit_1' As button":
         OnSelect: |
