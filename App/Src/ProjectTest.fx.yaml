@@ -152,7 +152,7 @@ ProjectTest As screen:
             "'Label-EndDate_1' As label":
                 Font: =Font.Verdana
                 Text: ="End date"
-                Visible: ='Checkbox - Current Project_1'.Value
+                Visible: =!'Checkbox - Current Project_1'.Value
                 X: =391
                 Y: =195
                 ZIndex: =5
