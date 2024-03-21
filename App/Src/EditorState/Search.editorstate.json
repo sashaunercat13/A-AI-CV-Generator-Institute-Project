@@ -2761,14 +2761,7 @@
         },
         "MoreItemsButtonColor",
         "DisplayFields",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "[\"Skill\"]",
-          "InvariantPropertyName": "SearchFields",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "SearchFields",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,

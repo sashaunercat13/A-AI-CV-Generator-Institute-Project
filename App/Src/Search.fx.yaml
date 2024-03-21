@@ -321,11 +321,11 @@ Search As screen:
         ZIndex: =16
 
         ComboBoxSkillSearch_1 As combobox:
-            DisplayFields: =["Title"]
+            DisplayFields: =["Skill"]
             InputTextPlaceholder: ="Filter skills"
             Items: =SkillsCollection
-            SearchFields: =["Title"]
-            SearchItems: =Search(SkillsCollection,ComboBoxSkillSearch_1.SearchText,"Title")
+            SearchFields: =["Skill"]
+            SearchItems: =Search(SkillsCollection,ComboBoxSkillSearch_1.SearchText,"Skill")
             X: =129
             Y: =424
             ZIndex: =5
