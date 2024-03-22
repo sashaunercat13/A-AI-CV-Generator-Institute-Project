@@ -15,7 +15,21 @@ Search As screen:
         Set(varIsHubsEmpty, true);
         Set(varIsClientEmpty, true);
         Set(varIsIndustryEmpty, true);
+        Set(varSCcheckedSearchEmpty, true);
+        Set(varBPSScheckedSearchEmpty, true);
         // Additional conditions can be set similarly
+        
+        Set(allFiltersEmpty, (varIsSkillsEmpty
+            && varIsQualificationsEmpty
+            && varIsRoleEmpty
+            && varIsCapabilityEmpty
+            && varIsHubsEmpty
+            && varIsClientEmpty
+            && varIsIndustryEmpty
+            && varBPSScheckedSearchEmpty
+            && varSCcheckedSearchEmpty
+            )
+        );
         
         ClearCollect(SkillsCollectionSearch, 
             {Title: "Agile Concepts", ID: 1},
@@ -163,8 +177,8 @@ Search As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =75
         Width: =498
-        X: =487
-        Y: =116
+        X: =492
+        Y: =109
         ZIndex: =4
 
         Label9_3 As label:
@@ -191,7 +205,7 @@ Search As screen:
         Items: =SkillsCollectionSearch
         OnChange: |-
             =// Set in the OnChange property of the ComboBox
-            Set(varIsSkillsEmpty, IsEmpty(ComboBoxSkill.SelectedItems));
+            Set(varIsSkillsEmpty, IsEmpty(ComboBoxSkillSearch.SelectedItems));
         SearchFields: =["Title"]
         SearchItems: =Search(SkillsCollectionSearch,ComboBoxSkillSearch.SearchText,"Title")
         X: =129
@@ -244,7 +258,6 @@ Search As screen:
             );
             
             //Collect the clients associated with these industries into a collection.
-            
             ClearCollect(
                 FilteredClientsInIndustries,
                 Filter(
@@ -281,6 +294,8 @@ Search As screen:
                 && varIsHubsEmpty
                 && varIsClientEmpty
                 && varIsIndustryEmpty
+                && varBPSScheckedSearchEmpty
+                && varSCcheckedSearchEmpty
                 )
             );
             /*
@@ -300,6 +315,10 @@ Search As screen:
                     FinalFilteredCVs,
                     Filter(
                         'CV Generator',
+                        // Client
+                        (IsEmpty(ComboBoxClient.SelectedItems) || 'Email' in FilteredEmailsForClient),
+                        // industry
+                        (IsEmpty(ComboBoxIndustry.SelectedItems) || 'Email' in FilteredClientsInProjects.Email),
                         // Skill filter - ony apply if there are selected skills
                         (IsEmpty(ComboBoxSkillSearch.SelectedItems) || 
                             CountIf(
@@ -315,9 +334,9 @@ Search As screen:
                         // Role Title filter - only apply if role title selected
                         (IsEmpty(ComboBoxRole.SelectedItems) || 'Role Title' in ComboBoxRole.SelectedItems),
                         // Apply Security Clearance SC filter based on checkbox
-                        (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
+                        (varBPSScheckedSearchEmpty || (!varBPSScheckedSearchEmpty && 'Security Clearance BPSS')),
                         // Apply Security Clearance BPSS filter based on checkbox
-                        (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
+                        (varSCcheckedSearchEmpty || (!varSCcheckedSearchEmpty && 'Security Clearance SC'))
                         //(IsBlank(DropdownCapabilitySearch.Selected.Value) || Capability = Text(DropdownCapabilitySearch.Selected.Value))
                         //Hub = RadioHubsSearch.SelectedText.Value
                     )
@@ -406,6 +425,16 @@ Search As screen:
         Y: =182
         ZIndex: =17
 
+    Label9_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        Text: |-
+            ="Capability:"
+        Width: =334
+        X: =125
+        Y: =187
+        ZIndex: =18
+
     RadioHubsSearch As radio:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Lighter
@@ -441,8 +470,8 @@ Search As screen:
             CheckboxSize: =30
             Color: =RGBA(255, 255, 255, 1)
             Height: =40
-            OnCheck: =Set(BPSScheckedSearch,true)
-            OnUncheck: =Set(BPSScheckedSearch,false)
+            OnCheck: =Set(varBPSScheckedSearchEmpty,false)
+            OnUncheck: =Set(varBPSScheckedSearchEmpty,true)
             Text: ="BPSS"
             Width: =121
             X: =174
@@ -453,8 +482,8 @@ Search As screen:
             CheckboxSize: =30
             Color: =RGBA(255, 255, 255, 1)
             Height: =40
-            OnCheck: =Set(SCcheckedSearch, true) 
-            OnUncheck: =Set(SCcheckedSearch, false) 
+            OnCheck: =Set(varSCcheckedSearchEmpty,false)
+            OnUncheck: =Set(varSCcheckedSearchEmpty,true)
             Text: ="SC"
             Width: =121
             X: =304
@@ -499,6 +528,7 @@ Search As screen:
     Gallery5 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =308
+        Items: =FilteredEmailsForClient
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =95
@@ -510,7 +540,7 @@ Search As screen:
         Label18 As label:
             Height: =46
             OnSelect: =Select(Parent)
-            Text: =
+            Text: =ThisItem.Email
             Width: =433
             X: =12
             Y: =24
@@ -598,6 +628,19 @@ Search As screen:
         X: =930
         Y: =587
         ZIndex: =34
+
+    ComboBoxCapabilitySearch As combobox:
+        DisplayFields: =["Value"]
+        Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        OnChange: |-
+            =// Set in the OnChange property of the ComboBox
+            Set(varIsCapabilityEmpty, IsEmpty(ComboBoxCapabilitySearch.SelectedItems));
+        SearchFields: =["Value"]
+        SearchItems: =Search(["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"],ComboBoxCapabilitySearch.SearchText,"Value")
+        SelectMultiple: =false
+        X: =127
+        Y: =222
+        ZIndex: =35
 
     Label8_4 As label:
         Height: =36
@@ -695,7 +738,7 @@ Search As screen:
             )
         OnChange: |-
             =// Set in the OnChange property of the ComboBox
-            Set(varIsHubsEmpty, !IsEmpty(ComboBoxHubs.SelectedItems));
+            Set(varIsHubsEmpty, IsEmpty(ComboBoxHubs.SelectedItems));
         SearchFields: =[""]
         SearchItems: =[]
         X: =129
@@ -709,33 +752,21 @@ Search As screen:
         Y: =267
         ZIndex: =48
 
-    Group9 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
+    Label8_14 As label:
+        Height: =36
+        Text: |-
+            ="BPSS empty: " & varBPSScheckedSearchEmpty
+        Width: =226
+        X: =1140
+        Y: =444
         ZIndex: =49
 
-        Label9_1 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Font: =Font.Verdana
-            Text: |-
-                ="Capability:"
-            Width: =334
-            X: =125
-            Y: =187
-            ZIndex: =18
-
-        ComboBoxCapabilitySearch As combobox:
-            DisplayFields: =["Value"]
-            Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
-            OnChange: |-
-                =// Set in the OnChange property of the ComboBox
-                Set(varIsCapabilityEmpty, IsEmpty(ComboBoxCapability.SelectedItems));
-            SearchFields: =["Value"]
-            SearchItems: =Search(["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"],ComboBoxCapabilitySearch.SearchText,"Value")
-            SelectMultiple: =false
-            X: =127
-            Y: =222
-            ZIndex: =35
+    Label8_15 As label:
+        Height: =36
+        Text: |-
+            ="SC empty: " & varSCcheckedSearchEmpty
+        Width: =226
+        X: =1140
+        Y: =408
+        ZIndex: =50
 
