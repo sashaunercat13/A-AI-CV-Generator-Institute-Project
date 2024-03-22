@@ -217,10 +217,19 @@ Search As screen:
             Set(varIsCapabilityEmpty, IsEmpty(ComboBoxCapabilitySearch.SelectedItems));
             Set(varIsRadioHubsEmpty, Len(RadioHubsSearch.SelectedText.Value) = 0);
             Set(varIsClientEmpty, IsEmpty(ComboBoxClient.SelectedItems));
+            Set(varIsIndustryEmpty, IsEmpty(ComboBoxIndustry.SelectedItems));
             // Additional conditions can be set similarly
             
             // One button to filter them all
-            Set(allFiltersEmpty, (varIsSkillsEmpty && varIsQualificationsEmpty && varIsRoleEmpty && varIsCapabilityEmpty && varIsRadioHubsEmpty));
+            Set(allFiltersEmpty, (varIsSkillsEmpty
+                && varIsQualificationsEmpty
+                && varIsRoleEmpty
+                && varIsCapabilityEmpty
+                && varIsRadioHubsEmpty
+                && varIsClientEmpty
+                && varIsIndustryEmpty
+                )
+            );
             
             // Conditional logic to handle both skills and qualifications
             If(
@@ -614,4 +623,13 @@ Search As screen:
         X: =990
         Y: =506
         ZIndex: =37
+
+    Label8_6 As label:
+        Height: =36
+        Text: |-
+            ="industry empty: " & IsEmpty(ComboBoxIndustry.SelectedItems)
+        Width: =226
+        X: =990
+        Y: =470
+        ZIndex: =38
 

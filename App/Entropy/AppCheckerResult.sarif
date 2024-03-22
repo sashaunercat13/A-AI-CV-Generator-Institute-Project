@@ -258,7 +258,7 @@
                 },
                 "region": {
                   "charLength": 143,
-                  "charOffset": 2296,
+                  "charOffset": 2434,
                   "snippet": {
                     "text": "CountIf(\n                    ComboBoxSkillSearch.SelectedItems,\n                    !IsBlank(Find(Text(Title), SkillsString))\n                )"
                   }
@@ -298,7 +298,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 2440,
+                  "charOffset": 2578,
                   "snippet": {
                     "text": ">"
                   }
@@ -338,7 +338,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2276,
+                  "charOffset": 2414,
                   "snippet": {
                     "text": "||"
                   }
@@ -6303,36 +6303,6 @@
               },
               "properties": {
                 "member": "UserPhoto",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varIsClientEmpty"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varIsClientEmpty",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varIsClientEmpty",
                 "module": "App",
                 "type": "App"
               }
