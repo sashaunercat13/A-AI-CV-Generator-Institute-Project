@@ -1,7 +1,7 @@
 Screen1 As screen:
 
     Button1 As button:
-        OnSelect: =Navigate(ProjectTest)
+        OnSelect: =Navigate(Search)
         Text: |-
             ="Search
             "

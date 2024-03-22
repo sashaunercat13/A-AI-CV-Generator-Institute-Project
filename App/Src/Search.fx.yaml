@@ -7,7 +7,7 @@ Search As screen:
         Set(BPSScheckedSearch, false);
         Set(SCcheckedSearch, false);
         
-        ClearCollect(SkillsCollection, 
+        ClearCollect(SkillsCollectionSearch, 
             //{Title: "Agile Concepts", ID: 1},
             {Title: "AWS", ID: 2},
             {Title: "Azure", ID: 3},
@@ -50,7 +50,7 @@ Search As screen:
             {Title: "SQL", ID: 40}
         );
         
-        ClearCollect(QualificationsCollection, 
+        ClearCollect(QualificationsCollectionSearch, 
             {Title: "Microsoft Certified: Azure Solutions Architect Expert", ID: 1},
             {Title: "Cisco Certified Network Associate (CCNA)", ID: 2},
             {Title: "CompTIA A+", ID: 3},
@@ -123,7 +123,7 @@ Search As screen:
         PressedFill: =
         Text: =""
         Width: =367
-        X: =110
+        X: =117
         Y: =84
         ZIndex: =1
 
@@ -147,14 +147,14 @@ Search As screen:
 
     GalleryFilteredCVs_1 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =397
+        Height: =557
         Items: =FinalFilteredCVs
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =75
-        Width: =843
-        X: =508
-        Y: =228
+        Width: =498
+        X: =487
+        Y: =116
         ZIndex: =4
 
         Label9_3 As label:
@@ -178,10 +178,9 @@ Search As screen:
     ButtonFilterCVs_1 As button:
         OnSelect: |
             =Clear(FinalFilteredCVs); // Clear the collection to start fresh
-            Clear(FilteredEmailsForClient);
-            Clear(FilteredClientsInIndustries);
-            Clear(FilteredClientsInProjects);
-            Clear(emails);
+            Clear(FilteredEmailsForClient); // Clear the collection which filters on Client
+            Clear(FilteredClientsInIndustries); // Clear the collection which finds Clients associated with selected industry
+            Clear(FilteredClientsInProjects); // Cleawr the collection which finds the CVs which have those Clients
             
             // Generate a collection of emails which have projects with the selected clients
             ClearCollect(
@@ -211,20 +210,17 @@ Search As screen:
                 )
             );
             
-            // make sure they are text
-            ClearCollect(emails,
-                ForAll(FilteredClientsInProjects, 
-                    {email: Text(Email)}
-                )
-            );
-            
             // Define variables for conditions
-            Set(varIsSkillsEmpty, IsEmpty(ComboBoxSkillSearch_1.SelectedItems));
-            Set(varIsQualificationsEmpty, IsEmpty(ComboBoxQualSearch_1.SelectedItems));
-            Set(varIsRoleEmpty, IsEmpty(ComboBoxRole_1.SelectedItems));
-            //Set(varIsCapabilityEmpty, Text(ComboBoxCapability.Selected.Value) = "All");
+            Set(varIsSkillsEmpty, IsEmpty(ComboBoxSkillSearch.SelectedItems));
+            Set(varIsQualificationsEmpty, IsEmpty(ComboBoxQualSearch.SelectedItems));
+            Set(varIsRoleEmpty, IsEmpty(ComboBoxRole.SelectedItems));
+            Set(varIsCapabilityEmpty, IsEmpty(ComboBoxCapabilitySearch.SelectedItems));
             Set(varIsRadioHubsEmpty, Len(RadioHubsSearch.SelectedText.Value) = 0);
+            Set(varIsClientEmpty, IsEmpty(ComboBoxClient.SelectedItems));
             // Additional conditions can be set similarly
+            
+            // One button to filter them all
+            Set(allFiltersEmpty, (varIsSkillsEmpty && varIsQualificationsEmpty && varIsRoleEmpty && varIsCapabilityEmpty && varIsRadioHubsEmpty));
             
             // Conditional logic to handle both skills and qualifications
             If(
@@ -232,39 +228,34 @@ Search As screen:
                 && varIsQualificationsEmpty
                 && varIsRoleEmpty
                 && !SCcheckedSearch
-                && !BPSScheckedSearch,
-                //&& varIsCapabilityEmpty
-                //&& varIsRadioHubsEmpty
+                && !BPSScheckedSearch
+                && varIsCapabilityEmpty
+                && varIsRadioHubsEmpty,
                 Collect(FinalFilteredCVs, 'CV Generator'),
                 Collect(
                     FinalFilteredCVs,
                     Filter(
                         'CV Generator',
-                        // Filter by the industries of the CVs projects
-                        //(IsEmpty(emails) || 
-                        Email="hhhh",
-                        //),
                         // Skill filter - ony apply if there are selected skills
-                        (IsEmpty(ComboBoxSkillSearch_1.SelectedItems) || 
+                        (IsEmpty(ComboBoxSkillSearch.SelectedItems) || 
                             CountIf(
-                                ComboBoxSkillSearch_1.SelectedItems,
+                                ComboBoxSkillSearch.SelectedItems,
                                 !IsBlank(Find(Text(Title), SkillsString))
                             ) > 0),
                         // Qualification filter - only apply if there are selected qualifications
-                        (IsEmpty(ComboBoxQualSearch_1.SelectedItems) || 
+                        (IsEmpty(ComboBoxQualSearch.SelectedItems) || 
                             CountIf(
-                                ComboBoxQualSearch_1.SelectedItems,
+                                ComboBoxQualSearch.SelectedItems,
                                 !IsBlank(Find(Text(Title), QualificationsString))
                             ) > 0),
                         // Role Title filter - only apply if role title selected
-                        (IsEmpty(ComboBoxRole_1.SelectedItems) || 'Role Title' in ComboBoxRole_1.SelectedItems),
+                        (IsEmpty(ComboBoxRole.SelectedItems) || 'Role Title' in ComboBoxRole.SelectedItems),
                         // Apply Security Clearance SC filter based on checkbox
                         (!SCcheckedSearch || (SCcheckedSearch && 'Security Clearance SC')),
                         // Apply Security Clearance BPSS filter based on checkbox
                         (!BPSScheckedSearch || (BPSScheckedSearch && 'Security Clearance BPSS'))
                         //(IsBlank(DropdownCapabilitySearch.Selected.Value) || Capability = Text(DropdownCapabilitySearch.Selected.Value))
                         //Hub = RadioHubsSearch.SelectedText.Value
-                        
                     )
                 )
             );
@@ -298,17 +289,19 @@ Search As screen:
         ZIndex: =15
 
     DropdownCapabilitySearch As dropdown:
+        AllowEmptySelection: =true
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
         Default: =""""""
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
-        Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
         OnChange: =
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
+        Visible: =false
         X: =129
         Y: =212
         ZIndex: =16
@@ -320,12 +313,12 @@ Search As screen:
         Y: =60
         ZIndex: =16
 
-        ComboBoxSkillSearch_1 As combobox:
-            DisplayFields: =["Skill"]
-            InputTextPlaceholder: ="Filter skills"
-            Items: =SkillsCollection
-            SearchFields: =["Skill"]
-            SearchItems: =Search(SkillsCollection,ComboBoxSkillSearch_1.SearchText,"Skill")
+        ComboBoxSkillSearch As combobox:
+            DisplayFields: =["Title"]
+            InputTextPlaceholder: =
+            Items: =SkillsCollectionSearch
+            SearchFields: =["Title"]
+            SearchItems: =Search(SkillsCollectionSearch,ComboBoxSkillSearch.SearchText,"Title")
             X: =129
             Y: =424
             ZIndex: =5
@@ -360,12 +353,12 @@ Search As screen:
         Y: =60
         ZIndex: =17
 
-        ComboBoxRole_1 As combobox:
+        ComboBoxRole As combobox:
             DisplayFields: =["Value"]
-            InputTextPlaceholder: ="Filter Role"
+            InputTextPlaceholder: =
             Items: =["Associate Consultant","Consultant", "Senior Consultant"]
             SearchFields: =["Value"]
-            SearchItems: =Search(["Associate Consultant","Consultant", "Senior Consultant"],ComboBoxRole_1.SearchText,"Value")
+            SearchItems: =Search(["Associate Consultant","Consultant", "Senior Consultant"],ComboBoxRole.SearchText,"Value")
             SelectMultiple: =false
             X: =129
             Y: =500
@@ -395,12 +388,12 @@ Search As screen:
         Y: =60
         ZIndex: =18
 
-        ComboBoxQualSearch_1 As combobox:
-            DisplayFields: =["Qualification"]
-            InputTextPlaceholder: ="Filter Qualifications"
-            Items: =QualificationsCollection
-            SearchFields: =["Qualification"]
-            SearchItems: =Search(QualificationsCollection,ComboBoxQualSearch_1.SearchText,"Qualification")
+        ComboBoxQualSearch As combobox:
+            DisplayFields: =["Title"]
+            InputTextPlaceholder: =
+            Items: =QualificationsCollectionSearch
+            SearchFields: =["Title"]
+            SearchItems: =Search(QualificationsCollectionSearch,ComboBoxQualSearch.SearchText,"Title")
             X: =129
             Y: =580
             ZIndex: =10
@@ -443,36 +436,17 @@ Search As screen:
             Y: =633
             ZIndex: =13
 
-    Label16 As label:
-        Color: =RGBA(246, 88, 16, 1)
-        Height: =159
-        Text: |-
-            =RadioHubsSearch.SelectedText.Value & " | len: " & Len(Text(RadioHubsSearch.SelectedText.Value))
-        Width: =328
-        X: =996
-        Y: =540
-        ZIndex: =21
-
     ComboBoxCapability As combobox:
         DisplayFields: =["Value"]
         IsSearchable: =false
         Items: =["All", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
         SearchFields: =["Value"]
-        SearchItems: =Search(["All", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"],ComboBoxCapability.SearchText,"Value")
+        SearchItems: =[]
         SelectMultiple: =false
         Visible: =false
         X: =985
         Y: =190
         ZIndex: =22
-
-    Label8 As label:
-        Height: =74
-        Text: |
-            =If(IsEmpty(emails), "The collection is empty", "The collection has data")
-        Width: =233
-        X: =609
-        Y: =625
-        ZIndex: =23
 
     Group5_2 As group:
         Height: =5
@@ -486,9 +460,9 @@ Search As screen:
             HoverColor: =RGBA(219, 219, 219, 1)
             Items: |-
                 =If(
-                    IsBlank(DropdownCapabilitySearch.Selected),
+                    varIsCapabilityEmpty,
                     [],
-                    LookUp(HubOptionSets, Capability = DropdownCapabilitySearch.Selected.Value).Options
+                    LookUp(HubOptionSets, Capability = ComboBoxCapabilitySearch.Selected.Value).Options
                 )
             Width: =371
             X: =116
@@ -505,28 +479,30 @@ Search As screen:
             ZIndex: =20
 
     ComboBoxClient As combobox:
-        DisplayFields: =["Value"]
-        Items: =["HMRC", "NHS", "BAE", "Home Office", "MOD", "Metropolitan Police Service (MPS)", "Scottish Fire and Rescue Service", "HMCTS", "DVSA", "Veterinary Medicines Directorate", "Heathrow Airport", "Jaguar Land Rover", "Burberry", "Lloyd's Register", "EDF", "Bosch", "Royal Mail", "Met Search", "London Ambulance Service", "London Fire Brigade", "National Security agencies", "multiple UK Police Forces", "Welish Assembly Government", "DWP", "MoJ", "DfE", "DEFRA", "Ministry of Justice (MoJ) on the HMCTS Reform Programme", "Driver and Vehicle Standards Agency (DVSA)"]
-        SearchFields: =["Value"]
-        SearchItems: =Search(["HMRC", "NHS", "BAE", "Home Office", "MOD", "Metropolitan Police Service (MPS)", "Scottish Fire and Rescue Service", "HMCTS", "DVSA", "Veterinary Medicines Directorate", "Heathrow Airport", "Jaguar Land Rover", "Burberry", "Lloyd's Register", "EDF", "Bosch", "Royal Mail", "Met Search", "London Ambulance Service", "London Fire Brigade", "National Security agencies", "multiple UK Police Forces", "Welish Assembly Government", "DWP", "MoJ", "DfE", "DEFRA", "Ministry of Justice (MoJ) on the HMCTS Reform Programme", "Driver and Vehicle Standards Agency (DVSA)"],ComboBoxClient.SearchText,"Value")
+        DisplayFields: =["Client"]
+        InputTextPlaceholder: =
+        Items: ='CV Generator - Client/Industry'.Client
+        SearchFields: =["Client"]
+        SearchItems: =Search('CV Generator - Client/Industry'.Client,ComboBoxClient.SearchText,"Client")
         X: =129
         Y: =127
         ZIndex: =24
 
     Gallery5 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Items: =emails
+        Height: =308
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =95
-        X: =711
+        Width: =366
+        X: =985
         Y: =116
         ZIndex: =25
 
         Label18 As label:
             Height: =46
             OnSelect: =Select(Parent)
-            Text: =ThisItem.email
+            Text: =
             Width: =433
             X: =12
             Y: =24
@@ -545,7 +521,7 @@ Search As screen:
             =["MALS", "CPRD", "Govt", "FS", "ET&U", "TMTS"]
         SearchFields: =["Value"]
         SearchItems: |-
-            =Search(["MALS","CPRD", "Govt", "FS", "ET&U", "TMTS", "Central Govt"]
+            =Search(["MALS", "CPRD", "Govt", "FS", "ET&U", "TMTS"]
             ,ComboBoxIndustry.SearchText,"Value")
         X: =129
         Y: =49
@@ -567,8 +543,75 @@ Search As screen:
 
     Label14 As label:
         Text: |-
-            ="# Rows: " & CountRows(Gallery5.AllItems)
-        X: =1074
+            ="# Rows: " & CountRows(GalleryFilteredCVs_1.AllItems)
+        X: =656
         Y: =706
         ZIndex: =29
+
+    Label3 As label:
+        Height: =39
+        Text: |-
+            ="Filters on: " & !allFiltersEmpty
+        Width: =179
+        X: =783
+        Y: =706
+        ZIndex: =30
+
+    Label8 As label:
+        Text: |-
+            ="Qual empty: " & IsEmpty(ComboBoxQualSearch.SelectedItems)
+        X: =985
+        Y: =705
+        ZIndex: =31
+
+    Label8_1 As label:
+        Text: |-
+            ="Skill empty: " & IsEmpty(ComboBoxSkillSearch.SelectedItems)
+        X: =985
+        Y: =665
+        ZIndex: =32
+
+    Label8_2 As label:
+        Text: |-
+            ="Role empty: " & IsEmpty(ComboBoxRole.SelectedItems)
+        X: =990
+        Y: =622
+        ZIndex: =33
+
+    Label8_3 As label:
+        Height: =36
+        Text: |-
+            ="Capability empty: " & IsEmpty(ComboBoxCapabilitySearch.SelectedItems)
+        Width: =226
+        X: =990
+        Y: =586
+        ZIndex: =34
+
+    ComboBoxCapabilitySearch As combobox:
+        DisplayFields: =["Value"]
+        Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        SearchFields: =["Value"]
+        SearchItems: =Search(["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"],ComboBoxCapabilitySearch.SearchText,"Value")
+        SelectMultiple: =false
+        X: =127
+        Y: =212
+        ZIndex: =35
+
+    Label8_4 As label:
+        Height: =36
+        Text: |-
+            ="Hubs empty: " & (Len(RadioHubsSearch.SelectedText.Value) = 0)
+        Width: =226
+        X: =990
+        Y: =544
+        ZIndex: =36
+
+    Label8_5 As label:
+        Height: =36
+        Text: |-
+            ="Client empty: " & IsEmpty(ComboBoxClient.SelectedItems)
+        Width: =226
+        X: =990
+        Y: =506
+        ZIndex: =37
 
