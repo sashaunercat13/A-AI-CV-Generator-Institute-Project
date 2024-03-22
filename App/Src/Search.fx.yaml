@@ -8,17 +8,17 @@ Search As screen:
         Set(SCcheckedSearch, false);
         
         // Set filter variables
-        Set(varIsSkillsEmpty, false);
-        Set(varIsQualificationsEmpty, false);
-        Set(varIsRoleEmpty, false);
-        Set(varIsCapabilityEmpty, false);
-        Set(varIsHubsEmpty, false);
-        Set(varIsClientEmpty, false);
-        Set(varIsIndustryEmpty, false);
+        Set(varIsSkillsEmpty, true);
+        Set(varIsQualificationsEmpty, true);
+        Set(varIsRoleEmpty, true);
+        Set(varIsCapabilityEmpty, true);
+        Set(varIsHubsEmpty, true);
+        Set(varIsClientEmpty, true);
+        Set(varIsIndustryEmpty, true);
         // Additional conditions can be set similarly
         
         ClearCollect(SkillsCollectionSearch, 
-            //{Title: "Agile Concepts", ID: 1},
+            {Title: "Agile Concepts", ID: 1},
             {Title: "AWS", ID: 2},
             {Title: "Azure", ID: 3},
             {Title: "Devops & Tooling (e.g. Git, Jenkins)", ID: 4},
@@ -191,7 +191,7 @@ Search As screen:
         Items: =SkillsCollectionSearch
         OnChange: |-
             =// Set in the OnChange property of the ComboBox
-            Set(varIsSkillsEmpty, !IsEmpty(ComboBoxSkill.SelectedItems));
+            Set(varIsSkillsEmpty, IsEmpty(ComboBoxSkill.SelectedItems));
         SearchFields: =["Title"]
         SearchItems: =Search(SkillsCollectionSearch,ComboBoxSkillSearch.SearchText,"Title")
         X: =129
@@ -204,7 +204,7 @@ Search As screen:
         Items: =["Associate Consultant","Consultant", "Senior Consultant"]
         OnChange: |-
             =// Set in the OnChange property of the ComboBox
-            Set(varIsRoleEmpty, !IsEmpty(ComboBoxRole.SelectedItems));
+            Set(varIsRoleEmpty, IsEmpty(ComboBoxRole.SelectedItems));
         SearchFields: =["Value"]
         SearchItems: =Search(["Associate Consultant","Consultant", "Senior Consultant"],ComboBoxRole.SearchText,"Value")
         SelectMultiple: =false
@@ -239,7 +239,7 @@ Search As screen:
                 FilteredEmailsForClient,
                 Filter(
                     'CV Generator - Project Experience',
-                    'Project Client' in ComboBoxClient.SelectedItems.Value
+                    'Project Client' in ComboBoxClient.SelectedItems
                 ).Email
             );
             
@@ -283,9 +283,7 @@ Search As screen:
                 && varIsIndustryEmpty
                 )
             );
-            
-            // Conditional logic to handle both skills and qualifications
-            If(
+            /*
                 varIsSkillsEmpty
                 && varIsQualificationsEmpty
                 && varIsRoleEmpty
@@ -293,6 +291,10 @@ Search As screen:
                 && !BPSScheckedSearch
                 && varIsCapabilityEmpty
                 && varIsRadioHubsEmpty,
+            */
+            // Conditional logic to handle both skills and qualifications
+            If(
+                allFiltersEmpty,
                 Collect(FinalFilteredCVs, 'CV Generator'),
                 Collect(
                     FinalFilteredCVs,
@@ -334,7 +336,7 @@ Search As screen:
         Items: =QualificationsCollectionSearch
         OnChange: |-
             =// Set in the OnChange property of the ComboBox
-            Set(varIsQualificationsEmpty, !IsEmpty(ComboBoxQualSearch.SelectedItems));
+            Set(varIsQualificationsEmpty, IsEmpty(ComboBoxQualSearch.SelectedItems));
         SearchFields: =["Title"]
         SearchItems: =Search(QualificationsCollectionSearch,ComboBoxQualSearch.SearchText,"Title")
         X: =129
@@ -487,7 +489,7 @@ Search As screen:
         Items: ='CV Generator - Client/Industry'.Client
         OnChange: |-
             =// Set in the OnChange property of the ComboBox
-            Set(varIsClientEmpty, !IsEmpty(ComboBoxClient.SelectedItems));
+            Set(varIsClientEmpty, IsEmpty(ComboBoxClient.SelectedItems));
         SearchFields: =["Client"]
         SearchItems: =Search('CV Generator - Client/Industry'.Client,ComboBoxClient.SearchText,"Client")
         X: =129
@@ -527,7 +529,7 @@ Search As screen:
             =["MALS", "CPRD", "Govt", "FS", "ET&U", "TMTS"]
         OnChange: |-
             =// Set in the OnChange property of the ComboBox
-            Set(varIsIndustryEmpty, !IsEmpty(ComboBoxIndustry.SelectedItems));
+            Set(varIsIndustryEmpty, IsEmpty(ComboBoxIndustry.SelectedItems));
         SearchFields: =["Value"]
         SearchItems: |-
             =Search(["MALS", "CPRD", "Govt", "FS", "ET&U", "TMTS"]
@@ -577,15 +579,15 @@ Search As screen:
     Label8_1 As label:
         Text: |-
             ="Skill empty: " & IsEmpty(ComboBoxSkillSearch.SelectedItems)
-        X: =925
-        Y: =666
+        X: =930
+        Y: =619
         ZIndex: =32
 
     Label8_2 As label:
         Text: |-
             ="Role empty: " & IsEmpty(ComboBoxRole.SelectedItems)
         X: =930
-        Y: =623
+        Y: =659
         ZIndex: =33
 
     Label8_3 As label:
@@ -626,7 +628,7 @@ Search As screen:
 
     Label8_7 As label:
         Text: |-
-            ="Qual empty: " & !varIsQualificationsEmpty
+            ="Qual empty: " & varIsQualificationsEmpty
         Width: =200
         X: =1135
         Y: =706
@@ -634,14 +636,14 @@ Search As screen:
 
     Label8_8 As label:
         Text: |-
-            ="Skill empty: " & !varIsSkillsEmpty
+            ="Skill empty: " & varIsSkillsEmpty
         X: =1140
         Y: =633
         ZIndex: =40
 
     Label8_9 As label:
         Text: |-
-            ="Role empty: " & !varIsRoleEmpty
+            ="Role empty: " & varIsRoleEmpty
         X: =1135
         Y: =666
         ZIndex: =41
@@ -649,7 +651,7 @@ Search As screen:
     Label8_10 As label:
         Height: =36
         Text: |-
-            ="Capability empty: " & !varIsCapabilityEmpty
+            ="Capability empty: " & varIsCapabilityEmpty
         Width: =226
         X: =1140
         Y: =587
@@ -658,7 +660,7 @@ Search As screen:
     Label8_11 As label:
         Height: =36
         Text: |-
-            ="Hubs empty: " & !varIsHubsEmpty
+            ="Hubs empty: " & varIsHubsEmpty
         Width: =226
         X: =1140
         Y: =545
@@ -667,7 +669,7 @@ Search As screen:
     Label8_12 As label:
         Height: =36
         Text: |-
-            ="Client empty: " & !varIsClientEmpty
+            ="Client empty: " & varIsClientEmpty
         Width: =226
         X: =1140
         Y: =507
@@ -676,7 +678,7 @@ Search As screen:
     Label8_13 As label:
         Height: =36
         Text: |-
-            ="industry empty: " & !varIsIndustryEmpty
+            ="industry empty: " & varIsIndustryEmpty
         Width: =226
         X: =1140
         Y: =471
@@ -729,7 +731,7 @@ Search As screen:
             Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
             OnChange: |-
                 =// Set in the OnChange property of the ComboBox
-                Set(varIsCapabilityEmpty, !IsEmpty(ComboBoxCapability.SelectedItems));
+                Set(varIsCapabilityEmpty, IsEmpty(ComboBoxCapability.SelectedItems));
             SearchFields: =["Value"]
             SearchItems: =Search(["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"],ComboBoxCapabilitySearch.SearchText,"Value")
             SelectMultiple: =false

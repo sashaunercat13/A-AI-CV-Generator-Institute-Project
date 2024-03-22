@@ -105,7 +105,7 @@ Create As screen:
         OnSelect: |-
             =Navigate('Skills Competancies & Qualifications');
             
-            Patch('CV Generator', {Capability: DropdownCapability.Selected.Value, Hub: RadioHubs.SelectedText.Value, Photo: User().Image, Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': DropdownCapability.Selected.Value, Alignment:'Primary Alignment'.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text, 'Security Clearance BPSS': BPSSchecked, 'Security Clearance SC': SCchecked, 'Microsoft Profile': {
+            Patch('CV Generator', {Capability: DropdownCapability.Selected.Value, Hub: RadioHubs.SelectedText.Value, Photo: User().Image, Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': DropdownRoleCreate.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text, 'Security Clearance BPSS': BPSSchecked, 'Security Clearance SC': SCchecked, 'Microsoft Profile': {
                               Claims: Concatenate(
                                 "i:0#.f|membership|",
                                 User().Email
@@ -141,7 +141,7 @@ Create As screen:
         Default: ="false"
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
-        Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
         OnChange: =
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
@@ -166,20 +166,19 @@ Create As screen:
         Y: =72
         ZIndex: =15
 
-    "'Primary Alignment' As dropdown":
+    DropdownRoleCreate As dropdown:
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
         Items: |
-            =["Primary Alignment","frog", "Intelligent Industry", "Corporate Experience", "W&O", "BT", "Analytics & AI", "Financial Service", "Manufacturing", "Automotive and Life Sciences", "Utilities & Energy", "TMTS", "Public Sector", "Consumer Products & Retail", "Sustainable Futures"]
+            =["", "Associate Consultant","Consultant", "Senior Consultant", "Managing Director", "Director", "Vice President"]
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
-        Visible: =false
-        X: =720
-        Y: =52
+        X: =992
+        Y: =319
         ZIndex: =16
 
     Icon4 As icon.LogJournal:
@@ -297,6 +296,14 @@ Create As screen:
         X: =714
         Y: =278
         ZIndex: =32
+
+    Label12_1 As label:
+        Text: |-
+            ="Role:"
+        Width: =377
+        X: =989
+        Y: =280
+        ZIndex: =33
 
     Group6 As group:
         Height: =5
