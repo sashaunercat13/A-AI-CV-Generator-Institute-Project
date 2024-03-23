@@ -316,23 +316,23 @@ Search As screen:
                     Filter(
                         'CV Generator',
                         // Client
-                        (IsEmpty(ComboBoxClient.SelectedItems) || Email in FilteredEmailsForClient),
+                        (varIsClientEmpty || Email in FilteredEmailsForClient),
                         // industry
-                        (IsEmpty(ComboBoxIndustry.SelectedItems) || Email in FilteredClientsInProjects.Email),
+                        (varIsIndustryEmpty || Email in FilteredClientsInProjects.Email),
                         // Skill filter - ony apply if there are selected skills
-                        (IsEmpty(ComboBoxSkillSearch.SelectedItems) || 
+                        (varIsSkillsEmpty || 
                             CountIf(
                                 ComboBoxSkillSearch.SelectedItems,
                                 !IsBlank(Find(Text(Title), SkillsString))
                             ) > 0),
                         // Qualification filter - only apply if there are selected qualifications
-                        (IsEmpty(ComboBoxQualSearch.SelectedItems) || 
+                        (varIsQualificationsEmpty || 
                             CountIf(
                                 ComboBoxQualSearch.SelectedItems,
                                 !IsBlank(Find(Text(Title), QualificationsString))
                             ) > 0),
                         // Role Title filter - only apply if role title selected
-                        (IsEmpty(ComboBoxRole.SelectedItems) || 'Role Title' in ComboBoxRole.SelectedItems),
+                        (varIsRoleEmpty || 'Role Title' in ComboBoxRole.SelectedItems),
                         // Apply Security Clearance SC filter based on checkbox
                         (varBPSScheckedSearchEmpty || (!varBPSScheckedSearchEmpty && 'Security Clearance BPSS')),
                         // Apply Security Clearance BPSS filter based on checkbox
