@@ -528,7 +528,7 @@ Search As screen:
     Gallery5 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =308
-        Items: =FilteredEmailsForClient
+        Items: =FilteredClientsInProjects
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =95
@@ -673,22 +673,22 @@ Search As screen:
         Text: |-
             ="Qual empty: " & varIsQualificationsEmpty
         Width: =200
-        X: =1135
-        Y: =706
+        X: =1125
+        Y: =614
         ZIndex: =39
 
     Label8_8 As label:
         Text: |-
             ="Skill empty: " & varIsSkillsEmpty
-        X: =1140
-        Y: =633
+        X: =1130
+        Y: =541
         ZIndex: =40
 
     Label8_9 As label:
         Text: |-
             ="Role empty: " & varIsRoleEmpty
-        X: =1135
-        Y: =666
+        X: =1125
+        Y: =574
         ZIndex: =41
 
     Label8_10 As label:
@@ -696,8 +696,8 @@ Search As screen:
         Text: |-
             ="Capability empty: " & varIsCapabilityEmpty
         Width: =226
-        X: =1140
-        Y: =587
+        X: =1130
+        Y: =495
         ZIndex: =42
 
     Label8_11 As label:
@@ -705,8 +705,8 @@ Search As screen:
         Text: |-
             ="Hubs empty: " & varIsHubsEmpty
         Width: =226
-        X: =1140
-        Y: =545
+        X: =1130
+        Y: =453
         ZIndex: =43
 
     Label8_12 As label:
@@ -714,8 +714,8 @@ Search As screen:
         Text: |-
             ="Client empty: " & varIsClientEmpty
         Width: =226
-        X: =1140
-        Y: =507
+        X: =1130
+        Y: =415
         ZIndex: =44
 
     Label8_13 As label:
@@ -723,8 +723,8 @@ Search As screen:
         Text: |-
             ="industry empty: " & varIsIndustryEmpty
         Width: =226
-        X: =1140
-        Y: =471
+        X: =1130
+        Y: =379
         ZIndex: =45
 
     ComboBoxHubs As combobox:
@@ -757,8 +757,8 @@ Search As screen:
         Text: |-
             ="BPSS empty: " & varBPSScheckedSearchEmpty
         Width: =226
-        X: =1140
-        Y: =444
+        X: =1130
+        Y: =695
         ZIndex: =49
 
     Label8_15 As label:
@@ -766,7 +766,7 @@ Search As screen:
         Text: |-
             ="SC empty: " & varSCcheckedSearchEmpty
         Width: =226
-        X: =1140
-        Y: =408
+        X: =1130
+        Y: =659
         ZIndex: =50
 
