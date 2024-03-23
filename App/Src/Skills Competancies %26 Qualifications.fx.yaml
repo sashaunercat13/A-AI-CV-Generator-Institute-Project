@@ -129,21 +129,46 @@
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
-            =Navigate(ProjectTest) ;
+            =Navigate(ProjectTest);
             // Convert collections to strings to save to a single column in List
-            Set(SkillsString, Concat(SkillsCollection, Skill & ", "));
-            Set(QualificationsString, Concat(QualificationsCollection, Qualification & ", "));
-            Set(EducationString, Concat(Education, DegreeType & ", " & University & ", " & Course & "; "));
-            
-            Patch('CV Generator', LookUp('CV Generator', Email = User().Email), { SkillsString: SkillsString, Education: EducationString, QualificationsString:QualificationsString})
-            
-            
+            Set(
+                SkillsString,
+                Concat(
+                    SkillsCollection,
+                    Skill & ", "
+                )
+            );
+            Set(
+                QualificationsString,
+                Concat(
+                    QualificationsCollection,
+                    Qualification & ", "
+                )
+            );
+            Set(
+                EducationString,
+                Concat(
+                    Education,
+                    DegreeType & ", " & University & ", " & Course & "; "
+                )
+            );
+            Patch(
+                'CV Generator',
+                LookUp(
+                    'CV Generator',
+                    Email = "jamie.martin@capgemini.com" //User().Email
+                ),
+                {
+                    SkillsString: SkillsString,
+                    Education: EducationString,
+                    QualificationsString: QualificationsString
+                }
+            )
             /*
             Patch('CV Generator', LookUp('CV Generator', Email = User().Email),{
                 Skills: SkillString
             })
             */
-            
             /*
             {Skills: Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text}) */
         Text: ="Next Page"
@@ -199,9 +224,9 @@
         DisplayFields: =["Value"]
         Font: =Font.Verdana
         InputTextPlaceholder: ="Search Skills"
-        Items: =["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL","Leadership","Communication","Problem-solving","Time management","Decision-making","Teamwork","Adaptability","Creativity","Critical thinking","Emotional intelligence","Conflict resolution","Negotiation","Stress management","Interpersonal skills","Organization","Strategic planning","Networking","Public speaking","Collaboration","Empathy","Resilience","Integrity","Flexibility","Customer service","Attention to detail","Initiative","Cultural awareness","Delegation","Motivation","Presentation skills","Coaching and mentoring","Diplomacy","Assertiveness","Consensus building","Persuasion","Relationship building","Conflict management","Feedback and constructive criticism","Trustworthiness","Decision-making under pressure","Analytical skills","Problem-solving in teams","Prioritisation","Project management","Change management","Empowerment","Resourcefulness","Business acumen","Self-awareness","Vision-setting","Emotional regulation","Active listening","Empathetic listening","Team building","Cross-cultural communication","Time blocking","Respectfulness","Ethical decision-making","Adaptive leadership","Problem sensitivity","Open-mindedness","Consistency","Innovation","Risk management","Conflict resolution strategies","Customer relationship management (CRM)","Feedback reception","Presentation delivery","Digital literacy","Strategic thinking","Public relations","Client management","Interdepartmental collaboration","Event planning and coordination","Salesmanship","Financial literacy","Conflict avoidance","Empowerment of others","Interpersonal effectiveness","Networking proficiency","Emotional resilience","Change adaptation","Constructive feedback delivery"]
+        Items: =["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL","Leadership","Communication","Problem-solving","Time management","Decision-making","Teamwork","Adaptability","Creativity","Critical thinking","Emotional intelligence","Conflict resolution","Negotiation","Stress management","Interpersonal skills","Organization","Strategic planning","Networking","Public speaking","Collaboration","Empathy","Resilience","Integrity","Flexibility","Customer service","Attention to detail","Initiative","Cultural awareness","Delegation","Motivation","Presentation skills","Coaching and mentoring","Diplomacy","Assertiveness","Consensus building","Persuasion","Relationship building","Conflict management","Feedback and constructive criticism","Trustworthiness","Decision-making under pressure","Analytical skills","Problem-solving in teams","Prioritisation","Project management","Change management","Empowerment","Resourcefulness","Business acumen","Self-awareness","Vision-setting","Emotional regulation","Active listening","Empathetic listening","Team building","Cross-cultural communication","Time blocking","Respectfulness","Ethical decision-making","Adaptive leadership","Problem sensitivity","Open-mindedness","Consistency","Innovation","Risk management","Conflict resolution strategies","Customer relationship management (CRM)","Feedback reception","Presentation delivery","Digital literacy","Strategic thinking","Public relations","Client management","Interdepartmental collaboration","Event planning and coordination","Salesmanship","Financial literacy","Conflict avoidance","Empowerment of others","Interpersonal effectiveness","Networking proficiency","Emotional resilience","Change adaptation","Constructive feedback delivery", "Machine Learning", "Computer Vision", "Cloud Data Platforms (Azure/GCP/AWS)", "Data Pre-Processing", "LLMs", "Generative AI", "Data Visualisation"]
         SearchFields: =["Value"]
-        SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL","Leadership","Communication","Problem-solving","Time management","Decision-making","Teamwork","Adaptability","Creativity","Critical thinking","Emotional intelligence","Conflict resolution","Negotiation","Stress management","Interpersonal skills","Organization","Strategic planning","Networking","Public speaking","Collaboration","Empathy","Resilience","Integrity","Flexibility","Customer service","Attention to detail","Initiative","Cultural awareness","Delegation","Motivation","Presentation skills","Coaching and mentoring","Diplomacy","Assertiveness","Consensus building","Persuasion","Relationship building","Conflict management","Feedback and constructive criticism","Trustworthiness","Decision-making under pressure","Analytical skills","Problem-solving in teams","Prioritisation","Project management","Change management","Empowerment","Resourcefulness","Business acumen","Self-awareness","Vision-setting","Emotional regulation","Active listening","Empathetic listening","Team building","Cross-cultural communication","Time blocking","Respectfulness","Ethical decision-making","Adaptive leadership","Problem sensitivity","Open-mindedness","Consistency","Innovation","Risk management","Conflict resolution strategies","Customer relationship management (CRM)","Feedback reception","Presentation delivery","Digital literacy","Strategic thinking","Public relations","Client management","Interdepartmental collaboration","Event planning and coordination","Salesmanship","Financial literacy","Conflict avoidance","Empowerment of others","Interpersonal effectiveness","Networking proficiency","Emotional resilience","Change adaptation","Constructive feedback delivery"],ComboBoxSkill.SearchText,"Value")
+        SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL","Leadership","Communication","Problem-solving","Time management","Decision-making","Teamwork","Adaptability","Creativity","Critical thinking","Emotional intelligence","Conflict resolution","Negotiation","Stress management","Interpersonal skills","Organization","Strategic planning","Networking","Public speaking","Collaboration","Empathy","Resilience","Integrity","Flexibility","Customer service","Attention to detail","Initiative","Cultural awareness","Delegation","Motivation","Presentation skills","Coaching and mentoring","Diplomacy","Assertiveness","Consensus building","Persuasion","Relationship building","Conflict management","Feedback and constructive criticism","Trustworthiness","Decision-making under pressure","Analytical skills","Problem-solving in teams","Prioritisation","Project management","Change management","Empowerment","Resourcefulness","Business acumen","Self-awareness","Vision-setting","Emotional regulation","Active listening","Empathetic listening","Team building","Cross-cultural communication","Time blocking","Respectfulness","Ethical decision-making","Adaptive leadership","Problem sensitivity","Open-mindedness","Consistency","Innovation","Risk management","Conflict resolution strategies","Customer relationship management (CRM)","Feedback reception","Presentation delivery","Digital literacy","Strategic thinking","Public relations","Client management","Interdepartmental collaboration","Event planning and coordination","Salesmanship","Financial literacy","Conflict avoidance","Empowerment of others","Interpersonal effectiveness","Networking proficiency","Emotional resilience","Change adaptation","Constructive feedback delivery", "Machine Learning", "Computer Vision", "Cloud Data Platforms (Azure/GCP/AWS)", "Data Pre-Processing", "LLMs", "Generative AI", "Data Visualisation"],ComboBoxSkill.SearchText,"Value")
         Width: =440
         X: =50
         Y: =200

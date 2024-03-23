@@ -102,33 +102,43 @@ Create As screen:
                 IsBlank(DropdownCapability.Selected.Value)Or IsBlank(RadioHubs) Or IsBlank('Profile box'.Text) Or IsBlank(Interests.Text), 
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
-        OnSelect: |-
+        OnSelect: |
             =Navigate('Skills Competancies & Qualifications');
-            
-            Patch('CV Generator', {Capability: DropdownCapability.Selected.Value, Hub: RadioHubs.SelectedText.Value, Photo: User().Image, Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': DropdownRoleCreate.Selected.Value, Profile: 'Profile box'.Text, Interests:Interests.Text, 'Security Clearance BPSS': BPSSchecked, 'Security Clearance SC': SCchecked, 'Microsoft Profile': {
-                              Claims: Concatenate(
-                                "i:0#.f|membership|",
-                                User().Email
-                            ),
-                            Department: "",
-                            DisplayName: User().FullName,
-                            Email: User().Email,
-                            JobTitle: "",
-                            Picture: ""
-                        }});
-            
+            Patch(
+                'CV Generator',
+                {
+                    Capability: DropdownCapability.Selected.Value,
+                    Hub: RadioHubs.SelectedText.Value,
+                    Photo: User().Image,
+                    Email: Office365Users.MyProfile().Mail,
+                    'First Name': CurrentUserFirstName,
+                    'Last Name': CurrentUserLastName,
+                    'Role Title': DropdownRoleCreate.Selected.Value,
+                    Profile: 'Profile box'.Text,
+                    Interests: Interests.Text,
+                    'Security Clearance BPSS': BPSSchecked,
+                    'Security Clearance SC': SCchecked,
+                    'Microsoft Profile': {
+                        Claims: Concatenate(
+                            "i:0#.f|membership|",
+                            "jamie.martin@capgemini.com"
+                        ),
+                        Department: "",
+                        DisplayName: "Jamie Martin",
+                        Email: "jamie.martin@capgemini.com",
+                        JobTitle: "",
+                        Picture: ""
+                    }
+                }
+            );
             /* If(
                 BPSSchecked,  
                 Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance BPSS':true}), 
                 Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance BPSS':false}));
             
-            
              If (SCchecked,
                 Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance SC':true}),
                 Patch('CV Generator', Defaults('CV Generator'), LookUp('CV Generator', Email = User().Email),{'Security Clearance SC':false})) */
-            
-              
-             
         Text: ="Next Page"
         X: =1167
         Y: =710
