@@ -316,9 +316,9 @@ Search As screen:
                     Filter(
                         'CV Generator',
                         // Client
-                        (IsEmpty(ComboBoxClient.SelectedItems) || 'Email' in FilteredEmailsForClient),
+                        (IsEmpty(ComboBoxClient.SelectedItems) || Email in FilteredEmailsForClient),
                         // industry
-                        (IsEmpty(ComboBoxIndustry.SelectedItems) || 'Email' in FilteredClientsInProjects.Email),
+                        (IsEmpty(ComboBoxIndustry.SelectedItems) || Email in FilteredClientsInProjects.Email),
                         // Skill filter - ony apply if there are selected skills
                         (IsEmpty(ComboBoxSkillSearch.SelectedItems) || 
                             CountIf(

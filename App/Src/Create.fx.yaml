@@ -262,7 +262,7 @@ Create As screen:
     Label9 As label:
         Font: =Font.Verdana
         Text: |-
-            ="Capability Expertise:"
+            ="Capability:"
         Width: =334
         X: =714
         Y: =42
