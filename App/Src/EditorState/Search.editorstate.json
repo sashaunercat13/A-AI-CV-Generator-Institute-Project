@@ -2811,14 +2811,7 @@
           "NameMapSourceSchema": "?"
         },
         "MoreItemsButtonColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "[\"Value\"]",
-          "InvariantPropertyName": "DisplayFields",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "DisplayFields",
         "SearchFields",
         {
           "AFDDataSourceName": "",
@@ -3459,7 +3452,14 @@
           "NameMapSourceSchema": "?"
         },
         "MoreItemsButtonColor",
-        "DisplayFields",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "[\"Title\"]",
+          "InvariantPropertyName": "DisplayFields",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "SearchFields",
         {
           "AFDDataSourceName": "",

@@ -344,7 +344,7 @@ ProjectTest As screen:
                 // Creating a new record because varSelectedProjectID = 0
                 Patch(
                     'CV Generator - Project Experience',
-                    Defaults('CV Generator - Project Experience'), // Indicates a new record
+                    Defaults('CV Generator - Project Experience'),// Indicates a new record
                     {
                         Email: User().Email,
                         'Project Title': '1ProjectTitle_2'.Text,
@@ -354,7 +354,10 @@ ProjectTest As screen:
                         'End Date': '1ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
                         'Microsoft Profile': {
-                            Claims: Concatenate("i:0#.f|membership|", User().Email),
+                            Claims: Concatenate(
+                                "i:0#.f|membership|",
+                                User().Email
+                            ),
                             Department: "",
                             DisplayName: User().FullName,
                             Email: User().Email,
@@ -378,7 +381,10 @@ ProjectTest As screen:
                         'End Date': '1ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
                         'Microsoft Profile': {
-                            Claims: Concatenate("i:0#.f|membership|", User().Email),
+                            Claims: Concatenate(
+                                "i:0#.f|membership|",
+                                User().Email
+                            ),
                             Department: "",
                             DisplayName: User().FullName,
                             Email: User().Email,
@@ -388,21 +394,18 @@ ProjectTest As screen:
                     }
                 )
             );
-            
             // Refresh the List
             Refresh('CV Generator - Project Experience');
-            
             // Add the new project to the list
             Clear(ProjectsOfThisUser);
-            
             // Update the collection
-            ClearCollect(ProjectsOfThisUser,
+            ClearCollect(
+                ProjectsOfThisUser,
                 Filter(
                     'CV Generator - Project Experience',
                     Email = User().Email
                 )
             );
-            
             //reset the form fields
             Reset('1ProjectTitle_2');
             Reset(DropdownRole);

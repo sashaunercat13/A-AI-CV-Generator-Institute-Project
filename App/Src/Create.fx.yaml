@@ -121,11 +121,11 @@ Create As screen:
                     'Microsoft Profile': {
                         Claims: Concatenate(
                             "i:0#.f|membership|",
-                            "jamie.martin@capgemini.com"
+                            User().Email
                         ),
                         Department: "",
-                        DisplayName: "Jamie Martin",
-                        Email: "jamie.martin@capgemini.com",
+                        DisplayName: User().FullName,
+                        Email: User().Email,
                         JobTitle: "",
                         Picture: ""
                     }

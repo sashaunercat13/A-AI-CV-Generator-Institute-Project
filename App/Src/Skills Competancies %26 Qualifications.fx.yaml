@@ -1,14 +1,654 @@
 "'Skills Competancies & Qualifications' As screen":
-    OnVisible: |
+    OnVisible: |-
         =// initialise the collections
-        ClearCollect(Education, {});
-        ClearCollect(Qualifications, {});
-        ClearCollect(SkillsCollection, {});
-        
+        ClearCollect(
+            EducationCollection,
+            {}
+        );
+        ClearCollect(
+            Qualifications,
+            {}
+        );
+        ClearCollect(
+            SkillsCollection,
+            {}
+        );
         // Clear the collections form any previous entries
-        Clear(Education);
+        Clear(EducationCollection);
         Clear(SkillsCollection);
         Clear(QualificationsCollection);
+        ClearCollect(
+            Skills,
+            [
+                "Agile Concepts",
+                "AWS",
+                "Azure",
+                "Devops & Tooling (e.g. Git, Jenkins)",
+                "GCP",
+                "RDBMS",
+                "Graph DBs",
+                "Hive",
+                "Elasticsearch",
+                "Databricks",
+                "Dataiku",
+                "Snowflake",
+                "Teradata",
+                "Data Robot",
+                "Pandas",
+                "Spark",
+                "Airflow",
+                "MLFlow",
+                "Kedro",
+                "TFX",
+                "Scikit-Learn",
+                "Tensorflow",
+                "PyTorch",
+                "Keras",
+                "Looker",
+                "Power BI",
+                "Shiny",
+                "Tableau",
+                "React",
+                "Flask",
+                "HTML",
+                ".NET",
+                "Go",
+                "JS",
+                "Java / Scala",
+                "Python",
+                "R",
+                "Rust",
+                "Shell",
+                "SQL",
+                "Leadership",
+                "Communication",
+                "Problem-solving",
+                "Time management",
+                "Decision-making",
+                "Teamwork",
+                "Adaptability",
+                "Creativity",
+                "Critical thinking",
+                "Emotional intelligence",
+                "Conflict resolution",
+                "Negotiation",
+                "Stress management",
+                "Interpersonal skills",
+                "Organization",
+                "Strategic planning",
+                "Networking",
+                "Public speaking",
+                "Collaboration",
+                "Empathy",
+                "Resilience",
+                "Integrity",
+                "Flexibility",
+                "Customer service",
+                "Attention to detail",
+                "Initiative",
+                "Cultural awareness",
+                "Delegation",
+                "Motivation",
+                "Presentation skills",
+                "Coaching and mentoring",
+                "Diplomacy",
+                "Assertiveness",
+                "Consensus building",
+                "Persuasion",
+                "Relationship building",
+                "Conflict management",
+                "Feedback and constructive criticism",
+                "Trustworthiness",
+                "Decision-making under pressure",
+                "Analytical skills",
+                "Problem-solving in teams",
+                "Prioritisation",
+                "Project management",
+                "Change management",
+                "Empowerment",
+                "Resourcefulness",
+                "Business acumen",
+                "Self-awareness",
+                "Vision-setting",
+                "Emotional regulation",
+                "Active listening",
+                "Empathetic listening",
+                "Team building",
+                "Cross-cultural communication",
+                "Time blocking",
+                "Respectfulness",
+                "Ethical decision-making",
+                "Adaptive leadership",
+                "Problem sensitivity",
+                "Open-mindedness",
+                "Consistency",
+                "Innovation",
+                "Risk management",
+                "Conflict resolution strategies",
+                "Customer relationship management (CRM)",
+                "Feedback reception",
+                "Presentation delivery",
+                "Digital literacy",
+                "Strategic thinking",
+                "Public relations",
+                "Client management",
+                "Interdepartmental collaboration",
+                "Event planning and coordination",
+                "Salesmanship",
+                "Financial literacy",
+                "Conflict avoidance",
+                "Empowerment of others",
+                "Interpersonal effectiveness",
+                "Networking proficiency",
+                "Emotional resilience",
+                "Change adaptation",
+                "Constructive feedback delivery",
+                "Machine Learning",
+                "Computer Vision",
+                "Cloud Data Platforms (Azure/GCP/AWS)",
+                "Data Pre-Processing",
+                "LLMs",
+                "Generative AI",
+                "Data Visualisation",
+                "Programming",
+                "Data Analysis",
+                "Time Management",
+            ]
+        );
+        
+        ClearCollect(
+            Qualifications,
+            [
+            "Microsoft Certified: Azure Solutions Architect Expert",
+            "Cisco Certified Network Associate (CCNA)",
+            "CompTIA A+",
+            "CompTIA Network+",
+            "CompTIA Security+",
+            "Certified Information Systems Security Professional (CISSP)",
+            "Certified Ethical Hacker (CEH)",
+            "AWS Certified Solutions Architect",
+            "Google Certified Professional Cloud Architect",
+            "Certified ScrumMaster (CSM)",
+            "Certified Scrum Product Owner (CSPO)",
+            "Project Management Professional (PMP)",
+            "ITIL Foundation Certification",
+            "Certified Information Security Manager (CISM)",
+            "Certified Information Systems Auditor (CISA)",
+            "VMware Certified Professional (VCP)",
+            "Red Hat Certified Engineer (RHCE)",
+            "Certified Kubernetes Administrator (CKA)",
+            "Certified Docker Associate (CDA)",
+            "Certified OpenStack Administrator (COA)",
+            "Microsoft Certified: Azure Administrator Associate",
+            "Microsoft Certified: Azure Developer Associate",
+            "Google Associate Cloud Engineer",
+            "Oracle Certified Professional (OCP)",
+            "Certified Information Privacy Professional (CIPP)",
+            "Certified Data Management Professional (CDMP)",
+            "Certified Analytics Professional (CAP)",
+            "Certified in Risk and Information Systems Control (CRISC)",
+            "Certified Wireless Network Professional (CWNP)",
+            "Certified Information Systems Security Officer (CISSO)",
+            "Offensive Security Certified Professional (OSCP)",
+            "Certified in Governance of Enterprise IT (CGEIT)",
+            "Amazon Web Services Certified Developer (AWS CD)",
+            "Certified Kubernetes Application Developer (CKAD)",
+            "Google Professional Data Engineer",
+            "Microsoft Certified: Data Analyst Associate",
+            "Salesforce Certified Administrator",
+            "Salesforce Certified Platform Developer",
+            "Certified Cloud Security Professional (CCSP)",
+            "Certified Cloud Architect (CCA)",
+            "Certified Blockchain Professional (CBP)",
+            "Certified Artificial Intelligence Professional (CAIP)",
+            "Microsoft Certified: Power Platform App Maker Associate",
+            "Microsoft Certified: Power Platform Developer Associate",
+            "Certified Machine Learning Engineer",
+            "Certified Big Data Professional (CBDP)",
+            "Certified DevOps Engineer (CDE)",
+            "Certified Cyber Forensics Professional (CCFP)",
+            "Certified Mobile App Developer (CMAD)",
+            "Certified 3D Printing Professional",
+            "Certified Professional in Human Resources (PHR)",
+            "Society for Human Resource Management Certified Professional (SHRM-CP)",
+            "Certified Management Accountant (CMA)",
+            "Certified Financial Planner (CFP)",
+            "Chartered Financial Analyst (CFA)",
+            "Six Sigma Green Belt",
+            "Six Sigma Black Belt",
+            "Certified Fraud Examiner (CFE)",
+            "Certified Internal Auditor (CIA)",
+            "Professional in Human Resources (PHRi)",
+            "Senior Professional in Human Resources (SPHR)",
+            "Certified Professional in Supply Management (CPSM)",
+            "Certified Associate in Project Management (CAPM)",
+            "Agile Certified Practitioner (PMI-ACP)",
+            "Professional Scrum Master (PSM)",
+            "Certified Product Manager (CPM)",
+            "Certified Professional in Healthcare Quality (CPHQ)",
+            "Certified Quality Engineer (CQE)",
+            "Certified Information Privacy Professional (CIPP)",
+            "Professional in Business Analysis (PMI-PBA)",
+            "Certified Risk Management Professional (CRMP)",
+            "Certified Compensation Professional (CCP)",
+            "Certified Employee Benefits Specialist (CEBS)",
+            "Professional Certified Marketer (PCM)",
+            "Certified Professional in Learning and Performance (CPLP)",
+            "Certified Professional Purchasing Manager (CPPM)",
+            "Certified Professional Contracts Manager (CPCM)",
+            "Certified Manager (CM)",
+            "Certified in the Governance of Enterprise IT (CGEIT)",
+            "Certified Supply Chain Professional (CSCP)",
+            "Certified Professional in Healthcare Information and Management Systems (CPHIMS)",
+            "Certified Manager of Quality/Organizational Excellence (CMQ/OE)",
+            "Professional in Project Management (PPM)",
+            "Certified Professional Logistician (CPL)",
+            "Certified Professional Medical Services Manager (CPMSM)",
+            "Certified Information Professional (CIP)",
+            "Certified Safety Professional (CSP)",
+            "Certified Professional Environmental Auditor (CPEA)",
+            "Certified Professional Ergonomist (CPE)",
+            "Certified Associate in Software Testing (CAST)",
+            "Certified Professional in Training Management (CPTM)",
+            "Certified Professional in Talent Development (CPTD)",
+            "Azure Data Scientist",
+            "Azure ML Engineer",
+            "AWS Cloud practitioner",
+            "Microsoft PowerBI Certified"
+        ]
+        )
+        /*
+        ClearCollect(
+            SkillsCollectionSearch,
+            {
+                Title: "Agile Concepts",
+                ID: 1
+            },
+            {
+                Title: "AWS",
+                ID: 2
+            },
+            {
+                Title: "Azure",
+                ID: 3
+            },
+            {
+                Title: "Devops & Tooling (e.g. Git, Jenkins)",
+                ID: 4
+            },
+            {
+                Title: "GCP",
+                ID: 5
+            },
+            {
+                Title: "RDBMS",
+                ID: 6
+            },
+            {
+                Title: "Graph DBs",
+                ID: 7
+            },
+            {
+                Title: "Hive",
+                ID: 8
+            },
+            {
+                Title: "Elasticsearch",
+                ID: 9
+            },
+            {
+                Title: "Databricks",
+                ID: 10
+            },
+            {
+                Title: "Dataiku",
+                ID: 11
+            },
+            {
+                Title: "Snowflake",
+                ID: 12
+            },
+            {
+                Title: "Teradata",
+                ID: 13
+            },
+            {
+                Title: "Data Robot",
+                ID: 14
+            },
+            {
+                Title: "Pandas",
+                ID: 15
+            },
+            {
+                Title: "Spark",
+                ID: 16
+            },
+            {
+                Title: "Airflow",
+                ID: 17
+            },
+            {
+                Title: "MLFlow",
+                ID: 18
+            },
+            {
+                Title: "Kedro",
+                ID: 19
+            },
+            {
+                Title: "TFX",
+                ID: 20
+            },
+            {
+                Title: "Scikit-Learn",
+                ID: 21
+            },
+            {
+                Title: "Tensorflow",
+                ID: 22
+            },
+            {
+                Title: "PyTorch",
+                ID: 23
+            },
+            {
+                Title: "Keras",
+                ID: 24
+            },
+            {
+                Title: "Looker",
+                ID: 25
+            },
+            {
+                Title: "Power BI",
+                ID: 26
+            },
+            {
+                Title: "Shiny",
+                ID: 27
+            },
+            {
+                Title: "Tableau",
+                ID: 28
+            },
+            {
+                Title: "React",
+                ID: 29
+            },
+            {
+                Title: "Flask",
+                ID: 30
+            },
+            {
+                Title: "HTML",
+                ID: 31
+            },
+            {
+                Title: ".NET",
+                ID: 32
+            },
+            {
+                Title: "Go",
+                ID: 33
+            },
+            {
+                Title: "JS",
+                ID: 34
+            },
+            {
+                Title: "Java / Scala",
+                ID: 35
+            },
+            {
+                Title: "Python",
+                ID: 36
+            },
+            {
+                Title: "R",
+                ID: 37
+            },
+            {
+                Title: "Rust",
+                ID: 38
+            },
+            {
+                Title: "Shell",
+                ID: 39
+            },
+            {
+                Title: "SQL",
+                ID: 40
+            }
+        );
+        ClearCollect(
+            QualificationsCollectionSearch,
+            {
+                Title: "Microsoft Certified: Azure Solutions Architect Expert",
+                ID: 1
+            },
+            {
+                Title: "Cisco Certified Network Associate (CCNA)",
+                ID: 2
+            },
+            {
+                Title: "CompTIA A+",
+                ID: 3
+            },
+            {
+                Title: "CompTIA Network+",
+                ID: 4
+            },
+            {
+                Title: "CompTIA Security+",
+                ID: 5
+            },
+            {
+                Title: "Certified Information Systems Security Professional (CISSP)",
+                ID: 6
+            },
+            {
+                Title: "Certified Ethical Hacker (CEH)",
+                ID: 7
+            },
+            {
+                Title: "AWS Certified Solutions Architect",
+                ID: 8
+            },
+            {
+                Title: "Google Certified Professional Cloud Architect",
+                ID: 9
+            },
+            {
+                Title: "Certified ScrumMaster (CSM)",
+                ID: 10
+            },
+            {
+                Title: "Certified Scrum Product Owner (CSPO)",
+                ID: 11
+            },
+            {
+                Title: "Project Management Professional (PMP)",
+                ID: 12
+            },
+            {
+                Title: "ITIL Foundation Certification",
+                ID: 13
+            },
+            {
+                Title: "Certified Information Security Manager (CISM)",
+                ID: 14
+            },
+            {
+                Title: "Certified Information Systems Auditor (CISA)",
+                ID: 15
+            },
+            {
+                Title: "VMware Certified Professional (VCP)",
+                ID: 16
+            },
+            {
+                Title: "Red Hat Certified Engineer (RHCE)",
+                ID: 17
+            },
+            {
+                Title: "Certified Kubernetes Administrator (CKA)",
+                ID: 18
+            },
+            {
+                Title: "Certified Docker Associate (CDA)",
+                ID: 19
+            },
+            {
+                Title: "Certified OpenStack Administrator (COA)",
+                ID: 20
+            },
+            {
+                Title: "Microsoft Certified: Azure Administrator Associate",
+                ID: 21
+            },
+            {
+                Title: "Microsoft Certified: Azure Developer Associate",
+                ID: 22
+            },
+            {
+                Title: "Google Associate Cloud Engineer",
+                ID: 23
+            },
+            {
+                Title: "Oracle Certified Professional (OCP)",
+                ID: 24
+            },
+            {
+                Title: "Certified Information Privacy Professional (CIPP)",
+                ID: 25
+            },
+            {
+                Title: "Certified Data Management Professional (CDMP)",
+                ID: 26
+            },
+            {
+                Title: "Certified Analytics Professional (CAP)",
+                ID: 27
+            },
+            {
+                Title: "Certified in Risk and Information Systems Control (CRISC)",
+                ID: 28
+            },
+            {
+                Title: "Certified Wireless Network Professional (CWNP)",
+                ID: 29
+            },
+            {
+                Title: "Certified Information Systems Security Officer (CISSO)",
+                ID: 30
+            },
+            {
+                Title: "Offensive Security Certified Professional (OSCP)",
+                ID: 31
+            },
+            {
+                Title: "Certified in Governance of Enterprise IT (CGEIT)",
+                ID: 32
+            },
+            {
+                Title: "Amazon Web Services Certified Developer (AWS CD)",
+                ID: 33
+            },
+            {
+                Title: "Certified Kubernetes Application Developer (CKAD)",
+                ID: 34
+            },
+            {
+                Title: "Google Professional Data Engineer",
+                ID: 35
+            },
+            {
+                Title: "Microsoft Certified: Data Analyst Associate",
+                ID: 36
+            },
+            {
+                Title: "Salesforce Certified Administrator",
+                ID: 37
+            },
+            {
+                Title: "Salesforce Certified Platform Developer",
+                ID: 38
+            },
+            {
+                Title: "Certified Cloud Security Professional (CCSP)",
+                ID: 39
+            },
+            {
+                Title: "Certified Cloud Architect (CCA)",
+                ID: 40
+            },
+            {
+                Title: "Certified Blockchain Professional (CBP)",
+                ID: 41
+            },
+            {
+                Title: "Certified Artificial Intelligence Professional (CAIP)",
+                ID: 42
+            },
+            {
+                Title: "Microsoft Certified: Power Platform App Maker Associate",
+                ID: 43
+            },
+            {
+                Title: "Microsoft Certified: Power Platform Developer Associate",
+                ID: 44
+            },
+            {
+                Title: "Certified Machine Learning Engineer",
+                ID: 45
+            },
+            {
+                Title: "Certified Big Data Professional (CBDP)",
+                ID: 46
+            },
+            {
+                Title: "Certified DevOps Engineer (CDE)",
+                ID: 47
+            },
+            {
+                Title: "Certified Cyber Forensics Professional (CCFP)",
+                ID: 48
+            },
+            {
+                Title: "Certified Mobile App Developer (CMAD)",
+                ID: 49
+            },
+            {
+                Title: "Certified 3D Printing Professional",
+                ID: 50
+            },
+            {
+                Title: "Certified Professional in Human Resources (PHR)",
+                ID: 51
+            },
+            {
+                Title: "Society for Human Resource Management Certified Professional (SHRM-CP)",
+                ID: 52
+            },
+            {
+                Title: "Certified Management Accountant (CMA)",
+                ID: 53
+            },
+            {
+                Title: "Certified Financial Planner (CFP)",
+                ID: 54
+            },
+            {
+                Title: "Chartered Financial Analyst (CFA)",
+                ID: 55
+            },
+            {
+                Title: "Six Sigma Green Belt",
+                ID: 56
+            }
+        );
+        */
 
     Button4 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
@@ -41,7 +681,7 @@
         DisabledFill: =RGBA(215, 223, 240, 1)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =257
+        Height: =306
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -49,7 +689,7 @@
         Text: =""
         Width: =640
         X: =687
-        Y: =440
+        Y: =391
         ZIndex: =3
 
     Button4_1 As button:
@@ -59,7 +699,7 @@
         DisabledFill: =RGBA(215, 223, 240, 1)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =290
+        Height: =246
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -123,7 +763,7 @@
         DisplayMode: |-
             =If(
                 IsEmpty(SkillsCollection)Or 
-                IsEmpty(Education) Or 
+                IsEmpty(EducationCollection) Or 
                 IsEmpty(QualificationsCollection),
             
             	DisplayMode.Disabled, DisplayMode.Edit)
@@ -148,7 +788,7 @@
             Set(
                 EducationString,
                 Concat(
-                    Education,
+                    EducationCollection,
                     DegreeType & ", " & University & ", " & Course & "; "
                 )
             );
@@ -156,7 +796,7 @@
                 'CV Generator',
                 LookUp(
                     'CV Generator',
-                    Email = "jamie.martin@capgemini.com" //User().Email
+                    Email = User().Email
                 ),
                 {
                     SkillsString: SkillsString,
@@ -224,9 +864,9 @@
         DisplayFields: =["Value"]
         Font: =Font.Verdana
         InputTextPlaceholder: ="Search Skills"
-        Items: =["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL","Leadership","Communication","Problem-solving","Time management","Decision-making","Teamwork","Adaptability","Creativity","Critical thinking","Emotional intelligence","Conflict resolution","Negotiation","Stress management","Interpersonal skills","Organization","Strategic planning","Networking","Public speaking","Collaboration","Empathy","Resilience","Integrity","Flexibility","Customer service","Attention to detail","Initiative","Cultural awareness","Delegation","Motivation","Presentation skills","Coaching and mentoring","Diplomacy","Assertiveness","Consensus building","Persuasion","Relationship building","Conflict management","Feedback and constructive criticism","Trustworthiness","Decision-making under pressure","Analytical skills","Problem-solving in teams","Prioritisation","Project management","Change management","Empowerment","Resourcefulness","Business acumen","Self-awareness","Vision-setting","Emotional regulation","Active listening","Empathetic listening","Team building","Cross-cultural communication","Time blocking","Respectfulness","Ethical decision-making","Adaptive leadership","Problem sensitivity","Open-mindedness","Consistency","Innovation","Risk management","Conflict resolution strategies","Customer relationship management (CRM)","Feedback reception","Presentation delivery","Digital literacy","Strategic thinking","Public relations","Client management","Interdepartmental collaboration","Event planning and coordination","Salesmanship","Financial literacy","Conflict avoidance","Empowerment of others","Interpersonal effectiveness","Networking proficiency","Emotional resilience","Change adaptation","Constructive feedback delivery", "Machine Learning", "Computer Vision", "Cloud Data Platforms (Azure/GCP/AWS)", "Data Pre-Processing", "LLMs", "Generative AI", "Data Visualisation"]
+        Items: =Skills
         SearchFields: =["Value"]
-        SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL","Leadership","Communication","Problem-solving","Time management","Decision-making","Teamwork","Adaptability","Creativity","Critical thinking","Emotional intelligence","Conflict resolution","Negotiation","Stress management","Interpersonal skills","Organization","Strategic planning","Networking","Public speaking","Collaboration","Empathy","Resilience","Integrity","Flexibility","Customer service","Attention to detail","Initiative","Cultural awareness","Delegation","Motivation","Presentation skills","Coaching and mentoring","Diplomacy","Assertiveness","Consensus building","Persuasion","Relationship building","Conflict management","Feedback and constructive criticism","Trustworthiness","Decision-making under pressure","Analytical skills","Problem-solving in teams","Prioritisation","Project management","Change management","Empowerment","Resourcefulness","Business acumen","Self-awareness","Vision-setting","Emotional regulation","Active listening","Empathetic listening","Team building","Cross-cultural communication","Time blocking","Respectfulness","Ethical decision-making","Adaptive leadership","Problem sensitivity","Open-mindedness","Consistency","Innovation","Risk management","Conflict resolution strategies","Customer relationship management (CRM)","Feedback reception","Presentation delivery","Digital literacy","Strategic thinking","Public relations","Client management","Interdepartmental collaboration","Event planning and coordination","Salesmanship","Financial literacy","Conflict avoidance","Empowerment of others","Interpersonal effectiveness","Networking proficiency","Emotional resilience","Change adaptation","Constructive feedback delivery", "Machine Learning", "Computer Vision", "Cloud Data Platforms (Azure/GCP/AWS)", "Data Pre-Processing", "LLMs", "Generative AI", "Data Visualisation"],ComboBoxSkill.SearchText,"Value")
+        SearchItems: =Search(Skills,ComboBoxSkill.SearchText,"Value")
         Width: =440
         X: =50
         Y: =200
@@ -252,7 +892,7 @@
         Text: ="Qualifications"
         Width: =630
         X: =704
-        Y: =454
+        Y: =405
         ZIndex: =15
 
     Gallery1 As gallery.galleryVertical:
@@ -291,14 +931,12 @@
     ComboBoxQual As combobox:
         DisplayFields: =["Value"]
         InputTextPlaceholder: ="Search Qualifications"
-        Items: |-
-            =["Microsoft Certified: Azure Solutions Architect Expert","Cisco Certified Network Associate (CCNA)","CompTIA A+","CompTIA Network+","CompTIA Security+","Certified Information Systems Security Professional (CISSP)","Certified Ethical Hacker (CEH)","AWS Certified Solutions Architect","Google Certified Professional Cloud Architect","Certified ScrumMaster (CSM)","Certified Scrum Product Owner (CSPO)","Project Management Professional (PMP)","ITIL Foundation Certification","Certified Information Security Manager (CISM)","Certified Information Systems Auditor (CISA)","VMware Certified Professional (VCP)","Red Hat Certified Engineer (RHCE)","Certified Kubernetes Administrator (CKA)","Certified Docker Associate (CDA)","Certified OpenStack Administrator (COA)","Microsoft Certified: Azure Administrator Associate","Microsoft Certified: Azure Developer Associate","Google Associate Cloud Engineer","Oracle Certified Professional (OCP)","Certified Information Privacy Professional (CIPP)","Certified Data Management Professional (CDMP)","Certified Analytics Professional (CAP)","Certified in Risk and Information Systems Control (CRISC)","Certified Wireless Network Professional (CWNP)","Certified Information Systems Security Officer (CISSO)","Offensive Security Certified Professional (OSCP)","Certified in Governance of Enterprise IT (CGEIT)","Amazon Web Services Certified Developer (AWS CD)","Certified Kubernetes Application Developer (CKAD)","Google Professional Data Engineer","Microsoft Certified: Data Analyst Associate","Salesforce Certified Administrator","Salesforce Certified Platform Developer","Certified Cloud Security Professional (CCSP)","Certified Cloud Architect (CCA)","Certified Blockchain Professional (CBP)","Certified Artificial Intelligence Professional (CAIP)","Microsoft Certified: Power Platform App Maker Associate","Microsoft Certified: Power Platform Developer Associate","Certified Machine Learning Engineer","Certified Big Data Professional (CBDP)","Certified DevOps Engineer (CDE)","Certified Cyber Forensics Professional (CCFP)","Certified Mobile App Developer (CMAD)","Certified 3D Printing Professional","Certified Professional in Human Resources (PHR)","Society for Human Resource Management Certified Professional (SHRM-CP)","Certified Management Accountant (CMA)","Certified Financial Planner (CFP)","Chartered Financial Analyst (CFA)","Six Sigma Green Belt","Six Sigma Black Belt","Certified Fraud Examiner (CFE)","Certified Internal Auditor (CIA)","Professional in Human Resources (PHRi)","Senior Professional in Human Resources (SPHR)","Certified Professional in Supply Management (CPSM)","Certified Associate in Project Management (CAPM)","Agile Certified Practitioner (PMI-ACP)","Professional Scrum Master (PSM)","Certified Product Manager (CPM)","Certified Professional in Healthcare Quality (CPHQ)","Certified Quality Engineer (CQE)","Certified Information Privacy Professional (CIPP)","Professional in Business Analysis (PMI-PBA)","Certified Risk Management Professional (CRMP)","Certified Compensation Professional (CCP)","Certified Employee Benefits Specialist (CEBS)","Professional Certified Marketer (PCM)","Certified Professional in Learning and Performance (CPLP)","Certified Professional Purchasing Manager (CPPM)","Certified Professional Contracts Manager (CPCM)","Certified Manager (CM)","Certified in the Governance of Enterprise IT (CGEIT)","Certified Supply Chain Professional (CSCP)","Certified Professional in Healthcare Information and Management Systems (CPHIMS)","Certified Manager of Quality/Organizational Excellence (CMQ/OE)","Professional in Project Management (PPM)","Certified Professional Logistician (CPL)","Certified Professional Medical Services Manager (CPMSM)","Certified Information Professional (CIP)","Certified Safety Professional (CSP)","Certified Professional Environmental Auditor (CPEA)","Certified Professional Ergonomist (CPE)","Certified Associate in Software Testing (CAST)","Certified Professional in Training Management (CPTM)","Certified Professional in Talent Development (CPTD)"]
+        Items: =Qualifications
         SearchFields: =["Value"]
-        SearchItems: |-
-            =Search(["Microsoft Certified: Azure Solutions Architect Expert","Cisco Certified Network Associate (CCNA)","CompTIA A+","CompTIA Network+","CompTIA Security+","Certified Information Systems Security Professional (CISSP)","Certified Ethical Hacker (CEH)","AWS Certified Solutions Architect","Google Certified Professional Cloud Architect","Certified ScrumMaster (CSM)","Certified Scrum Product Owner (CSPO)","Project Management Professional (PMP)","ITIL Foundation Certification","Certified Information Security Manager (CISM)","Certified Information Systems Auditor (CISA)","VMware Certified Professional (VCP)","Red Hat Certified Engineer (RHCE)","Certified Kubernetes Administrator (CKA)","Certified Docker Associate (CDA)","Certified OpenStack Administrator (COA)","Microsoft Certified: Azure Administrator Associate","Microsoft Certified: Azure Developer Associate","Google Associate Cloud Engineer","Oracle Certified Professional (OCP)","Certified Information Privacy Professional (CIPP)","Certified Data Management Professional (CDMP)","Certified Analytics Professional (CAP)","Certified in Risk and Information Systems Control (CRISC)","Certified Wireless Network Professional (CWNP)","Certified Information Systems Security Officer (CISSO)","Offensive Security Certified Professional (OSCP)","Certified in Governance of Enterprise IT (CGEIT)","Amazon Web Services Certified Developer (AWS CD)","Certified Kubernetes Application Developer (CKAD)","Google Professional Data Engineer","Microsoft Certified: Data Analyst Associate","Salesforce Certified Administrator","Salesforce Certified Platform Developer","Certified Cloud Security Professional (CCSP)","Certified Cloud Architect (CCA)","Certified Blockchain Professional (CBP)","Certified Artificial Intelligence Professional (CAIP)","Microsoft Certified: Power Platform App Maker Associate","Microsoft Certified: Power Platform Developer Associate","Certified Machine Learning Engineer","Certified Big Data Professional (CBDP)","Certified DevOps Engineer (CDE)","Certified Cyber Forensics Professional (CCFP)","Certified Mobile App Developer (CMAD)","Certified 3D Printing Professional","Certified Professional in Human Resources (PHR)","Society for Human Resource Management Certified Professional (SHRM-CP)","Certified Management Accountant (CMA)","Certified Financial Planner (CFP)","Chartered Financial Analyst (CFA)","Six Sigma Green Belt","Six Sigma Black Belt","Certified Fraud Examiner (CFE)","Certified Internal Auditor (CIA)","Professional in Human Resources (PHRi)","Senior Professional in Human Resources (SPHR)","Certified Professional in Supply Management (CPSM)","Certified Associate in Project Management (CAPM)","Agile Certified Practitioner (PMI-ACP)","Professional Scrum Master (PSM)","Certified Product Manager (CPM)","Certified Professional in Healthcare Quality (CPHQ)","Certified Quality Engineer (CQE)","Certified Information Privacy Professional (CIPP)","Professional in Business Analysis (PMI-PBA)","Certified Risk Management Professional (CRMP)","Certified Compensation Professional (CCP)","Certified Employee Benefits Specialist (CEBS)","Professional Certified Marketer (PCM)","Certified Professional in Learning and Performance (CPLP)","Certified Professional Purchasing Manager (CPPM)","Certified Professional Contracts Manager (CPCM)","Certified Manager (CM)","Certified in the Governance of Enterprise IT (CGEIT)","Certified Supply Chain Professional (CSCP)","Certified Professional in Healthcare Information and Management Systems (CPHIMS)","Certified Manager of Quality/Organizational Excellence (CMQ/OE)","Professional in Project Management (PPM)","Certified Professional Logistician (CPL)","Certified Professional Medical Services Manager (CPMSM)","Certified Information Professional (CIP)","Certified Safety Professional (CSP)","Certified Professional Environmental Auditor (CPEA)","Certified Professional Ergonomist (CPE)","Certified Associate in Software Testing (CAST)","Certified Professional in Training Management (CPTM)","Certified Professional in Talent Development (CPTD)"],ComboBoxQual.SearchText,"Value")
+        SearchItems: =Search(Qualifications,ComboBoxQual.SearchText,"Value")
         Width: =432
         X: =704
-        Y: =500
+        Y: =451
         ZIndex: =17
 
     ComboBoxUniversity As combobox:
@@ -319,7 +957,7 @@
     AddSkill_1 As button:
         Height: =63
         OnSelect: |-
-            =Collect(Education, {University: ComboBoxUniversity.Selected.Value, Course: ComboBoxCourse.Selected.Value, DegreeType: ComboBoxDegreeType.Selected.Value});
+            =Collect(EducationCollection, {University: ComboBoxUniversity.Selected.Value, Course: ComboBoxCourse.Selected.Value, DegreeType: ComboBoxDegreeType.Selected.Value});
             Reset(ComboBoxCourse);
             Reset(ComboBoxUniversity);
             Reset(ComboBoxDegreeType)
@@ -339,13 +977,13 @@
         Text: ="Add Qualification(s)"
         Width: =172
         X: =1149
-        Y: =501
+        Y: =452
         ZIndex: =20
 
     Gallery2 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =143
-        Items: =Education
+        Height: =91
+        Items: =EducationCollection
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =42
@@ -370,7 +1008,7 @@
         Icon5_1 As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
-            OnSelect: =Remove(Education, ThisItem)
+            OnSelect: =Remove(EducationCollection, ThisItem)
             X: =567
             Y: =5
             ZIndex: =3
@@ -403,14 +1041,14 @@
 
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =137
+        Height: =176
         Items: =QualificationsCollection
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =44
         Width: =636
         X: =706
-        Y: =549
+        Y: =507
         ZIndex: =24
 
         Icon9 As icon.ListScrollWatchlist:
