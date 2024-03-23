@@ -668,3 +668,19 @@ Search As screen:
         Y: =659
         ZIndex: =50
 
+    Button7 As button:
+        OnSelect: |-
+            =ForAll(
+                FinalFilteredCVs,
+                    Patch(
+                        Table_query__1,
+                        ThisRecord
+                    )
+            )
+        Text: |-
+            ="Export
+            "
+        X: =541
+        Y: =609
+        ZIndex: =51
+
