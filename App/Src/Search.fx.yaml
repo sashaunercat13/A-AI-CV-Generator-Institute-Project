@@ -1,6 +1,13 @@
 Search As screen:
     OnVisible: |-
-        =Clear(FinalFilteredCVs);
+        =//Dummy list of selected emails
+        Clear(SelectedCVsEmails);
+        ClearCollect(
+            SelectedCVsEmails,
+            ["lewis.bentley@capgemini.com"]
+        );
+        
+        Clear(FinalFilteredCVs);
         Collect(FinalFilteredCVs, 'CV Generator');
         
         // Set checkboxes
@@ -398,18 +405,6 @@ Search As screen:
         Y: =261
         ZIndex: =20
 
-    ComboBoxCapability As combobox:
-        DisplayFields: =["Value"]
-        IsSearchable: =false
-        Items: =["All", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
-        SearchFields: =["Value"]
-        SearchItems: =[]
-        SelectMultiple: =false
-        Visible: =false
-        X: =985
-        Y: =190
-        ZIndex: =22
-
     ComboBoxClient As combobox:
         DisplayFields: =["Client"]
         InputTextPlaceholder: =
@@ -422,34 +417,6 @@ Search As screen:
         X: =129
         Y: =142
         ZIndex: =24
-
-    Gallery5 As gallery.galleryVertical:
-        DelayItemLoading: =true
-        Height: =308
-        Items: =FilteredClientsInProjects
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =95
-        Width: =366
-        X: =985
-        Y: =116
-        ZIndex: =25
-
-        Label18 As label:
-            Height: =46
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.Email
-            Width: =433
-            X: =12
-            Y: =24
-            ZIndex: =1
-
-        "Icon10 As icon.'3DPrinting'":
-            Icon: =Icon.Printing3D
-            OnSelect: =Select(Parent)
-            X: =540
-            Y: =24
-            ZIndex: =2
 
     ComboBoxIndustry As combobox:
         DisplayFields: =["Value"]
@@ -680,7 +647,7 @@ Search As screen:
         Text: |-
             ="Export
             "
-        X: =541
-        Y: =609
+        X: =498
+        Y: =706
         ZIndex: =51
 
