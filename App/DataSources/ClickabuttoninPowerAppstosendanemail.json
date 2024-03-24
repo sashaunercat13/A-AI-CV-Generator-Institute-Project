@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "63160e58-0306-4ce6-9de0-0f9d9b6d7179",
+    "Name": "ClickabuttoninPowerAppstosendanemail",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
+  }
+]

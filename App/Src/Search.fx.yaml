@@ -636,14 +636,7 @@ Search As screen:
         ZIndex: =50
 
     Button7 As button:
-        OnSelect: |-
-            =ForAll(
-                FinalFilteredCVs,
-                    Patch(
-                        Table_query__1,
-                        ThisRecord
-                    )
-            )
+        OnSelect: =ClickabuttoninPowerAppstosendanemail.Run("lewis.bentley@capgemini.com", "Testing the flow", "Testing a Power Apps flow")
         Text: |-
             ="Export
             "

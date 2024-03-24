@@ -43,6 +43,44 @@
     "dependents": [],
     "id": "2d836a25-3500-4924-a40f-98fc2306d806"
   },
+  "31eb2070-781f-4cc9-8829-29fee0f8a895": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "Click a button in Power Apps to send an email"
+        },
+        "workflowEntityId": {
+          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
+        },
+        "workflowName": {
+          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "Click a button in Power Apps to send an email"
+        },
+        "workflowEntityId": {
+          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
+        },
+        "workflowName": {
+          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "ClickabuttoninPowerAppstosendanemail"
+    ],
+    "dependencies": {
+      "shared_office365": "f3b5979f-6d58-4b1a-a464-a355f974426a"
+    },
+    "dependents": [],
+    "id": "31eb2070-781f-4cc9-8829-29fee0f8a895"
+  },
   "6dfc64e3-2225-432e-945b-fa7298f7ceec": {
     "appActions": [],
     "connectionRef": {
@@ -97,6 +135,20 @@
     "dependencies": {},
     "dependents": [],
     "id": "a1f8889d-d323-4bb0-af94-99d7b2d80232"
+  },
+  "f3b5979f-6d58-4b1a-a464-a355f974426a": {
+    "connectionRef": {
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "31eb2070-781f-4cc9-8829-29fee0f8a895"
+    ],
+    "id": "f3b5979f-6d58-4b1a-a464-a355f974426a"
   },
   "f7962c18-93a0-47f2-b373-61748b339246": {
     "connectionRef": {
