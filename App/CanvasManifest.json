@@ -135,16 +135,15 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Welcome",
     "Create",
-    "Skills Competancies & Qualifications",
-    "Project Experience",
-    "Update",
-    "Update_Skills Competancies & Qualifications",
-    "Update_Profesional Experience",
-    "SuccessScreen",
-    "Search",
     "Profesional Experience OLD",
-    "Success"
+    "Project Experience",
+    "Search",
+    "Skills Competancies & Qualifications",
+    "Success",
+    "Update",
+    "Update_Profesional Experience",
+    "Update_Skills Competancies & Qualifications",
+    "Welcome"
   ]
 }

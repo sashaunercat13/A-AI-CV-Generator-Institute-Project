@@ -49,6 +49,9 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "f3b5979f-6d58-4b1a-a464-a355f974426a": {
+          "value": "shared_office365"
+        },
         "workflowDisplayName": {
           "value": "Click a button in Power Apps to send an email"
         },
@@ -60,6 +63,9 @@
         }
       },
       "parameterHintsV2": {
+        "shared_office365": {
+          "value": "f3b5979f-6d58-4b1a-a464-a355f974426a"
+        },
         "workflowDisplayName": {
           "value": "Click a button in Power Apps to send an email"
         },
@@ -98,20 +104,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "6dfc64e3-2225-432e-945b-fa7298f7ceec"
-  },
-  "7617f702-8ee8-4379-8c8a-72772b5d79a8": {
-    "connectionRef": {
-      "displayName": "Office 365 Outlook",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/office365/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "31eb2070-781f-4cc9-8829-29fee0f8a895"
-    ],
-    "id": "7617f702-8ee8-4379-8c8a-72772b5d79a8"
   },
   "8078daf5-b242-4a4c-b113-7f6223e9f2f4": {
     "connectionRef": {
