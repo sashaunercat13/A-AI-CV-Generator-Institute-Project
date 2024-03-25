@@ -1,11 +1,12 @@
 Search As screen:
     OnVisible: |-
-        =//Dummy list of selected emails
+        =/* Dummy list of selected emails
         Clear(SelectedCVsEmails);
         ClearCollect(
             SelectedCVsEmails,
             ["lewis.bentley@capgemini.com"]
         );
+        */
         
         Clear(FinalFilteredCVs);
         Collect(FinalFilteredCVs, 'CV Generator');

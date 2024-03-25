@@ -159,8 +159,25 @@ ProjectTest As screen:
             ZIndex: =11
 
             "'1ProjectEndDate_2' As datepicker":
-                DefaultDate: |
-                    =If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'End Date'), Today())
+                DefaultDate: |-
+                    =If(
+                        'Checkbox - Current Project_1'.Value = false,
+                        Blank(),
+                        (If(
+                            varSelectedProjectID > 0,
+                            LookUp(
+                                'CV Generator - Project Experience',
+                                ID = varSelectedProjectID,
+                                'End Date'
+                            ),
+                            Today()
+                        ))
+                    )
+                    /* is this your current project? (is there is an end date?)
+                    - yes (do not end Date)
+                    - no  (show end date )
+                    // is this a pevious project
+                     - yes () */
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
@@ -413,7 +430,10 @@ ProjectTest As screen:
             Reset('1ProjectStartDate_2');
             Reset('1ProjectEndDate_2');
             Reset('1ProjectDescription_2');
-            Reset(ComboBoxOneClient)
+            Reset(ComboBoxOneClient);
+            
+            // navigate to the success screen
+            Navigate(Screen2, ScreenTransition.Fade)
         Text: |-
             ="Submit
             "
