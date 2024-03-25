@@ -42,7 +42,7 @@ Search As screen:
         DisabledBorderColor: =RGBA(51, 51, 51, 1)
         DisabledColor: =RGBA(51, 51, 51, 1)
         Fill: =RGBA(39, 41, 54, 1)
-        Height: =662
+        Height: =640
         HoverBorderColor: =
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =
@@ -52,9 +52,72 @@ Search As screen:
         PressedFill: =
         Text: =""
         Width: =367
-        X: =117
-        Y: =84
+        X: =50
+        Y: =106
         ZIndex: =1
+
+    "GalleryFilteredCVs_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnVariant_ver5.0'":
+        DelayItemLoading: =true
+        DisplayMode: =DisplayMode.View
+        Height: =545
+        Items: =FinalFilteredCVs
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =263
+        Width: =857
+        WrapCount: =4
+        X: =468
+        Y: =134
+        ZIndex: =1
+
+        Image8 As image:
+            Height: =110
+            Image: =ThisItem.Photo
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: |
+                =0
+            RadiusBottomLeft: =55
+            RadiusBottomRight: =55
+            RadiusTopLeft: =55
+            RadiusTopRight: =55
+            Width: =110
+            X: =50
+            Y: =19
+            ZIndex: =1
+
+        Title4 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                =ThisItem.'First Name' & " " &
+                ThisItem.'Last Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 64
+            X: =32
+            Y: =Image8.Y + Image8.Height + 16
+            ZIndex: =2
+
+        Subtitle4 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Role Title'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title4.Width
+            X: =Title4.X
+            Y: =Title4.Y + Title4.Height + 8
+            ZIndex: =3
 
     "'Rectangle - blue top panel_1' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
@@ -70,80 +133,9 @@ Search As screen:
         Size: =24
         Text: ="Search CVs"
         Width: =312
-        X: =1054
-        Y: =30
+        X: =98
+        Y: =26
         ZIndex: =3
-
-    GalleryFilteredCVs_1 As gallery.galleryVertical:
-        DelayItemLoading: =true
-        Height: =557
-        Items: =FinalFilteredCVs
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =75
-        Width: =498
-        X: =492
-        Y: =109
-        ZIndex: =4
-
-        Label9_3 As label:
-            Height: =53
-            OnSelect: =Select(Parent)
-            Text: |-
-                =ThisItem.'First Name' & " " & ThisItem.'Last Name' & ", " & ThisItem.Capability & ", " & ThisItem.Hub
-                // ThisItem.Photo & " " &
-                //& ThisItem.SkillID & " " & " " & LookUp('Example Skills', ThisId=ThisItem.SkillID).Title 
-            Width: =482
-            X: =148
-            ZIndex: =1
-
-        Image1_1 As image:
-            Height: =75
-            Image: =ThisItem.Photo
-            OnSelect: =Select(Parent)
-            X: =15
-            ZIndex: =2
-
-    ComboBoxSkillSearch As combobox:
-        DisplayFields: =["Value"]
-        InputTextPlaceholder: =
-        Items: =Skills
-        OnChange: |-
-            =// Set in the OnChange property of the ComboBox
-            Set(varIsSkillsEmpty, IsEmpty(ComboBoxSkillSearch.SelectedItems));
-        SearchFields: =["Value"]
-        SearchItems: =Search(Skills,ComboBoxSkillSearch.SearchText,"Value")
-        X: =129
-        Y: =397
-        ZIndex: =5
-
-    ComboBoxRole As combobox:
-        DisplayFields: =["Value"]
-        InputTextPlaceholder: =
-        Items: =["Associate Consultant","Consultant", "Senior Consultant"]
-        OnChange: |-
-            =// Set in the OnChange property of the ComboBox
-            Set(varIsRoleEmpty, IsEmpty(ComboBoxRole.SelectedItems));
-        SearchFields: =["Value"]
-        SearchItems: =Search(["Associate Consultant","Consultant", "Senior Consultant"],ComboBoxRole.SearchText,"Value")
-        SelectMultiple: =false
-        X: =129
-        Y: =487
-        ZIndex: =6
-
-    Label2_3 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Text: ="Skills"
-        X: =129
-        Y: =352
-        ZIndex: =7
-
-    Label2_4 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Text: ="Role"
-        X: =129
-        Y: =442
-        ZIndex: =8
 
     ButtonFilterCVs_1 As button:
         OnSelect: |
@@ -250,37 +242,17 @@ Search As screen:
         Text: |-
             ="Search
             "
-        X: =213
-        Y: =687
+        X: =155
+        Y: =699
         ZIndex: =9
-
-    ComboBoxQualSearch As combobox:
-        DisplayFields: =["Value"]
-        InputTextPlaceholder: =
-        Items: =Qualifications
-        OnChange: |-
-            =// Set in the OnChange property of the ComboBox
-            Set(varIsQualificationsEmpty, IsEmpty(ComboBoxQualSearch.SelectedItems));
-        SearchFields: =["Value"]
-        SearchItems: =Search(Qualifications,ComboBoxQualSearch.SearchText,"Value")
-        X: =129
-        Y: =580
-        ZIndex: =10
-
-    Label2_5 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Text: ="Qualifications"
-        X: =129
-        Y: =532
-        ZIndex: =11
 
     Icon5_3 As icon.Search:
         Color: =RGBA(255, 255, 255, 1)
         Height: =72
         Icon: =Icon.Search
         Width: =53
-        X: =990
-        Y: =16
+        X: =34
+        Y: =12
         ZIndex: =14
 
     Profile_1 As label:
@@ -330,40 +302,6 @@ Search As screen:
         Y: =182
         ZIndex: =17
 
-    Label9_1 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.Verdana
-        Text: |-
-            ="Capability:"
-        Width: =334
-        X: =125
-        Y: =187
-        ZIndex: =18
-
-    RadioHubsSearch As radio:
-        Color: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Lighter
-        HoverColor: =RGBA(219, 219, 219, 1)
-        Items: |-
-            =If(
-                varIsCapabilityEmpty,
-                [],
-                LookUp(HubOptionSets, Capability = ComboBoxCapabilitySearch.Selected.Value).Options
-            )
-        OnChange: |
-            =// First, check if the Radio control has items
-            If(
-                !varIsCapabilityEmpty,
-                0,
-                // Optionally handle the case when no items are present
-                Set(varIsRadioHubsEmpty, true) // or false, depending on your logic
-            );
-        Visible: =false
-        Width: =371
-        X: =116
-        Y: =284
-        ZIndex: =19
-
     Group4 As group:
         Height: =5
         Width: =5
@@ -379,8 +317,8 @@ Search As screen:
             OnUncheck: =Set(varBPSScheckedSearchEmpty,true)
             Text: ="BPSS"
             Width: =121
-            X: =174
-            Y: =633
+            X: =65
+            Y: =651
             ZIndex: =12
 
         Checkbox_SC_Search_1 As checkbox:
@@ -391,256 +329,208 @@ Search As screen:
             OnUncheck: =Set(varSCcheckedSearchEmpty,true)
             Text: ="SC"
             Width: =121
-            X: =304
-            Y: =633
+            X: =195
+            Y: =651
             ZIndex: =13
-
-    Label11_1 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.Verdana
-        Text: |-
-            ="Hub:"
-        Visible: =false
-        X: =134
-        Y: =261
-        ZIndex: =20
-
-    ComboBoxClient As combobox:
-        DisplayFields: =["Client"]
-        InputTextPlaceholder: =
-        Items: ='CV Generator - Client/Industry'.Client
-        OnChange: |-
-            =// Set in the OnChange property of the ComboBox
-            Set(varIsClientEmpty, IsEmpty(ComboBoxClient.SelectedItems));
-        SearchFields: =["Client"]
-        SearchItems: =Search('CV Generator - Client/Industry'.Client,ComboBoxClient.SearchText,"Client")
-        X: =129
-        Y: =142
-        ZIndex: =24
-
-    ComboBoxIndustry As combobox:
-        DisplayFields: =["Value"]
-        Items: |
-            =["MALS", "CPRD", "Govt", "FS", "ET&U", "TMTS"]
-        OnChange: |-
-            =// Set in the OnChange property of the ComboBox
-            Set(varIsIndustryEmpty, IsEmpty(ComboBoxIndustry.SelectedItems));
-        SearchFields: =["Value"]
-        SearchItems: |-
-            =Search(["MALS", "CPRD", "Govt", "FS", "ET&U", "TMTS"]
-            ,ComboBoxIndustry.SearchText,"Value")
-        X: =129
-        Y: =52
-        ZIndex: =26
-
-    Label19 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Text: ="Client"
-        X: =129
-        Y: =97
-        ZIndex: =27
-
-    Label20 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Text: ="Industry"
-        X: =127
-        Y: =7
-        ZIndex: =28
-
-    Label14 As label:
-        Text: |-
-            ="# Rows: " & CountRows(GalleryFilteredCVs_1.AllItems)
-        X: =656
-        Y: =706
-        ZIndex: =29
-
-    Label3 As label:
-        Height: =39
-        Text: |-
-            ="Filters on: " & !allFiltersEmpty
-        Width: =179
-        X: =783
-        Y: =706
-        ZIndex: =30
-
-    Label8 As label:
-        Text: |-
-            ="Qual empty: " & IsEmpty(ComboBoxQualSearch.SelectedItems)
-        Width: =200
-        X: =925
-        Y: =706
-        ZIndex: =31
-
-    Label8_1 As label:
-        Text: |-
-            ="Skill empty: " & IsEmpty(ComboBoxSkillSearch.SelectedItems)
-        X: =930
-        Y: =619
-        ZIndex: =32
-
-    Label8_2 As label:
-        Text: |-
-            ="Role empty: " & IsEmpty(ComboBoxRole.SelectedItems)
-        X: =930
-        Y: =659
-        ZIndex: =33
-
-    Label8_3 As label:
-        Height: =36
-        Text: |-
-            ="Capability empty: " & IsEmpty(ComboBoxCapabilitySearch.SelectedItems)
-        Width: =226
-        X: =930
-        Y: =587
-        ZIndex: =34
-
-    ComboBoxCapabilitySearch As combobox:
-        DisplayFields: =["Value"]
-        Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
-        OnChange: |-
-            =// Set in the OnChange property of the ComboBox
-            Set(varIsCapabilityEmpty, IsEmpty(ComboBoxCapabilitySearch.SelectedItems));
-        SearchFields: =["Value"]
-        SearchItems: =Search(["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"],ComboBoxCapabilitySearch.SearchText,"Value")
-        SelectMultiple: =false
-        X: =127
-        Y: =222
-        ZIndex: =35
-
-    Label8_4 As label:
-        Height: =36
-        Text: |-
-            ="Hubs empty: " & (Len(RadioHubsSearch.SelectedText.Value) = 0)
-        Width: =226
-        X: =930
-        Y: =545
-        ZIndex: =36
-
-    Label8_5 As label:
-        Height: =36
-        Text: |-
-            ="Client empty: " & IsEmpty(ComboBoxClient.SelectedItems)
-        Width: =226
-        X: =930
-        Y: =507
-        ZIndex: =37
-
-    Label8_6 As label:
-        Height: =36
-        Text: |-
-            ="industry empty: " & IsEmpty(ComboBoxIndustry.SelectedItems)
-        Width: =226
-        X: =930
-        Y: =471
-        ZIndex: =38
-
-    Label8_7 As label:
-        Text: |-
-            ="Qual empty: " & varIsQualificationsEmpty
-        Width: =200
-        X: =1125
-        Y: =614
-        ZIndex: =39
-
-    Label8_8 As label:
-        Text: |-
-            ="Skill empty: " & varIsSkillsEmpty
-        X: =1130
-        Y: =541
-        ZIndex: =40
-
-    Label8_9 As label:
-        Text: |-
-            ="Role empty: " & varIsRoleEmpty
-        X: =1125
-        Y: =574
-        ZIndex: =41
-
-    Label8_10 As label:
-        Height: =36
-        Text: |-
-            ="Capability empty: " & varIsCapabilityEmpty
-        Width: =226
-        X: =1130
-        Y: =495
-        ZIndex: =42
-
-    Label8_11 As label:
-        Height: =36
-        Text: |-
-            ="Hubs empty: " & varIsHubsEmpty
-        Width: =226
-        X: =1130
-        Y: =453
-        ZIndex: =43
-
-    Label8_12 As label:
-        Height: =36
-        Text: |-
-            ="Client empty: " & varIsClientEmpty
-        Width: =226
-        X: =1130
-        Y: =415
-        ZIndex: =44
-
-    Label8_13 As label:
-        Height: =36
-        Text: |-
-            ="industry empty: " & varIsIndustryEmpty
-        Width: =226
-        X: =1130
-        Y: =379
-        ZIndex: =45
-
-    ComboBoxHubs As combobox:
-        DisplayFields: =[""]
-        IsSearchable: =false
-        Items: |-
-            =If(
-                varIsCapabilityEmpty,
-                [],
-                LookUp(HubOptionSets, Capability = ComboBoxCapabilitySearch.Selected.Value).Options
-            )
-        OnChange: |-
-            =// Set in the OnChange property of the ComboBox
-            Set(varIsHubsEmpty, IsEmpty(ComboBoxHubs.SelectedItems));
-        SearchFields: =[""]
-        SearchItems: =[]
-        X: =129
-        Y: =307
-        ZIndex: =47
-
-    Label13 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Text: ="Hub"
-        X: =127
-        Y: =267
-        ZIndex: =48
-
-    Label8_14 As label:
-        Height: =36
-        Text: |-
-            ="BPSS empty: " & varBPSScheckedSearchEmpty
-        Width: =226
-        X: =1130
-        Y: =695
-        ZIndex: =49
-
-    Label8_15 As label:
-        Height: =36
-        Text: |-
-            ="SC empty: " & varSCcheckedSearchEmpty
-        Width: =226
-        X: =1130
-        Y: =659
-        ZIndex: =50
 
     Button7 As button:
         OnSelect: =ClickabuttoninPowerAppstosendanemail.Run("lewis.bentley@capgemini.com", "Testing the flow", "Testing a Power Apps flow")
         Text: |-
             ="Export
             "
-        X: =498
+        X: =480
         Y: =706
         ZIndex: =51
+
+    "'Group Filter Fields & Titles' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =52
+
+        ComboBoxSkillSearch As combobox:
+            DisplayFields: =["Value"]
+            Height: =35
+            InputTextPlaceholder: =
+            Items: =Skills
+            OnChange: |-
+                =// Set in the OnChange property of the ComboBox
+                Set(varIsSkillsEmpty, IsEmpty(ComboBoxSkillSearch.SelectedItems));
+            SearchFields: =["Value"]
+            SearchItems: =Search(Skills,ComboBoxSkillSearch.SearchText,"Value")
+            Width: =345
+            X: =62
+            Y: =456
+            ZIndex: =5
+
+        ComboBoxRole As combobox:
+            DisplayFields: =["Value"]
+            Height: =35
+            InputTextPlaceholder: =
+            Items: =["Associate Consultant","Consultant", "Senior Consultant"]
+            OnChange: |-
+                =// Set in the OnChange property of the ComboBox
+                Set(varIsRoleEmpty, IsEmpty(ComboBoxRole.SelectedItems));
+            SearchFields: =["Value"]
+            SearchItems: =Search(["Associate Consultant","Consultant", "Senior Consultant"],ComboBoxRole.SearchText,"Value")
+            SelectMultiple: =false
+            Width: =345
+            X: =62
+            Y: =529
+            ZIndex: =6
+
+        Label2_3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            Text: ="Skills"
+            X: =62
+            Y: =423
+            ZIndex: =7
+
+        Label2_4 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            Text: ="Role"
+            X: =62
+            Y: =497
+            ZIndex: =8
+
+        ComboBoxQualSearch As combobox:
+            DisplayFields: =["Value"]
+            Height: =35
+            InputTextPlaceholder: =
+            Items: =Qualifications
+            OnChange: |-
+                =// Set in the OnChange property of the ComboBox
+                Set(varIsQualificationsEmpty, IsEmpty(ComboBoxQualSearch.SelectedItems));
+            SearchFields: =["Value"]
+            SearchItems: =Search(Qualifications,ComboBoxQualSearch.SearchText,"Value")
+            Width: =345
+            X: =62
+            Y: =602
+            ZIndex: =10
+
+        Label2_5 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            Text: ="Qualifications"
+            X: =62
+            Y: =571
+            ZIndex: =11
+
+        Label9_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            Text: ="Capability"
+            X: =62
+            Y: =275
+            ZIndex: =18
+
+        ComboBoxClient As combobox:
+            DisplayFields: =["Client"]
+            Height: =35
+            InputTextPlaceholder: =
+            Items: ='CV Generator - Client/Industry'.Client
+            OnChange: |-
+                =// Set in the OnChange property of the ComboBox
+                Set(varIsClientEmpty, IsEmpty(ComboBoxClient.SelectedItems));
+            SearchFields: =["Client"]
+            SearchItems: =Search('CV Generator - Client/Industry'.Client,ComboBoxClient.SearchText,"Client")
+            Width: =345
+            X: =62
+            Y: =237
+            ZIndex: =24
+
+        ComboBoxIndustry As combobox:
+            DisplayFields: =["Value"]
+            Height: =37
+            InputTextPlaceholder: =
+            Items: |
+                =["MALS", "CPRD", "Govt", "FS", "ET&U", "TMTS"]
+            OnChange: |-
+                =// Set in the OnChange property of the ComboBox
+                Set(varIsIndustryEmpty, IsEmpty(ComboBoxIndustry.SelectedItems));
+            SearchFields: =["Value"]
+            SearchItems: |-
+                =Search(["MALS", "CPRD", "Govt", "FS", "ET&U", "TMTS"]
+                ,ComboBoxIndustry.SearchText,"Value")
+            Width: =345
+            X: =62
+            Y: =162
+            ZIndex: =26
+
+        Label19 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            Text: ="Client"
+            X: =62
+            Y: =202
+            ZIndex: =27
+
+        Label20 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            Text: ="Industry"
+            X: =62
+            Y: =127
+            ZIndex: =28
+
+        ComboBoxCapabilitySearch As combobox:
+            DisplayFields: =["Value"]
+            Height: =35
+            InputTextPlaceholder: =
+            Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+            OnChange: |-
+                =// Set in the OnChange property of the ComboBox
+                Set(varIsCapabilityEmpty, IsEmpty(ComboBoxCapabilitySearch.SelectedItems));
+            SearchFields: =["Value"]
+            SearchItems: =Search(["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"],ComboBoxCapabilitySearch.SearchText,"Value")
+            SelectMultiple: =false
+            Width: =345
+            X: =62
+            Y: =310
+            ZIndex: =35
+
+        ComboBoxHubs As combobox:
+            DisplayFields: =[""]
+            Height: =35
+            IsSearchable: =false
+            Items: |-
+                =If(
+                    varIsCapabilityEmpty,
+                    [],
+                    LookUp(HubOptionSets, Capability = ComboBoxCapabilitySearch.Selected.Value).Options
+                )
+            OnChange: |-
+                =// Set in the OnChange property of the ComboBox
+                Set(varIsHubsEmpty, IsEmpty(ComboBoxHubs.SelectedItems));
+            SearchFields: =[""]
+            SearchItems: =[]
+            Width: =345
+            X: =62
+            Y: =383
+            ZIndex: =47
+
+        Label13 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            Text: ="Hub"
+            X: =62
+            Y: =348
+            ZIndex: =48
 

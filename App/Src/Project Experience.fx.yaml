@@ -1,4 +1,4 @@
-ProjectTest As screen:
+"'Project Experience' As screen":
     OnVisible: |-
         =// set the button variable
         //UpdateContext({selectedItemId: Blank()});

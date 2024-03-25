@@ -49,6 +49,9 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "f3b5979f-6d58-4b1a-a464-a355f974426a": {
+          "value": "shared_office365"
+        },
         "workflowDisplayName": {
           "value": "Click a button in Power Apps to send an email"
         },
@@ -60,6 +63,9 @@
         }
       },
       "parameterHintsV2": {
+        "shared_office365": {
+          "value": "f3b5979f-6d58-4b1a-a464-a355f974426a"
+        },
         "workflowDisplayName": {
           "value": "Click a button in Power Apps to send an email"
         },

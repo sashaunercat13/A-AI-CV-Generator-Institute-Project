@@ -149,7 +149,7 @@ Create As screen:
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
         Default: ="false"
-        Fill: =RGBA(215, 223, 240, 1)
+        Fill: =RGBA(0, 0, 0, 0)
         Font: =Font.Verdana
         Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
         OnChange: =
@@ -157,7 +157,7 @@ Create As screen:
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
         Width: =371
-        X: =720
+        X: =710
         Y: =82
         ZIndex: =13
 
@@ -187,8 +187,8 @@ Create As screen:
         SelectionColor: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(215, 223, 240, 1)
         Size: =12
-        X: =992
-        Y: =319
+        X: =176
+        Y: =604
         ZIndex: =16
 
     Icon4 As icon.LogJournal:
@@ -246,16 +246,17 @@ Create As screen:
         ZIndex: =23
 
     Icon7 As icon.Hamburger:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(39, 41, 54, 1)
         Height: =25
         Icon: =Icon.Hamburger
         OnSelect: =Navigate(Welcome)
         Width: =25
-        X: =11
-        Y: =17
+        X: =1311
+        Y: =14.5
         ZIndex: =26
 
     Button3 As button:
+        Color: =RGBA(39, 41, 54, 1)
         Fill: =RGBA(0, 0, 0, 0)
         Height: =27
         HoverFill: =
@@ -265,16 +266,16 @@ Create As screen:
         Size: =11
         Text: ="Menu"
         Width: =51
-        X: =38
-        Y: =17
+        X: =1260
+        Y: =15
         ZIndex: =27
 
     Label9 As label:
         Font: =Font.Verdana
-        Text: |-
-            ="Capability:"
+        FontWeight: =FontWeight.Semibold
+        Text: ="Capability"
         Width: =334
-        X: =714
+        X: =710
         Y: =42
         ZIndex: =28
 
@@ -287,32 +288,36 @@ Create As screen:
                 LookUp(HubOptionSets, Capability = DropdownCapability.Selected.Value).Options
             )
         Width: =371
-        X: =720
-        Y: =166
+        X: =710
+        Y: =169
         ZIndex: =29
 
     Label11 As label:
         Font: =Font.Verdana
-        Text: |-
-            ="Hub:"
-        X: =720
-        Y: =131
+        FontWeight: =FontWeight.Semibold
+        Text: ="Hub"
+        X: =711
+        Y: =132
         ZIndex: =31
 
     Label12 As label:
-        Text: |-
-            ="Security Clearance:"
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Text: ="Security Clearance"
         Width: =377
-        X: =714
-        Y: =278
+        X: =713
+        Y: =288
         ZIndex: =32
 
     Label12_1 As label:
-        Text: |-
-            ="Role:"
-        Width: =377
-        X: =989
-        Y: =280
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        Text: ="Role"
+        Width: =59
+        X: =117
+        Y: =606
         ZIndex: =33
 
     Group6 As group:
@@ -329,8 +334,8 @@ Create As screen:
             OnUncheck: =Set(BPSSchecked,false)
             Text: ="BPSS"
             Width: =121
-            X: =726
-            Y: =312
+            X: =721
+            Y: =317
             ZIndex: =24
 
         Checkbox_SC As checkbox:
@@ -340,7 +345,7 @@ Create As screen:
             OnUncheck: =Set(SCchecked, false) 
             Text: ="SC"
             Width: =121
-            X: =856
-            Y: =312
+            X: =851
+            Y: =317
             ZIndex: =25
 
