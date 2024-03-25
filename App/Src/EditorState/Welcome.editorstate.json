@@ -3392,7 +3392,7 @@
       "MetaDataIDKey": "",
       "Name": "Search CV Button",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3444,7 +3444,7 @@
       "MetaDataIDKey": "",
       "Name": "Update CV Button",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 16,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3496,7 +3496,7 @@
       "MetaDataIDKey": "",
       "Name": "View CV Button",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
