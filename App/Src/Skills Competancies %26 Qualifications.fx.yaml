@@ -769,7 +769,7 @@
             )
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
-            =Navigate('Project Experience');
+            =Navigate('Profesional Experience');
             // Convert collections to strings to save to a single column in List
             Set(
                 SkillsString,
@@ -1080,4 +1080,10 @@
             X: =546
             Y: =4
             ZIndex: =3
+
+    Label3 As label:
+        Text: ="Text"
+        X: =40
+        Y: =40
+        ZIndex: =25
 

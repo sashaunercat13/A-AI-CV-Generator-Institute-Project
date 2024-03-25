@@ -3273,7 +3273,14 @@
     "Button-Submit_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(\n    varSelectedProjectID = 0,\n    // Creating a new record because varSelectedProjectID = 0\n    Patch(\n        'CV Generator - Project Experience',\n        Defaults('CV Generator - Project Experience'),// Indicates a new record\n        {\n            Email: User().Email,\n            'Project Title': '1ProjectTitle_2'.Text,\n            'Project Client': ComboBoxOneClient.Selected.Client,\n            'Project Role': DropdownRole.Selected.Value,\n            'Start Date': '1ProjectStartDate_2'.SelectedDate,\n            'End Date': '1ProjectEndDate_2'.SelectedDate,\n            'Project Description': '1ProjectDescription_2'.Text,\n            'Microsoft Profile': {\n                Claims: Concatenate(\n                    \"i:0#.f|membership|\",\n                    User().Email\n                ),\n                Department: \"\",\n                DisplayName: User().FullName,\n                Email: User().Email,\n                JobTitle: \"\",\n                Picture: \"\"\n            }\n        }\n    ),\n    // Updating an existing record because varSelectedProjectID > 0\n    Patch(\n        'CV Generator - Project Experience',\n        LookUp(\n            'CV Generator - Project Experience',\n            ID = varSelectedProjectID\n        ),\n        {\n            'Project Title': '1ProjectTitle_2'.Text,\n            'Project Client': ComboBoxOneClient.Selected.Client,\n            'Project Role': DropdownRole.Selected.Value,\n            'Start Date': '1ProjectStartDate_2'.SelectedDate,\n            'End Date': '1ProjectEndDate_2'.SelectedDate,\n            'Project Description': '1ProjectDescription_2'.Text,\n            'Microsoft Profile': {\n                Claims: Concatenate(\n                    \"i:0#.f|membership|\",\n                    User().Email\n                ),\n                Department: \"\",\n                DisplayName: User().FullName,\n                Email: User().Email,\n                JobTitle: \"\",\n                Picture: \"\"\n            }\n        }\n    )\n);\n// Refresh the List\nRefresh('CV Generator - Project Experience');\n// Add the new project to the list\nClear(ProjectsOfThisUser);\n// Update the collection\nClearCollect(\n    ProjectsOfThisUser,\n    Filter(\n        'CV Generator - Project Experience',\n        Email = User().Email\n    )\n);\n//reset the form fields\nReset('1ProjectTitle_2');\nReset(DropdownRole);\n//Reset('Dropdown3');\nReset('1ProjectStartDate_2');\nReset('1ProjectEndDate_2');\nReset('1ProjectDescription_2');\nReset(ComboBoxOneClient);\n\n// navigate to the success screen\nNavigate(Screen2, ScreenTransition.Fade)",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "AutoDisableOnSelect",
         "Text",
         "Tooltip",
@@ -3580,7 +3587,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
