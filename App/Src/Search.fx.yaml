@@ -1,11 +1,12 @@
 Search As screen:
     OnVisible: |-
-        =//Dummy list of selected emails
+        =/* Dummy list of selected emails
         Clear(SelectedCVsEmails);
         ClearCollect(
             SelectedCVsEmails,
             ["lewis.bentley@capgemini.com"]
         );
+        */
         
         Clear(FinalFilteredCVs);
         Collect(FinalFilteredCVs, 'CV Generator');
@@ -56,7 +57,7 @@ Search As screen:
         Y: =106
         ZIndex: =1
 
-    "GalleryFilteredCVs_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnVariant_ver5.0'":
+    GalleryFilteredCVs_1 As gallery.galleryVertical:
         DelayItemLoading: =true
         DisplayMode: =DisplayMode.View
         Height: =545
