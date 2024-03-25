@@ -433,7 +433,7 @@ ProjectTest As screen:
             Reset(ComboBoxOneClient);
             
             // navigate to the success screen
-            Navigate(Screen2, ScreenTransition.Fade)
+            Navigate(Success, ScreenTransition.Fade)
         Text: |-
             ="Submit
             "
