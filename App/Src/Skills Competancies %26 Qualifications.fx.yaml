@@ -738,6 +738,7 @@
         ZIndex: =7
 
     Label5_4 As label:
+        Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Height: =41
@@ -769,7 +770,7 @@
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |-
-            =Navigate(ProjectTest);
+            =Navigate('Project Experience');
             // Convert collections to strings to save to a single column in List
             Set(
                 SkillsString,
@@ -863,6 +864,7 @@
     ComboBoxSkill As combobox:
         DisplayFields: =["Value"]
         Font: =Font.Verdana
+        Height: =35
         InputTextPlaceholder: ="Search Skills"
         Items: =Skills
         SearchFields: =["Value"]
@@ -873,6 +875,7 @@
         ZIndex: =13
 
     AddSkill As button:
+        Height: =35
         OnSelect: |-
             =// Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
             ForAll(ComboBoxSkill.SelectedItems, Collect(SkillsCollection, {Skill: Value}));
@@ -897,17 +900,18 @@
 
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =418
+        Height: =420
         Items: =SkillsCollection
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =35
-        Width: =601
+        Width: =630
         X: =33
         Y: =258
         ZIndex: =16
 
         Icon3 As icon.ToolsWrench:
+            Color: =RGBA(39, 41, 54, 1)
             Height: =30
             Icon: =Icon.ToolsWrench
             OnSelect: =Select(Parent)
@@ -930,6 +934,7 @@
 
     ComboBoxQual As combobox:
         DisplayFields: =["Value"]
+        Height: =35
         InputTextPlaceholder: ="Search Qualifications"
         Items: =Qualifications
         SearchFields: =["Value"]
@@ -941,6 +946,7 @@
 
     ComboBoxUniversity As combobox:
         DisplayFields: =["Value"]
+        Height: =35
         InputTextPlaceholder: ="Search Universities"
         Items: |
             =["University of Oxford","University of Bath","University of Cambridge","UCL (University College London)","University of Manchester","University of Bristol","Loughborough University","University of Leeds","The University of Edinburgh","University of Birmingham","Durham University","University of Glasgow","University of St Andrews","University of Warwick","Imperial College London","University of Nottingham","University of Southampton","University of Surrey","University of Strathclyde","University of Exeter","University of Sheffield","King's College London, University of","Lancaster University","Queen's University Belfast","London School of Economics and Political Science (LSE)","Cardiff University","University of Liverpool","University of York","Newcastle University","Ulster University","Heriot-Watt University","Queen Mary University of London","Swansea University","University of Stirling","University of East Anglia UEA","Aston University, Birmingham","University of Reading","City, University of London","Royal Holloway, University of London","Northumbria University, Newcastle","University of Aberdeen","Sheffield Hallam University","University of Sussex","University of Dundee","University of Leicester","University of Derby","Teesside University, Middlesbrough","University of Huddersfield","Birmingham City University","University of South Wales","University of Portsmouth","Liverpool John Moores University","Nottingham Trent University","Leeds Beckett University","University of Greenwich","Coventry University","Manchester Metropolitan University","Brunel University London","University of the West of Scotland","University of Hull","University of Kent","University of Gloucestershire","Solent University (Southampton)","University of East London","University of Plymouth","SOAS University of London","University of Hertfordshire","Aberystwyth University","Bournemouth University","Keele University","University of Brighton","Glasgow Caledonian University","University of Chester","University of Bradford","London South Bank University","Anglia Ruskin University","Middlesex University","London Metropolitan University","De Montfort University","University of Wolverhampton","Oxford Brookes University","University of Chichester","Buckinghamshire New University","Bristol, University of the West of","University of Salford","Cardiff Metropolitan University","University of Lincoln","Edge Hill University","University of Worcester","University of Northampton","University of Central Lancashire","Staffordshire University","Bangor University","University of Essex","Goldsmiths, University of London","University of Roehampton","University of West London","St George's, University of London","University of Sunderland","University of the Arts London","University for the Creative Arts","Robert Gordon University","University of Wales Trinity Saint David","University of Winchester","University of Suffolk","Kingston University","Bath Spa University","University of Bedfordshire","Royal Agricultural University","Edinburgh Napier University","St Mary's University, Twickenham","Ravensbourne University London","Liverpool Hope University","University of Westminster, London","York St John University","Queen Margaret University, Edinburgh","University of Cumbria","Falmouth University","Canterbury Christ Church University","Abertay University","University of the Highlands and Islands","University of Buckingham","Norwich University of the Arts","Newman University, Birmingham","University of Bolton","Leeds Trinity University","Plymouth Marjon University","Bishop Grosseteste University","Royal Conservatoire of Scotland","Glyndwr University, Wrexham"]
@@ -955,7 +961,7 @@
         ZIndex: =18
 
     AddSkill_1 As button:
-        Height: =63
+        Height: =35
         OnSelect: |-
             =Collect(EducationCollection, {University: ComboBoxUniversity.Selected.Value, Course: ComboBoxCourse.Selected.Value, DegreeType: ComboBoxDegreeType.Selected.Value});
             Reset(ComboBoxCourse);
@@ -968,7 +974,7 @@
         ZIndex: =19
 
     AddSkill_2 As button:
-        Height: =39
+        Height: =35
         OnSelect: |
             =//Collect(Qualifications, {Qualification: ComboBoxQual.SelectedItems});
             ForAll(ComboBoxQual.SelectedItems, Collect(QualificationsCollection, {Qualification: Value}));
@@ -982,20 +988,22 @@
 
     Gallery2 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =91
+        Height: =90
         Items: =EducationCollection
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =42
-        Width: =641
-        X: =687
-        Y: =290
+        X: =690
+        Y: =283
         ZIndex: =21
 
         Icon6 As icon.DocumentwithContent:
-            Height: =40
+            Height: =25
             Icon: =Icon.DocumentWithContent
             OnSelect: =Select(Parent)
+            Width: =52
+            X: =12
+            Y: =7
             ZIndex: =1
 
         Label5 As label:
@@ -1015,7 +1023,7 @@
 
     ComboBoxCourse As combobox:
         DisplayFields: =["Value"]
-        Height: =39
+        Height: =35
         InputTextPlaceholder: ="Search Courses"
         Items: =["Account & Finance","Aeronautical & Aerospace","Biomedical Sciences","Business & Management Studies","Chemical Engineering","Chemistry and/or Chemical Sciences","Civil and/or Environmental Engineering","Computer Science","Economics","Electrical & Electronic Engineering","Geography & Environmental Science","Geology and Geophysics Sciences","Information Technology","Marketing","Mathematics","Mechanical Engineering","Music","Philosophy","Physics","Politics and/or International Relations","Psychology and/or Criminology","Sociology","Materials Science / Engineering","Sport Science and/or Physiotherapy","Education / Teaching / PGCE","Communications & Media Studies","Art History","Creative Writing","Criminology","Data Science","Dentistry","Drama and Theatre Studies","Earth Sciences","English Literature","Environmental Science","Fashion Design","Film Studies","Fine Art","Forensic Science","Genetics","Graphic Design","History","Hospitality Management","Human Resource Management","Linguistics","Management Studies","Modern Languages (e.g., French, German, Spanish)","Music","Nursing","Nutrition","Occupational Therapy","Pharmacy","Photography","Public Health","Quantity Surveying","Radiography","Social Work","Software Engineering","Sports Science","Statistics","Sustainable Development","Textile Design","Theology","Tourism Management","Urban Planning","Veterinary Medicine","Web Development","Zoology","Artificial Intelligence","Robotics","Renewable Energy Engineering","Marine Biology","Aerospace Technology","Nanotechnology","Renewable Energy Systems","Cybersecurity","Game Design","Animation","Renewable Energy Management","Green Chemistry","Petroleum Engineering","International Business","Fashion Marketing","Renewable Energy Policy","Computational Biology","Artificial Neural Networks","Ethical Hacking"]
         SearchFields: =["Value"]
@@ -1023,12 +1031,12 @@
         SelectMultiple: =false
         Width: =204
         X: =931
-        Y: =244
+        Y: =237
         ZIndex: =22
 
     ComboBoxDegreeType As combobox:
         DisplayFields: =["Value"]
-        Height: =38
+        Height: =35
         InputTextPlaceholder: ="Search Degree Type"
         Items: =["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"]
         SearchFields: =["Value"]
@@ -1036,7 +1044,7 @@
         SelectMultiple: =false
         Width: =214
         X: =704
-        Y: =245
+        Y: =238
         ZIndex: =23
 
     Gallery3 As gallery.galleryVertical:
@@ -1046,16 +1054,16 @@
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =44
-        Width: =636
-        X: =706
-        Y: =507
+        X: =690
+        Y: =505
         ZIndex: =24
 
         Icon9 As icon.ListScrollWatchlist:
-            Height: =38
+            Height: =25
             Icon: =Icon.ListScrollWatchlist
             OnSelect: =Select(Parent)
-            Width: =39
+            Width: =52
+            Y: =9
             ZIndex: =1
 
         Label7 As label:

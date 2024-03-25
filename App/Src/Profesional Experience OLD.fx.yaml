@@ -1,0 +1,18 @@
+"'Profesional Experience OLD' As screen":
+    OnVisible: |
+        =Set(Project1ButtonText, "Project 1");
+        Set(Project2ButtonText, "Project 2");
+        Set(Project3ButtonText, "Project 3");
+        Set(Project4ButtonText, "Project 4");
+        Set(Project5ButtonText, "Project 5");
+        Set(Project6ButtonText, "Project 6");
+        Set(Project7ButtonText, "Project 7");
+        Set(Project8ButtonText, "Project 8");
+        Set(Project9ButtonText, "Project 9");
+        Set(Project10ButtonText, "Project 10");
+        
+        UpdateContext({Container2Visible:false});
+        UpdateContext({Container3Visible:false});
+        UpdateContext({Container4Visible:false});
+        UpdateContext({ContainerVisible:true});
+
