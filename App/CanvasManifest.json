@@ -74,7 +74,7 @@
       "optimizedforteamsmeeting": false,
       "packagemodernruntime": false,
       "parallelcodegen": false,
-      "pdffunction": false,
+      "pdffunction": true,
       "powerfxdecimal": false,
       "powerfxv1": false,
       "primaryoutputpropertycoerciondeprecated": true,
@@ -143,6 +143,7 @@
     "Search",
     "Update",
     "Update_Profesional Experience",
-    "Update_Skills Competancies & Qualifications"
+    "Update_Skills Competancies & Qualifications",
+    "PDF View TEST"
   ]
 }
