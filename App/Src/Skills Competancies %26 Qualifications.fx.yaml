@@ -960,12 +960,19 @@
         ZIndex: =18
 
     AddSkill_1 As button:
+        DisplayMode: |-
+            =If( 
+                IsBlank(ComboBoxUniversity) Or IsBlank(ComboBoxDegreeType) Or IsBlank(ComboBoxCourse),
+                DisplayMode.Disabled,
+                DisplayMode.Edit)
+                
         Height: =35
-        OnSelect: |-
+        OnSelect: |+
             =Collect(EducationCollection, {University: ComboBoxUniversity.Selected.Value, Course: ComboBoxCourse.Selected.Value, DegreeType: ComboBoxDegreeType.Selected.Value});
             Reset(ComboBoxCourse);
             Reset(ComboBoxUniversity);
-            Reset(ComboBoxDegreeType)
+            Reset(ComboBoxDegreeType);
+            
         Size: =12
         Text: ="Add Education"
         X: =1155

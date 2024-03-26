@@ -321,7 +321,6 @@
             SearchItems: =Choices('CV Generator - Project Experience'.'Microsoft Profile','1ProjectManager_1'.SearchText)
             SelectMultiple: |
                 =false
-            Template: =ListItemTemplate.Double
             Visible: |
                 =true
             X: =34
@@ -355,7 +354,7 @@
             
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 113, 194, 1)
-        OnSelect: |-
+        OnSelect: |
             =If(
                 varSelectedProjectID = 0,
                 // Creating a new record because varSelectedProjectID = 0
@@ -431,9 +430,6 @@
             Reset('1ProjectEndDate_2');
             Reset('1ProjectDescription_2');
             Reset(ComboBoxOneClient);
-            
-            // navigate to the success screen
-            Navigate(Success, ScreenTransition.Fade)
         Text: ="Submit project"
         X: =395
         Y: =699
@@ -530,4 +526,13 @@
         X: =14
         Y: =699
         ZIndex: =26
+
+    Button5 As button:
+        OnSelect: |-
+            =// navigate to the success screen
+            Navigate(Success, ScreenTransition.Fade)
+        Text: ="Complete CV"
+        X: =1180
+        Y: =699
+        ZIndex: =27
 
