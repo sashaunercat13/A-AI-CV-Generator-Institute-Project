@@ -261,19 +261,6 @@ Search As screen:
         Y: =12
         ZIndex: =14
 
-    Profile_1 As label:
-        Color: =RGBA(39, 41, 54, 1)
-        Font: =Font.Verdana
-        FontWeight: =FontWeight.Semibold
-        Height: =122
-        Size: =36
-        Text: ="Your Profile"
-        Visible: =false
-        Width: =397
-        X: =122
-        Y: =130
-        ZIndex: =15
-
     DropdownCapabilitySearch As dropdown:
         AllowEmptySelection: =true
         ChevronBackground: =RGBA(215, 223, 240, 1)
