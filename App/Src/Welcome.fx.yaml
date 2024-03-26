@@ -77,7 +77,9 @@ Welcome As screen:
             PressedFill: =
             Size: =22
             Text: ="Create CV"
-            Visible: =!UserExistsInSP
+            Visible: |-
+                =// !UserExistsInSP
+                true
             Width: =325
             X: =842
             Y: =222
@@ -92,7 +94,9 @@ Welcome As screen:
             Icon: =Icon.ChevronUp
             OnSelect: =
             Rotation: =90
-            Visible: =!UserExistsInSP
+            Visible: |-
+                =// !UserExistsInSP
+                true
             X: =778
             Y: =242
             ZIndex: =11
@@ -199,7 +203,7 @@ Welcome As screen:
             PressedFill: =
             Size: =22
             Text: ="Update CV"
-            Visible: =UserExistsInSP
+            Visible: =false
             Width: =325
             X: =842
             Y: =222
@@ -213,6 +217,7 @@ Welcome As screen:
             Height: =57
             Icon: =Icon.ChevronUp
             Rotation: =90
+            Visible: =false
             X: =778
             Y: =244
             ZIndex: =16

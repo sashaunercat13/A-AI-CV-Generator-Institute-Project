@@ -132,6 +132,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144": {
+          "value": "shared_sharepointonline"
+        },
+        "635bd87a-5158-41f4-9adf-382c58d197a8": {
+          "value": "shared_excelonlinebusiness"
+        },
         "workflowDisplayName": {
           "value": "Click a button in Power Apps to send an email"
         },
@@ -143,6 +149,12 @@
         }
       },
       "parameterHintsV2": {
+        "shared_excelonlinebusiness": {
+          "value": "635bd87a-5158-41f4-9adf-382c58d197a8"
+        },
+        "shared_sharepointonline": {
+          "value": "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144"
+        },
         "workflowDisplayName": {
           "value": "Click a button in Power Apps to send an email"
         },
