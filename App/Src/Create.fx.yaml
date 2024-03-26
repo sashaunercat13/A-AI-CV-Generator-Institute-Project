@@ -69,7 +69,7 @@ Create As screen:
         Visible: =false
         Width: =397
         X: =726
-        ZIndex: =8
+        ZIndex: =6
 
     Label5_1 As label:
         Font: =Font.Verdana
@@ -79,7 +79,7 @@ Create As screen:
         Width: =217
         X: =713
         Y: =367
-        ZIndex: =10
+        ZIndex: =7
 
     "'Profile box' As text":
         Default: =""
@@ -94,7 +94,7 @@ Create As screen:
         Width: =607
         X: =713
         Y: =409
-        ZIndex: =11
+        ZIndex: =8
 
     Button1_1 As button:
         DisplayMode: |
@@ -142,24 +142,7 @@ Create As screen:
         Text: ="Next Page"
         X: =1167
         Y: =710
-        ZIndex: =12
-
-    DropdownCapability As dropdown:
-        ChevronBackground: =RGBA(215, 223, 240, 1)
-        ChevronFill: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 18, 107, 1)
-        Default: ="false"
-        Fill: =RGBA(0, 0, 0, 0)
-        Font: =Font.Verdana
-        Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
-        OnChange: =
-        SelectionColor: =RGBA(0, 18, 107, 1)
-        SelectionFill: =RGBA(215, 223, 240, 1)
-        Size: =12
-        Width: =371
-        X: =710
-        Y: =82
-        ZIndex: =13
+        ZIndex: =9
 
     Image2_1 As image:
         Height: =184
@@ -167,14 +150,14 @@ Create As screen:
         Width: =415
         X: =89
         Y: =96
-        ZIndex: =14
+        ZIndex: =10
 
     Image1_2 As image:
         Image: ='White Logo Capgemini Invent'
         Width: =572
         X: =52
         Y: =72
-        ZIndex: =15
+        ZIndex: =11
 
     DropdownRoleCreate As dropdown:
         ChevronBackground: =RGBA(215, 223, 240, 1)
@@ -189,7 +172,7 @@ Create As screen:
         Size: =12
         X: =176
         Y: =604
-        ZIndex: =16
+        ZIndex: =12
 
     Icon4 As icon.LogJournal:
         Height: =143
@@ -197,7 +180,7 @@ Create As screen:
         Width: =144
         X: =1167
         Y: =107
-        ZIndex: =18
+        ZIndex: =13
 
     Label1 As label:
         Align: =Align.Center
@@ -207,7 +190,7 @@ Create As screen:
         Width: =378
         X: =149
         Y: =534
-        ZIndex: =19
+        ZIndex: =14
 
     Label1_2 As label:
         Align: =Align.Center
@@ -217,7 +200,7 @@ Create As screen:
         Width: =378
         X: =149
         Y: =647
-        ZIndex: =21
+        ZIndex: =15
 
     Label5_6 As label:
         Font: =Font.Verdana
@@ -228,7 +211,7 @@ Create As screen:
         Width: =217
         X: =714
         Y: =554
-        ZIndex: =22
+        ZIndex: =16
 
     Interests As text:
         Default: =""
@@ -243,7 +226,7 @@ Create As screen:
         Width: =607
         X: =714
         Y: =592
-        ZIndex: =23
+        ZIndex: =17
 
     Icon7 As icon.Hamburger:
         Color: =RGBA(39, 41, 54, 1)
@@ -253,7 +236,7 @@ Create As screen:
         Width: =25
         X: =1311
         Y: =14.5
-        ZIndex: =26
+        ZIndex: =20
 
     Button3 As button:
         Color: =RGBA(39, 41, 54, 1)
@@ -268,7 +251,7 @@ Create As screen:
         Width: =51
         X: =1260
         Y: =15
-        ZIndex: =27
+        ZIndex: =21
 
     Label9 As label:
         Font: =Font.Verdana
@@ -277,7 +260,7 @@ Create As screen:
         Width: =334
         X: =710
         Y: =42
-        ZIndex: =28
+        ZIndex: =22
 
     RadioHubs As radio:
         BorderThickness: =2
@@ -290,7 +273,7 @@ Create As screen:
         Width: =371
         X: =710
         Y: =169
-        ZIndex: =29
+        ZIndex: =23
 
     Label11 As label:
         Font: =Font.Verdana
@@ -298,7 +281,7 @@ Create As screen:
         Text: ="Hub"
         X: =711
         Y: =132
-        ZIndex: =31
+        ZIndex: =24
 
     Label12 As label:
         Font: =Font.Verdana
@@ -307,9 +290,9 @@ Create As screen:
         Width: =377
         X: =713
         Y: =288
-        ZIndex: =32
+        ZIndex: =25
 
-    Label12_1 As label:
+    "'Label - Role' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -318,7 +301,23 @@ Create As screen:
         Width: =59
         X: =117
         Y: =606
-        ZIndex: =33
+        ZIndex: =26
+
+    DropdownCapability As dropdown:
+        ChevronBackground: =RGBA(215, 223, 240, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        Default: ="false"
+        Font: =Font.Verdana
+        Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
+        OnChange: =
+        SelectionColor: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(241, 244, 249, 1)
+        Size: =12
+        Width: =371
+        X: =710
+        Y: =82
+        ZIndex: =27
 
     Group6 As group:
         Height: =5
@@ -336,7 +335,7 @@ Create As screen:
             Width: =121
             X: =721
             Y: =317
-            ZIndex: =24
+            ZIndex: =18
 
         Checkbox_SC As checkbox:
             CheckboxSize: =30
@@ -347,5 +346,5 @@ Create As screen:
             Width: =121
             X: =851
             Y: =317
-            ZIndex: =25
+            ZIndex: =19
 

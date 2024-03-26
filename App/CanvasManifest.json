@@ -135,15 +135,14 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
+    "Welcome",
     "Create",
-    "Profesional Experience OLD",
-    "Profesional Experience",
-    "Search",
     "Skills Competancies & Qualifications",
+    "Profesional Experience",
     "Success",
+    "Search",
     "Update",
     "Update_Profesional Experience",
-    "Update_Skills Competancies & Qualifications",
-    "Welcome"
+    "Update_Skills Competancies & Qualifications"
   ]
 }
