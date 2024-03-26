@@ -294,20 +294,10 @@ Search As screen:
 
     Button7 As button:
         OnSelect: =ClickabuttoninPowerAppstosendanemail.Run()
-        Text: |-
-            ="Export
-            "
+        Text: ="View Selected"
         X: =480
         Y: =706
         ZIndex: =51
-
-    Icon10 As icon.DocumentPDF:
-        Icon: =Icon.DocumentPDF
-        OnSelect: |-
-            =Set(VarCandidatesPDF,PDF( GalleryFilteredCVs_1 ,{Orientation:PaperOrientation.Landscape}))
-        X: =686
-        Y: =682
-        ZIndex: =52
 
     "'Group Filter Fields & Titles' As group":
         Height: =5
