@@ -2,14 +2,7 @@
   <doc title="Click a button in Power Apps to send an email" />
   <grammars>
     <jsonTypes targetNamespace="https://europe-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <string name="ManualTriggerInput_Sendanemail_ux28_V2_ux29__To_def" />
-      <string name="ManualTriggerInput_Sendanemail_ux28_V2_ux29__Subject_def" />
-      <string name="ManualTriggerInput_Sendanemail_ux28_V2_ux29__Body_def" />
-      <object name="ManualTriggerInput">
-        <property name="Sendanemail(V2)_To" type="string" />
-        <property name="Sendanemail(V2)_Subject" type="string" />
-        <property name="Sendanemail(V2)_Body" type="string" />
-      </object>
+      <object name="ManualTriggerInput" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://europe-001.azure-apim.net/apim/logicflows">
@@ -21,11 +14,7 @@
           <param style="query" name="api-version" type="xs:string" required="true" fixed="2015-02-01-preview">
             <doc title="The api version" />
           </param>
-          <representation mediaType="application/json">
-            <param style="plain" name="Sendanemail(V2)_To" path="/Sendanemail(V2)_To" type="xs:string" required="true" />
-            <param style="plain" name="Sendanemail(V2)_Subject" path="/Sendanemail(V2)_Subject" type="xs:string" required="true" />
-            <param style="plain" name="Sendanemail(V2)_Body" path="/Sendanemail(V2)_Body" type="xs:string" required="true" />
-          </representation>
+          <representation mediaType="application/json" />
         </request>
       </method>
     </resource>
