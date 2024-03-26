@@ -321,7 +321,7 @@
             SearchItems: =Choices('CV Generator - Project Experience'.'Microsoft Profile','1ProjectManager_1'.SearchText)
             SelectMultiple: |
                 =false
-            Template: =ListItemTemplate.Person
+            Template: =ListItemTemplate.Double
             Visible: |
                 =true
             X: =34
@@ -434,10 +434,8 @@
             
             // navigate to the success screen
             Navigate(Success, ScreenTransition.Fade)
-        Text: |-
-            ="Submit
-            "
-        X: =1168
+        Text: ="Submit project"
+        X: =395
         Y: =699
         ZIndex: =17
 
@@ -489,7 +487,7 @@
         Y: =663
         ZIndex: =22
 
-    Button9 As button:
+    "'Button - New' As button":
         Fill: =RGBA(39, 113, 194, 1)
         OnSelect: |
             =// reset the current project button
@@ -497,8 +495,8 @@
             
             // set this is selected button for colour
             //Set(selectedButtonID, 0);
-        Text: ="New"
-        X: =395
+        Text: ="New project "
+        X: =568
         Y: =699
         ZIndex: =23
 
