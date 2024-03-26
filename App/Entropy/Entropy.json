@@ -36,6 +36,7 @@
     "Background Rectangle": 94,
     "Background Rectangle_1": 112,
     "Background Rectangle_2": 252,
+    "Button1": 268,
     "Button1_1": 138,
     "Button1_2": 245,
     "Button1_3": 244,
@@ -273,7 +274,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "03/26/2024 14:35:23",
+  "HeaderLastSavedDateTimeUTC": "03/26/2024 14:42:05",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0fa35610-3dad-4a9b-9e62-152ac7a52071": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/9a8e9e94578249608b48053882822b52\"",
@@ -302,6 +303,7 @@
     "Screenshot 2024-03-04 120003": "https://docserverpwaprodneu.blob.core.windows.net/d27fdc9c-396d-4ce7-849b-6543b4eb4494-1/resource/Assets0Images00004.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-26T14%3A09%3A23Z&ske=2024-03-27T14%3A24%3A23Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-27T14%3A24%3A23Z&sr=b&sp=r&sig=9wD8%2BYcoaCBj7Icb7oCX6RCJN%2FXer9DkHeMAVCYKq1E%3D",
     "White Logo Capgemini Invent": "https://docserverpwaprodneu.blob.core.windows.net/d27fdc9c-396d-4ce7-849b-6543b4eb4494-1/resource/Assets0Images00005.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-26T14%3A09%3A23Z&ske=2024-03-27T14%3A24%3A23Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-27T14%3A24%3A23Z&sr=b&sp=r&sig=LeNiIFhWLSPztTo5zlultBhj43%2BUcgWnEjeK8hkYCO4%3D"
   },
+  "OldLogoFileName": "ffvv1e4k.jpg",
   "OrderComponentMetadata": {
     "6b01bf047f29498a89aa71ff084a0b2f": 0
   },
@@ -465,6 +467,7 @@
     "Background Rectangle": {},
     "Background Rectangle_1": {},
     "Background Rectangle_2": {},
+    "Button1": {},
     "Button1_1": {},
     "Button1_2": {},
     "Button1_3": {},
@@ -735,6 +738,7 @@
     "Background Rectangle": 0,
     "Background Rectangle_1": 17,
     "Background Rectangle_2": 151,
+    "Button1": 0,
     "Button1_1": 44,
     "Button1_2": 81,
     "Button1_3": 80,

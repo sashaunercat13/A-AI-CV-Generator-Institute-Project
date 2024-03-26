@@ -548,3 +548,10 @@ Search As screen:
             Y: =348
             ZIndex: =48
 
+    Button1 As button:
+        OnSelect: =Back()
+        Text: ="Back"
+        X: =1165
+        Y: =706
+        ZIndex: =53
+
