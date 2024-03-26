@@ -261,40 +261,6 @@ Search As screen:
         Y: =12
         ZIndex: =14
 
-    DropdownCapabilitySearch As dropdown:
-        AllowEmptySelection: =true
-        ChevronBackground: =RGBA(215, 223, 240, 1)
-        ChevronFill: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 18, 107, 1)
-        Default: =""""""
-        Fill: =RGBA(215, 223, 240, 1)
-        Font: =Font.Verdana
-        Items: =["Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
-        OnChange: =
-        SelectionColor: =RGBA(0, 18, 107, 1)
-        SelectionFill: =RGBA(215, 223, 240, 1)
-        Size: =12
-        Visible: =false
-        X: =129
-        Y: =212
-        ZIndex: =16
-
-    "'Primary Alignment_2' As dropdown":
-        ChevronBackground: =RGBA(215, 223, 240, 1)
-        ChevronFill: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 18, 107, 1)
-        Fill: =RGBA(215, 223, 240, 1)
-        Font: =Font.Verdana
-        Items: |
-            =["Primary Alignment","frog", "Intelligent Industry", "Corporate Experience", "W&O", "BT", "Analytics & AI", "Financial Service", "Manufacturing", "Automotive and Life Sciences", "Utilities & Energy", "TMTS", "Public Sector", "Consumer Products & Retail", "Sustainable Futures"]
-        SelectionColor: =RGBA(0, 18, 107, 1)
-        SelectionFill: =RGBA(215, 223, 240, 1)
-        Size: =12
-        Visible: =false
-        X: =116
-        Y: =182
-        ZIndex: =17
-
     Group4 As group:
         Height: =5
         Width: =5
@@ -328,20 +294,10 @@ Search As screen:
 
     Button7 As button:
         OnSelect: =ClickabuttoninPowerAppstosendanemail.Run()
-        Text: |-
-            ="Export
-            "
+        Text: ="View Selected"
         X: =480
         Y: =706
         ZIndex: =51
-
-    Icon10 As icon.DocumentPDF:
-        Icon: =Icon.DocumentPDF
-        OnSelect: |-
-            =Set(VarCandidatesPDF,PDF(GalleryFilteredCVs_1,{Orientation:PaperOrientation.Landscape}))
-        X: =686
-        Y: =682
-        ZIndex: =52
 
     "'Group Filter Fields & Titles' As group":
         Height: =5

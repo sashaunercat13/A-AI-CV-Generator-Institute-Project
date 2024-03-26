@@ -1,0 +1,73 @@
+"'View Selected CVs' As screen":
+
+    "'Chosen CVs' As gallery.galleryVertical":
+        DelayItemLoading: =true
+        Height: =712
+        Items: =FinalFilteredCVs
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =686
+        Width: =1227
+        X: =12
+        Y: =16
+        ZIndex: =1
+
+        Container1_1 As groupContainer:
+            Height: =638
+            Width: =1182
+            ZIndex: =1
+
+            Label10_1 As label:
+                Align: =Align.Center
+                Fill: =RGBA(175, 191, 224, 1)
+                Height: =568
+                Text: ="Profile"
+                Width: =322
+                X: =30
+                Y: =40
+                ZIndex: =1
+
+            Label14_1 As label:
+                Align: =Align.Center
+                Fill: =RGBA(175, 191, 224, 1)
+                Height: =342
+                Text: ="Experience"
+                Width: =755
+                X: =382
+                Y: =40
+                ZIndex: =2
+
+            Label16_3 As label:
+                Align: =Align.Center
+                Fill: =RGBA(175, 191, 224, 1)
+                Height: =210
+                Text: ="Skills & Qualifications"
+                Width: =590
+                X: =382
+                Y: =398
+                ZIndex: =3
+
+            Label16_2 As label:
+                Align: =Align.Center
+                Fill: =RGBA(175, 191, 224, 1)
+                Height: =210
+                Text: ="Interests"
+                Width: =152
+                X: =985
+                Y: =398
+                ZIndex: =4
+
+            Image7 As image:
+                Image: =ThisItem.Photo
+                X: =141
+                Y: =150
+                ZIndex: =5
+
+    Icon10 As icon.DocumentPDF:
+        Icon: =Icon.DocumentPDF
+        OnSelect: |-
+            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{Orientation:PaperOrientation.Landscape}))
+        X: =1270
+        Y: =684
+        ZIndex: =2
+
