@@ -961,11 +961,11 @@
 
     AddSkill_1 As button:
         DisplayMode: |-
-            =If( 
-                IsBlank(ComboBoxUniversity) Or IsBlank(ComboBoxDegreeType) Or IsBlank(ComboBoxCourse),
+            =If(
+                IsBlank(ComboBoxUniversity.SelectedItems) Or IsBlank(ComboBoxDegreeType.SelectedItems) Or IsBlank(ComboBoxCourse.SelectedItems),
                 DisplayMode.Disabled,
-                DisplayMode.Edit)
-                
+                DisplayMode.Edit
+            )
         Height: =35
         OnSelect: |+
             =Collect(EducationCollection, {University: ComboBoxUniversity.Selected.Value, Course: ComboBoxCourse.Selected.Value, DegreeType: ComboBoxDegreeType.Selected.Value});

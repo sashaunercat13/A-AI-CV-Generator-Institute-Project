@@ -4556,17 +4556,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.SCcheckedSearch"
+                  "fullyQualifiedName": "App.BPSScheckedSearch"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.SCcheckedSearch",
+                  "fullyQualifiedName": "App.BPSScheckedSearch",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "SCcheckedSearch",
+                "member": "BPSScheckedSearch",
                 "module": "App",
                 "type": "App"
               }
@@ -4586,17 +4586,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.BPSScheckedSearch"
+                  "fullyQualifiedName": "App.SCcheckedSearch"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.BPSScheckedSearch",
+                  "fullyQualifiedName": "App.SCcheckedSearch",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "BPSScheckedSearch",
+                "member": "SCcheckedSearch",
                 "module": "App",
                 "type": "App"
               }

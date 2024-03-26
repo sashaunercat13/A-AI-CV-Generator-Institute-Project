@@ -1,0 +1,11 @@
+"'PDF View TEST' As screen":
+
+    PdfViewer1 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =VarCandidatesPDF
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =494
+        X: =40
+        Y: =40
+        ZIndex: =1
+
