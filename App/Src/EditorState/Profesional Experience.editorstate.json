@@ -2387,7 +2387,7 @@
       "MetaDataIDKey": "",
       "Name": "Button5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2638,7 +2638,7 @@
       "MetaDataIDKey": "",
       "Name": "Button6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3284,7 +3284,7 @@
       "MetaDataIDKey": "",
       "Name": "Button-Submit_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5632,7 +5632,7 @@
       "MetaDataIDKey": "",
       "Name": "Gallery4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6401,7 +6401,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7106,7 +7106,7 @@
       "MetaDataIDKey": "",
       "Name": "Label15",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8324,14 +8324,7 @@
         "PressedFill",
         "HoverFill",
         "Font",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Size",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Size",
         "FontWeight",
         "Italic",
         "Underline",

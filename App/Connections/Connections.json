@@ -43,49 +43,33 @@
     "dependents": [],
     "id": "2d836a25-3500-4924-a40f-98fc2306d806"
   },
-  "31eb2070-781f-4cc9-8829-29fee0f8a895": {
+  "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144": {
     "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "7617f702-8ee8-4379-8c8a-72772b5d79a8": {
-          "value": "shared_office365"
-        },
-        "workflowDisplayName": {
-          "value": "Click a button in Power Apps to send an email"
-        },
-        "workflowEntityId": {
-          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
-        },
-        "workflowName": {
-          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_office365": {
-          "value": "7617f702-8ee8-4379-8c8a-72772b5d79a8"
-        },
-        "workflowDisplayName": {
-          "value": "Click a button in Power Apps to send an email"
-        },
-        "workflowEntityId": {
-          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
-        },
-        "workflowName": {
-          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
-        }
-      }
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/alexsp/sporelease/1.0.1682.3673/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {},
-    "dataSources": [
-      "ClickabuttoninPowerAppstosendanemail"
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "ee6be9fc-1393-485e-bd22-fbd123b29574"
     ],
-    "dependencies": {
-      "shared_office365": "7617f702-8ee8-4379-8c8a-72772b5d79a8"
+    "id": "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144"
+  },
+  "635bd87a-5158-41f4-9adf-382c58d197a8": {
+    "connectionRef": {
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
     },
-    "dependents": [],
-    "id": "31eb2070-781f-4cc9-8829-29fee0f8a895"
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "ee6be9fc-1393-485e-bd22-fbd123b29574"
+    ],
+    "id": "635bd87a-5158-41f4-9adf-382c58d197a8"
   },
   "6dfc64e3-2225-432e-945b-fa7298f7ceec": {
     "appActions": [],
@@ -141,6 +125,45 @@
     "dependencies": {},
     "dependents": [],
     "id": "a1f8889d-d323-4bb0-af94-99d7b2d80232"
+  },
+  "ee6be9fc-1393-485e-bd22-fbd123b29574": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "Click a button in Power Apps to send an email"
+        },
+        "workflowEntityId": {
+          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
+        },
+        "workflowName": {
+          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "Click a button in Power Apps to send an email"
+        },
+        "workflowEntityId": {
+          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
+        },
+        "workflowName": {
+          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "ClickabuttoninPowerAppstosendanemail"
+    ],
+    "dependencies": {
+      "shared_excelonlinebusiness": "635bd87a-5158-41f4-9adf-382c58d197a8",
+      "shared_sharepointonline": "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144"
+    },
+    "dependents": [],
+    "id": "ee6be9fc-1393-485e-bd22-fbd123b29574"
   },
   "f7962c18-93a0-47f2-b373-61748b339246": {
     "connectionRef": {
