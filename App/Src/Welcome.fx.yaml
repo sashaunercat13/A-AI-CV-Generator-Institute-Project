@@ -114,6 +114,7 @@ Welcome As screen:
             HoverBorderColor: =
             HoverColor: =RGBA(39, 41, 54, 1)
             HoverFill: =
+            OnSelect: =Navigate(Search)
             PressedBorderColor: =
             PressedColor: =RGBA(39, 41, 54, 1)
             PressedFill: =
@@ -131,6 +132,7 @@ Welcome As screen:
             FocusedBorderThickness: =6
             Height: =57
             Icon: =Icon.ChevronUp
+            OnSelect: =Navigate(Search)
             Rotation: =90
             X: =778
             Y: =374
