@@ -347,14 +347,6 @@ Search As screen:
         Y: =706
         ZIndex: =51
 
-    Icon10 As icon.DocumentPDF:
-        Icon: =Icon.DocumentPDF
-        OnSelect: |-
-            =Set(VarCandidatesPDF,PDF(GalleryFilteredCVs_1,{Orientation:PaperOrientation.Landscape}))
-        X: =686
-        Y: =682
-        ZIndex: =52
-
     "'Group Filter Fields & Titles' As group":
         Height: =5
         Width: =5
@@ -546,4 +538,12 @@ Search As screen:
             X: =62
             Y: =348
             ZIndex: =48
+
+    Icon10 As icon.DocumentPDF:
+        Icon: =Icon.DocumentPDF
+        OnSelect: |-
+            =Set(VarCandidatesPDF,PDF(GalleryFilteredCVs_1,{Orientation:PaperOrientation.Landscape}))
+        X: =686
+        Y: =682
+        ZIndex: =52
 
