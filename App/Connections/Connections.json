@@ -50,7 +50,9 @@
       "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {},
-    "dataSources": [],
+    "dataSources": [
+      "CV Generator"
+    ],
     "dependencies": {},
     "dependents": [
       "ee6be9fc-1393-485e-bd22-fbd123b29574"
