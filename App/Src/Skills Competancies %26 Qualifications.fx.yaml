@@ -1,6 +1,7 @@
 "'Skills Competancies & Qualifications' As screen":
     OnVisible: |-
         =// initialise the collections
+        /*
         ClearCollect(
             EducationCollection,
             {}
@@ -13,6 +14,7 @@
             SkillsCollection,
             {}
         );
+        */
         // Clear the collections form any previous entries
         Clear(EducationCollection);
         Clear(SkillsCollection);
