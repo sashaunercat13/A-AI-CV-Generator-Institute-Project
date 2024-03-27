@@ -540,6 +540,16 @@
         Y: =699
         ZIndex: =27
 
+    Icon13_2 As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Welcome)
+        Width: =52
+        X: =1221
+        Y: =30
+        ZIndex: =30
+
     Group1 As group:
         Height: =5
         Width: =5
@@ -579,14 +589,4 @@
             X: =320
             Y: =197
             ZIndex: =29
-
-    Icon13_2 As icon.Home:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =60
-        Icon: =Icon.Home
-        OnSelect: =Navigate(Welcome)
-        Width: =52
-        X: =1221
-        Y: =30
-        ZIndex: =30
 
