@@ -69,14 +69,6 @@
                 Y: =402
                 ZIndex: =5
 
-            Label14_1 As label:
-                Height: =302
-                Text: ="Text"
-                Width: =916
-                X: =328
-                Y: =72
-                ZIndex: =6
-
             Label14_4 As label:
                 Height: =117
                 Text: ="Text"
@@ -92,17 +84,6 @@
                 X: =799
                 Y: =450
                 ZIndex: =8
-
-            Label10_1 As label:
-                Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
-                Font: =Font.Verdana
-                FontWeight: =FontWeight.Semibold
-                Text: =ThisItem.'First Name'& " " & ThisItem.'Last Name'
-                Width: =220
-                X: =40
-                Y: =16
-                ZIndex: =9
 
             Label10_5 As label:
                 Align: =Align.Center
