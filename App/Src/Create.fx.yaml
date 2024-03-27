@@ -304,6 +304,14 @@ Create As screen:
         Y: =30
         ZIndex: =28
 
+    "'Capgemini Logo_2' As image":
+        Height: =60
+        Image: ='Logo Blue'
+        Width: =52
+        X: =1288
+        Y: =29
+        ZIndex: =29
+
     Group6 As group:
         Height: =5
         Width: =5

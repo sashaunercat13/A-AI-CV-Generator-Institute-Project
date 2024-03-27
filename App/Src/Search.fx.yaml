@@ -508,3 +508,11 @@ Search As screen:
         Y: =30
         ZIndex: =54
 
+    "'Capgemini Logo_3' As image":
+        Height: =60
+        Image: ='Logo Blue'
+        Width: =52
+        X: =1288
+        Y: =29
+        ZIndex: =55
+

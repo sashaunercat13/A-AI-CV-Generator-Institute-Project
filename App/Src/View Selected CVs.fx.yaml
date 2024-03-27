@@ -32,21 +32,12 @@
         Y: =119
         ZIndex: =1
 
-        Icon12 As icon.Trash:
-            Color: =RGBA(39, 41, 54, 1)
-            Height: =32
-            Icon: =Icon.Trash
-            Width: =47
-            X: =1280
-            Y: =305
-            ZIndex: =2
-
         "'CV Template_2' As groupContainer":
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =581
+            Height: =599
             Width: =1265
             X: =15
-            Y: =30
+            Y: =10
             ZIndex: =3
 
             Rectangle1_1 As rectangle:
@@ -105,23 +96,13 @@
                 Y: =450
                 ZIndex: =8
 
-            Label10_5 As label:
-                Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
-                Font: =Font.Verdana
-                Height: =35
-                Text: =ThisItem.Hub
-                Width: =277
-                X: =11
-                Y: =214
-                ZIndex: =10
-
             Label10_8 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
                 Height: =35
-                Text: =ThisItem.Capability
+                Size: =11
+                Text: =ThisItem.Capability & " - " & ThisItem.Hub
                 Width: =277
                 X: =11
                 Y: =179
@@ -145,8 +126,8 @@
                 Height: =35
                 Text: =ThisItem.Grade
                 Width: =277
-                X: =11
-                Y: =261
+                X: =9
+                Y: =214
                 ZIndex: =13
 
             Label10_11 As label:
@@ -188,14 +169,24 @@
                 Y: =40
                 ZIndex: =17
 
+        Icon7 As icon.CancelBadge:
+            Color: =RGBA(39, 41, 54, 1)
+            Height: =47
+            Icon: =Icon.CancelBadge
+            OnSelect: =Select(Parent)
+            Width: =27
+            X: =1292
+            Y: =297
+            ZIndex: =4
+
     Icon10 As icon.DocumentPDF:
         Height: =50
         Icon: =Icon.DocumentPDF
         OnSelect: |-
             =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers:true,Orientation:PaperOrientation.Landscape, Size:PaperSize.A4 }))
         Width: =43
-        X: =1282
-        Y: =96
+        X: =1305
+        Y: =119
         ZIndex: =2
 
     "'Rectangle - blue top panel_3' As rectangle":
@@ -222,4 +213,22 @@
         X: =34
         Y: =15
         ZIndex: =5
+
+    "'Capgemini Logo_4' As image":
+        Height: =60
+        Image: ='Logo Blue'
+        Width: =52
+        X: =1288
+        Y: =29
+        ZIndex: =6
+
+    Icon13_4 As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Welcome)
+        Width: =52
+        X: =1221
+        Y: =30
+        ZIndex: =7
 
