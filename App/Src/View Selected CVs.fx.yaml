@@ -169,6 +169,18 @@
                 Y: =40
                 ZIndex: =17
 
+            Label10_12 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Verdana
+                FontWeight: =FontWeight.Semibold
+                Height: =35
+                Text: =ThisItem.'First Name' & " " & ThisItem.'Last Name'
+                Width: =277
+                X: =9
+                Y: =19
+                ZIndex: =18
+
         Icon7 As icon.CancelBadge:
             Color: =RGBA(39, 41, 54, 1)
             Height: =47
