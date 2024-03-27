@@ -85,7 +85,7 @@
       "MetaDataIDKey": "",
       "Name": "Button9_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -352,7 +352,7 @@
       "MetaDataIDKey": "",
       "Name": "Button9_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -594,7 +594,7 @@
       "MetaDataIDKey": "",
       "Name": "Capgemini Logo_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -900,7 +900,7 @@
       "MetaDataIDKey": "",
       "Name": "Checkbox1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1178,7 +1178,7 @@
       "MetaDataIDKey": "",
       "Name": "Checkbox1_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1423,7 +1423,7 @@
       "MetaDataIDKey": "",
       "Name": "Chosen CVs",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1597,7 +1597,7 @@
       "MetaDataIDKey": "",
       "Name": "CV Template_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1722,7 +1722,7 @@
       "MetaDataIDKey": "",
       "Name": "galleryTemplate6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1790,7 +1790,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1991,7 +1991,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon13_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2164,7 +2164,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2343,7 +2343,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2544,7 +2544,7 @@
       "MetaDataIDKey": "",
       "Name": "Image5_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2754,7 +2754,7 @@
       "MetaDataIDKey": "",
       "Name": "Image6_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2995,7 +2995,7 @@
       "MetaDataIDKey": "",
       "Name": "Label - Professional Experience_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3286,7 +3286,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10_10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3577,7 +3577,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10_11",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4166,7 +4166,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10_8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4457,7 +4457,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10_9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4727,7 +4727,7 @@
       "MetaDataIDKey": "",
       "Name": "Label14_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4997,7 +4997,7 @@
       "MetaDataIDKey": "",
       "Name": "Label14_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5236,7 +5236,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle - blue top panel_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5447,8 +5447,7 @@
         "Size",
         "Orientation",
         "LoadingSpinner",
-        "LoadingSpinnerColor",
-        "OnVisible"
+        "LoadingSpinnerColor"
       ],
       "IsAutoGenerated": false,
       "IsComponentDefinition": false,
@@ -5501,11 +5500,6 @@
         {
           "Category": "Design",
           "PropertyName": "Orientation",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Behavior",
-          "PropertyName": "OnVisible",
           "RuleProviderType": "Unknown"
         }
       ],
