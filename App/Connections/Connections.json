@@ -1,18 +1,4 @@
 {
-  "0307c9be-4d6e-4a4d-a4c9-39d8da489a00": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/alexsp/sporelease/1.0.1682.3673/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "ee6be9fc-1393-485e-bd22-fbd123b29574"
-    ],
-    "id": "0307c9be-4d6e-4a4d-a4c9-39d8da489a00"
-  },
   "0fa35610-3dad-4a9b-9e62-152ac7a52071": {
     "appActions": [
       "MyProfile"
@@ -56,20 +42,6 @@
     },
     "dependents": [],
     "id": "2d836a25-3500-4924-a40f-98fc2306d806"
-  },
-  "435b08d4-9323-4e27-a7b1-fadc4100c0ff": {
-    "connectionRef": {
-      "displayName": "Excel Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/excelonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "ee6be9fc-1393-485e-bd22-fbd123b29574"
-    ],
-    "id": "435b08d4-9323-4e27-a7b1-fadc4100c0ff"
   },
   "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144": {
     "connectionRef": {
