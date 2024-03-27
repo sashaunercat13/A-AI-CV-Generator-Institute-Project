@@ -1,4 +1,24 @@
 "'View Selected CVs' As screen":
+    OnVisible: |-
+        =// create a separate collection that maps projects to their CVs.
+        
+        /*
+        ForAll(FinalFilteredCVs As _CV,
+            Collect(
+                CVsWithProjects,
+                {
+                    CV: _CV,
+                    Projects: FirstN(
+                        SortByColumns(
+                            Filter('CV Generator - Project Experience', Email = _CV.Email),
+                            "End Date", SortOrder.Descending
+                        ),
+                        3
+                    )
+                }
+            )
+        )
+        /*
 
     "'Chosen CVs' As gallery.galleryVertical":
         DelayItemLoading: =true
