@@ -293,7 +293,7 @@ Search As screen:
             ZIndex: =13
 
     Button7 As button:
-        OnSelect: =ClickabuttoninPowerAppstosendanemail.Run()
+        OnSelect: =ClickabuttoninPowerAppstosendanemail.Run(FinalFilteredCVs)
         Text: ="View Selected"
         X: =480
         Y: =706
