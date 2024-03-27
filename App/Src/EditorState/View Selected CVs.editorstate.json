@@ -829,7 +829,14 @@
     "Checkbox1_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "CheckmarkFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "CheckmarkFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "CheckboxBackgroundFill",
         "CheckboxBorderColor",
         {
@@ -868,7 +875,14 @@
         "Y",
         "Width",
         "Height",
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ZIndex",
         "BorderThickness",
         "FocusedBorderThickness",
@@ -894,6 +908,14 @@
           "InvariantPropertyName": "CheckboxSize",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -914,6 +936,11 @@
           "Category": "Data",
           "PropertyName": "Text",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Default",
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -1107,7 +1134,14 @@
     "Checkbox1_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "CheckmarkFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "CheckmarkFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "CheckboxBackgroundFill",
         "CheckboxBorderColor",
         {
@@ -1119,11 +1153,32 @@
           "NameMapSourceSchema": "?"
         },
         "BorderColor",
-        "DisabledBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisabledBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderStyle",
         "FocusedBorderColor",
-        "PressedBorderColor",
-        "HoverBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ColorFade(Self.BorderColor, -30%)",
+          "InvariantPropertyName": "PressedBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ColorFade(Self.BorderColor, 30%)",
+          "InvariantPropertyName": "HoverBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -1132,16 +1187,51 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "DisabledColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisabledColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Fill",
-        "DisabledFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisabledFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Font",
         "PressedColor",
         "HoverColor",
-        "PressedFill",
-        "HoverFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ColorFade(Self.Fill, -30%)",
+          "InvariantPropertyName": "PressedFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ColorFade(Self.Fill, 30%)",
+          "InvariantPropertyName": "HoverFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "FontWeight",
-        "VerticalAlign",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "VerticalAlign",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "X",
         "Y",
         {
@@ -1153,7 +1243,14 @@
           "NameMapSourceSchema": "?"
         },
         "Height",
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ZIndex",
         "BorderThickness",
         "FocusedBorderThickness",
@@ -1179,6 +1276,14 @@
           "InvariantPropertyName": "CheckboxSize",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -1199,6 +1304,11 @@
           "Category": "Data",
           "PropertyName": "Text",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Default",
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -1238,12 +1348,12 @@
         {
           "Category": "Design",
           "PropertyName": "PressedBorderColor",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
           "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -1283,12 +1393,12 @@
         {
           "Category": "Design",
           "PropertyName": "PressedFill",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
           "PropertyName": "HoverFill",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -3598,7 +3708,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10_11",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4783,7 +4893,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10_15",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5342,7 +5452,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "VerticalAlign",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "VerticalAlign",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "X",
         "Y",
         "Width",

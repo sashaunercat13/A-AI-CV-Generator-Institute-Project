@@ -116,6 +116,7 @@
                 PaddingTop: =2
                 Size: =10
                 Text: =ThisItem.Profile
+                VerticalAlign: =VerticalAlign.Top
                 Width: =277
                 X: =11
                 Y: =352
@@ -145,7 +146,10 @@
 
             Checkbox1_2 As checkbox:
                 CheckboxSize: =25
+                CheckmarkFill: =RGBA(39, 41, 54, 1)
                 Color: =RGBA(255, 255, 255, 1)
+                Default: =ThisItem.'Security Clearance BPSS'
+                DisplayMode: =DisplayMode.View
                 Height: =44
                 Size: =11
                 Text: ="BPSS"
@@ -156,8 +160,17 @@
 
             Checkbox1_3 As checkbox:
                 CheckboxSize: =25
+                CheckmarkFill: =RGBA(39, 41, 54, 1)
                 Color: =RGBA(255, 255, 255, 1)
+                Default: =ThisItem.'Security Clearance SC'
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.View
                 Height: =44
+                HoverBorderColor: =
+                HoverFill: =
+                PressedBorderColor: =
+                PressedFill: =
                 Size: =11
                 Text: ="SC"
                 Width: =114
