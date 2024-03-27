@@ -113,7 +113,7 @@ Create As screen:
                     Email: Office365Users.MyProfile().Mail,
                     'First Name': CurrentUserFirstName,
                     'Last Name': CurrentUserLastName,
-                    'Role Title': DropdownRoleCreate.Selected.Value,
+                    Grade: DropdownRoleCreate.Selected.Value,
                     Profile: 'Profile box'.Text,
                     Interests: Interests.Text,
                     'Security Clearance BPSS': BPSSchecked,
@@ -228,31 +228,6 @@ Create As screen:
         Y: =592
         ZIndex: =17
 
-    Icon7 As icon.Hamburger:
-        Color: =RGBA(39, 41, 54, 1)
-        Height: =25
-        Icon: =Icon.Hamburger
-        OnSelect: =Navigate(Welcome)
-        Width: =25
-        X: =1311
-        Y: =14.5
-        ZIndex: =20
-
-    Button3 As button:
-        Color: =RGBA(39, 41, 54, 1)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =27
-        HoverFill: =
-        OnSelect: =Navigate(Welcome) 
-        PressedColor: =RGBA(18, 171, 219, 1)
-        PressedFill: =
-        Size: =11
-        Text: ="Menu"
-        Width: =51
-        X: =1260
-        Y: =15
-        ZIndex: =21
-
     Label9 As label:
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -318,6 +293,16 @@ Create As screen:
         X: =710
         Y: =82
         ZIndex: =27
+
+    Icon13_1 As icon.Home:
+        Color: =RGBA(39, 41, 54, 1)
+        Height: =60
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Welcome)
+        Width: =52
+        X: =1221
+        Y: =30
+        ZIndex: =28
 
     Group6 As group:
         Height: =5

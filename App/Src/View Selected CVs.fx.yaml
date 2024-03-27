@@ -42,7 +42,7 @@
                 RadiusTopLeft: =50
                 RadiusTopRight: =50
                 X: =98
-                Y: =72
+                Y: =56
                 ZIndex: =3
 
             Button9_2 As button:
@@ -89,57 +89,55 @@
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
-                FontWeight: =FontWeight.Semibold
-                Text: ="Hub"
-                Width: =220
-                X: =40
-                Y: =238
+                Height: =35
+                Text: =ThisItem.Hub
+                Width: =277
+                X: =11
+                Y: =214
                 ZIndex: =10
 
             Label10_8 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
-                FontWeight: =FontWeight.Semibold
-                Text: ="Capability"
-                Width: =220
-                X: =40
-                Y: =198
+                Height: =35
+                Text: =ThisItem.Capability
+                Width: =277
+                X: =11
+                Y: =179
                 ZIndex: =11
 
             Label10_9 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
-                FontWeight: =FontWeight.Semibold
-                Height: =167
+                Height: =35
                 Text: ="Profile"
-                Width: =220
-                X: =47
-                Y: =373
+                Width: =277
+                X: =11
+                Y: =368
                 ZIndex: =12
 
             Label10_10 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
-                FontWeight: =FontWeight.Semibold
-                Text: ="Grade"
-                Width: =220
-                X: =40
-                Y: =278
+                Height: =35
+                Text: =ThisItem.Grade
+                Width: =277
+                X: =11
+                Y: =261
                 ZIndex: =13
 
             Label10_11 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
-                FontWeight: =FontWeight.Semibold
-                Height: =50
+                Height: =35
                 Text: ="Education"
-                Width: =235
-                X: =40
-                Y: =323
+                Width: =277
+                X: =11
+                Y: =321
                 ZIndex: =14
 
             Checkbox1_2 As checkbox:
