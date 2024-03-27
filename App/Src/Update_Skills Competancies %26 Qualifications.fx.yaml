@@ -121,7 +121,7 @@
         ZIndex: =10
 
     TextInput4_3 As text:
-        Default: =LookUp('CV Generator', Email = User().Email).'Qualification 1'
+        Default: =LookUp('CV Generator', Email = User().Email).Qualification1
         Height: =50
         Width: =610
         X: =710
