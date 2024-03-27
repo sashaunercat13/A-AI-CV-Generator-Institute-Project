@@ -82,7 +82,9 @@
       "CV Generator"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "ee6be9fc-1393-485e-bd22-fbd123b29574"
+    ],
     "id": "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144"
   },
   "6dfc64e3-2225-432e-945b-fa7298f7ceec": {
@@ -146,6 +148,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144": {
+          "value": "shared_sharepointonline"
+        },
+        "635bd87a-5158-41f4-9adf-382c58d197a8": {
+          "value": "shared_excelonlinebusiness"
+        },
         "workflowDisplayName": {
           "value": "Click a button in Power Apps to send an email"
         },
@@ -157,6 +165,12 @@
         }
       },
       "parameterHintsV2": {
+        "shared_excelonlinebusiness": {
+          "value": "635bd87a-5158-41f4-9adf-382c58d197a8"
+        },
+        "shared_sharepointonline": {
+          "value": "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144"
+        },
         "workflowDisplayName": {
           "value": "Click a button in Power Apps to send an email"
         },
@@ -173,8 +187,8 @@
       "ClickabuttoninPowerAppstosendanemail"
     ],
     "dependencies": {
-      "shared_excelonlinebusiness": "435b08d4-9323-4e27-a7b1-fadc4100c0ff",
-      "shared_sharepointonline": "0307c9be-4d6e-4a4d-a4c9-39d8da489a00"
+      "shared_excelonlinebusiness": "635bd87a-5158-41f4-9adf-382c58d197a8",
+      "shared_sharepointonline": "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144"
     },
     "dependents": [],
     "id": "ee6be9fc-1393-485e-bd22-fbd123b29574"

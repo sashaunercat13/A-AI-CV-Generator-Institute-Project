@@ -352,7 +352,7 @@ Search As screen:
             Font: =Font.Verdana
             FontWeight: =FontWeight.Semibold
             Height: =35
-            Text: ="Role"
+            Text: ="Grade"
             X: =62
             Y: =497
             ZIndex: =8
@@ -440,7 +440,7 @@ Search As screen:
             Font: =Font.Verdana
             FontWeight: =FontWeight.Semibold
             Height: =35
-            Text: ="Industry"
+            Text: ="Sector"
             X: =62
             Y: =127
             ZIndex: =28

@@ -528,7 +528,7 @@
         OnSelect: =Back()
         Text: ="Back"
         X: =14
-        Y: =699
+        Y: =719
         ZIndex: =26
 
     Button5 As button:

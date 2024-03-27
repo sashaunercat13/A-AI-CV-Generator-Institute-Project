@@ -656,10 +656,10 @@
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =0
         DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(215, 223, 240, 1)
+        DisabledFill: =RGBA(39, 41, 54, 1)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =562
+        Height: =57
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -680,10 +680,10 @@
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =0
         DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(215, 223, 240, 1)
+        DisabledFill: =RGBA(39, 41, 54, 1)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =306
+        Height: =56
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -698,10 +698,10 @@
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =0
         DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(215, 223, 240, 1)
+        DisabledFill: =RGBA(39, 41, 54, 1)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =246
+        Height: =56
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -740,26 +740,27 @@
         ZIndex: =7
 
     Label5_4 As label:
-        Color: =RGBA(39, 41, 54, 1)
+        Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
-        Height: =41
+        Height: =57
         Size: =22
         Text: ="Skills"
-        Width: =630
-        X: =44
-        Y: =150
+        Width: =562
+        X: =24
+        Y: =135
         ZIndex: =8
 
     Label5_5 As label:
+        Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
-        Height: =41
+        Height: =57
         Size: =22
         Text: ="Education"
         Width: =630
         X: =698
-        Y: =151
+        Y: =135
         ZIndex: =9
 
     Button1_2 As button:
@@ -889,14 +890,15 @@
         ZIndex: =14
 
     Label5_17 As label:
+        Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
-        Height: =41
+        Height: =56
         Size: =22
         Text: ="Qualifications"
         Width: =630
-        X: =704
-        Y: =405
+        X: =699
+        Y: =389
         ZIndex: =15
 
     Gallery1 As gallery.galleryVertical:
@@ -1089,10 +1091,4 @@
             X: =546
             Y: =4
             ZIndex: =3
-
-    Label3 As label:
-        Text: ="Text"
-        X: =40
-        Y: =40
-        ZIndex: =25
 

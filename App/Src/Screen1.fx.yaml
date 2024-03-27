@@ -1,0 +1,169 @@
+Screen1 As screen:
+
+    "'CV Template_1' As groupContainer":
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =581
+        Width: =1265
+        X: =10
+        Y: =13
+        ZIndex: =2
+
+        Rectangle1 As rectangle:
+            Fill: =RGBA(39, 41, 54, 1)
+            Height: =581
+            Width: =296
+            ZIndex: =1
+
+        Image5 As image:
+            RadiusBottomLeft: =50  
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            X: =98
+            Y: =72
+            ZIndex: =3
+
+        Button9 As button:
+            Align: =Align.Left
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(39, 41, 54, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =34
+            Text: ="Recent Professional Experience"
+            Width: =856
+            X: =328
+            Y: =20
+            ZIndex: =4
+
+        Button9_1 As button:
+            Align: =Align.Left
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(39, 41, 54, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =35
+            Text: ="Skills & Qualifications"
+            Width: =916
+            X: =328
+            Y: =402
+            ZIndex: =5
+
+        Label14 As label:
+            Height: =302
+            Text: ="Text"
+            Width: =916
+            X: =328
+            Y: =72
+            ZIndex: =6
+
+        Label14_2 As label:
+            Height: =117
+            Text: ="Text"
+            Width: =445
+            X: =328
+            Y: =450
+            ZIndex: =7
+
+        Label14_3 As label:
+            Height: =117
+            Text: ="Text"
+            Width: =445
+            X: =799
+            Y: =450
+            ZIndex: =8
+
+        Label10 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Text: ="Name"
+            Width: =220
+            X: =40
+            Y: =40
+            ZIndex: =9
+
+        Label10_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Text: ="Hub"
+            Width: =220
+            X: =40
+            Y: =238
+            ZIndex: =10
+
+        Label10_3 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Text: ="Capability"
+            Width: =220
+            X: =40
+            Y: =198
+            ZIndex: =11
+
+        Label10_4 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =167
+            Text: ="Profile"
+            Width: =220
+            X: =47
+            Y: =373
+            ZIndex: =12
+
+        Label10_6 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Text: ="Grade"
+            Width: =220
+            X: =40
+            Y: =278
+            ZIndex: =13
+
+        Label10_7 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            Text: ="Education"
+            Width: =235
+            X: =40
+            Y: =323
+            ZIndex: =14
+
+        Checkbox1 As checkbox:
+            CheckboxSize: =25
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =44
+            Text: ="BPSS"
+            Width: =114
+            X: =67
+            Y: =508
+            ZIndex: =15
+
+        Checkbox1_1 As checkbox:
+            CheckboxSize: =25
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =44
+            Text: ="SC"
+            Width: =114
+            X: =161
+            Y: =508
+            ZIndex: =16
+
+        Image6 As image:
+            Height: =34
+            Image: ='Logo Blue'
+            Width: =48
+            X: =1208
+            Y: =40
+            ZIndex: =17
+

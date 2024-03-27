@@ -2,72 +2,206 @@
 
     "'Chosen CVs' As gallery.galleryVertical":
         DelayItemLoading: =true
-        Height: =712
+        Height: =617
         Items: =FinalFilteredCVs
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =686
-        Width: =1227
-        X: =12
-        Y: =16
+        TemplateSize: =612
+        Width: =1337
+        X: =11
+        Y: =119
         ZIndex: =1
 
-        Container1_1 As groupContainer:
-            Height: =638
-            Width: =1182
-            ZIndex: =1
+        Icon12 As icon.Trash:
+            Color: =RGBA(39, 41, 54, 1)
+            Height: =32
+            Icon: =Icon.Trash
+            Width: =47
+            X: =1280
+            Y: =305
+            ZIndex: =2
 
-            Label10_1 As label:
-                Align: =Align.Center
-                Fill: =RGBA(175, 191, 224, 1)
-                Height: =568
-                Text: ="Profile"
-                Width: =322
-                X: =30
-                Y: =40
+        "'CV Template_2' As groupContainer":
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =581
+            Width: =1265
+            X: =15
+            Y: =30
+            ZIndex: =3
+
+            Rectangle1_1 As rectangle:
+                Fill: =RGBA(39, 41, 54, 1)
+                Height: =581
+                Width: =296
                 ZIndex: =1
 
-            Label14_1 As label:
-                Align: =Align.Center
-                Fill: =RGBA(175, 191, 224, 1)
-                Height: =342
-                Text: ="Experience"
-                Width: =755
-                X: =382
-                Y: =40
-                ZIndex: =2
-
-            Label16_3 As label:
-                Align: =Align.Center
-                Fill: =RGBA(175, 191, 224, 1)
-                Height: =210
-                Text: ="Skills & Qualifications"
-                Width: =590
-                X: =382
-                Y: =398
+            Image5_1 As image:
+                Image: =ThisItem.Photo
+                RadiusBottomLeft: =50  
+                RadiusBottomRight: =50
+                RadiusTopLeft: =50
+                RadiusTopRight: =50
+                X: =98
+                Y: =72
                 ZIndex: =3
 
-            Label16_2 As label:
-                Align: =Align.Center
-                Fill: =RGBA(175, 191, 224, 1)
-                Height: =210
-                Text: ="Interests"
-                Width: =152
-                X: =985
-                Y: =398
+            Button9_2 As button:
+                Align: =Align.Left
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(39, 41, 54, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =34
+                Text: ="Recent Professional Experience"
+                Width: =856
+                X: =328
+                Y: =20
                 ZIndex: =4
 
-            Image7 As image:
-                Image: =ThisItem.Photo
-                X: =141
-                Y: =150
+            Button9_3 As button:
+                Align: =Align.Left
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(39, 41, 54, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =35
+                Text: ="Skills & Qualifications"
+                Width: =916
+                X: =328
+                Y: =402
                 ZIndex: =5
 
+            Label14_4 As label:
+                Height: =117
+                Text: ="Text"
+                Width: =445
+                X: =328
+                Y: =450
+                ZIndex: =7
+
+            Label14_5 As label:
+                Height: =117
+                Text: ="Text"
+                Width: =445
+                X: =799
+                Y: =450
+                ZIndex: =8
+
+            Label10_5 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Verdana
+                FontWeight: =FontWeight.Semibold
+                Text: ="Hub"
+                Width: =220
+                X: =40
+                Y: =238
+                ZIndex: =10
+
+            Label10_8 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Verdana
+                FontWeight: =FontWeight.Semibold
+                Text: ="Capability"
+                Width: =220
+                X: =40
+                Y: =198
+                ZIndex: =11
+
+            Label10_9 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Verdana
+                FontWeight: =FontWeight.Semibold
+                Height: =167
+                Text: ="Profile"
+                Width: =220
+                X: =47
+                Y: =373
+                ZIndex: =12
+
+            Label10_10 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Verdana
+                FontWeight: =FontWeight.Semibold
+                Text: ="Grade"
+                Width: =220
+                X: =40
+                Y: =278
+                ZIndex: =13
+
+            Label10_11 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Verdana
+                FontWeight: =FontWeight.Semibold
+                Height: =50
+                Text: ="Education"
+                Width: =235
+                X: =40
+                Y: =323
+                ZIndex: =14
+
+            Checkbox1_2 As checkbox:
+                CheckboxSize: =25
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =44
+                Text: ="BPSS"
+                Width: =114
+                X: =67
+                Y: =508
+                ZIndex: =15
+
+            Checkbox1_3 As checkbox:
+                CheckboxSize: =25
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =44
+                Text: ="SC"
+                Width: =114
+                X: =161
+                Y: =508
+                ZIndex: =16
+
+            Image6_1 As image:
+                Height: =34
+                Image: ='Logo Blue'
+                Width: =48
+                X: =1208
+                Y: =40
+                ZIndex: =17
+
     Icon10 As icon.DocumentPDF:
+        Height: =50
         Icon: =Icon.DocumentPDF
         OnSelect: |-
-            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{Orientation:PaperOrientation.Landscape}))
-        X: =1270
-        Y: =684
+            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers:true,Orientation:PaperOrientation.Landscape, Size:PaperSize.A4 }))
+        Width: =43
+        X: =1282
+        Y: =96
         ZIndex: =2
+
+    "'Rectangle - blue top panel_3' As rectangle":
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =96
+        Width: =1366
+        ZIndex: =3
+
+    "'Label - Professional Experience_3' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =43
+        Size: =24
+        Text: ="View Candidate CVs"
+        Width: =513
+        X: =98
+        Y: =26
+        ZIndex: =4
+
+    Icon8 As icon.View:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.View
+        X: =34
+        Y: =15
+        ZIndex: =5
 
