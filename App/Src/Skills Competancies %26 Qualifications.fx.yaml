@@ -653,13 +653,13 @@
         */
 
     Button4 As button:
-        BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(39, 41, 54, 1)
+        BorderColor: =RGBA(39, 41, 54, 1)
+        BorderThickness: =3
+        DisabledBorderColor: =RGBA(39, 41, 54, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =57
+        Height: =557
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -678,12 +678,12 @@
 
     Button4_2 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(39, 41, 54, 1)
+        BorderThickness: =3
+        DisabledBorderColor: =RGBA(39, 41, 54, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =56
+        Height: =301
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -696,12 +696,12 @@
 
     Button4_1 As button:
         BorderColor: =RGBA(18, 171, 219, 1)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 112, 173, 1)
-        DisabledFill: =RGBA(39, 41, 54, 1)
+        BorderThickness: =3
+        DisabledBorderColor: =RGBA(39, 41, 54, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =56
+        Height: =238
         RadiusBottomLeft: =15  
         RadiusBottomRight: =15
         RadiusTopLeft: =15
@@ -717,7 +717,7 @@
         Image: ='Logo Blue'
         Width: =52
         X: =1288
-        Y: =29
+        Y: =30
         ZIndex: =5
 
     Label6 As label:
@@ -740,7 +740,7 @@
         ZIndex: =7
 
     Label5_4 As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Height: =57
@@ -752,7 +752,7 @@
         ZIndex: =8
 
     Label5_5 As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Height: =57
@@ -871,9 +871,9 @@
         Items: =Skills
         SearchFields: =["Value"]
         SearchItems: =Search(Skills,ComboBoxSkill.SearchText,"Value")
-        Width: =440
-        X: =50
-        Y: =200
+        Width: =464
+        X: =33
+        Y: =203
         ZIndex: =13
 
     AddSkill As button:
@@ -886,11 +886,11 @@
         Text: ="Add Skill(s)"
         Width: =120
         X: =515
-        Y: =200
+        Y: =203
         ZIndex: =14
 
     Label5_17 As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Height: =56
@@ -944,7 +944,7 @@
         SearchItems: =Search(Qualifications,ComboBoxQual.SearchText,"Value")
         Width: =432
         X: =704
-        Y: =451
+        Y: =459
         ZIndex: =17
 
     ComboBoxUniversity As combobox:
@@ -960,7 +960,7 @@
         SelectMultiple: =false
         Width: =432
         X: =704
-        Y: =195
+        Y: =203
         ZIndex: =18
 
     AddSkill_1 As button:
@@ -980,7 +980,7 @@
         Size: =12
         Text: ="Add Education"
         X: =1155
-        Y: =196
+        Y: =204
         ZIndex: =19
 
     AddSkill_2 As button:
@@ -993,7 +993,7 @@
         Text: ="Add Qualification(s)"
         Width: =172
         X: =1149
-        Y: =452
+        Y: =460
         ZIndex: =20
 
     Gallery2 As gallery.galleryVertical:
@@ -1041,7 +1041,7 @@
         SelectMultiple: =false
         Width: =204
         X: =931
-        Y: =237
+        Y: =245
         ZIndex: =22
 
     ComboBoxDegreeType As combobox:
@@ -1054,7 +1054,7 @@
         SelectMultiple: =false
         Width: =214
         X: =704
-        Y: =238
+        Y: =246
         ZIndex: =23
 
     Gallery3 As gallery.galleryVertical:
@@ -1091,4 +1091,14 @@
             X: =546
             Y: =4
             ZIndex: =3
+
+    Icon13 As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Welcome)
+        Width: =52
+        X: =1221
+        Y: =30
+        ZIndex: =25
 

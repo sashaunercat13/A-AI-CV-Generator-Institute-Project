@@ -109,7 +109,7 @@ Update As screen:
             =Navigate('Update_Skills Competancies & Qualifications');
             Patch('CV Generator', LookUp('CV Generator', Email = User().Email),
             
-            {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, 'Role Title': RoleTitle_1.Selected.Value, Alignment:'Primary Alignment_1'.Selected.Value, Profile: 'Profile box_1'.Text})
+            {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, Grade: RoleTitle_1.Selected.Value, Alignment:'Primary Alignment_1'.Selected.Value, Profile: 'Profile box_1'.Text})
         Text: ="Next Page"
         X: =1167
         Y: =710
@@ -119,7 +119,7 @@ Update As screen:
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
-        Default: =LookUp('CV Generator', Email = User().Email).'Role Title'
+        Default: =LookUp('CV Generator', Email = User().Email).Grade
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
         Items: =["Please select role title","Associate Consultant", "Consultant", "Senior Consultant", "Managing Consultant", "Senior Manager", "Director", "Senior Director", "VP"]
