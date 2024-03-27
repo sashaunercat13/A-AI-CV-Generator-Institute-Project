@@ -13,8 +13,9 @@
         ZIndex: =1
 
         Container1_1 As groupContainer:
-            Height: =638
-            Width: =1182
+            Fill: =RGBA(0, 18, 107, 1)
+            Height: =674
+            Width: =1209
             ZIndex: =1
 
             Label10_1 As label:
@@ -23,8 +24,8 @@
                 Height: =568
                 Text: ="Profile"
                 Width: =322
-                X: =30
-                Y: =40
+                X: =70
+                Y: =70
                 ZIndex: =1
 
             Label14_1 As label:
@@ -33,8 +34,8 @@
                 Height: =342
                 Text: ="Experience"
                 Width: =755
-                X: =382
-                Y: =40
+                X: =417
+                Y: =71
                 ZIndex: =2
 
             Label16_3 As label:
@@ -43,8 +44,8 @@
                 Height: =210
                 Text: ="Skills & Qualifications"
                 Width: =590
-                X: =382
-                Y: =398
+                X: =412
+                Y: =428
                 ZIndex: =3
 
             Label16_2 As label:
@@ -53,20 +54,20 @@
                 Height: =210
                 Text: ="Interests"
                 Width: =152
-                X: =985
-                Y: =398
+                X: =1020
+                Y: =428
                 ZIndex: =4
 
             Image7 As image:
                 Image: =ThisItem.Photo
-                X: =141
-                Y: =150
+                X: =181
+                Y: =192
                 ZIndex: =5
 
     Icon10 As icon.DocumentPDF:
         Icon: =Icon.DocumentPDF
         OnSelect: |-
-            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{Orientation:PaperOrientation.Landscape}))
+            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers:true,Orientation:PaperOrientation.Landscape, Size:PaperSize.A4 }))
         X: =1270
         Y: =684
         ZIndex: =2
