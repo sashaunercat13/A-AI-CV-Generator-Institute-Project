@@ -101,7 +101,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 26,
+    "BindingErrorCount": 50,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -137,14 +137,17 @@
   "ScreenOrder": [
     "Welcome",
     "Create",
+    "Update (Create)",
     "Skills Competancies & Qualifications",
+    "Update (Skills Competancies & Qualifications)",
     "Profesional Experience",
     "Success",
     "Search",
     "View Selected CVs",
     "PDF View TEST",
-    "Update",
-    "Update_Profesional Experience",
-    "Update_Skills Competancies & Qualifications"
+    "View My CV",
+    "00Update",
+    "00Update_Profesional Experience",
+    "00Update_Skills Competancies & Qualifications"
   ]
 }

@@ -53,14 +53,14 @@ Welcome As screen:
         Y: =72
         ZIndex: =12
 
-    "'Create CV Button' As group":
+    "'Update CV Button' As group":
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =15
+        ZIndex: =20
 
-        Button2 As button:
+        Button2_3 As button:
             Align: =Align.Left
             Color: =RGBA(18, 171, 219, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -70,43 +70,34 @@ Welcome As screen:
             Height: =96
             HoverColor: =RGBA(39, 41, 54, 1)
             HoverFill: =
-            OnSelect: =Navigate(Create) 
+            OnSelect: =Navigate('Update (Create)')
             PressedColor: |+
                 =RGBA(39, 41, 54, 1)
                 
             PressedFill: =
             Size: =22
-            Text: ="Create CV"
-            Visible: |-
-                =// !UserExistsInSP
-                true
+            Text: ="Update CV"
+            Visible: =UserExistsInSP
             Width: =325
             X: =842
             Y: =222
-            ZIndex: =7
+            ZIndex: =15
 
-        Icon2 As icon.ChevronUp:
-            BorderThickness: =6
+        Icon12 As icon.NextArrow:
             Color: =RGBA(18, 171, 219, 1)
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =6
-            Height: =57
-            Icon: =Icon.ChevronUp
-            OnSelect: =
-            Rotation: =90
-            Visible: |-
-                =// !UserExistsInSP
-                true
-            X: =778
-            Y: =242
-            ZIndex: =11
+            Icon: =Icon.NextArrow
+            OnSelect: =Navigate('Update (Create)')
+            Visible: =UserExistsInSP
+            X: =763
+            Y: =238
+            ZIndex: =17
 
     "'Search CV Button' As group":
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =15
+        ZIndex: =20
 
         Button2_2 As button:
             Align: =Align.Left
@@ -129,25 +120,19 @@ Welcome As screen:
             Y: =354
             ZIndex: =9
 
-        Icon2_2 As icon.ChevronUp:
-            BorderThickness: =6
+        Icon12_1 As icon.NextArrow:
             Color: =RGBA(18, 171, 219, 1)
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =6
-            Height: =57
-            Icon: =Icon.ChevronUp
-            OnSelect: =Navigate(Search)
-            Rotation: =90
-            X: =778
-            Y: =374
-            ZIndex: =14
+            Icon: =Icon.NextArrow
+            X: =763
+            Y: =367
+            ZIndex: =18
 
     "'View CV Button' As group":
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =15
+        ZIndex: =20
 
         Button2_1 As button:
             Align: =Align.Left
@@ -157,6 +142,7 @@ Welcome As screen:
             Height: =96
             HoverColor: =RGBA(39, 41, 54, 1)
             HoverFill: =
+            OnSelect: =Navigate('View My CV')
             PressedColor: =RGBA(39, 41, 54, 1)
             PressedFill: =
             Size: =22
@@ -166,26 +152,31 @@ Welcome As screen:
             Y: =480
             ZIndex: =8
 
-        Icon2_1 As icon.ChevronUp:
-            BorderThickness: =6
+        Icon12_2 As icon.NextArrow:
             Color: =RGBA(18, 171, 219, 1)
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =6
-            Height: =57
-            Icon: =Icon.ChevronUp
-            Rotation: =90
-            X: =778
-            Y: =499
-            ZIndex: =13
+            Icon: =Icon.NextArrow
+            OnSelect: =Navigate('View My CV')
+            X: =763
+            Y: =496
+            ZIndex: =19
 
-    "'Update CV Button' As group":
+    Label3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =426
+        Text: ="DESCRIPTION & PURPOSE "
+        Width: =523
+        X: =71
+        Y: =250
+        ZIndex: =21
+
+    "'Create CV Button' As group":
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =17
+        ZIndex: =21
 
-        Button2_3 As button:
+        Button2 As button:
             Align: =Align.Left
             Color: =RGBA(18, 171, 219, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -195,30 +186,24 @@ Welcome As screen:
             Height: =96
             HoverColor: =RGBA(39, 41, 54, 1)
             HoverFill: =
-            OnSelect: |
-                =Navigate(Update); 
+            OnSelect: =Navigate(Create) 
             PressedColor: |+
                 =RGBA(39, 41, 54, 1)
                 
             PressedFill: =
             Size: =22
-            Text: ="Update CV"
-            Visible: =false
+            Text: ="Create CV"
+            Visible: =!UserExistsInSP
             Width: =325
             X: =842
             Y: =222
-            ZIndex: =15
+            ZIndex: =7
 
-        Icon2_3 As icon.ChevronUp:
-            BorderThickness: =6
+        Icon12_3 As icon.NextArrow:
             Color: =RGBA(18, 171, 219, 1)
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =6
-            Height: =57
-            Icon: =Icon.ChevronUp
-            Rotation: =90
-            Visible: =false
-            X: =778
-            Y: =244
-            ZIndex: =16
+            Icon: =Icon.NextArrow
+            Visible: =!UserExistsInSP
+            X: =763
+            Y: =238
+            ZIndex: =20
 

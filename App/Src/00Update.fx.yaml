@@ -1,4 +1,4 @@
-Update As screen:
+"'00Update' As screen":
     OnVisible: =
 
     "'Background Rectangle_2' As rectangle":
@@ -106,7 +106,7 @@ Update As screen:
     Button1_4 As button:
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |
-            =Navigate('Update_Skills Competancies & Qualifications');
+            =Navigate('00Update_Skills Competancies & Qualifications');
             Patch('CV Generator', LookUp('CV Generator', Email = User().Email),
             
             {Email: Office365Users.MyProfile().Mail, 'First Name': CurrentUserFirstName, 'Last Name': CurrentUserLastName, Grade: RoleTitle_1.Selected.Value, Alignment:'Primary Alignment_1'.Selected.Value, Profile: 'Profile box_1'.Text})

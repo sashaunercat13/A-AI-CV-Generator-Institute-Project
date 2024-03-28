@@ -59,13 +59,15 @@ Search As screen:
         ZIndex: =1
 
     GalleryFilteredCVs_1 As gallery.galleryVertical:
+        BorderThickness: =2
         DelayItemLoading: =true
         DisplayMode: =DisplayMode.View
         Height: =545
         Items: =FinalFilteredCVs
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
+        TemplateFill: =RGBA(0, 112, 173, 0)
+        TemplatePadding: =2
         TemplateSize: =263
         Width: =857
         WrapCount: =4
@@ -86,12 +88,13 @@ Search As screen:
             RadiusTopRight: =55
             Width: =110
             X: =50
-            Y: =19
+            Y: =36
             ZIndex: =1
 
         Title4 As label:
             Align: =Align.Center
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
             Height: =25
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -104,12 +107,13 @@ Search As screen:
                 ThisItem.'Last Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =207
-            X: =3
-            Y: =Image8.Y + Image8.Height + 16
+            X: =1
+            Y: =11
             ZIndex: =2
 
         Subtitle4 As label:
             Align: =Align.Center
+            Font: =Font.Verdana
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =21
             OnSelect: =Select(Parent)
@@ -121,9 +125,33 @@ Search As screen:
             Text: =ThisItem.Grade
             VerticalAlign: =VerticalAlign.Top
             Width: =176
-            X: =17
-            Y: =170
+            X: =16
+            Y: =157
             ZIndex: =3
+
+        Label10 As label:
+            Align: =Align.Center
+            Font: =Font.Verdana
+            Height: =37
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.Capability & " - "
+            Width: =191
+            X: =9
+            Y: =178
+            ZIndex: =4
+
+        Label14 As label:
+            Align: =Align.Center
+            Font: =Font.Verdana
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.Hub
+            Width: =191
+            X: =9
+            Y: =197
+            ZIndex: =5
 
     "'Rectangle - blue top panel_1' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)

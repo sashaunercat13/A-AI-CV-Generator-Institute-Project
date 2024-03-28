@@ -1,4 +1,4 @@
-"'Update_Profesional Experience' As screen":
+"'00Update_Profesional Experience' As screen":
     OnVisible: |-
         =UpdateContext({UContainer2Visible:false});
         UpdateContext({UContainer3Visible:false});
@@ -123,7 +123,7 @@
         ZIndex: =30
 
         "'1ProjectDescription_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'1 Project Description'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0031_ProjectDescription
             Height: =246
             HintText: ="Description (Max 600 characters) "
             MaxLength: =600
@@ -133,7 +133,7 @@
             ZIndex: =1
 
         "'1ProjectTitle_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'1 Project Title'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0031_ProjectTitle
             Font: =Font.Verdana
             HintText: ="Project Title"
             Width: =414
@@ -142,7 +142,7 @@
             ZIndex: =2
 
         "'1ProjectRole_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'1 Project Role'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0031_ProjectRole
             Font: =Font.Verdana
             HintText: ="Role"
             Width: =216
@@ -151,14 +151,14 @@
             ZIndex: =3
 
         "'1ProjectStartDate_1' As datepicker":
-            DefaultDate: =LookUp('CV Generator', Email = User().Email).'1 Project Start Date'
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).OData__x0031_ProjectStartDate
             Format: ="dd/mm/yyyy"
             X: =40
             Y: =209
             ZIndex: =4
 
         "'1ProjectEndDate_1' As datepicker":
-            DefaultDate: =LookUp('CV Generator', Email = User().Email).'1 Project End Date'
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).OData__x0031_ProjectEndDate
             Format: |
                 ="dd/mm/yyyy"
             X: =391
@@ -190,7 +190,7 @@
             ZIndex: =8
 
         "'1ProjectClient_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'1 Project Client'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0031_ProjectClient
             Font: =Font.Verdana
             HintText: ="Client"
             Width: =216
@@ -207,7 +207,7 @@
         ZIndex: =31
 
         "'2ProjectDescription_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'2 Project Description'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0032_ProjectDescription
             Fill: =RGBA(232, 244, 217, 1)
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -218,7 +218,7 @@
             ZIndex: =1
 
         "'2ProjectTitle_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'2 Project Title'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0032_ProjectTitle
             Font: =Font.Verdana
             HintText: ="Project Title"
             Width: =414
@@ -227,7 +227,7 @@
             ZIndex: =2
 
         "'2ProjectRole_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'2 Project Role'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0032_ProjectRole
             Font: =Font.Verdana
             HintText: ="Role"
             Width: =216
@@ -236,14 +236,14 @@
             ZIndex: =3
 
         "'2ProjectStartDate_1' As datepicker":
-            DefaultDate: =LookUp('CV Generator', Email = User().Email).'2 Project Start Date'
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).OData__x0032_ProjectStartDate
             Format: ="dd/mm/yyyy"
             X: =40
             Y: =209
             ZIndex: =4
 
         "'2ProjectEndDate_1' As datepicker":
-            DefaultDate: =LookUp('CV Generator', Email = User().Email).'2 Project End Date'
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).OData__x0032_ProjectEndDate
             Format: |
                 ="dd/mm/yyyy"
             X: =391
@@ -275,7 +275,7 @@
             ZIndex: =8
 
         "'2ProjectClient_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'2 Project Client'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0032_ProjectClient
             Font: =Font.Verdana
             HintText: ="Client"
             Width: =216
@@ -292,7 +292,7 @@
         ZIndex: =32
 
         "'3ProjectDescription_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'3 Project Description'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0033_ProjectDescription
             Fill: =RGBA(253, 222, 207, 1)
             Height: =246
             HintText: ="Description (Max 600 characters) "
@@ -303,7 +303,7 @@
             ZIndex: =1
 
         "'3ProjectTitle_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'3 Project Title'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0033_ProjectTitle
             Font: =Font.Verdana
             HintText: ="Project Title"
             Width: =414
@@ -312,7 +312,7 @@
             ZIndex: =2
 
         "'3ProjectRole_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'3 Project Client'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0033_ProjectClient
             Font: =Font.Verdana
             HintText: ="Role"
             Width: =216
@@ -321,14 +321,14 @@
             ZIndex: =3
 
         "'3ProjectStartDate_1' As datepicker":
-            DefaultDate: =LookUp('CV Generator', Email = User().Email).'3 Project Start Date'
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).OData__x0033_ProjectStartDate
             Format: ="dd/mm/yyyy"
             X: =40
             Y: =209
             ZIndex: =4
 
         "'3ProjectEndDate_1' As datepicker":
-            DefaultDate: =LookUp('CV Generator', Email = User().Email).'3 Project End Date'
+            DefaultDate: =LookUp('CV Generator', Email = User().Email).OData__x0033_ProjectEndDate
             Format: |
                 ="dd/mm/yyyy"
             X: =391
@@ -360,7 +360,7 @@
             ZIndex: =8
 
         "'3ProjectClient_1' As text":
-            Default: =LookUp('CV Generator', Email = User().Email).'3 Project Client'
+            Default: =LookUp('CV Generator', Email = User().Email).OData__x0033_ProjectClient
             Font: =Font.Verdana
             HintText: ="Client"
             Width: =216
