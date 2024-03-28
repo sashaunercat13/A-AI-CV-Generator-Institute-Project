@@ -372,7 +372,6 @@
                         'Project Client': ComboBoxOneClient.Selected.Client,
                         'Project Role': DropdownRole.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
-                        'End Date': '1ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
                         'Microsoft Profile': {
                             Claims: Concatenate(
@@ -386,7 +385,8 @@
                             Picture: ""
                         }
                     }
-                ),
+                )
+              ,
                 // Updating an existing record because varSelectedProjectID > 0
                 Patch(
                     'CV Generator - Project Experience',
@@ -399,7 +399,6 @@
                         'Project Client': ComboBoxOneClient.Selected.Client,
                         'Project Role': DropdownRole.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
-                        'End Date': '1ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
                         'Microsoft Profile': {
                             Claims: Concatenate(
@@ -415,6 +414,20 @@
                     }
                 )
             );
+            
+            /*    If (
+                    !IsBlank('1ProjectEndDate_2'.SelectedDate),
+                    Patch(
+                        'CV Generator - Project Experience',
+                        LookUp(
+                            'CV Generator - Project Experience',
+                            ID = varSelectedProjectID
+                        ),
+                        {'End Date': '1ProjectEndDate_2'.SelectedDate}
+                    )
+                );
+                */
+            
             // Refresh the List
             Refresh('CV Generator - Project Experience');
             // Add the new project to the list
