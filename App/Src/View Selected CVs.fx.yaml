@@ -22,19 +22,19 @@
 
     "'Chosen CVs' As gallery.galleryVertical":
         DelayItemLoading: =true
-        Height: =617
+        Height: =647
         Items: =FinalFilteredCVs
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =612
+        TemplateSize: =634
         Width: =1337
         X: =11
-        Y: =119
+        Y: =89
         ZIndex: =1
 
         "'CV Template_2' As groupContainer":
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =599
+            Height: =615
             Width: =1265
             X: =15
             Y: =10
@@ -42,7 +42,7 @@
 
             Rectangle1_1 As rectangle:
                 Fill: =RGBA(39, 41, 54, 1)
-                Height: =581
+                Height: =615
                 Width: =296
                 ZIndex: =1
 
@@ -65,7 +65,6 @@
                 Text: ="Recent Professional Experience"
                 Width: =856
                 X: =328
-                Y: =20
                 ZIndex: =4
 
             Button9_3 As button:
@@ -77,7 +76,7 @@
                 Text: ="Skills & Qualifications"
                 Width: =916
                 X: =328
-                Y: =402
+                Y: =430
                 ZIndex: =5
 
             Label14_4 As label:
@@ -85,7 +84,7 @@
                 Text: ="Text"
                 Width: =445
                 X: =328
-                Y: =450
+                Y: =478
                 ZIndex: =7
 
             Label14_5 As label:
@@ -94,7 +93,7 @@
                     =ThisItem.QualificationsString
                 Width: =445
                 X: =799
-                Y: =450
+                Y: =478
                 ZIndex: =8
 
             Label10_8 As label:
@@ -237,7 +236,7 @@
 
             Gallery8 As gallery.galleryVertical:
                 DelayItemLoading: =true
-                Height: =326
+                Height: =365
                 Items: |-
                     =Filter(
                         'CV Generator - Project Experience',
@@ -249,7 +248,7 @@
                 TemplateSize: =163
                 Width: =929
                 X: =328
-                Y: =56
+                Y: =54
                 ZIndex: =22
 
                 Label16 As label:
