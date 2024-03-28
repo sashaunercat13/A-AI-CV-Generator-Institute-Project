@@ -1,4 +1,4 @@
-Create As screen:
+"'Update (Create)' As screen":
     OnVisible: |-
         =ClearCollect(HubOptionSets,
         {Capability: "Data & AI Strategy", Options: ["Data Strategy & Op Model", "Data Science Consulting"]},
@@ -7,13 +7,13 @@ Create As screen:
         {Capability: "Data & AI Enablement", Options: ["Customer & Digital Analytics", "Operation & Enterprise Analytics"]}
         );
 
-    "'Background Rectangle_1' As rectangle":
+    "'Background Rectangle_3' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
         Height: =768
         Width: =641
         ZIndex: =1
 
-    Image3_1 As image:
+    Image3_3 As image:
         Height: =671
         Image: ='Cap squiggle'
         Width: =616
@@ -21,7 +21,7 @@ Create As screen:
         Y: =96
         ZIndex: =2
 
-    Name_1 As label:
+    Name_3 As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
@@ -34,7 +34,7 @@ Create As screen:
         Y: =364
         ZIndex: =3
 
-    Email_1 As label:
+    Email_3 As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
@@ -45,7 +45,7 @@ Create As screen:
         Y: =501
         ZIndex: =4
 
-    ProfilePic_2 As image:
+    ProfilePic_4 As image:
         Height: =126
         Image: |
             =User().Image
@@ -59,7 +59,7 @@ Create As screen:
         Y: =225
         ZIndex: =5
 
-    Profile As label:
+    Profile_1 As label:
         Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -71,7 +71,7 @@ Create As screen:
         X: =726
         ZIndex: =6
 
-    Label5_1 As label:
+    Label5_2 As label:
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Size: =22
@@ -81,8 +81,8 @@ Create As screen:
         Y: =367
         ZIndex: =7
 
-    "'Profile box' As text":
-        Default: =""
+    "'Profile box_2' As text":
+        Default: =LookUp('CV Generator', Email = User().Email).Profile
         EnableSpellCheck: =true
         Font: =Font.Verdana
         Height: =134
@@ -96,26 +96,26 @@ Create As screen:
         Y: =409
         ZIndex: =8
 
-    Button1_1 As button:
+    Button1_8 As button:
         DisplayMode: |
             = If(
-                IsBlank(DropdownCapability.Selected.Value)Or IsBlank(RadioHubs.Selected) Or IsBlank('Profile box'.Text) Or IsBlank(Interests.Text), 
+                IsBlank(DropdownCapability_1.Selected.Value)Or IsBlank(RadioHubs_1) Or IsBlank('Profile box_2'.Text) Or IsBlank(Interests_1.Text), 
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |
-            =Navigate('Skills Competancies & Qualifications');
+            =Navigate('Update (Skills Competancies & Qualifications)');
             Patch(
                 'CV Generator',
                 {
-                    Capability: DropdownCapability.Selected.Value,
-                    Hub: RadioHubs.SelectedText.Value,
+                    Capability: DropdownCapability_1.Selected.Value,
+                    Hub: RadioHubs_1.SelectedText.Value,
                     Photo: User().Image,
                     Email: Office365Users.MyProfile().Mail,
                     'First Name': CurrentUserFirstName,
                     'Last Name': CurrentUserLastName,
-                    Grade: DropdownRoleCreate.Selected.Value,
-                    Profile: 'Profile box'.Text,
-                    Interests: Interests.Text,
+                    Grade: DropdownRoleCreate_1.Selected.Value,
+                    Profile: 'Profile box_2'.Text,
+                    Interests: Interests_1.Text,
                     'Security Clearance BPSS': BPSSchecked,
                     'Security Clearance SC': SCchecked,
                     'Microsoft Profile': {
@@ -144,7 +144,7 @@ Create As screen:
         Y: =710
         ZIndex: =9
 
-    Image2_1 As image:
+    Image2_3 As image:
         Height: =184
         Image: ='Screenshot 2024-03-04 120003'
         Width: =415
@@ -152,17 +152,18 @@ Create As screen:
         Y: =96
         ZIndex: =10
 
-    Image1_2 As image:
+    Image1_4 As image:
         Image: ='White Logo Capgemini Invent'
         Width: =572
         X: =52
         Y: =72
         ZIndex: =11
 
-    DropdownRoleCreate As dropdown:
+    DropdownRoleCreate_1 As dropdown:
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
+        Default: =LookUp('CV Generator', Email = User().Email).Grade
         Fill: =RGBA(215, 223, 240, 1)
         Font: =Font.Verdana
         Items: |
@@ -174,7 +175,7 @@ Create As screen:
         Y: =604
         ZIndex: =12
 
-    Icon4 As icon.LogJournal:
+    Icon4_2 As icon.LogJournal:
         Height: =143
         Icon: =Icon.LogJournal
         Width: =144
@@ -182,7 +183,7 @@ Create As screen:
         Y: =107
         ZIndex: =13
 
-    Label1 As label:
+    Label1_1 As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Height: =63
@@ -192,7 +193,7 @@ Create As screen:
         Y: =534
         ZIndex: =14
 
-    Label1_2 As label:
+    Label1_3 As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Height: =63
@@ -202,7 +203,7 @@ Create As screen:
         Y: =647
         ZIndex: =15
 
-    Label5_6 As label:
+    Label5_7 As label:
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Height: =28
@@ -213,8 +214,8 @@ Create As screen:
         Y: =554
         ZIndex: =16
 
-    Interests As text:
-        Default: =""
+    Interests_1 As text:
+        Default: =LookUp('CV Generator', Email = User().Email).Interests
         EnableSpellCheck: =true
         Font: =Font.Verdana
         Height: =102
@@ -228,7 +229,7 @@ Create As screen:
         Y: =592
         ZIndex: =17
 
-    Label9 As label:
+    Label9_2 As label:
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Text: ="Capability"
@@ -237,20 +238,21 @@ Create As screen:
         Y: =42
         ZIndex: =22
 
-    RadioHubs As radio:
+    RadioHubs_1 As radio:
         BorderThickness: =2
+        Default: =LookUp('CV Generator', Email = User().Email).Hub
         Items: |-
             =If(
-                IsBlank(DropdownCapability.Selected),
+                IsBlank(DropdownCapability_1.Selected),
                 [],
-                LookUp(HubOptionSets, Capability = DropdownCapability.Selected.Value).Options
+                LookUp(HubOptionSets, Capability = DropdownCapability_1.Selected.Value).Options
             )
         Width: =371
         X: =710
         Y: =169
         ZIndex: =23
 
-    Label11 As label:
+    Label11_1 As label:
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Text: ="Hub"
@@ -258,7 +260,7 @@ Create As screen:
         Y: =132
         ZIndex: =24
 
-    Label12 As label:
+    Label12_1 As label:
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Text: ="Security Clearance"
@@ -267,11 +269,22 @@ Create As screen:
         Y: =288
         ZIndex: =25
 
-    DropdownCapability As dropdown:
+    "'Label - Role_1' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        Text: ="Grade"
+        Width: =76
+        X: =99
+        Y: =606
+        ZIndex: =26
+
+    DropdownCapability_1 As dropdown:
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
-        Default: ="false"
+        Default: =LookUp('CV Generator', Email = User().Email).Capability
         Font: =Font.Verdana
         Items: =["", "Data & AI Strategy", "Data & AI Innovation", "Data & AI Factory", "Data & AI Enablement"]
         OnChange: =
@@ -283,7 +296,7 @@ Create As screen:
         Y: =82
         ZIndex: =27
 
-    Icon13_1 As icon.Home:
+    Icon13_5 As icon.Home:
         Color: =RGBA(39, 41, 54, 1)
         Height: =60
         Icon: =Icon.Home
@@ -293,7 +306,7 @@ Create As screen:
         Y: =30
         ZIndex: =28
 
-    "'Capgemini Logo_2' As image":
+    "'Capgemini Logo_5' As image":
         Height: =60
         Image: ='Logo Blue'
         Width: =52
@@ -301,26 +314,16 @@ Create As screen:
         Y: =29
         ZIndex: =29
 
-    "'Label - Role_2' As label":
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.Verdana
-        FontWeight: =FontWeight.Semibold
-        Height: =38
-        Text: ="Grade"
-        Width: =76
-        X: =99
-        Y: =606
-        ZIndex: =30
-
-    Group6 As group:
+    Group6_2 As group:
         Height: =5
         Width: =5
         X: =60
         Y: =60
         ZIndex: =33
 
-        Checkbox_BPSS As checkbox:
+        Checkbox_BPSS_1 As checkbox:
             CheckboxSize: =30
+            Default: =LookUp('CV Generator', Email = User().Email).'Security Clearance BPSS'
             Height: =40
             OnCheck: =Set(BPSSchecked,true)
             OnUncheck: =Set(BPSSchecked,false)
@@ -330,8 +333,9 @@ Create As screen:
             Y: =317
             ZIndex: =18
 
-        Checkbox_SC As checkbox:
+        Checkbox_SC_1 As checkbox:
             CheckboxSize: =30
+            Default: =LookUp('CV Generator', Email = User().Email).'Security Clearance SC'
             Height: =40
             OnCheck: =Set( SCchecked, true) 
             OnUncheck: =Set(SCchecked, false) 

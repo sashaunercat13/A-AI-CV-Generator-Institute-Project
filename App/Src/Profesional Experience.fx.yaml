@@ -78,6 +78,7 @@
         ZIndex: =6
 
     Experience1_2 As groupContainer:
+        DropShadow: =DropShadow.Regular
         Height: =562
         Width: =959
         X: =395
@@ -434,7 +435,7 @@
             Reset(ComboBoxOneClient);
         Text: ="Submit project"
         X: =395
-        Y: =699
+        Y: =719
         ZIndex: =17
 
     Gallery4 As gallery.galleryVertical:
@@ -537,7 +538,7 @@
             Navigate(Success, ScreenTransition.Fade)
         Text: ="Complete CV"
         X: =1180
-        Y: =699
+        Y: =719
         ZIndex: =27
 
     Icon13_2 As icon.Home:

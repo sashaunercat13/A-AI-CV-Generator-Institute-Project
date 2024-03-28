@@ -1,0 +1,1104 @@
+"'Update (Skills Competancies & Qualifications)' As screen":
+    OnVisible: |-
+        =// initialise the collections
+        /*
+        ClearCollect(
+            EducationCollection,
+            {}
+        );
+        ClearCollect(
+            Qualifications,
+            {}
+        );
+        ClearCollect(
+            SkillsCollection,
+            {}
+        );
+        */
+        // Clear the collections form any previous entries
+        Clear(EducationCollection);
+        Clear(SkillsCollection);
+        Clear(QualificationsCollection);
+        ClearCollect(
+            Skills,
+            [
+                "Agile Concepts",
+                "AWS",
+                "Azure",
+                "Devops & Tooling (e.g. Git, Jenkins)",
+                "GCP",
+                "RDBMS",
+                "Graph DBs",
+                "Hive",
+                "Elasticsearch",
+                "Databricks",
+                "Dataiku",
+                "Snowflake",
+                "Teradata",
+                "Data Robot",
+                "Pandas",
+                "Spark",
+                "Airflow",
+                "MLFlow",
+                "Kedro",
+                "TFX",
+                "Scikit-Learn",
+                "Tensorflow",
+                "PyTorch",
+                "Keras",
+                "Looker",
+                "Power BI",
+                "Shiny",
+                "Tableau",
+                "React",
+                "Flask",
+                "HTML",
+                ".NET",
+                "Go",
+                "JS",
+                "Java / Scala",
+                "Python",
+                "R",
+                "Rust",
+                "Shell",
+                "SQL",
+                "Leadership",
+                "Communication",
+                "Problem-solving",
+                "Time management",
+                "Decision-making",
+                "Teamwork",
+                "Adaptability",
+                "Creativity",
+                "Critical thinking",
+                "Emotional intelligence",
+                "Conflict resolution",
+                "Negotiation",
+                "Stress management",
+                "Interpersonal skills",
+                "Organization",
+                "Strategic planning",
+                "Networking",
+                "Public speaking",
+                "Collaboration",
+                "Empathy",
+                "Resilience",
+                "Integrity",
+                "Flexibility",
+                "Customer service",
+                "Attention to detail",
+                "Initiative",
+                "Cultural awareness",
+                "Delegation",
+                "Motivation",
+                "Presentation skills",
+                "Coaching and mentoring",
+                "Diplomacy",
+                "Assertiveness",
+                "Consensus building",
+                "Persuasion",
+                "Relationship building",
+                "Conflict management",
+                "Feedback and constructive criticism",
+                "Trustworthiness",
+                "Decision-making under pressure",
+                "Analytical skills",
+                "Problem-solving in teams",
+                "Prioritisation",
+                "Project management",
+                "Change management",
+                "Empowerment",
+                "Resourcefulness",
+                "Business acumen",
+                "Self-awareness",
+                "Vision-setting",
+                "Emotional regulation",
+                "Active listening",
+                "Empathetic listening",
+                "Team building",
+                "Cross-cultural communication",
+                "Time blocking",
+                "Respectfulness",
+                "Ethical decision-making",
+                "Adaptive leadership",
+                "Problem sensitivity",
+                "Open-mindedness",
+                "Consistency",
+                "Innovation",
+                "Risk management",
+                "Conflict resolution strategies",
+                "Customer relationship management (CRM)",
+                "Feedback reception",
+                "Presentation delivery",
+                "Digital literacy",
+                "Strategic thinking",
+                "Public relations",
+                "Client management",
+                "Interdepartmental collaboration",
+                "Event planning and coordination",
+                "Salesmanship",
+                "Financial literacy",
+                "Conflict avoidance",
+                "Empowerment of others",
+                "Interpersonal effectiveness",
+                "Networking proficiency",
+                "Emotional resilience",
+                "Change adaptation",
+                "Constructive feedback delivery",
+                "Machine Learning",
+                "Computer Vision",
+                "Cloud Data Platforms (Azure/GCP/AWS)",
+                "Data Pre-Processing",
+                "LLMs",
+                "Generative AI",
+                "Data Visualisation",
+                "Programming",
+                "Data Analysis",
+                "Time Management",
+            ]
+        );
+        
+        ClearCollect(
+            Qualifications,
+            [
+            "Microsoft Certified: Azure Solutions Architect Expert",
+            "Cisco Certified Network Associate (CCNA)",
+            "CompTIA A+",
+            "CompTIA Network+",
+            "CompTIA Security+",
+            "Certified Information Systems Security Professional (CISSP)",
+            "Certified Ethical Hacker (CEH)",
+            "AWS Certified Solutions Architect",
+            "Google Certified Professional Cloud Architect",
+            "Certified ScrumMaster (CSM)",
+            "Certified Scrum Product Owner (CSPO)",
+            "Project Management Professional (PMP)",
+            "ITIL Foundation Certification",
+            "Certified Information Security Manager (CISM)",
+            "Certified Information Systems Auditor (CISA)",
+            "VMware Certified Professional (VCP)",
+            "Red Hat Certified Engineer (RHCE)",
+            "Certified Kubernetes Administrator (CKA)",
+            "Certified Docker Associate (CDA)",
+            "Certified OpenStack Administrator (COA)",
+            "Microsoft Certified: Azure Administrator Associate",
+            "Microsoft Certified: Azure Developer Associate",
+            "Google Associate Cloud Engineer",
+            "Oracle Certified Professional (OCP)",
+            "Certified Information Privacy Professional (CIPP)",
+            "Certified Data Management Professional (CDMP)",
+            "Certified Analytics Professional (CAP)",
+            "Certified in Risk and Information Systems Control (CRISC)",
+            "Certified Wireless Network Professional (CWNP)",
+            "Certified Information Systems Security Officer (CISSO)",
+            "Offensive Security Certified Professional (OSCP)",
+            "Certified in Governance of Enterprise IT (CGEIT)",
+            "Amazon Web Services Certified Developer (AWS CD)",
+            "Certified Kubernetes Application Developer (CKAD)",
+            "Google Professional Data Engineer",
+            "Microsoft Certified: Data Analyst Associate",
+            "Salesforce Certified Administrator",
+            "Salesforce Certified Platform Developer",
+            "Certified Cloud Security Professional (CCSP)",
+            "Certified Cloud Architect (CCA)",
+            "Certified Blockchain Professional (CBP)",
+            "Certified Artificial Intelligence Professional (CAIP)",
+            "Microsoft Certified: Power Platform App Maker Associate",
+            "Microsoft Certified: Power Platform Developer Associate",
+            "Certified Machine Learning Engineer",
+            "Certified Big Data Professional (CBDP)",
+            "Certified DevOps Engineer (CDE)",
+            "Certified Cyber Forensics Professional (CCFP)",
+            "Certified Mobile App Developer (CMAD)",
+            "Certified 3D Printing Professional",
+            "Certified Professional in Human Resources (PHR)",
+            "Society for Human Resource Management Certified Professional (SHRM-CP)",
+            "Certified Management Accountant (CMA)",
+            "Certified Financial Planner (CFP)",
+            "Chartered Financial Analyst (CFA)",
+            "Six Sigma Green Belt",
+            "Six Sigma Black Belt",
+            "Certified Fraud Examiner (CFE)",
+            "Certified Internal Auditor (CIA)",
+            "Professional in Human Resources (PHRi)",
+            "Senior Professional in Human Resources (SPHR)",
+            "Certified Professional in Supply Management (CPSM)",
+            "Certified Associate in Project Management (CAPM)",
+            "Agile Certified Practitioner (PMI-ACP)",
+            "Professional Scrum Master (PSM)",
+            "Certified Product Manager (CPM)",
+            "Certified Professional in Healthcare Quality (CPHQ)",
+            "Certified Quality Engineer (CQE)",
+            "Certified Information Privacy Professional (CIPP)",
+            "Professional in Business Analysis (PMI-PBA)",
+            "Certified Risk Management Professional (CRMP)",
+            "Certified Compensation Professional (CCP)",
+            "Certified Employee Benefits Specialist (CEBS)",
+            "Professional Certified Marketer (PCM)",
+            "Certified Professional in Learning and Performance (CPLP)",
+            "Certified Professional Purchasing Manager (CPPM)",
+            "Certified Professional Contracts Manager (CPCM)",
+            "Certified Manager (CM)",
+            "Certified in the Governance of Enterprise IT (CGEIT)",
+            "Certified Supply Chain Professional (CSCP)",
+            "Certified Professional in Healthcare Information and Management Systems (CPHIMS)",
+            "Certified Manager of Quality/Organizational Excellence (CMQ/OE)",
+            "Professional in Project Management (PPM)",
+            "Certified Professional Logistician (CPL)",
+            "Certified Professional Medical Services Manager (CPMSM)",
+            "Certified Information Professional (CIP)",
+            "Certified Safety Professional (CSP)",
+            "Certified Professional Environmental Auditor (CPEA)",
+            "Certified Professional Ergonomist (CPE)",
+            "Certified Associate in Software Testing (CAST)",
+            "Certified Professional in Training Management (CPTM)",
+            "Certified Professional in Talent Development (CPTD)",
+            "Azure Data Scientist",
+            "Azure ML Engineer",
+            "AWS Cloud practitioner",
+            "Microsoft PowerBI Certified"
+        ]
+        )
+        /*
+        ClearCollect(
+            SkillsCollectionSearch,
+            {
+                Title: "Agile Concepts",
+                ID: 1
+            },
+            {
+                Title: "AWS",
+                ID: 2
+            },
+            {
+                Title: "Azure",
+                ID: 3
+            },
+            {
+                Title: "Devops & Tooling (e.g. Git, Jenkins)",
+                ID: 4
+            },
+            {
+                Title: "GCP",
+                ID: 5
+            },
+            {
+                Title: "RDBMS",
+                ID: 6
+            },
+            {
+                Title: "Graph DBs",
+                ID: 7
+            },
+            {
+                Title: "Hive",
+                ID: 8
+            },
+            {
+                Title: "Elasticsearch",
+                ID: 9
+            },
+            {
+                Title: "Databricks",
+                ID: 10
+            },
+            {
+                Title: "Dataiku",
+                ID: 11
+            },
+            {
+                Title: "Snowflake",
+                ID: 12
+            },
+            {
+                Title: "Teradata",
+                ID: 13
+            },
+            {
+                Title: "Data Robot",
+                ID: 14
+            },
+            {
+                Title: "Pandas",
+                ID: 15
+            },
+            {
+                Title: "Spark",
+                ID: 16
+            },
+            {
+                Title: "Airflow",
+                ID: 17
+            },
+            {
+                Title: "MLFlow",
+                ID: 18
+            },
+            {
+                Title: "Kedro",
+                ID: 19
+            },
+            {
+                Title: "TFX",
+                ID: 20
+            },
+            {
+                Title: "Scikit-Learn",
+                ID: 21
+            },
+            {
+                Title: "Tensorflow",
+                ID: 22
+            },
+            {
+                Title: "PyTorch",
+                ID: 23
+            },
+            {
+                Title: "Keras",
+                ID: 24
+            },
+            {
+                Title: "Looker",
+                ID: 25
+            },
+            {
+                Title: "Power BI",
+                ID: 26
+            },
+            {
+                Title: "Shiny",
+                ID: 27
+            },
+            {
+                Title: "Tableau",
+                ID: 28
+            },
+            {
+                Title: "React",
+                ID: 29
+            },
+            {
+                Title: "Flask",
+                ID: 30
+            },
+            {
+                Title: "HTML",
+                ID: 31
+            },
+            {
+                Title: ".NET",
+                ID: 32
+            },
+            {
+                Title: "Go",
+                ID: 33
+            },
+            {
+                Title: "JS",
+                ID: 34
+            },
+            {
+                Title: "Java / Scala",
+                ID: 35
+            },
+            {
+                Title: "Python",
+                ID: 36
+            },
+            {
+                Title: "R",
+                ID: 37
+            },
+            {
+                Title: "Rust",
+                ID: 38
+            },
+            {
+                Title: "Shell",
+                ID: 39
+            },
+            {
+                Title: "SQL",
+                ID: 40
+            }
+        );
+        ClearCollect(
+            QualificationsCollectionSearch,
+            {
+                Title: "Microsoft Certified: Azure Solutions Architect Expert",
+                ID: 1
+            },
+            {
+                Title: "Cisco Certified Network Associate (CCNA)",
+                ID: 2
+            },
+            {
+                Title: "CompTIA A+",
+                ID: 3
+            },
+            {
+                Title: "CompTIA Network+",
+                ID: 4
+            },
+            {
+                Title: "CompTIA Security+",
+                ID: 5
+            },
+            {
+                Title: "Certified Information Systems Security Professional (CISSP)",
+                ID: 6
+            },
+            {
+                Title: "Certified Ethical Hacker (CEH)",
+                ID: 7
+            },
+            {
+                Title: "AWS Certified Solutions Architect",
+                ID: 8
+            },
+            {
+                Title: "Google Certified Professional Cloud Architect",
+                ID: 9
+            },
+            {
+                Title: "Certified ScrumMaster (CSM)",
+                ID: 10
+            },
+            {
+                Title: "Certified Scrum Product Owner (CSPO)",
+                ID: 11
+            },
+            {
+                Title: "Project Management Professional (PMP)",
+                ID: 12
+            },
+            {
+                Title: "ITIL Foundation Certification",
+                ID: 13
+            },
+            {
+                Title: "Certified Information Security Manager (CISM)",
+                ID: 14
+            },
+            {
+                Title: "Certified Information Systems Auditor (CISA)",
+                ID: 15
+            },
+            {
+                Title: "VMware Certified Professional (VCP)",
+                ID: 16
+            },
+            {
+                Title: "Red Hat Certified Engineer (RHCE)",
+                ID: 17
+            },
+            {
+                Title: "Certified Kubernetes Administrator (CKA)",
+                ID: 18
+            },
+            {
+                Title: "Certified Docker Associate (CDA)",
+                ID: 19
+            },
+            {
+                Title: "Certified OpenStack Administrator (COA)",
+                ID: 20
+            },
+            {
+                Title: "Microsoft Certified: Azure Administrator Associate",
+                ID: 21
+            },
+            {
+                Title: "Microsoft Certified: Azure Developer Associate",
+                ID: 22
+            },
+            {
+                Title: "Google Associate Cloud Engineer",
+                ID: 23
+            },
+            {
+                Title: "Oracle Certified Professional (OCP)",
+                ID: 24
+            },
+            {
+                Title: "Certified Information Privacy Professional (CIPP)",
+                ID: 25
+            },
+            {
+                Title: "Certified Data Management Professional (CDMP)",
+                ID: 26
+            },
+            {
+                Title: "Certified Analytics Professional (CAP)",
+                ID: 27
+            },
+            {
+                Title: "Certified in Risk and Information Systems Control (CRISC)",
+                ID: 28
+            },
+            {
+                Title: "Certified Wireless Network Professional (CWNP)",
+                ID: 29
+            },
+            {
+                Title: "Certified Information Systems Security Officer (CISSO)",
+                ID: 30
+            },
+            {
+                Title: "Offensive Security Certified Professional (OSCP)",
+                ID: 31
+            },
+            {
+                Title: "Certified in Governance of Enterprise IT (CGEIT)",
+                ID: 32
+            },
+            {
+                Title: "Amazon Web Services Certified Developer (AWS CD)",
+                ID: 33
+            },
+            {
+                Title: "Certified Kubernetes Application Developer (CKAD)",
+                ID: 34
+            },
+            {
+                Title: "Google Professional Data Engineer",
+                ID: 35
+            },
+            {
+                Title: "Microsoft Certified: Data Analyst Associate",
+                ID: 36
+            },
+            {
+                Title: "Salesforce Certified Administrator",
+                ID: 37
+            },
+            {
+                Title: "Salesforce Certified Platform Developer",
+                ID: 38
+            },
+            {
+                Title: "Certified Cloud Security Professional (CCSP)",
+                ID: 39
+            },
+            {
+                Title: "Certified Cloud Architect (CCA)",
+                ID: 40
+            },
+            {
+                Title: "Certified Blockchain Professional (CBP)",
+                ID: 41
+            },
+            {
+                Title: "Certified Artificial Intelligence Professional (CAIP)",
+                ID: 42
+            },
+            {
+                Title: "Microsoft Certified: Power Platform App Maker Associate",
+                ID: 43
+            },
+            {
+                Title: "Microsoft Certified: Power Platform Developer Associate",
+                ID: 44
+            },
+            {
+                Title: "Certified Machine Learning Engineer",
+                ID: 45
+            },
+            {
+                Title: "Certified Big Data Professional (CBDP)",
+                ID: 46
+            },
+            {
+                Title: "Certified DevOps Engineer (CDE)",
+                ID: 47
+            },
+            {
+                Title: "Certified Cyber Forensics Professional (CCFP)",
+                ID: 48
+            },
+            {
+                Title: "Certified Mobile App Developer (CMAD)",
+                ID: 49
+            },
+            {
+                Title: "Certified 3D Printing Professional",
+                ID: 50
+            },
+            {
+                Title: "Certified Professional in Human Resources (PHR)",
+                ID: 51
+            },
+            {
+                Title: "Society for Human Resource Management Certified Professional (SHRM-CP)",
+                ID: 52
+            },
+            {
+                Title: "Certified Management Accountant (CMA)",
+                ID: 53
+            },
+            {
+                Title: "Certified Financial Planner (CFP)",
+                ID: 54
+            },
+            {
+                Title: "Chartered Financial Analyst (CFA)",
+                ID: 55
+            },
+            {
+                Title: "Six Sigma Green Belt",
+                ID: 56
+            }
+        );
+        */
+
+    Button4_6 As button:
+        BorderColor: =RGBA(39, 41, 54, 1)
+        BorderThickness: =3
+        DisabledBorderColor: =RGBA(39, 41, 54, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =557
+        RadiusBottomLeft: =15  
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Text: =""
+        Width: =640
+        X: =20
+        Y: =135
+        ZIndex: =1
+
+    Rectangle2_1 As rectangle:
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =116
+        Width: =1366
+        ZIndex: =2
+
+    Button4_8 As button:
+        BorderColor: =RGBA(18, 171, 219, 1)
+        BorderThickness: =3
+        DisabledBorderColor: =RGBA(39, 41, 54, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =301
+        RadiusBottomLeft: =15  
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Text: =""
+        Width: =640
+        X: =687
+        Y: =391
+        ZIndex: =3
+
+    Button4_7 As button:
+        BorderColor: =RGBA(18, 171, 219, 1)
+        BorderThickness: =3
+        DisabledBorderColor: =RGBA(39, 41, 54, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =238
+        RadiusBottomLeft: =15  
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Text: =""
+        Width: =640
+        X: =687
+        Y: =135
+        ZIndex: =4
+
+    Image4_1 As image:
+        Height: =60
+        Image: ='Logo Blue'
+        Width: =52
+        X: =1288
+        Y: =30
+        ZIndex: =5
+
+    Label6_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =39
+        Size: =24
+        Text: ="Skills, Education and Qualifications"
+        Width: =790
+        X: =84
+        Y: =37
+        ZIndex: =6
+
+    Icon1_2 As icon.Ribbon:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Ribbon
+        X: =20
+        Y: =25
+        ZIndex: =7
+
+    Label5_8 As label:
+        Color: =RGBA(39, 41, 54, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =57
+        Size: =22
+        Text: ="Skills"
+        Width: =562
+        X: =24
+        Y: =135
+        ZIndex: =8
+
+    Label5_18 As label:
+        Color: =RGBA(39, 41, 54, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =57
+        Size: =22
+        Text: ="Education"
+        Width: =630
+        X: =698
+        Y: =135
+        ZIndex: =9
+
+    Button1_10 As button:
+        DisplayMode: |-
+            =If(
+                IsEmpty(SkillsCollection) Or IsEmpty(EducationCollection) Or IsEmpty(QualificationsCollection),
+                DisplayMode.Disabled,
+                DisplayMode.Edit
+            )
+        Fill: =RGBA(39, 41, 54, 1)
+        OnSelect: |-
+            =Navigate('Profesional Experience');
+            // Convert collections to strings to save to a single column in List
+            Set(
+                SkillsString,
+                Concat(
+                    SkillsCollection,
+                    Skill & ", "
+                )
+            );
+            Set(
+                QualificationsString,
+                Concat(
+                    QualificationsCollection,
+                    Qualification & ", "
+                )
+            );
+            Set(
+                EducationString,
+                Concat(
+                    EducationCollection,
+                    DegreeType & ", " & University & ", " & Course & "; "
+                )
+            );
+            Patch(
+                'CV Generator',
+                LookUp(
+                    'CV Generator',
+                    Email = User().Email
+                ),
+                {
+                    SkillsString: SkillsString,
+                    Education: EducationString,
+                    QualificationsString: QualificationsString
+                }
+            )
+            /*
+            Patch('CV Generator', LookUp('CV Generator', Email = User().Email),{
+                Skills: SkillString
+            })
+            */
+            /*
+            {Skills: Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text}) */
+        Text: ="Next Page"
+        X: =1167
+        Y: =710
+        ZIndex: =10
+
+    Button1_9 As button:
+        Fill: =RGBA(39, 41, 54, 1)
+        OnSelect: =Navigate(Create)
+        Text: ="Back "
+        X: =20
+        Y: =710
+        ZIndex: =11
+
+    "'Microsoft Profile_1' As combobox":
+        DefaultSelectedItems: |-
+            =/*{
+                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
+                    Claims: 
+                        User().Email
+                    ,
+                    DisplayName: User().FullName,
+                    Email: User().Email
+                } */
+            {
+            
+                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.'CV Generator'",
+            
+                    Claims: Concatenate(
+            
+                        "i:0#.f|membership|",
+            
+                        User().Email
+            
+                    ),
+            
+                    DisplayName: User().FullName,
+            
+                    Email: User().Email
+            
+                } 
+        DisplayFields: =["Claims"]
+        Items: =Choices([@'CV Generator'].'Microsoft Profile')
+        SearchFields: =["Claims"]
+        SearchItems: =Choices('CV Generator'.'Microsoft Profile','Microsoft Profile_1'.SearchText)
+        Visible: =false
+        X: =931
+        Y: =25
+        ZIndex: =12
+
+    ComboBoxSkill_1 As combobox:
+        DisplayFields: =["Value"]
+        Font: =Font.Verdana
+        Height: =35
+        InputTextPlaceholder: ="Search Skills"
+        Items: =Skills
+        SearchFields: =["Value"]
+        SearchItems: =Search(Skills,ComboBoxSkill_1.SearchText,"Value")
+        Width: =464
+        X: =33
+        Y: =203
+        ZIndex: =13
+
+    AddSkill_3 As button:
+        Height: =35
+        OnSelect: |-
+            =// Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
+            ForAll(ComboBoxSkill_1.SelectedItems, Collect(SkillsCollection, {Skill: Value}));
+            Reset(ComboBoxSkill_1);
+        Size: =12
+        Text: ="Add Skill(s)"
+        Width: =120
+        X: =515
+        Y: =203
+        ZIndex: =14
+
+    Label5_19 As label:
+        Color: =RGBA(39, 41, 54, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =56
+        Size: =22
+        Text: ="Qualifications"
+        Width: =630
+        X: =699
+        Y: =389
+        ZIndex: =15
+
+    Gallery1_1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =420
+        Items: =SkillsCollection
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =35
+        Width: =630
+        X: =33
+        Y: =258
+        ZIndex: =16
+
+        Icon3_1 As icon.ToolsWrench:
+            Color: =RGBA(39, 41, 54, 1)
+            Height: =30
+            Icon: =Icon.ToolsWrench
+            OnSelect: =Select(Parent)
+            ZIndex: =1
+
+        Label2_1 As label:
+            Height: =30
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Skill
+            Width: =447
+            X: =64
+            ZIndex: =2
+
+        Icon5_4 As icon.Trash:
+            Height: =30
+            Icon: =Icon.Trash
+            OnSelect: =Remove(SkillsCollection, ThisItem)
+            X: =511
+            ZIndex: =3
+
+    ComboBoxQual_1 As combobox:
+        DisplayFields: =["Value"]
+        Height: =35
+        InputTextPlaceholder: ="Search Qualifications"
+        Items: =Qualifications
+        SearchFields: =["Value"]
+        SearchItems: =Search(Qualifications,ComboBoxQual_1.SearchText,"Value")
+        Width: =432
+        X: =704
+        Y: =459
+        ZIndex: =17
+
+    ComboBoxUniversity_1 As combobox:
+        DisplayFields: =["Value"]
+        Height: =35
+        InputTextPlaceholder: ="Search Universities"
+        Items: |
+            =["University of Oxford","University of Bath","University of Cambridge","UCL (University College London)","University of Manchester","University of Bristol","Loughborough University","University of Leeds","The University of Edinburgh","University of Birmingham","Durham University","University of Glasgow","University of St Andrews","University of Warwick","Imperial College London","University of Nottingham","University of Southampton","University of Surrey","University of Strathclyde","University of Exeter","University of Sheffield","King's College London, University of","Lancaster University","Queen's University Belfast","London School of Economics and Political Science (LSE)","Cardiff University","University of Liverpool","University of York","Newcastle University","Ulster University","Heriot-Watt University","Queen Mary University of London","Swansea University","University of Stirling","University of East Anglia UEA","Aston University, Birmingham","University of Reading","City, University of London","Royal Holloway, University of London","Northumbria University, Newcastle","University of Aberdeen","Sheffield Hallam University","University of Sussex","University of Dundee","University of Leicester","University of Derby","Teesside University, Middlesbrough","University of Huddersfield","Birmingham City University","University of South Wales","University of Portsmouth","Liverpool John Moores University","Nottingham Trent University","Leeds Beckett University","University of Greenwich","Coventry University","Manchester Metropolitan University","Brunel University London","University of the West of Scotland","University of Hull","University of Kent","University of Gloucestershire","Solent University (Southampton)","University of East London","University of Plymouth","SOAS University of London","University of Hertfordshire","Aberystwyth University","Bournemouth University","Keele University","University of Brighton","Glasgow Caledonian University","University of Chester","University of Bradford","London South Bank University","Anglia Ruskin University","Middlesex University","London Metropolitan University","De Montfort University","University of Wolverhampton","Oxford Brookes University","University of Chichester","Buckinghamshire New University","Bristol, University of the West of","University of Salford","Cardiff Metropolitan University","University of Lincoln","Edge Hill University","University of Worcester","University of Northampton","University of Central Lancashire","Staffordshire University","Bangor University","University of Essex","Goldsmiths, University of London","University of Roehampton","University of West London","St George's, University of London","University of Sunderland","University of the Arts London","University for the Creative Arts","Robert Gordon University","University of Wales Trinity Saint David","University of Winchester","University of Suffolk","Kingston University","Bath Spa University","University of Bedfordshire","Royal Agricultural University","Edinburgh Napier University","St Mary's University, Twickenham","Ravensbourne University London","Liverpool Hope University","University of Westminster, London","York St John University","Queen Margaret University, Edinburgh","University of Cumbria","Falmouth University","Canterbury Christ Church University","Abertay University","University of the Highlands and Islands","University of Buckingham","Norwich University of the Arts","Newman University, Birmingham","University of Bolton","Leeds Trinity University","Plymouth Marjon University","Bishop Grosseteste University","Royal Conservatoire of Scotland","Glyndwr University, Wrexham"]
+        SearchFields: =["Value"]
+        SearchItems: |-
+            =Search(["University of Oxford","University of Bath","University of Cambridge","UCL (University College London)","University of Manchester","University of Bristol","Loughborough University","University of Leeds","The University of Edinburgh","University of Birmingham","Durham University","University of Glasgow","University of St Andrews","University of Warwick","Imperial College London","University of Nottingham","University of Southampton","University of Surrey","University of Strathclyde","University of Exeter","University of Sheffield","King's College London, University of","Lancaster University","Queen's University Belfast","London School of Economics and Political Science (LSE)","Cardiff University","University of Liverpool","University of York","Newcastle University","Ulster University","Heriot-Watt University","Queen Mary University of London","Swansea University","University of Stirling","University of East Anglia UEA","Aston University, Birmingham","University of Reading","City, University of London","Royal Holloway, University of London","Northumbria University, Newcastle","University of Aberdeen","Sheffield Hallam University","University of Sussex","University of Dundee","University of Leicester","University of Derby","Teesside University, Middlesbrough","University of Huddersfield","Birmingham City University","University of South Wales","University of Portsmouth","Liverpool John Moores University","Nottingham Trent University","Leeds Beckett University","University of Greenwich","Coventry University","Manchester Metropolitan University","Brunel University London","University of the West of Scotland","University of Hull","University of Kent","University of Gloucestershire","Solent University (Southampton)","University of East London","University of Plymouth","SOAS University of London","University of Hertfordshire","Aberystwyth University","Bournemouth University","Keele University","University of Brighton","Glasgow Caledonian University","University of Chester","University of Bradford","London South Bank University","Anglia Ruskin University","Middlesex University","London Metropolitan University","De Montfort University","University of Wolverhampton","Oxford Brookes University","University of Chichester","Buckinghamshire New University","Bristol, University of the West of","University of Salford","Cardiff Metropolitan University","University of Lincoln","Edge Hill University","University of Worcester","University of Northampton","University of Central Lancashire","Staffordshire University","Bangor University","University of Essex","Goldsmiths, University of London","University of Roehampton","University of West London","St George's, University of London","University of Sunderland","University of the Arts London","University for the Creative Arts","Robert Gordon University","University of Wales Trinity Saint David","University of Winchester","University of Suffolk","Kingston University","Bath Spa University","University of Bedfordshire","Royal Agricultural University","Edinburgh Napier University","St Mary's University, Twickenham","Ravensbourne University London","Liverpool Hope University","University of Westminster, London","York St John University","Queen Margaret University, Edinburgh","University of Cumbria","Falmouth University","Canterbury Christ Church University","Abertay University","University of the Highlands and Islands","University of Buckingham","Norwich University of the Arts","Newman University, Birmingham","University of Bolton","Leeds Trinity University","Plymouth Marjon University","Bishop Grosseteste University","Royal Conservatoire of Scotland","Glyndwr University, Wrexham"]
+            ,ComboBoxUniversity_1.SearchText,"Value")
+        SelectMultiple: =false
+        Width: =432
+        X: =704
+        Y: =203
+        ZIndex: =18
+
+    AddSkill_4 As button:
+        DisplayMode: |-
+            =If(
+                IsBlank(ComboBoxUniversity_1.SelectedItems) Or IsBlank(ComboBoxDegreeType_1.SelectedItems) Or IsBlank(ComboBoxCourse_1.SelectedItems),
+                DisplayMode.Disabled,
+                DisplayMode.Edit
+            )
+        Height: =35
+        OnSelect: |+
+            =Collect(EducationCollection, {University: ComboBoxUniversity_1.Selected.Value, Course: ComboBoxCourse_1.Selected.Value, DegreeType: ComboBoxDegreeType_1.Selected.Value});
+            Reset(ComboBoxCourse_1);
+            Reset(ComboBoxUniversity_1);
+            Reset(ComboBoxDegreeType_1);
+            
+        Size: =12
+        Text: ="Add Education"
+        X: =1155
+        Y: =204
+        ZIndex: =19
+
+    AddSkill_5 As button:
+        Height: =35
+        OnSelect: |
+            =//Collect(Qualifications, {Qualification: ComboBoxQual.SelectedItems});
+            ForAll(ComboBoxQual_1.SelectedItems, Collect(QualificationsCollection, {Qualification: Value}));
+            Reset(ComboBoxQual_1);
+        Size: =12
+        Text: ="Add Qualification(s)"
+        Width: =172
+        X: =1149
+        Y: =460
+        ZIndex: =20
+
+    Gallery2_1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =90
+        Items: =EducationCollection
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =42
+        X: =690
+        Y: =283
+        ZIndex: =21
+
+        Icon6_1 As icon.DocumentwithContent:
+            Height: =25
+            Icon: =Icon.DocumentWithContent
+            OnSelect: =Select(Parent)
+            Width: =52
+            X: =12
+            Y: =7
+            ZIndex: =1
+
+        Label5_3 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.DegreeType & " " & ThisItem.Course & ", " & ThisItem.University
+            Width: =504
+            X: =64
+            ZIndex: =2
+
+        Icon5_5 As icon.Trash:
+            Height: =30
+            Icon: =Icon.Trash
+            OnSelect: =Remove(EducationCollection, ThisItem)
+            X: =566
+            Y: =5
+            ZIndex: =3
+
+    ComboBoxCourse_1 As combobox:
+        DisplayFields: =["Value"]
+        Height: =35
+        InputTextPlaceholder: ="Search Courses"
+        Items: =["Account & Finance","Aeronautical & Aerospace","Biomedical Sciences","Business & Management Studies","Chemical Engineering","Chemistry and/or Chemical Sciences","Civil and/or Environmental Engineering","Computer Science","Economics","Electrical & Electronic Engineering","Geography & Environmental Science","Geology and Geophysics Sciences","Information Technology","Marketing","Mathematics","Mechanical Engineering","Music","Philosophy","Physics","Politics and/or International Relations","Psychology and/or Criminology","Sociology","Materials Science / Engineering","Sport Science and/or Physiotherapy","Education / Teaching / PGCE","Communications & Media Studies","Art History","Creative Writing","Criminology","Data Science","Dentistry","Drama and Theatre Studies","Earth Sciences","English Literature","Environmental Science","Fashion Design","Film Studies","Fine Art","Forensic Science","Genetics","Graphic Design","History","Hospitality Management","Human Resource Management","Linguistics","Management Studies","Modern Languages (e.g., French, German, Spanish)","Music","Nursing","Nutrition","Occupational Therapy","Pharmacy","Photography","Public Health","Quantity Surveying","Radiography","Social Work","Software Engineering","Sports Science","Statistics","Sustainable Development","Textile Design","Theology","Tourism Management","Urban Planning","Veterinary Medicine","Web Development","Zoology","Artificial Intelligence","Robotics","Renewable Energy Engineering","Marine Biology","Aerospace Technology","Nanotechnology","Renewable Energy Systems","Cybersecurity","Game Design","Animation","Renewable Energy Management","Green Chemistry","Petroleum Engineering","International Business","Fashion Marketing","Renewable Energy Policy","Computational Biology","Artificial Neural Networks","Ethical Hacking"]
+        SearchFields: =["Value"]
+        SearchItems: =Search(["Account & Finance","Aeronautical & Aerospace","Biomedical Sciences","Business & Management Studies","Chemical Engineering","Chemistry and/or Chemical Sciences","Civil and/or Environmental Engineering","Computer Science","Economics","Electrical & Electronic Engineering","Geography & Environmental Science","Geology and Geophysics Sciences","Information Technology","Marketing","Mathematics","Mechanical Engineering","Music","Philosophy","Physics","Politics and/or International Relations","Psychology and/or Criminology","Sociology","Materials Science / Engineering","Sport Science and/or Physiotherapy","Education / Teaching / PGCE","Communications & Media Studies","Art History","Creative Writing","Criminology","Data Science","Dentistry","Drama and Theatre Studies","Earth Sciences","English Literature","Environmental Science","Fashion Design","Film Studies","Fine Art","Forensic Science","Genetics","Graphic Design","History","Hospitality Management","Human Resource Management","Linguistics","Management Studies","Modern Languages (e.g., French, German, Spanish)","Music","Nursing","Nutrition","Occupational Therapy","Pharmacy","Photography","Public Health","Quantity Surveying","Radiography","Social Work","Software Engineering","Sports Science","Statistics","Sustainable Development","Textile Design","Theology","Tourism Management","Urban Planning","Veterinary Medicine","Web Development","Zoology","Artificial Intelligence","Robotics","Renewable Energy Engineering","Marine Biology","Aerospace Technology","Nanotechnology","Renewable Energy Systems","Cybersecurity","Game Design","Animation","Renewable Energy Management","Green Chemistry","Petroleum Engineering","International Business","Fashion Marketing","Renewable Energy Policy","Computational Biology","Artificial Neural Networks","Ethical Hacking"],ComboBoxCourse_1.SearchText,"Value")
+        SelectMultiple: =false
+        Width: =204
+        X: =931
+        Y: =245
+        ZIndex: =22
+
+    ComboBoxDegreeType_1 As combobox:
+        DisplayFields: =["Value"]
+        Height: =35
+        InputTextPlaceholder: ="Search Degree Type"
+        Items: =["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"]
+        SearchFields: =["Value"]
+        SearchItems: =Search(["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"],ComboBoxDegreeType_1.SearchText,"Value")
+        SelectMultiple: =false
+        Width: =214
+        X: =704
+        Y: =246
+        ZIndex: =23
+
+    Gallery3_1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =176
+        Items: =QualificationsCollection
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =44
+        X: =690
+        Y: =505
+        ZIndex: =24
+
+        Icon9_1 As icon.ListScrollWatchlist:
+            Height: =25
+            Icon: =Icon.ListScrollWatchlist
+            OnSelect: =Select(Parent)
+            Width: =52
+            Y: =9
+            ZIndex: =1
+
+        Label7_1 As label:
+            Height: =44
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Qualification
+            Width: =494
+            X: =52
+            ZIndex: =2
+
+        Icon5_6 As icon.Trash:
+            Height: =30
+            Icon: =Icon.Trash
+            OnSelect: =Remove(QualificationsCollection, ThisItem)
+            X: =546
+            Y: =4
+            ZIndex: =3
+
+    Icon13_6 As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Welcome)
+        Width: =52
+        X: =1221
+        Y: =30
+        ZIndex: =25
+

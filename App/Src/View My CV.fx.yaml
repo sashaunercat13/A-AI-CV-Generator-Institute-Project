@@ -1,0 +1,279 @@
+"'View My CV' As screen":
+    OnVisible: |-
+        =// create a separate collection that maps projects to their CVs.
+        
+        /*
+        ForAll(FinalFilteredCVs As _CV,
+            Collect(
+                CVsWithProjects,
+                {
+                    CV: _CV,
+                    Projects: FirstN(
+                        SortByColumns(
+                            Filter('CV Generator - Project Experience', Email = _CV.Email),
+                            "End Date", SortOrder.Descending
+                        ),
+                        3
+                    )
+                }
+            )
+        )
+        /*
+
+    Icon10_1 As icon.DocumentPDF:
+        Height: =50
+        Icon: =Icon.DocumentPDF
+        OnSelect: |-
+            =Set(VarCandidatesPDF,PDF( 'Chosen CVs_1',{ExpandContainers:true,Orientation:PaperOrientation.Landscape, Size:PaperSize.A4 }))
+        Width: =43
+        X: =1305
+        Y: =119
+        ZIndex: =2
+
+    "'Rectangle - blue top panel_4' As rectangle":
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =96
+        Width: =1366
+        ZIndex: =3
+
+    "'Label - Professional Experience_4' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =43
+        Size: =24
+        Text: ="My CV"
+        Width: =513
+        X: =98
+        Y: =26
+        ZIndex: =4
+
+    Icon8_3 As icon.View:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =65
+        Icon: =Icon.View
+        Width: =47
+        X: =34
+        Y: =15
+        ZIndex: =5
+
+    "'Capgemini Logo_6' As image":
+        Height: =60
+        Image: ='Logo Blue'
+        Width: =52
+        X: =1288
+        Y: =29
+        ZIndex: =6
+
+    Icon13_7 As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Welcome)
+        Width: =52
+        X: =1221
+        Y: =30
+        ZIndex: =7
+
+    "'CV Template_3' As groupContainer":
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =599
+        Width: =1265
+        X: =40
+        Y: =119
+        ZIndex: =8
+
+        Rectangle1_2 As rectangle:
+            Fill: =RGBA(39, 41, 54, 1)
+            Height: =581
+            Width: =296
+            ZIndex: =1
+
+        Image5_2 As image:
+            Image: =User().Image
+            RadiusBottomLeft: =50  
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            X: =98
+            Y: =56
+            ZIndex: =3
+
+        Button9_4 As button:
+            Align: =Align.Left
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(39, 41, 54, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =34
+            Text: ="Recent Professional Experience"
+            Width: =856
+            X: =328
+            Y: =20
+            ZIndex: =4
+
+        Button9_5 As button:
+            Align: =Align.Left
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(39, 41, 54, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =35
+            Text: ="Skills & Qualifications"
+            Width: =916
+            X: =328
+            Y: =402
+            ZIndex: =5
+
+        Label14_6 As label:
+            Height: =117
+            Text: ="Text"
+            Width: =445
+            X: =328
+            Y: =450
+            ZIndex: =7
+
+        Label14_7 As label:
+            Height: =117
+            Text: ="Text"
+            Width: =445
+            X: =799
+            Y: =450
+            ZIndex: =8
+
+        Label10_18 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            Height: =35
+            Size: =11
+            Text: =LookUp('CV Generator', Email = User().Email).Capability & " - " & LookUp('CV Generator', Email = User().Email).Hub
+            Width: =277
+            X: =11
+            Y: =179
+            ZIndex: =11
+
+        Label10_23 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            Height: =192
+            PaddingBottom: =2
+            PaddingTop: =2
+            Size: =10
+            Text: =LookUp('CV Generator', Email = User().Email).Profile
+            VerticalAlign: =VerticalAlign.Top
+            Width: =277
+            X: =11
+            Y: =352
+            ZIndex: =12
+
+        Label10_19 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            Height: =35
+            Text: =LookUp('CV Generator', Email = User().Email).Grade
+            Width: =277
+            X: =9
+            Y: =214
+            ZIndex: =13
+
+        Label10_21 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            Height: =60
+            Size: =10
+            Text: =LookUp('CV Generator', Email = User().Email).Education
+            Width: =277
+            X: =6
+            Y: =267
+            ZIndex: =14
+
+        Checkbox1_4 As checkbox:
+            CheckboxSize: =25
+            CheckmarkFill: =RGBA(39, 41, 54, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Default: =LookUp('CV Generator', Email = User().Email).'Security Clearance BPSS'
+            DisplayMode: =DisplayMode.View
+            Height: =44
+            Size: =11
+            Text: ="BPSS"
+            Width: =114
+            X: =67
+            Y: =544
+            ZIndex: =15
+
+        Checkbox1_5 As checkbox:
+            CheckboxSize: =25
+            CheckmarkFill: =RGBA(39, 41, 54, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Default: =LookUp('CV Generator', Email = User().Email).'Security Clearance SC'
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.View
+            Height: =44
+            HoverBorderColor: =
+            HoverFill: =
+            PressedBorderColor: =
+            PressedFill: =
+            Size: =11
+            Text: ="SC"
+            Width: =114
+            X: =161
+            Y: =544
+            ZIndex: =16
+
+        Image6_2 As image:
+            Height: =34
+            Image: ='Logo Blue'
+            Width: =48
+            X: =1208
+            Y: =40
+            ZIndex: =17
+
+        Label10_16 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =35
+            Text: =LookUp('CV Generator', Email = User().Email).'First Name' & " " & LookUp('CV Generator', Email = User().Email).'Last Name'
+            Width: =277
+            X: =9
+            Y: =19
+            ZIndex: =18
+
+        Label10_17 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            Height: =35
+            Size: =11
+            Text: =
+            Width: =277
+            X: =19
+            Y: =54
+            ZIndex: =19
+
+        Label10_20 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Size: =11
+            Text: ="Education"
+            Width: =119
+            X: =6
+            Y: =253
+            ZIndex: =20
+
+        Label10_22 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Size: =11
+            Text: ="Profile"
+            Width: =119
+            X: =9
+            Y: =327
+            ZIndex: =21
+

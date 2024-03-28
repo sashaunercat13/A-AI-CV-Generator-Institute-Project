@@ -1,0 +1,7 @@
+"'00Update_Profesional Experience' As screen":
+    OnVisible: |-
+        =UpdateContext({UContainer2Visible:false});
+        UpdateContext({UContainer3Visible:false});
+        UpdateContext({UContainer4Visible:false});
+        UpdateContext({UContainerVisible:true})
+
