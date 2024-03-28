@@ -19,6 +19,8 @@
         );
         
         //Collect(ProjectsOfThisUser, {ID: 0, 'Project Title': "New Project"});
+        
+        Set(varDatePicked, !IsBlank(ProjectEndDate_2.SelectedDate))
 
     "'Rectangle - blue top panel_2' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
@@ -162,7 +164,7 @@
             Y: =60
             ZIndex: =11
 
-            "'1ProjectEndDate_2' As datepicker":
+            ProjectEndDate_2 As datepicker:
                 DefaultDate: |-
                     =If(
                         'Checkbox - Current Project_1'.Value = false,
@@ -186,6 +188,8 @@
                 Format: |
                     ="dd/mm/yyyy"
                 InputTextPlaceholder: =//If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), Self.Format, Self.Language))
+                OnChange: |
+                    =Set(varDatePicked, !IsBlank(ProjectEndDate_2.SelectedDate))
                 StartOfWeek: =StartOfWeek.Monday
                 Visible: =!'Checkbox - Current Project_1'.Value
                 X: =391
@@ -346,6 +350,12 @@
             Y: =15
             ZIndex: =15
 
+        Label24 As label:
+            Text: ="Text"
+            X: =719
+            Y: =134
+            ZIndex: =16
+
     "'Button-Submit_1' As button":
         DisplayMode: |-
             =If(
@@ -353,7 +363,7 @@
                 IsBlank(ComboBoxOneClient.SelectedItems) Or
                 IsBlank(DropdownRole.SelectedText) Or 
                 IsBlank('1ProjectManager_1'.SelectedItems) Or 
-                IsBlank('1ProjectEndDate_2'.SelectedDate) Or
+                IsBlank(ProjectEndDate_2.SelectedDate) Or
                 IsBlank('1ProjectStartDate_2'.SelectedDate) Or
                 IsBlank('1ProjectDescription_2'.Text),
             
@@ -372,6 +382,7 @@
                         'Project Client': ComboBoxOneClient.Selected.Client,
                         'Project Role': DropdownRole.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
+                        //'End Date': varDatePicked || 'ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
                         'Microsoft Profile': {
                             Claims: Concatenate(
@@ -385,8 +396,7 @@
                             Picture: ""
                         }
                     }
-                )
-              ,
+                ),
                 // Updating an existing record because varSelectedProjectID > 0
                 Patch(
                     'CV Generator - Project Experience',
@@ -414,8 +424,8 @@
                     }
                 )
             );
-            
-            /*    If (
+            /*
+            If (
                     !IsBlank('1ProjectEndDate_2'.SelectedDate),
                     Patch(
                         'CV Generator - Project Experience',
@@ -425,9 +435,8 @@
                         ),
                         {'End Date': '1ProjectEndDate_2'.SelectedDate}
                     )
-                );
-                */
-            
+            );
+            */
             // Refresh the List
             Refresh('CV Generator - Project Experience');
             // Add the new project to the list
@@ -445,7 +454,7 @@
             Reset(DropdownRole);
             //Reset('Dropdown3');
             Reset('1ProjectStartDate_2');
-            Reset('1ProjectEndDate_2');
+            Reset(ProjectEndDate_2);
             Reset('1ProjectDescription_2');
             Reset(ComboBoxOneClient);
         Text: ="Submit project"
@@ -589,4 +598,10 @@
             X: =320
             Y: =197
             ZIndex: =29
+
+    Label26 As label:
+        Text: =varDatePicked
+        X: =1123
+        Y: =369
+        ZIndex: =31
 
