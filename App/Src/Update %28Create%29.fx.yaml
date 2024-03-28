@@ -105,7 +105,7 @@
         OnSelect: |
             =Navigate('Update (Skills Competancies & Qualifications)');
             Patch(
-                'CV Generator', LookUp('CV Generator', Email = User().Email)
+                'CV Generator', LookUp('CV Generator', Email = User().Email),
                 {
                     Capability: DropdownCapability_1.Selected.Value,
                     Hub: RadioHubs_1.SelectedText.Value,
