@@ -85,7 +85,7 @@
       "MetaDataIDKey": "",
       "Name": "Button9_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1868,14 +1868,7 @@
         "X",
         "Y",
         "Width",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Height",
         "ZIndex",
         {
           "AFDDataSourceName": "",
@@ -1898,7 +1891,7 @@
       "MetaDataIDKey": "",
       "Name": "Gallery8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3113,7 +3106,7 @@
       "MetaDataIDKey": "",
       "Name": "Image6_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4234,7 +4227,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10_12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7081,14 +7074,7 @@
         "LineHeight",
         "BorderThickness",
         "FocusedBorderThickness",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Size",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Size",
         "Italic",
         "Underline",
         "Strikethrough",
@@ -7471,7 +7457,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle1_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
