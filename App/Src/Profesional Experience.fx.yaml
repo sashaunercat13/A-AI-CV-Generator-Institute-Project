@@ -185,6 +185,7 @@
                 Font: =Font.Verdana
                 Format: |
                     ="dd/mm/yyyy"
+                InputTextPlaceholder: =//If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), Self.Format, Self.Language))
                 StartOfWeek: =StartOfWeek.Monday
                 Visible: =!'Checkbox - Current Project_1'.Value
                 X: =391
