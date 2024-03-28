@@ -4428,7 +4428,8 @@
         "Y",
         "Width",
         "Height",
-        "ZIndex"
+        "ZIndex",
+        "BorderThickness"
       ],
       "GalleryTemplateChildName": "galleryTemplate4_1",
       "HasDynamicProperties": false,
@@ -4453,6 +4454,11 @@
         {
           "Category": "Data",
           "PropertyName": "Items",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderThickness",
           "RuleProviderType": "Unknown"
         },
         {

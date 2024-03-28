@@ -72,29 +72,12 @@
                 DisabledColor: =RGBA(255, 255, 255, 1)
                 DisabledFill: =RGBA(39, 41, 54, 1)
                 DisplayMode: =DisplayMode.Disabled
-                Height: =35
-                Text: ="Skills & Qualifications"
-                Width: =916
+                Height: =38
+                Text: ="Skills"
+                Width: =450
                 X: =328
-                Y: =460
+                Y: =456
                 ZIndex: =5
-
-            Label14_4 As label:
-                Height: =117
-                Text: =ThisItem.SkillsString
-                Width: =445
-                X: =328
-                Y: =498
-                ZIndex: =7
-
-            Label14_5 As label:
-                Height: =117
-                Text: |
-                    =ThisItem.QualificationsString
-                Width: =445
-                X: =799
-                Y: =498
-                ZIndex: =8
 
             Label10_8 As label:
                 Align: =Align.Center
@@ -290,11 +273,88 @@
                     Y: =24
                     ZIndex: =4
 
+            Gallery5 As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =120
+                Items: |-
+                    =FirstN(
+                        Split(
+                            ThisItem.QualificationsString,
+                            ", "
+                        ),
+                        6
+                    )
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: |
+                    =30
+                Width: =462
+                WrapCount: =2
+                X: =794
+                Y: =498
+                ZIndex: =23
+
+                Label21 As label:
+                    Height: =26
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: ="• " & ThisItem.Value
+                    Width: =234
+                    ZIndex: =1
+
+            Button9_6 As button:
+                Align: =Align.Left
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(39, 41, 54, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =38
+                Text: ="Qualifications"
+                Width: =450
+                X: =794
+                Y: =456
+                ZIndex: =24
+
+            Gallery6 As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =117
+                Items: |-
+                    =FirstN(
+                        Split(
+                            ThisItem.SkillsString,
+                            ", "
+                        ),
+                        6
+                    )
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                Width: =450
+                X: =328
+                Y: =498
+                ZIndex: =25
+
+                Label22 As label:
+                    Height: =57
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.Value
+                    Width: =434
+                    ZIndex: =1
+
         Icon7 As icon.CancelBadge:
             Color: =RGBA(39, 41, 54, 1)
             Height: =47
             Icon: =Icon.CancelBadge
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Remove(FinalFilteredCVs, ThisItem);
+                
+                /*
+                ClearCollect(ProjectsOfThisUser,
+                    Filter(
+                        'CV Generator - Project Experience',
+                        Email = User().Email
+                    )
+                );
+                */
             Width: =27
             X: =1292
             Y: =297

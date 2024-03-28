@@ -481,26 +481,7 @@
             Height: =35
             Icon: =Icon.Trash
             OnSelect: |-
-                =/*
-                // Remove this project
-                RemoveIf('CV Generator - Project Experience', ID=varSelectedProjectID);
-                
-                // Refresh the List
-                //Refresh('CV Generator - Project Experience');
-                
-                // Update the collection
-                ClearCollect(ProjectsOfThisUser,
-                    Filter(
-                        'CV Generator - Project Experience',
-                        Email = User().Email
-                    )
-                );
-                
-                // Initially set var to 0 so a new project is the default
-                Set(varSelectedProjectID, 0);
-                */
-                
-                Remove('CV Generator - Project Experience', ThisItem);
+                =Remove('CV Generator - Project Experience', ThisItem);
                 
                 ClearCollect(ProjectsOfThisUser,
                     Filter(
