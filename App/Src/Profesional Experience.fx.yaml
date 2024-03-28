@@ -123,6 +123,7 @@
             Font: =Font.Verdana
             Height: =45
             HintText: ="Project Title"
+            MaxLength: =55
             OnChange: =Set(Project1ButtonText, '1ProjectTitle_2'.Text) 
             Width: =414
             X: =34
@@ -462,6 +463,8 @@
                     RGBA(39, 113, 194, 1), // Red for the selected item
                     RGBA(255, 255, 255, 1) // Light gray for unselected items
                 )
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Normal
             Height: =35
             OnSelect: |-
                 =// maintain variable of this projects id
@@ -470,6 +473,7 @@
                 
                 // maintain variable of this buttons id to change colour
                 //UpdateContext({selectedButtonID: ThisItem.ID});
+            Size: =12
             Text: =ThisItem.'Project Title'
             Width: =240
             X: =68
