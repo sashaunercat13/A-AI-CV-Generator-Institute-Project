@@ -267,9 +267,10 @@ Search As screen:
                         // Apply Security Clearance SC filter based on checkbox
                         (varBPSScheckedSearchEmpty || (!varBPSScheckedSearchEmpty && 'Security Clearance BPSS')),
                         // Apply Security Clearance BPSS filter based on checkbox
-                        (varSCcheckedSearchEmpty || (!varSCcheckedSearchEmpty && 'Security Clearance SC'))
-                        //(IsBlank(DropdownCapabilitySearch.Selected.Value) || Capability = Text(DropdownCapabilitySearch.Selected.Value))
+                        (varSCcheckedSearchEmpty || (!varSCcheckedSearchEmpty && 'Security Clearance SC')),
+                        (varIsCapabilityEmpty || (Capability = ComboBoxCapabilitySearch.Selected.Value))
                         //Hub = RadioHubsSearch.SelectedText.Value
+                        //(varIsHubsEmpty || (Hub = ComboBoxHubs.Selected))
                     )
                 )
             );
@@ -492,20 +493,37 @@ Search As screen:
             ZIndex: =35
 
         ComboBoxHubs As combobox:
-            DisplayFields: =[""]
+            DisplayFields: =["Value"]
             Height: =35
-            IsSearchable: =false
+            InputTextPlaceholder: =
             Items: |-
-                =If(
+                =/*
+                If(
                     varIsCapabilityEmpty,
                     [],
                     LookUp(HubOptionSets, Capability = ComboBoxCapabilitySearch.Selected.Value).Options
                 )
+                */
+                
+                ["Data Strategy & Op Model", "Data Science Consulting", "Data & AI Innovation", "Data Science Consulting", "AI Product Innovation", "Data & AI Factory", "Business Insights & Storytelling", "Data & AI Architecture", "Data & AI Enablement", "Customer & Digital Analytics", "Operation & Enterprise Analytics"]
             OnChange: |-
                 =// Set in the OnChange property of the ComboBox
                 Set(varIsHubsEmpty, IsEmpty(ComboBoxHubs.SelectedItems));
-            SearchFields: =[""]
-            SearchItems: =[]
+            SearchFields: =["Value"]
+            SearchItems: |-
+                =Search(/*
+                If(
+                    varIsCapabilityEmpty,
+                    [],
+                    LookUp(HubOptionSets, Capability = ComboBoxCapabilitySearch.Selected.Value).Options
+                )
+                
+                ["Data Strategy & Op Model", "Data Science Consulting", "Data & AI Innovation", "Data Science Consulting", "AI Product Innovation", "Data & AI Factory", "Business Insights & Storytelling", "Data & AI Architecture", "Data & AI Enablement", "Customer & Digital Analytics", "Operation & Enterprise Analytics"]
+                
+                */
+                
+                ["hello"],ComboBoxHubs.SearchText,"Value")
+            SelectMultiple: =false
             Width: =345
             X: =62
             Y: =383
@@ -545,4 +563,10 @@ Search As screen:
         X: =1288
         Y: =29
         ZIndex: =55
+
+    Label25 As label:
+        Text: =varIsHubsEmpty
+        X: =739
+        Y: =699
+        ZIndex: =57
 
