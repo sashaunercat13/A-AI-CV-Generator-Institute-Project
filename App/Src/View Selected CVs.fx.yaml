@@ -239,14 +239,17 @@
                 DelayItemLoading: =true
                 Height: =326
                 Items: |-
-                    =Filter(
-                        'CV Generator - Project Experience',
-                        Email = ThisItem.Email
+                    =FirstN(
+                        Filter(
+                            'CV Generator - Project Experience',
+                            Email = ThisItem.Email
+                        ),
+                        2
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowScrollbar: =false
-                TemplateSize: =163
+                TemplateSize: =160
                 Width: =929
                 X: =328
                 Y: =56
@@ -261,6 +264,7 @@
                     ZIndex: =1
 
                 Label17 As label:
+                    FontWeight: =FontWeight.Bold
                     Height: =37
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.'Start Date' & " - " & ThisItem.'End Date'
@@ -272,6 +276,7 @@
                     Height: =139
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.'Project Description'
+                    VerticalAlign: =VerticalAlign.Top
                     Width: =919
                     Y: =37
                     ZIndex: =3
