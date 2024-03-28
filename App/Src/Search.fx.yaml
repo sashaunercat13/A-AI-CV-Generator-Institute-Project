@@ -504,7 +504,8 @@ Search As screen:
                     LookUp(HubOptionSets, Capability = ComboBoxCapabilitySearch.Selected.Value).Options
                 )
                 */
-                ["Data Strategy & Op Model", "Data Science Consulting", "Data & AI Innovation", "Data Science Consulting", "AI Product Innovation", "Data & AI Factory", "Business Insights & Storytelling", "Data & AI Architecture", "Data & AI Enablement", "Customer & Digital Analytics", "Operation & Enterprise Analytics",]
+                
+                ["Data Strategy & Op Model", "Data Science Consulting", "Data & AI Innovation", "Data Science Consulting", "AI Product Innovation", "Data & AI Factory", "Business Insights & Storytelling", "Data & AI Architecture", "Data & AI Enablement", "Customer & Digital Analytics", "Operation & Enterprise Analytics"]
             OnChange: |-
                 =// Set in the OnChange property of the ComboBox
                 Set(varIsHubsEmpty, IsEmpty(ComboBoxHubs.SelectedItems));
