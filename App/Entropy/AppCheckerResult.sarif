@@ -2138,6 +2138,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "View Selected CVs",
+                "type": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "View Selected CVs",
+                "type": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "View Selected CVs",
+                "type": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "View Selected CVs",
+                "type": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery8.AccessibleLabel"
                 }
               ],
@@ -2181,6 +2301,66 @@
                 "member": "TabIndex",
                 "module": "View Selected CVs",
                 "type": "'View Selected CVs'.'Chosen CVs'.'CV Template_2'.Gallery8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.Icon7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.Icon7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "View Selected CVs",
+                "type": "'View Selected CVs'.'Chosen CVs'.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.Icon7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'View Selected CVs'.'Chosen CVs'.Icon7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "View Selected CVs",
+                "type": "'View Selected CVs'.'Chosen CVs'.Icon7"
               }
             }
           ],
@@ -4508,6 +4688,35 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'View Selected CVs'"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'View Selected CVs'",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "View Selected CVs",
+                "type": "'View Selected CVs'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ScreenHasManyControls",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'00Update_Profesional Experience'.UContainer2Visible"
                 }
               ],
@@ -4813,6 +5022,27 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Using the 'Collect' function to create a collection directly from a connected data source may not load every row if the data source is too large."
+              }
+            },
+            {
+              "id": "app-ScreenHasManyControls",
+              "messageStrings": {
+                "issue": {
+                  "text": "Too many controls on a screen"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Reduce the number of controls on the screen.",
+                  "Break the app into more screens to reduce the per-screen complexity.",
+                  "Use components to unify grouped controls that are identical across screens, reducing duplication.",
+                  "Use galleries to represent a series of repeated similar controls.",
+                  "Break the app into multiple apps so that each app is small and performant."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"View Selected CVs\" is 342, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],
