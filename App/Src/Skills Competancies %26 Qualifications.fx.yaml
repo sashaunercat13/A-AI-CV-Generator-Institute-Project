@@ -781,6 +781,9 @@
                     Skill & ", "
                 )
             );
+            
+            If(Right(SkillsString, 1) = ",", Set(SkillsString, Left(SkillsString, Len(SkillsString) - 1)));
+            
             Set(
                 QualificationsString,
                 Concat(
