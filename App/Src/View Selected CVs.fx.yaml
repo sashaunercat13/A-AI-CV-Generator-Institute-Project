@@ -339,7 +339,8 @@
                     OnSelect: =Select(Parent)
                     Size: =10
                     Text: ="• " & ThisItem.Value
-                    Width: =434
+                    X: =40
+                    Y: =17
                     ZIndex: =1
 
         Icon7 As icon.CancelBadge:
