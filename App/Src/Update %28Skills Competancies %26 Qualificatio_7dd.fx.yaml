@@ -1048,7 +1048,7 @@
         DisplayFields: =["Value"]
         Height: =35
         InputTextPlaceholder: ="Search Degree Type"
-        Items: =["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"]
+        Items: =["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MA", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"]
         SearchFields: =["Value"]
         SearchItems: =Search(["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"],ComboBoxDegreeType_1.SearchText,"Value")
         SelectMultiple: =false
