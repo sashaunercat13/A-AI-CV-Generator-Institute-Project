@@ -76,7 +76,7 @@
                 Text: ="Skills & Qualifications"
                 Width: =916
                 X: =328
-                Y: =430
+                Y: =460
                 ZIndex: =5
 
             Label14_4 As label:
@@ -84,7 +84,7 @@
                 Text: ="Text"
                 Width: =445
                 X: =328
-                Y: =478
+                Y: =498
                 ZIndex: =7
 
             Label14_5 As label:
@@ -93,7 +93,7 @@
                     =ThisItem.QualificationsString
                 Width: =445
                 X: =799
-                Y: =478
+                Y: =498
                 ZIndex: =8
 
             Label10_8 As label:
@@ -111,7 +111,7 @@
             Label10_9 As label:
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
-                Height: =192
+                Height: =210
                 PaddingBottom: =2
                 PaddingTop: =2
                 Size: =10
@@ -154,8 +154,8 @@
                 Size: =11
                 Text: ="BPSS"
                 Width: =114
-                X: =67
-                Y: =544
+                X: =61
+                Y: =562
                 ZIndex: =15
 
             Checkbox1_3 As checkbox:
@@ -174,8 +174,8 @@
                 Size: =11
                 Text: ="SC"
                 Width: =114
-                X: =161
-                Y: =544
+                X: =155
+                Y: =562
                 ZIndex: =16
 
             Image6_1 As image:
@@ -183,7 +183,6 @@
                 Image: ='Logo Blue'
                 Width: =48
                 X: =1196
-                Y: =20
                 ZIndex: =17
 
             Label10_12 As label:
@@ -236,27 +235,27 @@
 
             Gallery8 As gallery.galleryVertical:
                 DelayItemLoading: =true
-                Height: =365
+                Height: =420
                 Items: |-
                     =FirstN(
                         Filter(
                             'CV Generator - Project Experience',
                             Email = ThisItem.Email
                         ),
-                        2
+                        3
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowScrollbar: =false
-                TemplateSize: =160
+                TemplateSize: =(420/3)-7
                 Width: =929
                 X: =328
-                Y: =54
+                Y: =34
                 ZIndex: =22
 
                 Label16 As label:
                     FontWeight: =FontWeight.Bold
-                    Height: =37
+                    Height: =24
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.'Project Role' & ", " & ThisItem.'Project Title' & " - " & ThisItem.'Project Client'
                     Width: =716
@@ -264,7 +263,7 @@
 
                 Label17 As label:
                     FontWeight: =FontWeight.Bold
-                    Height: =37
+                    Height: =24
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.'Start Date' & " - " & ThisItem.'End Date'
                     Width: =203
@@ -272,12 +271,13 @@
                     ZIndex: =2
 
                 Label18 As label:
-                    Height: =139
+                    Height: =121
                     OnSelect: =Select(Parent)
+                    Size: =10
                     Text: =ThisItem.'Project Description'
                     VerticalAlign: =VerticalAlign.Top
                     Width: =919
-                    Y: =37
+                    Y: =19
                     ZIndex: =3
 
         Icon7 As icon.CancelBadge:
@@ -296,8 +296,8 @@
         OnSelect: |-
             =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers:true,Orientation:PaperOrientation.Landscape, Size:PaperSize.A4 }))
         Width: =43
-        X: =1305
-        Y: =119
+        X: =1297
+        Y: =107
         ZIndex: =2
 
     "'Rectangle - blue top panel_3' As rectangle":
