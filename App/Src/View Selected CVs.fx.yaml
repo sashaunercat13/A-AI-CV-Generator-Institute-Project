@@ -81,7 +81,7 @@
 
             Label14_4 As label:
                 Height: =117
-                Text: ="Text"
+                Text: =ThisItem.SkillsString
                 Width: =445
                 X: =328
                 Y: =498
@@ -257,7 +257,7 @@
                     FontWeight: =FontWeight.Bold
                     Height: =24
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.'Project Role' & ", " & ThisItem.'Project Title' & " - " & ThisItem.'Project Client'
+                    Text: =ThisItem.'Project Title'
                     Width: =716
                     ZIndex: =1
 
@@ -271,14 +271,24 @@
                     ZIndex: =2
 
                 Label18 As label:
-                    Height: =121
+                    Height: =84
                     OnSelect: =Select(Parent)
                     Size: =10
                     Text: =ThisItem.'Project Description'
                     VerticalAlign: =VerticalAlign.Top
                     Width: =919
-                    Y: =19
+                    Y: =48
                     ZIndex: =3
+
+                Label16_1 As label:
+                    FontWeight: =FontWeight.Bold
+                    Height: =24
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: =ThisItem.'Project Client' & ", " & ThisItem.'Project Role'
+                    Width: =716
+                    Y: =24
+                    ZIndex: =4
 
         Icon7 As icon.CancelBadge:
             Color: =RGBA(39, 41, 54, 1)
