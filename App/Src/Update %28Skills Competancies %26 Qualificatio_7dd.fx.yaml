@@ -2,23 +2,46 @@
     OnVisible: |-
         =// initialise the collections
         
-        ClearCollect(
+        // Clear the collections form any previous entries
+        Clear(EducationCollectionUpdate);
+        Clear(SkillsCollectionUpdate);
+        Clear(QualificationsCollectionUpdate);
+        
+        /*
+        Collect(
             EducationCollectionUpdate,
             Split(CurrentUser.Education, ";")
         );
-        ClearCollect(
+        */
+        
+        ForAll(
+            Split(CurrentUser.Education, ";"),
+            If(
+                !IsBlank(Trim(Value)),
+                Collect(
+                    EducationCollectionUpdate,
+                    {
+                        DegreeType: Trim(First(Split(Value, ",")).Value),
+                        University: Trim(Last(FirstN(Split(Value, ","), 2)).Value),
+                        Course: Trim(Last(Split(Value, ",")).Value)
+                    }
+                )
+            )
+        );
+        
+        Collect(
             QualificationsCollectionUpdate,
             Split(CurrentUser.QualificationsString, ",")
         );
-        ClearCollect(
+        Collect(
             SkillsCollectionUpdate,
             Split(CurrentUser.SkillsString, ",")
         );
         
         // Clear the collections form any previous entries
-        Clear(EducationCollectionUpdate);
-        Clear(SkillsCollectionUpdate);
-        Clear(QualificationsCollectionUpdate);
+        //Clear(EducationCollectionUpdate);
+        //Clear(SkillsCollectionUpdate);
+        //Clear(QualificationsCollectionUpdate);
         
         ClearCollect(
             Skills,
@@ -767,7 +790,7 @@
     Button1_10 As button:
         DisplayMode: |-
             =If(
-                IsEmpty(SkillsCollection) Or IsEmpty(EducationCollection) Or IsEmpty(QualificationsCollection),
+                IsEmpty(SkillsCollectionUpdate) Or IsEmpty(EducationCollectionUpdate) Or IsEmpty(QualificationsCollectionUpdate),
                 DisplayMode.Disabled,
                 DisplayMode.Edit
             )
@@ -785,14 +808,14 @@
             Set(
                 QualificationsString,
                 Concat(
-                    QualificationsCollection,
-                    Qualification & ", "
+                    QualificationsCollectionUpdate,
+                    Value & ", "
                 )
             );
             Set(
                 EducationString,
                 Concat(
-                    EducationCollection,
+                    EducationCollectionUpdate,
                     DegreeType & ", " & University & ", " & Course & "; "
                 )
             );
@@ -881,7 +904,7 @@
         Height: =35
         OnSelect: |-
             =// Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
-            ForAll(ComboBoxSkill_1.SelectedItems, Collect(SkillsCollectionUpdate, {Skill: Value}));
+            ForAll(ComboBoxSkill_1.SelectedItems, Collect(SkillsCollectionUpdate, {Value: Value}));
             Reset(ComboBoxSkill_1);
         Size: =12
         Text: ="Add Skill(s)"
@@ -905,7 +928,7 @@
     Gallery1_1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =420
-        Items: =Split(CurrentUser.SkillsString, ",")
+        Items: =SkillsCollectionUpdate
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =35
@@ -988,7 +1011,7 @@
         Height: =35
         OnSelect: |
             =//Collect(Qualifications, {Qualification: ComboBoxQual.SelectedItems});
-            ForAll(ComboBoxQual_1.SelectedItems, Collect(QualificationsCollection, {Qualification: Value}));
+            ForAll(ComboBoxQual_1.SelectedItems, Collect(QualificationsCollectionUpdate, {Value: Value}));
             Reset(ComboBoxQual_1);
         Size: =12
         Text: ="Add Qualification(s)"
@@ -1019,7 +1042,7 @@
 
         Label5_3 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.Value
+            Text: =ThisItem.DegreeType & " " & ThisItem.Course & ", " & ThisItem.University
             Width: =504
             X: =64
             ZIndex: =2
@@ -1061,7 +1084,7 @@
     Gallery3_1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =176
-        Items: =QualificationsCollection
+        Items: =QualificationsCollectionUpdate
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =44
@@ -1080,7 +1103,7 @@
         Label7_1 As label:
             Height: =44
             OnSelect: =Select(Parent)
-            Text: =ThisItem.Qualification
+            Text: =ThisItem.Value
             Width: =494
             X: =52
             ZIndex: =2
@@ -1088,7 +1111,7 @@
         Icon5_6 As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
-            OnSelect: =Remove(QualificationsCollection, ThisItem)
+            OnSelect: =Remove(QualificationsCollectionUpdate, ThisItem)
             X: =546
             Y: =4
             ZIndex: =3

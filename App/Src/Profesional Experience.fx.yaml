@@ -317,12 +317,12 @@
                 
                     } 
                     */
-            DisplayFields: =["DisplayName","JobTitle","Picture"]
+            DisplayFields: =["Claims"]
             Font: =Font.Verdana
             Height: =33
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator - Project Experience'].'Microsoft Profile')
-            SearchFields: =["DisplayName"]
+            SearchFields: =["Claims"]
             SearchItems: =Choices('CV Generator - Project Experience'.'Microsoft Profile','1ProjectManager_1'.SearchText)
             SelectMultiple: |
                 =false

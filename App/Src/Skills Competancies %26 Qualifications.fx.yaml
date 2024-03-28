@@ -1073,8 +1073,8 @@
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =44
-        X: =690
-        Y: =505
+        X: =681
+        Y: =495
         ZIndex: =24
 
         Icon9 As icon.ListScrollWatchlist:
