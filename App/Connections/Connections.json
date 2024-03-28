@@ -51,7 +51,10 @@
     },
     "datasets": {},
     "dataSources": [
-      "CV Generator"
+      "CV Generator",
+      "CV Generator - Project Experience",
+      "Client/Industry",
+      "CV Generator - Client/Industry"
     ],
     "dependencies": {},
     "dependents": [
