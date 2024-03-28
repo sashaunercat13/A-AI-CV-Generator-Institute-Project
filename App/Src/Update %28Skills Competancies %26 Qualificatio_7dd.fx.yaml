@@ -1,24 +1,25 @@
 "'Update (Skills Competancies & Qualifications)' As screen":
     OnVisible: |-
         =// initialise the collections
-        /*
+        
         ClearCollect(
-            EducationCollection,
-            {}
+            EducationCollectionUpdate,
+            Split(CurrentUser.Education, ";")
         );
         ClearCollect(
-            Qualifications,
-            {}
+            QualificationsCollectionUpdate,
+            Split(CurrentUser.QualificationsString, ",")
         );
         ClearCollect(
-            SkillsCollection,
-            {}
+            SkillsCollectionUpdate,
+            Split(CurrentUser.SkillsString, ",")
         );
-        */
+        
         // Clear the collections form any previous entries
-        Clear(EducationCollection);
-        Clear(SkillsCollection);
-        Clear(QualificationsCollection);
+        Clear(EducationCollectionUpdate);
+        Clear(SkillsCollectionUpdate);
+        Clear(QualificationsCollectionUpdate);
+        
         ClearCollect(
             Skills,
             [
@@ -777,8 +778,8 @@
             Set(
                 SkillsString,
                 Concat(
-                    SkillsCollection,
-                    Skill & ", "
+                    SkillsCollectionUpdate,
+                    Value & ", "
                 )
             );
             Set(
@@ -880,7 +881,7 @@
         Height: =35
         OnSelect: |-
             =// Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
-            ForAll(ComboBoxSkill_1.SelectedItems, Collect(SkillsCollection, {Skill: Value}));
+            ForAll(ComboBoxSkill_1.SelectedItems, Collect(SkillsCollectionUpdate, {Skill: Value}));
             Reset(ComboBoxSkill_1);
         Size: =12
         Text: ="Add Skill(s)"
@@ -904,7 +905,7 @@
     Gallery1_1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =420
-        Items: =SkillsCollection
+        Items: =Split(CurrentUser.SkillsString, ",")
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =35
@@ -923,7 +924,7 @@
         Label2_1 As label:
             Height: =30
             OnSelect: =Select(Parent)
-            Text: =ThisItem.Skill
+            Text: =ThisItem.Value
             Width: =447
             X: =64
             ZIndex: =2
@@ -931,7 +932,7 @@
         Icon5_4 As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
-            OnSelect: =Remove(SkillsCollection, ThisItem)
+            OnSelect: =Remove(SkillsCollectionUpdate, ThisItem)
             X: =511
             ZIndex: =3
 
@@ -972,7 +973,7 @@
             )
         Height: =35
         OnSelect: |+
-            =Collect(EducationCollection, {University: ComboBoxUniversity_1.Selected.Value, Course: ComboBoxCourse_1.Selected.Value, DegreeType: ComboBoxDegreeType_1.Selected.Value});
+            =Collect(EducationCollectionUpdate, {University: ComboBoxUniversity_1.Selected.Value, Course: ComboBoxCourse_1.Selected.Value, DegreeType: ComboBoxDegreeType_1.Selected.Value});
             Reset(ComboBoxCourse_1);
             Reset(ComboBoxUniversity_1);
             Reset(ComboBoxDegreeType_1);
@@ -999,7 +1000,7 @@
     Gallery2_1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =90
-        Items: =EducationCollection
+        Items: =EducationCollectionUpdate
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =42
@@ -1018,7 +1019,7 @@
 
         Label5_3 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.DegreeType & " " & ThisItem.Course & ", " & ThisItem.University
+            Text: =ThisItem.Value
             Width: =504
             X: =64
             ZIndex: =2
@@ -1026,7 +1027,7 @@
         Icon5_5 As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
-            OnSelect: =Remove(EducationCollection, ThisItem)
+            OnSelect: =Remove(EducationCollectionUpdate, ThisItem)
             X: =566
             Y: =5
             ZIndex: =3
@@ -1101,4 +1102,13 @@
         X: =1221
         Y: =30
         ZIndex: =25
+
+    Label23 As label:
+        Height: =58
+        Text: =CurrentUser.Email
+        Underline: =true
+        Width: =315
+        X: =374
+        Y: =701
+        ZIndex: =26
 

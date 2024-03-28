@@ -268,9 +268,9 @@ Search As screen:
                         (varBPSScheckedSearchEmpty || (!varBPSScheckedSearchEmpty && 'Security Clearance BPSS')),
                         // Apply Security Clearance BPSS filter based on checkbox
                         (varSCcheckedSearchEmpty || (!varSCcheckedSearchEmpty && 'Security Clearance SC')),
-                        (varIsCapabilityEmpty || (Capability = ComboBoxCapabilitySearch.Selected.Value))
+                        (varIsCapabilityEmpty || (Capability = ComboBoxCapabilitySearch.Selected.Value)),
                         //Hub = RadioHubsSearch.SelectedText.Value
-                        //(varIsHubsEmpty || (Hub = ComboBoxHubs.Selected))
+                        (varIsHubsEmpty || (Hub = ComboBoxHubs.Selected.Value))
                     )
                 )
             );
@@ -496,6 +496,7 @@ Search As screen:
             DisplayFields: =["Value"]
             Height: =35
             InputTextPlaceholder: =
+            IsSearchable: =false
             Items: |-
                 =/*
                 If(
@@ -505,7 +506,7 @@ Search As screen:
                 )
                 */
                 
-                ["Data Strategy & Op Model", "Data Science Consulting", "Data & AI Innovation", "Data Science Consulting", "AI Product Innovation", "Data & AI Factory", "Business Insights & Storytelling", "Data & AI Architecture", "Data & AI Enablement", "Customer & Digital Analytics", "Operation & Enterprise Analytics"]
+                ["Data Strategy & Op Model", "Data Science Consulting", "Data Science Consulting", "AI Product Innovation", "Business Insights & Storytelling", "Data & AI Architecture", "Customer & Digital Analytics", "Operation & Enterprise Analytics"]
             OnChange: |-
                 =// Set in the OnChange property of the ComboBox
                 Set(varIsHubsEmpty, IsEmpty(ComboBoxHubs.SelectedItems));
@@ -517,12 +518,9 @@ Search As screen:
                     [],
                     LookUp(HubOptionSets, Capability = ComboBoxCapabilitySearch.Selected.Value).Options
                 )
-                
-                ["Data Strategy & Op Model", "Data Science Consulting", "Data & AI Innovation", "Data Science Consulting", "AI Product Innovation", "Data & AI Factory", "Business Insights & Storytelling", "Data & AI Architecture", "Data & AI Enablement", "Customer & Digital Analytics", "Operation & Enterprise Analytics"]
-                
                 */
                 
-                ["hello"],ComboBoxHubs.SearchText,"Value")
+                ["hubs"],ComboBoxHubs.SearchText,"Value")
             SelectMultiple: =false
             Width: =345
             X: =62
