@@ -5,7 +5,7 @@ Welcome As screen:
         Set(CurrentUserLastName, Office365Users.MyProfile().Surname);
          
         // Set the CurrentItem to the result of a LookUp of a CV associated with the current Microsoft User.
-        Set(CurrentUser, LookUp('CV Generator', 'Email' = User().Email));
+        Set(CurrentUser, LookUp('CV Generator', Email = User().Email));
         Set(UserExistsInSP, Not(IsBlank(CurrentUser)));
         
         // get the photo
