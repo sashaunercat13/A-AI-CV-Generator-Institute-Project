@@ -30,7 +30,7 @@
         Width: =1337
         X: =11
         Y: =89
-        ZIndex: =1
+        ZIndex: =2
 
         "'CV Template_2' As groupContainer":
             Fill: =RGBA(255, 255, 255, 1)
@@ -327,16 +327,18 @@
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
-                Width: =450
+                TemplateSize: =32
+                Width: =449
+                WrapCount: =2
                 X: =328
                 Y: =498
                 ZIndex: =25
 
                 Label22 As label:
-                    Height: =57
+                    Height: =34
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.Value
+                    Size: =10
+                    Text: ="• " & ThisItem.Value
                     Width: =434
                     ZIndex: =1
 
@@ -360,16 +362,6 @@
             Y: =297
             ZIndex: =4
 
-    Icon10 As icon.DocumentPDF:
-        Height: =50
-        Icon: =Icon.DocumentPDF
-        OnSelect: |-
-            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers:true,Orientation:PaperOrientation.Landscape, Size:PaperSize.A4 }))
-        Width: =43
-        X: =1297
-        Y: =107
-        ZIndex: =2
-
     "'Rectangle - blue top panel_3' As rectangle":
         Fill: =RGBA(39, 41, 54, 1)
         Height: =96
@@ -388,6 +380,17 @@
         Y: =26
         ZIndex: =4
 
+    Icon10 As icon.DocumentPDF:
+        Color: =RGBA(39, 41, 54, 1)
+        Height: =50
+        Icon: =Icon.DocumentPDF
+        OnSelect: |-
+            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers:true,Orientation:PaperOrientation.Landscape, Size:PaperSize.A4 }))
+        Width: =67
+        X: =1299
+        Y: =704
+        ZIndex: =5
+
     Icon8 As icon.View:
         Color: =RGBA(255, 255, 255, 1)
         Height: =65
@@ -395,7 +398,7 @@
         Width: =47
         X: =34
         Y: =15
-        ZIndex: =5
+        ZIndex: =6
 
     "'Capgemini Logo_4' As image":
         Height: =60
@@ -403,7 +406,7 @@
         Width: =52
         X: =1288
         Y: =29
-        ZIndex: =6
+        ZIndex: =7
 
     Icon13_4 As icon.Home:
         Color: =RGBA(255, 255, 255, 1)
@@ -413,5 +416,16 @@
         Width: =52
         X: =1221
         Y: =30
-        ZIndex: =7
+        ZIndex: =8
+
+    Button1_4 As button:
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =25
+        OnSelect: =Navigate(Search)
+        Size: =13
+        Text: ="Back to search"
+        Width: =148
+        X: =34
+        Y: =729
+        ZIndex: =9
 
