@@ -18,7 +18,7 @@
                 }
             )
         )
-        /*
+        */
 
     "'Chosen CVs' As gallery.galleryVertical":
         DelayItemLoading: =true
@@ -183,8 +183,8 @@
                 Height: =34
                 Image: ='Logo Blue'
                 Width: =48
-                X: =1208
-                Y: =40
+                X: =1196
+                Y: =20
                 ZIndex: =17
 
             Label10_12 As label:
@@ -234,6 +234,47 @@
                 X: =9
                 Y: =327
                 ZIndex: =21
+
+            Gallery8 As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =326
+                Items: |-
+                    =Filter(
+                        'CV Generator - Project Experience',
+                        Email = ThisItem.Email
+                    )
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TemplateSize: =163
+                Width: =929
+                X: =328
+                Y: =56
+                ZIndex: =22
+
+                Label16 As label:
+                    FontWeight: =FontWeight.Bold
+                    Height: =37
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.'Project Role' & ", " & ThisItem.'Project Title' & " - " & ThisItem.'Project Client'
+                    Width: =716
+                    ZIndex: =1
+
+                Label17 As label:
+                    Height: =37
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.'Start Date' & " - " & ThisItem.'End Date'
+                    Width: =203
+                    X: =716
+                    ZIndex: =2
+
+                Label18 As label:
+                    Height: =139
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.'Project Description'
+                    Width: =919
+                    Y: =37
+                    ZIndex: =3
 
         Icon7 As icon.CancelBadge:
             Color: =RGBA(39, 41, 54, 1)
