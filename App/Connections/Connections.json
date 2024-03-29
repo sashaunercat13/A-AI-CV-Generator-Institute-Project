@@ -19,6 +19,21 @@
     "dependents": [],
     "id": "0fa35610-3dad-4a9b-9e62-152ac7a52071"
   },
+  "214c6d64-6a74-4c45-8555-4dcaeffc808d": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1682/1.0.1682.3675/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "68efca49-bc20-42b1-b176-09d779b309ee",
+      "dc5484c8-880b-49ca-8992-d100d1f861d8"
+    ],
+    "id": "214c6d64-6a74-4c45-8555-4dcaeffc808d"
+  },
   "2d836a25-3500-4924-a40f-98fc2306d806": {
     "connectionRef": {
       "displayName": "Excel",
@@ -57,10 +72,73 @@
       "CV Generator - Client/Industry"
     ],
     "dependencies": {},
-    "dependents": [
-      "ee6be9fc-1393-485e-bd22-fbd123b29574"
-    ],
+    "dependents": [],
     "id": "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144"
+  },
+  "5d6f5858-3745-40f1-b81d-e0ca8565451e": {
+    "connectionRef": {
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "68efca49-bc20-42b1-b176-09d779b309ee"
+    ],
+    "id": "5d6f5858-3745-40f1-b81d-e0ca8565451e"
+  },
+  "68efca49-bc20-42b1-b176-09d779b309ee": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "214c6d64-6a74-4c45-8555-4dcaeffc808d": {
+          "value": "shared_sharepointonline"
+        },
+        "5d6f5858-3745-40f1-b81d-e0ca8565451e": {
+          "value": "shared_excelonlinebusiness"
+        },
+        "workflowDisplayName": {
+          "value": "Click a button in Power Apps to send an email"
+        },
+        "workflowEntityId": {
+          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
+        },
+        "workflowName": {
+          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_excelonlinebusiness": {
+          "value": "5d6f5858-3745-40f1-b81d-e0ca8565451e"
+        },
+        "shared_sharepointonline": {
+          "value": "214c6d64-6a74-4c45-8555-4dcaeffc808d"
+        },
+        "workflowDisplayName": {
+          "value": "Click a button in Power Apps to send an email"
+        },
+        "workflowEntityId": {
+          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
+        },
+        "workflowName": {
+          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "ClickabuttoninPowerAppstosendanemail"
+    ],
+    "dependencies": {
+      "shared_excelonlinebusiness": "5d6f5858-3745-40f1-b81d-e0ca8565451e",
+      "shared_sharepointonline": "214c6d64-6a74-4c45-8555-4dcaeffc808d"
+    },
+    "dependents": [],
+    "id": "68efca49-bc20-42b1-b176-09d779b309ee"
   },
   "6dfc64e3-2225-432e-945b-fa7298f7ceec": {
     "appActions": [],
@@ -117,56 +195,107 @@
     "dependents": [],
     "id": "a1f8889d-d323-4bb0-af94-99d7b2d80232"
   },
-  "ee6be9fc-1393-485e-bd22-fbd123b29574": {
+  "c7026e6b-af89-4e6d-8704-9f6caa7b9a83": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144": {
-          "value": "shared_sharepointonline"
-        },
-        "635bd87a-5158-41f4-9adf-382c58d197a8": {
-          "value": "shared_excelonlinebusiness"
+        "dbdffc07-73c8-4f33-ac24-89b623967c05": {
+          "value": "shared_office365"
         },
         "workflowDisplayName": {
-          "value": "Click a button in Power Apps to send an email"
+          "value": "Download PDF"
         },
         "workflowEntityId": {
-          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
+          "value": "e948518c-ebed-ee11-a1fd-6045bdf2b0ab"
         },
         "workflowName": {
-          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
+          "value": "493498ad-c1c0-7bff-4b50-adbb74c3d053"
         }
       },
       "parameterHintsV2": {
-        "shared_excelonlinebusiness": {
-          "value": "635bd87a-5158-41f4-9adf-382c58d197a8"
-        },
-        "shared_sharepointonline": {
-          "value": "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144"
+        "shared_office365": {
+          "value": "dbdffc07-73c8-4f33-ac24-89b623967c05"
         },
         "workflowDisplayName": {
-          "value": "Click a button in Power Apps to send an email"
+          "value": "Download PDF"
         },
         "workflowEntityId": {
-          "value": "8eb5c561-dbe9-ee11-904c-6045bdf2b0ab"
+          "value": "e948518c-ebed-ee11-a1fd-6045bdf2b0ab"
         },
         "workflowName": {
-          "value": "5a127c13-56df-e101-cde8-ae926f3b60ed"
+          "value": "493498ad-c1c0-7bff-4b50-adbb74c3d053"
         }
       }
     },
     "datasets": {},
     "dataSources": [
-      "ClickabuttoninPowerAppstosendanemail"
+      "DownloadPDF"
     ],
     "dependencies": {
-      "shared_excelonlinebusiness": "635bd87a-5158-41f4-9adf-382c58d197a8",
-      "shared_sharepointonline": "4dcd54d9-ecd7-47c1-9786-59a0b7dfa144"
+      "shared_office365": "dbdffc07-73c8-4f33-ac24-89b623967c05"
     },
     "dependents": [],
-    "id": "ee6be9fc-1393-485e-bd22-fbd123b29574"
+    "id": "c7026e6b-af89-4e6d-8704-9f6caa7b9a83"
+  },
+  "dbdffc07-73c8-4f33-ac24-89b623967c05": {
+    "connectionRef": {
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "c7026e6b-af89-4e6d-8704-9f6caa7b9a83"
+    ],
+    "id": "dbdffc07-73c8-4f33-ac24-89b623967c05"
+  },
+  "dc5484c8-880b-49ca-8992-d100d1f861d8": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "214c6d64-6a74-4c45-8555-4dcaeffc808d": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Create file,Compose,Respond to a PowerApp or flow"
+        },
+        "workflowEntityId": {
+          "value": "af4429f1-eded-ee11-a1fd-6045bdf2b0ab"
+        },
+        "workflowName": {
+          "value": "ee30d919-caf9-61c5-be87-50dd9a9f82cb"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "214c6d64-6a74-4c45-8555-4dcaeffc808d"
+        },
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Create file,Compose,Respond to a PowerApp or flow"
+        },
+        "workflowEntityId": {
+          "value": "af4429f1-eded-ee11-a1fd-6045bdf2b0ab"
+        },
+        "workflowName": {
+          "value": "ee30d919-caf9-61c5-be87-50dd9a9f82cb"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppV2->Createfile,Compose,RespondtoaPowerApporflow"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "214c6d64-6a74-4c45-8555-4dcaeffc808d"
+    },
+    "dependents": [],
+    "id": "dc5484c8-880b-49ca-8992-d100d1f861d8"
   },
   "f7962c18-93a0-47f2-b373-61748b339246": {
     "connectionRef": {

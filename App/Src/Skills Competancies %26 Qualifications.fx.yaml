@@ -778,21 +778,21 @@
                 SkillsString,
                 Concat(
                     SkillsCollection,
-                    Skill & ", "
+                    Skill & ","
                 )
             );
             
-            If(Right(SkillsString, 2) = ", ", Set(SkillsString, Left(SkillsString, Len(SkillsString) - 2)));
+            If(Right(SkillsString, 1) = ",", Set(SkillsString, Left(SkillsString, Len(SkillsString) - 1)));
             
             Set(
                 QualificationsString,
                 Concat(
                     QualificationsCollection,
-                    Qualification & ", "
+                    Qualification & ","
                 )
             );
             
-            If(Right(QualificationsString, 2) = ",", Set(QualificationsString, Left(QualificationsString, Len(QualificationsString) - 2))); 
+            If(Right(QualificationsString, 1) = ",", Set(QualificationsString, Left(QualificationsString, Len(QualificationsString) - 1))); 
             
             Set(
                 EducationString,
@@ -802,7 +802,7 @@
                 )
             );
             
-            If(Right(EducationString, 2) = "; ", Set(EducationString, Left(EducationString, Len(EducationString) - 2)));
+            If(Right(EducationString, 1) = ";", Set(EducationString, Left(EducationString, Len(EducationString) - 1)));
             
             Patch(
                 'CV Generator',

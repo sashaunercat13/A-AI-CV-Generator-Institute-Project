@@ -805,6 +805,9 @@
                     Value & ", "
                 )
             );
+            
+            If(Right(SkillsString, 1) = ",", Set(SkillsString, Left(SkillsString, Len(SkillsString) - 1)));
+            
             Set(
                 QualificationsString,
                 Concat(
@@ -812,13 +815,19 @@
                     Value & ", "
                 )
             );
+            
+            If(Right(QualificationsString, 1) = ",", Set(QualificationsString, Left(QualificationsString, Len(QualificationsString) - 1))); 
+            
             Set(
                 EducationString,
                 Concat(
                     EducationCollectionUpdate,
-                    DegreeType & ", " & University & ", " & Course & "; "
+                    DegreeType & ", " & University & "," & Course & ";"
                 )
             );
+            
+            If(Right(EducationString, 2) = ";", Set(EducationString, Left(EducationString, Len(EducationString) - 1)));
+            
             Patch(
                 'CV Generator',
                 LookUp(
@@ -831,13 +840,6 @@
                     QualificationsString: QualificationsString
                 }
             )
-            /*
-            Patch('CV Generator', LookUp('CV Generator', Email = User().Email),{
-                Skills: SkillString
-            })
-            */
-            /*
-            {Skills: Skill1.Text, 'Skill 2': Skill2.Text, 'Skill 3': Skill3.Text, 'Skill 4': Skill4.Text, 'Skill 5': Skill5.Text, 'Skill 6': Skill6.Text, 'Qualification 1':Qualification1.Text, 'Qualification 2':Qualification2.Text, 'Qualification 3':Qualification3.Text}) */
         Text: ="Next Page"
         X: =1167
         Y: =710

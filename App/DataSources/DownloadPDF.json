@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "05f8307b-d2df-4cb3-9314-658a9865db32",
+    "Name": "DownloadPDF",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "e948518c-ebed-ee11-a1fd-6045bdf2b0ab"
+  }
+]

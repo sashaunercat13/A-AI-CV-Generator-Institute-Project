@@ -55,3 +55,19 @@
         Y: =1
         ZIndex: =7
 
+    Icon2 As icon.Save:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Save
+        OnSelect: |-
+            =Download(
+                'PowerAppV2->Createfile,Compose,RespondtoaPowerApporflow'.Run(
+                    {
+                        name: "hello.pdf",
+                        contentBytes: VarCandidatesPDF
+                    }
+                ).path
+            );
+        X: =693
+        Y: =16
+        ZIndex: =8
+
