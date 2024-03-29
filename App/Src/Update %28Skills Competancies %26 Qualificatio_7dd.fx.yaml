@@ -1128,12 +1128,3 @@
         Y: =30
         ZIndex: =25
 
-    Label23 As label:
-        Height: =58
-        Text: =CurrentUser.Email
-        Underline: =true
-        Width: =315
-        X: =374
-        Y: =701
-        ZIndex: =26
-
