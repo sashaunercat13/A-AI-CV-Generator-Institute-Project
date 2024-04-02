@@ -1,2 +1,53 @@
 "'PDF Preview' As screen":
 
+    PdfViewer1 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =VarCandidatesPDF
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =624
+        Width: =1239
+        X: =34
+        Y: =118
+        ZIndex: =6
+
+    Icon2 As icon.DockCheckProperties:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.DockCheckProperties
+        X: =34
+        Y: =15
+        ZIndex: =7
+
+    Icon15 As icon.Download:
+        Height: =46
+        Icon: =Icon.Download
+        OnSelect: |
+            =Download('PowerAppV2->Createfile,Compose,RespondtoaPowerApporflow'.Run(
+            
+                                {
+            
+                                    name: "hello.pdf",
+            
+                                    contentBytes: VarCandidatesPDF
+            
+                                }
+            
+                            ).path 
+            )
+        Width: =67
+        X: =1285
+        Y: =696
+        ZIndex: =8
+
+    Label23 As label:
+        Align: =Align.Center
+        DisplayMode: =DisplayMode.View
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        Size: =10
+        Text: ="Download"
+        Width: =93
+        X: =1273
+        Y: =666
+        ZIndex: =9
+
