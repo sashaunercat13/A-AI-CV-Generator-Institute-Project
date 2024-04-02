@@ -1,2 +1,88 @@
 "'PDF Preview' As screen":
 
+    "'Rectangle - blue top panel_5' As rectangle":
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =96
+        Width: =1366
+        ZIndex: =1
+
+    "'Label - Professional Experience_5' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =43
+        Size: =24
+        Text: ="PDF Preview "
+        Width: =513
+        X: =98
+        Y: =26
+        ZIndex: =2
+
+    "'Capgemini Logo_7' As image":
+        Height: =60
+        Image: ='Logo Blue'
+        Width: =52
+        X: =1288
+        Y: =29
+        ZIndex: =4
+
+    Icon13_8 As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Home)
+        Width: =52
+        X: =1221
+        Y: =30
+        ZIndex: =5
+
+    PdfViewer1 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =VarCandidatesPDF
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =624
+        Width: =1239
+        X: =34
+        Y: =118
+        ZIndex: =6
+
+    Icon2 As icon.DockCheckProperties:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.DockCheckProperties
+        X: =34
+        Y: =15
+        ZIndex: =7
+
+    Icon15 As icon.Download:
+        Height: =46
+        Icon: =Icon.Download
+        OnSelect: |-
+            =[16:50] Bentley, Lewis
+            'PowerAppV2->Createfile,Compose,RespondtoaPowerApporflow'.Run(
+            
+                                {
+            
+                                    name: "hello.pdf",
+            
+                                    contentBytes: VarCandidatesPDF
+            
+                                }
+            
+                            ).path
+        Width: =67
+        X: =1285
+        Y: =696
+        ZIndex: =8
+
+    Label23 As label:
+        Align: =Align.Center
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        Size: =10
+        Text: ="Download"
+        Width: =93
+        X: =1273
+        Y: =666
+        ZIndex: =9
+
