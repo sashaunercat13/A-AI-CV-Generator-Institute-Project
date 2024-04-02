@@ -101,7 +101,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 2,
+    "BindingErrorCount": 31,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -145,6 +145,7 @@
     "Search",
     "View Selected CVs",
     "PDF Preview",
-    "View My CV"
+    "View My CV",
+    "Screen1"
   ]
 }
