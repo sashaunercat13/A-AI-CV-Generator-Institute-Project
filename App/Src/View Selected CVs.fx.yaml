@@ -390,7 +390,7 @@
         Icon: =Icon.DocumentPDF
         OnSelect: |-
             =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers: true, Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }));
-            Navigate('PDF View TEST')
+            Navigate('PDF Preview')
         Width: =49
         X: =1299
         Y: =717
