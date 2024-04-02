@@ -562,9 +562,3 @@ Search As screen:
         Y: =29
         ZIndex: =55
 
-    Label25 As label:
-        Text: =varIsHubsEmpty
-        X: =739
-        Y: =699
-        ZIndex: =57
-
