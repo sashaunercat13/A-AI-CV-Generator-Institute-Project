@@ -392,8 +392,8 @@
             =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers: true, Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }));
             Navigate('PDF View TEST')
         Width: =49
-        X: =1221
-        Y: =723
+        X: =1299
+        Y: =717
         ZIndex: =5
 
     Icon8 As icon.View:
