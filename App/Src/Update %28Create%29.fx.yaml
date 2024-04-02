@@ -230,6 +230,7 @@
         ZIndex: =17
 
     Label9_2 As label:
+        DisplayMode: =DisplayMode.View
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Text: ="Capability"
