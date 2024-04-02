@@ -694,7 +694,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnTimerEnd",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultTimerStyle",

@@ -1,4 +1,4 @@
-Welcome As screen:
+Home As screen:
     OnVisible: |-
         =// Set variables from the first and last name of the logged in user
         Set(CurrentUserFirstName, Office365Users.MyProfile().GivenName);
@@ -164,6 +164,7 @@ Welcome As screen:
         Color: =RGBA(255, 255, 255, 1)
         Height: =426
         Text: ="DESCRIPTION & PURPOSE "
+        Visible: =false
         Width: =523
         X: =71
         Y: =250

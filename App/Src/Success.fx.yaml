@@ -18,7 +18,7 @@
     Timer5 As timer:
         AutoStart: =true
         Duration: =4000
-        OnTimerEnd: =Navigate(Welcome, ScreenTransition.Fade);
+        OnTimerEnd: =Navigate(Home, ScreenTransition.Fade);
         Visible: =false
         X: =40
         Y: =40
