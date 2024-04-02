@@ -6,6 +6,7 @@
         Align: =Align.Center
         AutoHeight: =true
         Color: =RGBA(0, 112, 173, 1)
+        DisplayMode: =DisplayMode.View
         Font: =Font.Verdana
         Height: =
         Size: =24

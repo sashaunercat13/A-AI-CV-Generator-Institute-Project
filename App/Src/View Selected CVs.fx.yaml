@@ -389,7 +389,8 @@
         Height: =37
         Icon: =Icon.DocumentPDF
         OnSelect: |-
-            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers: true, Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }))
+            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers: true, Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }));
+            Navigate('PDF View TEST')
         Width: =49
         X: =1221
         Y: =723

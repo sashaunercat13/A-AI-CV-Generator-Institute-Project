@@ -1328,36 +1328,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Profesional Experience'.Experience1_2.Dropdown3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Profesional Experience'.Experience1_2.Dropdown3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Profesional Experience",
-                "type": "'Profesional Experience'.Experience1_2.Dropdown3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Profesional Experience'.Experience1_2.DropdownRole.AccessibleLabel"
                 }
               ],
@@ -4508,19 +4478,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Profesional Experience'.ComboBox1.AccessibleLabel"
+                  "fullyQualifiedName": "'Profesional Experience'.Experience1_2.ComboBoxRole1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Profesional Experience'.ComboBox1.AccessibleLabel",
+                  "fullyQualifiedName": "'Profesional Experience'.Experience1_2.ComboBoxRole1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Profesional Experience",
-                "type": "'Profesional Experience'.ComboBox1"
+                "type": "'Profesional Experience'.Experience1_2.ComboBoxRole1"
               }
             }
           ],
