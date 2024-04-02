@@ -205,6 +205,7 @@
                 ZIndex: =5
 
         DropdownRole As dropdown:
+            ContentLanguage: ="Role"
             Default: |
                 =If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Project Role'), "")
             Height: =45
@@ -250,20 +251,11 @@
                 "Environmental Compliance Specialist",
                 "Corporate Social Responsibility (CSR) Lead Manager",
                 "Corporate Social Responsibility (CSR) Manager"]
+            Visible: =false
             Width: =212
             X: =713
             Y: =16
             ZIndex: =12
-
-        Dropdown3 As dropdown:
-            Default: =If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Project Client'), "")
-            Height: =45
-            Items: ='CV Generator - Client/Industry'.Client
-            Visible: =false
-            Width: =213
-            X: =470
-            Y: =16
-            ZIndex: =13
 
         "'1ProjectManager_1' As combobox":
             Default: |-
@@ -321,15 +313,16 @@
                 
                     } 
                     */
-            DisplayFields: =["Claims"]
+            DisplayFields: =["DisplayName","JobTitle","Picture"]
             Font: =Font.Verdana
             Height: =33
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator - Project Experience'].'Microsoft Profile')
-            SearchFields: =["Claims"]
+            SearchFields: =["DisplayName"]
             SearchItems: =Choices('CV Generator - Project Experience'.'Microsoft Profile','1ProjectManager_1'.SearchText)
             SelectMultiple: |
                 =false
+            Template: =ListItemTemplate.Person
             Visible: |
                 =true
             X: =34
@@ -338,9 +331,12 @@
 
         ComboBoxOneClient As combobox:
             Default: =//If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Project Client'), "")
+            DefaultSelectedItems: |-
+                =//First(ComboBoxSample)
+                //If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Project Client'), "")
             DisplayFields: =["Client"]
             Height: =45
-            InputTextPlaceholder: ="Search client"
+            InputTextPlaceholder: ="Client"
             Items: ='CV Generator - Client/Industry'.Client
             SearchFields: =["Client"]
             SearchItems: =Search('CV Generator - Client/Industry'.Client,ComboBoxOneClient.SearchText,"Client")
@@ -350,10 +346,102 @@
             Y: =15
             ZIndex: =15
 
-        Label24 As label:
-            Text: ="Text"
+        ComboBoxRole1 As combobox:
+            Default: |
+                =//If(varSelectedProjectID > 0, LookUp('CV Generator - Project Experience', ID = varSelectedProjectID, 'Project Role'), "")
+            DisplayFields: =["Value"]
+            Height: =45
+            InputTextPlaceholder: ="Role"
+            Items: |
+                =["Product Owner",
+                "Scrum Master",
+                "Agile Coach",
+                "Senior Business Analyst (BA)",
+                "Business Analyst (BA)",
+                "Product Manager",
+                "Technical Lead",
+                "Senior Developer",
+                "Developer",
+                "Junior Developer",
+                "Quality Assurance (QA) Lead",
+                "Quality Assurance (QA) Engineer",
+                "UX/UI Lead",
+                "UX/UI Designer",
+                "DevOps Lead",
+                "DevOps Engineer",
+                "Database Administrator (DBA)",
+                "Senior System Architect",
+                "System Architect",
+                "Release Manager",
+                "Stakeholder",
+                "Data Scientist",
+                "Senior Cybersecurity Analyst",
+                "Cybersecurity Analyst",
+                "Cloud Architect",
+                "Senior AI/Machine Learning Engineer",
+                "AI/Machine Learning Engineer",
+                "Blockchain Lead",
+                "Blockchain Developer",
+                "IoT Lead",
+                "IoT Specialist",
+                "Senior Environmental Sustainability Manager",
+                "Environmental Sustainability Manager",
+                "Carbon Emissions Lead Analyst",
+                "Carbon Emissions Analyst",
+                "Sustainable Design Lead Architect",
+                "Sustainable Design Architect",
+                "Senior Environmental Compliance Specialist",
+                "Environmental Compliance Specialist",
+                "Corporate Social Responsibility (CSR) Lead Manager",
+                "Corporate Social Responsibility (CSR) Manager"]
+            SearchFields: =["Value"]
+            SearchItems: |-
+                =Search(["Product Owner",
+                "Scrum Master",
+                "Agile Coach",
+                "Senior Business Analyst (BA)",
+                "Business Analyst (BA)",
+                "Product Manager",
+                "Technical Lead",
+                "Senior Developer",
+                "Developer",
+                "Junior Developer",
+                "Quality Assurance (QA) Lead",
+                "Quality Assurance (QA) Engineer",
+                "UX/UI Lead",
+                "UX/UI Designer",
+                "DevOps Lead",
+                "DevOps Engineer",
+                "Database Administrator (DBA)",
+                "Senior System Architect",
+                "System Architect",
+                "Release Manager",
+                "Stakeholder",
+                "Data Scientist",
+                "Senior Cybersecurity Analyst",
+                "Cybersecurity Analyst",
+                "Cloud Architect",
+                "Senior AI/Machine Learning Engineer",
+                "AI/Machine Learning Engineer",
+                "Blockchain Lead",
+                "Blockchain Developer",
+                "IoT Lead",
+                "IoT Specialist",
+                "Senior Environmental Sustainability Manager",
+                "Environmental Sustainability Manager",
+                "Carbon Emissions Lead Analyst",
+                "Carbon Emissions Analyst",
+                "Sustainable Design Lead Architect",
+                "Sustainable Design Architect",
+                "Senior Environmental Compliance Specialist",
+                "Environmental Compliance Specialist",
+                "Corporate Social Responsibility (CSR) Lead Manager",
+                "Corporate Social Responsibility (CSR) Manager"]
+                ,ComboBoxRole1.SearchText,"Value")
+            SelectMultiple: =false
+            Width: =212
             X: =719
-            Y: =134
+            Y: =16
             ZIndex: =16
 
     "'Button-Submit_1' As button":
@@ -361,7 +449,7 @@
             =If(
                 IsBlank('1ProjectTitle_2'.Text) Or 
                 IsBlank(ComboBoxOneClient.SelectedItems) Or
-                IsBlank(DropdownRole.SelectedText) Or 
+                IsBlank(ComboBoxRole1.SelectedItems) Or 
                 IsBlank('1ProjectManager_1'.SelectedItems) Or 
                 IsBlank(ProjectEndDate_2.SelectedDate) Or
                 IsBlank('1ProjectStartDate_2'.SelectedDate) Or
@@ -380,7 +468,7 @@
                         Email: User().Email,
                         'Project Title': '1ProjectTitle_2'.Text,
                         'Project Client': ComboBoxOneClient.Selected.Client,
-                        'Project Role': DropdownRole.Selected.Value,
+                        'Project Role': ComboBoxRole1.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
                         //'End Date': varDatePicked || 'ProjectEndDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
@@ -407,7 +495,7 @@
                     {
                         'Project Title': '1ProjectTitle_2'.Text,
                         'Project Client': ComboBoxOneClient.Selected.Client,
-                        'Project Role': DropdownRole.Selected.Value,
+                        'Project Role': ComboBoxRole1.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
                         'Project Description': '1ProjectDescription_2'.Text,
                         'Microsoft Profile': {
@@ -451,7 +539,7 @@
             );
             //reset the form fields
             Reset('1ProjectTitle_2');
-            Reset(DropdownRole);
+            Reset(ComboBoxRole1);
             //Reset('Dropdown3');
             Reset('1ProjectStartDate_2');
             Reset(ProjectEndDate_2);
@@ -553,7 +641,7 @@
         Color: =RGBA(255, 255, 255, 1)
         Height: =60
         Icon: =Icon.Home
-        OnSelect: =Navigate(Welcome)
+        OnSelect: =Navigate(Home)
         Width: =52
         X: =1221
         Y: =30
@@ -598,10 +686,4 @@
             X: =320
             Y: =197
             ZIndex: =29
-
-    Label26 As label:
-        Text: =varDatePicked
-        X: =1123
-        Y: =369
-        ZIndex: =31
 

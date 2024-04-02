@@ -1,0 +1,14 @@
+Home As screen:
+    OnVisible: |-
+        =// Set variables from the first and last name of the logged in user
+        Set(CurrentUserFirstName, Office365Users.MyProfile().GivenName);
+        Set(CurrentUserLastName, Office365Users.MyProfile().Surname);
+         
+        // Set the CurrentItem to the result of a LookUp of a CV associated with the current Microsoft User.
+        Set(CurrentUser, LookUp('CV Generator', Email = User().Email));
+        Set(UserExistsInSP, Not(IsBlank(CurrentUser)));
+        
+        // get the photo
+        Set(UserID, Office365Users.MyProfile().Id);
+        Set(UserPhoto, Office365Users.UserPhotoV2(UserID))
+
