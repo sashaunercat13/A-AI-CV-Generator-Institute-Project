@@ -15,7 +15,7 @@ Screen1 As screen:
             ZIndex: =1
 
         Image5_3 As image:
-            Image: =ThisItem.Photo
+            Image: =CurrentUser.Photo
             RadiusBottomLeft: =50  
             RadiusBottomRight: =50
             RadiusTopLeft: =50
@@ -53,7 +53,7 @@ Screen1 As screen:
             Font: =Font.Verdana
             Height: =35
             Size: =11
-            Text: =ThisItem.Capability & " - " & ThisItem.Hub
+            Text: =CurrentUser.Capability & " - " & CurrentUser.Hub
             Width: =277
             X: =11
             Y: =179
@@ -66,7 +66,7 @@ Screen1 As screen:
             PaddingBottom: =2
             PaddingTop: =2
             Size: =10
-            Text: =ThisItem.Profile
+            Text: =CurrentUser.Profile
             VerticalAlign: =VerticalAlign.Top
             Width: =277
             X: =11
@@ -78,7 +78,7 @@ Screen1 As screen:
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Verdana
             Height: =35
-            Text: =ThisItem.Grade
+            Text: =CurrentUser.Grade
             Width: =277
             X: =9
             Y: =214
@@ -89,10 +89,7 @@ Screen1 As screen:
             Font: =Font.Verdana
             Height: =60
             Size: =10
-            Text: |-
-                =//FirstN(Split(ThisItem.Education,";"),2)
-                
-                ThisItem.Education
+            Text: =CurrentUser.Education
             Width: =277
             X: =6
             Y: =267
@@ -102,7 +99,7 @@ Screen1 As screen:
             CheckboxSize: =25
             CheckmarkFill: =RGBA(39, 41, 54, 1)
             Color: =RGBA(255, 255, 255, 1)
-            Default: =ThisItem.'Security Clearance BPSS'
+            Default: =CurrentUser.'Security Clearance BPSS'
             DisplayMode: =DisplayMode.View
             Height: =44
             Size: =11
@@ -116,7 +113,7 @@ Screen1 As screen:
             CheckboxSize: =25
             CheckmarkFill: =RGBA(39, 41, 54, 1)
             Color: =RGBA(255, 255, 255, 1)
-            Default: =ThisItem.'Security Clearance SC'
+            Default: =CurrentUser.'Security Clearance SC'
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(255, 255, 255, 1)
             DisplayMode: =DisplayMode.View
@@ -145,7 +142,7 @@ Screen1 As screen:
             Font: =Font.Verdana
             FontWeight: =FontWeight.Semibold
             Height: =35
-            Text: =ThisItem.'First Name' & " " & ThisItem.'Last Name'
+            Text: =CurrentUser.'First Name' & " " & CurrentUser.'Last Name'
             Width: =277
             X: =9
             Y: =19
@@ -194,7 +191,7 @@ Screen1 As screen:
                 =FirstN(
                     Filter(
                         'CV Generator - Project Experience',
-                        Email = ThisItem.Email
+                        Email = CurrentUser.Email
                     ),
                     3
                 )
@@ -250,7 +247,7 @@ Screen1 As screen:
             Items: |-
                 =FirstN(
                     Split(
-                        ThisItem.QualificationsString,
+                        CurrentUser.QualificationsString,
                         ","
                     ),
                     6
@@ -291,7 +288,7 @@ Screen1 As screen:
             Items: |-
                 =FirstN(
                     Split(
-                        ThisItem.SkillsString,
+                        CurrentUser.SkillsString,
                         ","
                     ),
                     6
@@ -358,4 +355,15 @@ Screen1 As screen:
         X: =1221
         Y: =30
         ZIndex: =6
+
+    Button1_5 As button:
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =25
+        OnSelect: =Navigate(Home)
+        Size: =13
+        Text: ="Back to menu"
+        Width: =148
+        X: =54
+        Y: =743
+        ZIndex: =7
 

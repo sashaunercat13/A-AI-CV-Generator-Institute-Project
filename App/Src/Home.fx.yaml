@@ -142,7 +142,7 @@ Home As screen:
             Height: =96
             HoverColor: =RGBA(39, 41, 54, 1)
             HoverFill: =
-            OnSelect: =Navigate('View My CV')
+            OnSelect: =Navigate('Screen1')
             PressedColor: =RGBA(39, 41, 54, 1)
             PressedFill: =
             Size: =22
@@ -155,7 +155,7 @@ Home As screen:
         Icon12_2 As icon.NextArrow:
             Color: =RGBA(18, 171, 219, 1)
             Icon: =Icon.NextArrow
-            OnSelect: =Navigate('View My CV')
+            OnSelect: =Navigate('Screen1')
             X: =803
             Y: =536
             ZIndex: =12
