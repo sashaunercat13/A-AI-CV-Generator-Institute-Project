@@ -1,4 +1,4 @@
-"'PDF View TEST' As screen":
+"'PDF Preview' As screen":
 
     PdfViewer1 As pdfViewer:
         BorderColor: =RGBA(0, 0, 0, 1)

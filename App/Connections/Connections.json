@@ -26,7 +26,11 @@
       "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {},
-    "dataSources": [],
+    "dataSources": [
+      "CV Generator - Client/Industry",
+      "CV Generator",
+      "CV Generator - Project Experience"
+    ],
     "dependencies": {},
     "dependents": [
       "68efca49-bc20-42b1-b176-09d779b309ee",
