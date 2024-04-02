@@ -56,9 +56,8 @@
     Icon15 As icon.Download:
         Height: =46
         Icon: =Icon.Download
-        OnSelect: |-
-            =[16:50] Bentley, Lewis
-            'PowerAppV2->Createfile,Compose,RespondtoaPowerApporflow'.Run(
+        OnSelect: |
+            =Download('PowerAppV2->Createfile,Compose,RespondtoaPowerApporflow'.Run(
             
                                 {
             
@@ -68,7 +67,8 @@
             
                                 }
             
-                            ).path
+                            ).path 
+            )
         Width: =67
         X: =1285
         Y: =696
@@ -76,6 +76,7 @@
 
     Label23 As label:
         Align: =Align.Center
+        DisplayMode: =DisplayMode.View
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Height: =30
