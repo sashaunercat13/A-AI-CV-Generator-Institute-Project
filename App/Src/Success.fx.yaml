@@ -2,7 +2,7 @@
     BackgroundImage: ='2 submit successful background'
     ImagePosition: =ImagePosition.Stretch
 
-    LblSuccessMsg2 As label:
+    "'Label - SuccessMessage' As label":
         Align: =Align.Center
         AutoHeight: =true
         Color: =RGBA(0, 112, 173, 1)
@@ -16,7 +16,7 @@
         Y: =382
         ZIndex: =3
 
-    Timer5 As timer:
+    TimerSuccess As timer:
         AutoStart: =true
         Duration: =4000
         OnTimerEnd: =Navigate(Home, ScreenTransition.Fade);
@@ -25,7 +25,7 @@
         Y: =40
         ZIndex: =4
 
-    Icon14 As icon.CheckBadge:
+    IconCheckSuccess As icon.CheckBadge:
         Color: =RGBA(18, 171, 219, 1)
         Height: =109
         Icon: =Icon.CheckBadge

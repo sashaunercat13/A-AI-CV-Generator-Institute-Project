@@ -23,11 +23,11 @@
     Icon10_1 As icon.DocumentPDF:
         Height: =50
         Icon: =Icon.DocumentPDF
-        OnSelect: |-
-            =Set(VarCandidatesPDF,PDF( 'Chosen CVs_1',{ExpandContainers:true,Orientation:PaperOrientation.Landscape, Size:PaperSize.A4 }))
+        OnSelect: |
+            =//Set(VarPersonalPDF,PDF(ContainerMyCVTemplate,{Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }));
         Width: =43
-        X: =1305
-        Y: =119
+        X: =1309
+        Y: =616
         ZIndex: =2
 
     "'Rectangle - blue top panel_4' As rectangle":
@@ -75,22 +75,22 @@
         Y: =30
         ZIndex: =7
 
-    "'CV Template_3' As groupContainer":
+    ContainerMyCVTemplate As groupContainer:
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =599
+        Height: =615
         Width: =1265
-        X: =40
-        Y: =119
+        X: =32
+        Y: =103
         ZIndex: =8
 
-        Rectangle1_2 As rectangle:
+        Rectangle1_3 As rectangle:
             Fill: =RGBA(39, 41, 54, 1)
-            Height: =581
+            Height: =615
             Width: =296
             ZIndex: =1
 
-        Image5_2 As image:
-            Image: =User().Image
+        Image5_3 As image:
+            Image: =CurrentUser.Photo
             RadiusBottomLeft: =50  
             RadiusBottomRight: =50
             RadiusTopLeft: =50
@@ -99,7 +99,7 @@
             Y: =56
             ZIndex: =3
 
-        Button9_4 As button:
+        Button9_7 As button:
             Align: =Align.Left
             DisabledColor: =RGBA(255, 255, 255, 1)
             DisabledFill: =RGBA(39, 41, 54, 1)
@@ -108,104 +108,87 @@
             Text: ="Recent Professional Experience"
             Width: =856
             X: =328
-            Y: =20
             ZIndex: =4
 
-        Button9_5 As button:
+        Button9_8 As button:
             Align: =Align.Left
             DisabledColor: =RGBA(255, 255, 255, 1)
             DisabledFill: =RGBA(39, 41, 54, 1)
             DisplayMode: =DisplayMode.Disabled
-            Height: =35
-            Text: ="Skills & Qualifications"
-            Width: =916
+            Height: =38
+            Text: ="Skills"
+            Width: =450
             X: =328
-            Y: =402
+            Y: =456
             ZIndex: =5
 
-        Label14_6 As label:
-            Height: =117
-            Text: ="Text"
-            Width: =445
-            X: =328
-            Y: =450
-            ZIndex: =7
-
-        Label14_7 As label:
-            Height: =117
-            Text: ="Text"
-            Width: =445
-            X: =799
-            Y: =450
-            ZIndex: =8
-
-        Label10_18 As label:
+        Label10_26 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Verdana
             Height: =35
             Size: =11
-            Text: =LookUp('CV Generator', Email = User().Email).Capability & " - " & LookUp('CV Generator', Email = User().Email).Hub
+            Text: =CurrentUser.Capability & " - " & CurrentUser.Hub
             Width: =277
             X: =11
             Y: =179
             ZIndex: =11
 
-        Label10_23 As label:
+        Label10_31 As label:
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Verdana
-            Height: =192
+            Height: =210
             PaddingBottom: =2
             PaddingTop: =2
             Size: =10
-            Text: =LookUp('CV Generator', Email = User().Email).Profile
+            Text: =CurrentUser.Profile
             VerticalAlign: =VerticalAlign.Top
             Width: =277
             X: =11
             Y: =352
             ZIndex: =12
 
-        Label10_19 As label:
+        Label10_27 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Verdana
             Height: =35
-            Text: =LookUp('CV Generator', Email = User().Email).Grade
+            Text: =CurrentUser.Grade
             Width: =277
             X: =9
             Y: =214
             ZIndex: =13
 
-        Label10_21 As label:
+        Label10_29 As label:
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Verdana
             Height: =60
             Size: =10
-            Text: =LookUp('CV Generator', Email = User().Email).Education
+            Text: =CurrentUser.Education
             Width: =277
             X: =6
             Y: =267
             ZIndex: =14
 
-        Checkbox1_4 As checkbox:
+        Checkbox1_6 As checkbox:
             CheckboxSize: =25
             CheckmarkFill: =RGBA(39, 41, 54, 1)
             Color: =RGBA(255, 255, 255, 1)
-            Default: =LookUp('CV Generator', Email = User().Email).'Security Clearance BPSS'
+            Default: =CurrentUser.'Security Clearance BPSS'
             DisplayMode: =DisplayMode.View
             Height: =44
             Size: =11
             Text: ="BPSS"
             Width: =114
-            X: =67
-            Y: =544
+            X: =61
+            Y: =562
             ZIndex: =15
 
-        Checkbox1_5 As checkbox:
+        Checkbox1_7 As checkbox:
             CheckboxSize: =25
             CheckmarkFill: =RGBA(39, 41, 54, 1)
             Color: =RGBA(255, 255, 255, 1)
-            Default: =LookUp('CV Generator', Email = User().Email).'Security Clearance SC'
+            Default: =CurrentUser.'Security Clearance SC'
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(255, 255, 255, 1)
             DisplayMode: =DisplayMode.View
@@ -217,31 +200,30 @@
             Size: =11
             Text: ="SC"
             Width: =114
-            X: =161
-            Y: =544
+            X: =155
+            Y: =562
             ZIndex: =16
 
-        Image6_2 As image:
+        Image6_3 As image:
             Height: =34
             Image: ='Logo Blue'
             Width: =48
-            X: =1208
-            Y: =40
+            X: =1196
             ZIndex: =17
 
-        Label10_16 As label:
+        Label10_24 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Verdana
             FontWeight: =FontWeight.Semibold
             Height: =35
-            Text: =LookUp('CV Generator', Email = User().Email).'First Name' & " " & LookUp('CV Generator', Email = User().Email).'Last Name'
+            Text: =CurrentUser.'First Name' & " " & CurrentUser.'Last Name'
             Width: =277
             X: =9
             Y: =19
             ZIndex: =18
 
-        Label10_17 As label:
+        Label10_25 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Verdana
@@ -253,7 +235,7 @@
             Y: =54
             ZIndex: =19
 
-        Label10_20 As label:
+        Label10_28 As label:
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Verdana
             FontWeight: =FontWeight.Semibold
@@ -265,7 +247,7 @@
             Y: =253
             ZIndex: =20
 
-        Label10_22 As label:
+        Label10_30 As label:
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Verdana
             FontWeight: =FontWeight.Semibold
@@ -276,4 +258,178 @@
             X: =9
             Y: =327
             ZIndex: =21
+
+        Gallery8_1 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Height: =420
+            Items: |-
+                =FirstN(
+                    Filter(
+                        'CV Generator - Project Experience',
+                        Email = CurrentUser.Email
+                    ),
+                    3
+                )
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplateSize: =(420/3)-7
+            Width: =929
+            X: =328
+            Y: =34
+            ZIndex: =22
+
+            Label16_2 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Project Title'
+                Width: =716
+                ZIndex: =1
+
+            Label17_1 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Start Date' & " - " & ThisItem.'End Date'
+                Width: =203
+                X: =716
+                ZIndex: =2
+
+            Label18_1 As label:
+                Height: =84
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.'Project Description'
+                VerticalAlign: =VerticalAlign.Top
+                Width: =919
+                Y: =48
+                ZIndex: =3
+
+            Label16_3 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.'Project Client' & ", " & ThisItem.'Project Role'
+                Width: =716
+                Y: =24
+                ZIndex: =4
+
+        Gallery5_1 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Height: =120
+            Items: |-
+                =FirstN(
+                    Split(
+                        CurrentUser.QualificationsString,
+                        ","
+                    ),
+                    6
+                )
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: |
+                =30
+            Width: =462
+            WrapCount: =2
+            X: =794
+            Y: =495
+            ZIndex: =23
+
+            Label21_1 As label:
+                Height: =30
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: ="• " & ThisItem.Value
+                Width: =223.5
+                ZIndex: =1
+
+        Button9_9 As button:
+            Align: =Align.Left
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(39, 41, 54, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =38
+            Text: ="Qualifications"
+            Width: =450
+            X: =794
+            Y: =456
+            ZIndex: =24
+
+        Gallery6_1 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Height: =117
+            Items: |-
+                =FirstN(
+                    Split(
+                        CurrentUser.SkillsString,
+                        ","
+                    ),
+                    6
+                )
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =32
+            Width: =449
+            WrapCount: =2
+            X: =329
+            Y: =498
+            ZIndex: =25
+
+            Label22_1 As label:
+                Height: =30
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: ="• " & ThisItem.Value
+                Width: =201
+                X: =4
+                ZIndex: =1
+
+    Button1_5 As button:
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =25
+        OnSelect: =Navigate(Home)
+        Size: =13
+        Text: ="Back to menu"
+        Width: =148
+        X: =45
+        Y: =730
+        ZIndex: =9
+
+    IconDownload_1 As icon.Download:
+        Height: =46
+        Icon: =Icon.Download
+        OnSelect: |
+            =Set(VarPersonalPDF,PDF(ContainerMyCVTemplate,{Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }));
+            
+            Download('PowerAppV2->Createfile,Compose,RespondtoaPowerApporflow'.Run(
+            
+                                {
+            
+                                    name: "Selected CVs.pdf",
+            
+                                    contentBytes: VarCandidatesPDF
+            
+                                }
+            
+                            ).path 
+            )
+        Width: =67
+        X: =1285
+        Y: =696
+        ZIndex: =10
+
+    "'Label - Download_1' As label":
+        Align: =Align.Center
+        DisplayMode: =DisplayMode.View
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        Size: =10
+        Text: ="Download"
+        Width: =93
+        X: =1273
+        Y: =666
+        ZIndex: =11
 

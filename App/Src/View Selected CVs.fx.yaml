@@ -20,7 +20,7 @@
         )
         */
 
-    "'Chosen CVs' As gallery.galleryVertical":
+    GalleryCandidateView As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =647
         Items: =FinalFilteredCVs
@@ -32,7 +32,7 @@
         Y: =89
         ZIndex: =2
 
-        "'CV Template_2' As groupContainer":
+        "'Container - CandidateCVTemplate' As groupContainer":
             Fill: =RGBA(255, 255, 255, 1)
             Height: =615
             Width: =1265
@@ -40,13 +40,13 @@
             Y: =10
             ZIndex: =3
 
-            Rectangle1_1 As rectangle:
+            ButtonBackgroundLeftPanelView As rectangle:
                 Fill: =RGBA(39, 41, 54, 1)
                 Height: =615
                 Width: =296
                 ZIndex: =1
 
-            Image5_1 As image:
+            ImageCandidateProfilePic1 As image:
                 Image: =ThisItem.Photo
                 RadiusBottomLeft: =50  
                 RadiusBottomRight: =50
@@ -56,7 +56,7 @@
                 Y: =56
                 ZIndex: =3
 
-            Button9_2 As button:
+            ButtonBackgroundPE As button:
                 Align: =Align.Left
                 DisabledColor: =RGBA(255, 255, 255, 1)
                 DisabledFill: =RGBA(39, 41, 54, 1)
@@ -67,7 +67,7 @@
                 X: =328
                 ZIndex: =4
 
-            Button9_3 As button:
+            ButtonBackgroundSkills As button:
                 Align: =Align.Left
                 DisabledColor: =RGBA(255, 255, 255, 1)
                 DisabledFill: =RGBA(39, 41, 54, 1)
@@ -79,7 +79,7 @@
                 Y: =456
                 ZIndex: =5
 
-            Label10_8 As label:
+            "'Label - CandidateCapability&Hub' As label":
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
@@ -91,7 +91,7 @@
                 Y: =179
                 ZIndex: =11
 
-            Label10_9 As label:
+            "'Label - CandidateProfile1' As label":
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
                 Height: =210
@@ -105,7 +105,7 @@
                 Y: =352
                 ZIndex: =12
 
-            Label10_10 As label:
+            "'Label - CandidateGrade1' As label":
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
@@ -116,7 +116,7 @@
                 Y: =214
                 ZIndex: =13
 
-            Label10_11 As label:
+            "'Label - CandidateSelectedEducation' As label":
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
                 Height: =60
@@ -130,7 +130,7 @@
                 Y: =267
                 ZIndex: =14
 
-            Checkbox1_2 As checkbox:
+            CheckboxCandidateBPSS As checkbox:
                 CheckboxSize: =25
                 CheckmarkFill: =RGBA(39, 41, 54, 1)
                 Color: =RGBA(255, 255, 255, 1)
@@ -144,7 +144,7 @@
                 Y: =562
                 ZIndex: =15
 
-            Checkbox1_3 As checkbox:
+            CheckboxCandidateSC As checkbox:
                 CheckboxSize: =25
                 CheckmarkFill: =RGBA(39, 41, 54, 1)
                 Color: =RGBA(255, 255, 255, 1)
@@ -164,14 +164,14 @@
                 Y: =562
                 ZIndex: =16
 
-            Image6_1 As image:
+            ImageCapIconInCV As image:
                 Height: =34
                 Image: ='Logo Blue'
                 Width: =48
                 X: =1196
                 ZIndex: =17
 
-            Label10_12 As label:
+            "'Label - CandidateName1' As label":
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
@@ -183,19 +183,7 @@
                 Y: =19
                 ZIndex: =18
 
-            Label10_13 As label:
-                Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
-                Font: =Font.Verdana
-                Height: =35
-                Size: =11
-                Text: =
-                Width: =277
-                X: =19
-                Y: =54
-                ZIndex: =19
-
-            Label10_14 As label:
+            "'Label - CandidateEducation' As label":
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
                 FontWeight: =FontWeight.Semibold
@@ -207,7 +195,7 @@
                 Y: =253
                 ZIndex: =20
 
-            Label10_15 As label:
+            "'Label - CandidateProfile' As label":
                 Color: =RGBA(255, 255, 255, 1)
                 Font: =Font.Verdana
                 FontWeight: =FontWeight.Semibold
@@ -219,7 +207,7 @@
                 Y: =327
                 ZIndex: =21
 
-            Gallery8 As gallery.galleryVertical:
+            GalleryCandidatePE As gallery.galleryVertical:
                 DelayItemLoading: =true
                 Height: =420
                 Items: |-
@@ -239,7 +227,7 @@
                 Y: =34
                 ZIndex: =22
 
-                Label16 As label:
+                "'Label - ProjectName' As label":
                     FontWeight: =FontWeight.Bold
                     Height: =24
                     OnSelect: =Select(Parent)
@@ -247,7 +235,7 @@
                     Width: =716
                     ZIndex: =1
 
-                Label17 As label:
+                "'Label - ProjectDates' As label":
                     FontWeight: =FontWeight.Bold
                     Height: =24
                     OnSelect: =Select(Parent)
@@ -256,7 +244,7 @@
                     X: =716
                     ZIndex: =2
 
-                Label18 As label:
+                "'Label - ProjectDescription' As label":
                     Height: =84
                     OnSelect: =Select(Parent)
                     Size: =10
@@ -266,7 +254,7 @@
                     Y: =48
                     ZIndex: =3
 
-                Label16_1 As label:
+                "'Label - ProjectClient&Role' As label":
                     FontWeight: =FontWeight.Bold
                     Height: =24
                     OnSelect: =Select(Parent)
@@ -276,7 +264,7 @@
                     Y: =24
                     ZIndex: =4
 
-            Gallery5 As gallery.galleryVertical:
+            GalleryCandidateQualifications As gallery.galleryVertical:
                 DelayItemLoading: =true
                 Height: =120
                 Items: |-
@@ -297,7 +285,7 @@
                 Y: =498
                 ZIndex: =23
 
-                Label21 As label:
+                "'Lable - CandidateQualification' As label":
                     Height: =34
                     OnSelect: =Select(Parent)
                     Size: =10
@@ -305,7 +293,7 @@
                     Width: =234
                     ZIndex: =1
 
-            Button9_6 As button:
+            ButtonBackgroundQual As button:
                 Align: =Align.Left
                 DisabledColor: =RGBA(255, 255, 255, 1)
                 DisabledFill: =RGBA(39, 41, 54, 1)
@@ -317,7 +305,7 @@
                 Y: =456
                 ZIndex: =24
 
-            Gallery6 As gallery.galleryVertical:
+            GalleryCandidateSkill As gallery.galleryVertical:
                 DelayItemLoading: =true
                 Height: =117
                 Items: |-
@@ -337,7 +325,7 @@
                 Y: =498
                 ZIndex: =25
 
-                Label22 As label:
+                "'Label - CandidateSkill' As label":
                     Height: =30
                     OnSelect: =Select(Parent)
                     Size: =10
@@ -346,7 +334,7 @@
                     X: =4
                     ZIndex: =1
 
-        Icon7 As icon.CancelBadge:
+        IconCancelVSCV As icon.CancelBadge:
             Color: =RGBA(39, 41, 54, 1)
             Height: =47
             Icon: =Icon.CancelBadge
@@ -366,13 +354,13 @@
             Y: =297
             ZIndex: =4
 
-    "'Rectangle - blue top panel_3' As rectangle":
+    RectangleBackgroundTopVSCV As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =96
         Width: =1366
         ZIndex: =3
 
-    "'Label - Professional Experience_3' As label":
+    "'Label - ViewCandidateCVTitle' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -384,19 +372,19 @@
         Y: =26
         ZIndex: =4
 
-    Icon10 As icon.DocumentPDF:
+    IconPDFVSCV As icon.DocumentPDF:
         Color: =RGBA(39, 41, 54, 1)
         Height: =37
         Icon: =Icon.DocumentPDF
         OnSelect: |-
-            =Set(VarCandidatesPDF,PDF( 'Chosen CVs',{ExpandContainers: true, Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }));
+            =Set(VarCandidatesPDF,PDF( GalleryCandidateView,{ExpandContainers: true, Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }));
             Navigate('PDF Preview')
         Width: =49
         X: =1299
         Y: =717
         ZIndex: =5
 
-    Icon8 As icon.View:
+    IconViewVSCV As icon.View:
         Color: =RGBA(255, 255, 255, 1)
         Height: =65
         Icon: =Icon.View
@@ -405,7 +393,7 @@
         Y: =15
         ZIndex: =6
 
-    "'Capgemini Logo_4' As image":
+    ImageCapIconVSCV As image:
         Height: =60
         Image: ='Logo Blue'
         Width: =52
@@ -413,7 +401,7 @@
         Y: =29
         ZIndex: =7
 
-    Icon13_4 As icon.Home:
+    IconHomeVSCV As icon.Home:
         Color: =RGBA(255, 255, 255, 1)
         Height: =60
         Icon: =Icon.Home
@@ -423,7 +411,7 @@
         Y: =30
         ZIndex: =8
 
-    Button1_4 As button:
+    ButtonBackVSCV As button:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =25
         OnSelect: =Navigate(Search)

@@ -1,23 +1,16 @@
 "'PDF Preview' As screen":
 
-    PdfViewer1 As pdfViewer:
+    PDFViewer As pdfViewer:
         BorderColor: =RGBA(0, 0, 0, 1)
         Document: =VarCandidatesPDF
         Fill: =RGBA(0, 0, 0, 0.5)
-        Height: =624
-        Width: =1239
-        X: =34
-        Y: =118
+        Height: =578
+        Width: =1205
+        X: =68
+        Y: =129
         ZIndex: =6
 
-    Icon2 As icon.DockCheckProperties:
-        Color: =RGBA(255, 255, 255, 1)
-        Icon: =Icon.DockCheckProperties
-        X: =34
-        Y: =15
-        ZIndex: =7
-
-    Icon15 As icon.Download:
+    IconDownload As icon.Download:
         Height: =46
         Icon: =Icon.Download
         OnSelect: |
@@ -38,7 +31,7 @@
         Y: =696
         ZIndex: =8
 
-    Label23 As label:
+    "'Label - Download' As label":
         Align: =Align.Center
         DisplayMode: =DisplayMode.View
         Font: =Font.Verdana
@@ -50,4 +43,60 @@
         X: =1273
         Y: =666
         ZIndex: =9
+
+    RectangleBackgroundTopPP As rectangle:
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =116
+        Width: =1366
+        ZIndex: =10
+
+    ImageCapIconPP As image:
+        Height: =60
+        Image: ='Logo Blue'
+        Width: =52
+        X: =1288
+        Y: =29
+        ZIndex: =11
+
+    "'Label - TitlePDFPreview' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =39
+        Size: =24
+        Text: ="PDF Preview"
+        Width: =790
+        X: =84
+        Y: =37
+        ZIndex: =12
+
+    IconeHomePP As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Home)
+        Width: =52
+        X: =1221
+        Y: =30
+        ZIndex: =14
+
+    IconDocumentCheck As icon.DocumentPDF:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =54
+        Icon: =Icon.DockCheckProperties
+        Width: =49
+        X: =34
+        Y: =33
+        ZIndex: =15
+
+    ButtonBackPP As button:
+        Fill: =RGBA(39, 41, 54, 1)
+        Height: =25
+        OnSelect: =Navigate('View Selected CVs') 
+        Size: =13
+        Text: ="Back"
+        Width: =148
+        X: =34
+        Y: =717
+        ZIndex: =16
 

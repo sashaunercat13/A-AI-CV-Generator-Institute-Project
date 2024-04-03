@@ -22,13 +22,13 @@
         
         Set(varDatePicked, !IsBlank(ProjectEndDate_2.SelectedDate))
 
-    "'Rectangle - blue top panel_2' As rectangle":
+    RectangleBackgroundTopPE As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =116
         Width: =1366
         ZIndex: =1
 
-    "'Capgemini Logo_1' As image":
+    ImageCapIconPE As image:
         Height: =60
         Image: ='Logo Blue'
         Width: =52
@@ -36,7 +36,7 @@
         Y: =29
         ZIndex: =2
 
-    "'Label - Professional Experience_2' As label":
+    "'Label - TitleProfessionalExperience' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -48,14 +48,14 @@
         Y: =37
         ZIndex: =3
 
-    "'Icon - Circle with tick_1' As icon.CheckBadge":
+    IconCheckPE As icon.CheckBadge:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.CheckBadge
         X: =14
         Y: =27
         ZIndex: =4
 
-    "'(Disabled Button) - blue background side panel_2' As button":
+    ButtonBackgroundLeftPanel As button:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =562
         HoverBorderColor: =
@@ -68,7 +68,7 @@
         Y: =145
         ZIndex: =5
 
-    "'Label-Project Overview title_1' As label":
+    "'Label - ProjectOverview' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -79,7 +79,7 @@
         Y: =174
         ZIndex: =6
 
-    Experience1_2 As groupContainer:
+    "'Container - AllProjectExperienceInputFields' As groupContainer":
         DropShadow: =DropShadow.Regular
         Height: =562
         Width: =959
@@ -257,7 +257,7 @@
             Y: =16
             ZIndex: =12
 
-        "'1ProjectManager_1' As combobox":
+        ComboBoxProjectManager As combobox:
             Default: |-
                 =If(
                     varSelectedProjectID > 0,
@@ -319,7 +319,7 @@
             InputTextPlaceholder: ="Please select your manager" 
             Items: =Choices([@'CV Generator - Project Experience'].'Microsoft Profile')
             SearchFields: =["DisplayName"]
-            SearchItems: =Choices('CV Generator - Project Experience'.'Microsoft Profile','1ProjectManager_1'.SearchText)
+            SearchItems: =Choices('CV Generator - Project Experience'.'Microsoft Profile',ComboBoxProjectManager.SearchText)
             SelectMultiple: |
                 =false
             Template: =ListItemTemplate.Person
@@ -444,13 +444,13 @@
             Y: =16
             ZIndex: =16
 
-    "'Button-Submit_1' As button":
+    ButtonSubmitProject As button:
         DisplayMode: |-
             =If(
                 IsBlank('1ProjectTitle_2'.Text) Or 
                 IsBlank(ComboBoxOneClient.SelectedItems) Or
                 IsBlank(ComboBoxRole1.SelectedItems) Or 
-                IsBlank('1ProjectManager_1'.SelectedItems) Or 
+                IsBlank(ComboBoxProjectManager.SelectedItems) Or 
                 IsBlank(ProjectEndDate_2.SelectedDate) Or
                 IsBlank('1ProjectStartDate_2'.SelectedDate) Or
                 IsBlank('1ProjectDescription_2'.Text),
@@ -470,7 +470,7 @@
                         'Project Client': ComboBoxOneClient.Selected.Client,
                         'Project Role': ComboBoxRole1.Selected.Value,
                         'Start Date': '1ProjectStartDate_2'.SelectedDate,
-                        //'End Date': varDatePicked || 'ProjectEndDate_2'.SelectedDate,
+                        //'Project Manager': ComboBoxProjectManager.Selected.Item, 
                         'Project Description': '1ProjectDescription_2'.Text,
                         'Microsoft Profile': {
                             Claims: Concatenate(
@@ -550,7 +550,7 @@
         Y: =719
         ZIndex: =17
 
-    Gallery4 As gallery.galleryVertical:
+    GalleryProjectsDisplay As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =470
         Items: |-
@@ -609,7 +609,7 @@
             Y: =15
             ZIndex: =2
 
-    Label15 As label:
+    "'Label - varSelectedProjectID (Hidden)' As label":
         Color: =RGBA(255, 255, 255, 1)
         Height: =36
         Size: =26
@@ -620,7 +620,7 @@
         Y: =663
         ZIndex: =22
 
-    Button6 As button:
+    ButtonBackPE As button:
         Fill: =RGBA(39, 113, 194, 1)
         OnSelect: =Back()
         Text: ="Back"
@@ -628,7 +628,7 @@
         Y: =719
         ZIndex: =26
 
-    Button5 As button:
+    ButtonCompleteCV As button:
         OnSelect: |-
             =// navigate to the success screen
             Navigate(Success, ScreenTransition.Fade)
@@ -637,7 +637,7 @@
         Y: =719
         ZIndex: =27
 
-    Icon13_2 As icon.Home:
+    IconHomePE As icon.Home:
         Color: =RGBA(255, 255, 255, 1)
         Height: =60
         Icon: =Icon.Home
@@ -647,14 +647,14 @@
         Y: =30
         ZIndex: =30
 
-    Group1 As group:
+    GroupNewProjectButton As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =30
 
-        Icon11 As icon.Add:
+        IconAdd As icon.Add:
             BorderColor: =RGBA(255, 255, 255, 1)
             Color: =RGBA(255, 255, 255, 1)
             FocusedBorderColor: =RGBA(255, 255, 255, 1)
@@ -672,7 +672,7 @@
             Y: =174
             ZIndex: =28
 
-        Label8 As label:
+        "'Label - New' As label":
             Color: =RGBA(255, 255, 255, 1)
             OnSelect: |
                 =// reset the current project button

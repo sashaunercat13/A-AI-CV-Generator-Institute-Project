@@ -676,7 +676,7 @@
         );
         */
 
-    Button4_6 As button:
+    ButtonBackgroundSkillsBoxUSEQ As button:
         BorderColor: =RGBA(39, 41, 54, 1)
         BorderThickness: =3
         DisabledBorderColor: =RGBA(39, 41, 54, 1)
@@ -694,13 +694,13 @@
         Y: =135
         ZIndex: =1
 
-    Rectangle2_1 As rectangle:
+    RectangleBackgroundTopUSEQ As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =116
         Width: =1366
         ZIndex: =2
 
-    Button4_8 As button:
+    ButtonBackgroundQualBoxUSEQ As button:
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =3
         DisabledBorderColor: =RGBA(39, 41, 54, 1)
@@ -718,7 +718,7 @@
         Y: =391
         ZIndex: =3
 
-    Button4_7 As button:
+    ButtonBackgroundEdBoxUSEQ As button:
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =3
         DisabledBorderColor: =RGBA(39, 41, 54, 1)
@@ -736,7 +736,7 @@
         Y: =135
         ZIndex: =4
 
-    Image4_1 As image:
+    ImageCapIconUSEQ As image:
         Height: =60
         Image: ='Logo Blue'
         Width: =52
@@ -744,7 +744,7 @@
         Y: =30
         ZIndex: =5
 
-    Label6_1 As label:
+    "'Label - USEQTitle' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -756,14 +756,14 @@
         Y: =37
         ZIndex: =6
 
-    Icon1_2 As icon.Ribbon:
+    IconRibbonUSEQ As icon.Ribbon:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Ribbon
         X: =20
         Y: =25
         ZIndex: =7
 
-    Label5_8 As label:
+    "'Label - SkillsUSEQ' As label":
         Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -775,7 +775,7 @@
         Y: =135
         ZIndex: =8
 
-    Label5_18 As label:
+    "'Label - EducationUSEQ' As label":
         Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -787,7 +787,7 @@
         Y: =135
         ZIndex: =9
 
-    Button1_10 As button:
+    ButtonNextPageUSEQ As button:
         DisplayMode: |-
             =If(
                 IsEmpty(SkillsCollectionUpdate) Or IsEmpty(EducationCollectionUpdate) Or IsEmpty(QualificationsCollectionUpdate),
@@ -845,7 +845,7 @@
         Y: =710
         ZIndex: =10
 
-    Button1_9 As button:
+    ButtonBackUSEQ As button:
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: =Navigate(Create)
         Text: ="Back "
@@ -853,7 +853,7 @@
         Y: =710
         ZIndex: =11
 
-    "'Microsoft Profile_1' As combobox":
+    "'ComboBoxMicrosoftProfileUSEQ (Hidden)' As combobox":
         DefaultSelectedItems: |-
             =/*{
                     '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -883,31 +883,31 @@
         DisplayFields: =["Claims"]
         Items: =Choices([@'CV Generator'].'Microsoft Profile')
         SearchFields: =["Claims"]
-        SearchItems: =Choices('CV Generator'.'Microsoft Profile','Microsoft Profile_1'.SearchText)
+        SearchItems: =Choices('CV Generator'.'Microsoft Profile','ComboBoxMicrosoftProfileUSEQ (Hidden)'.SearchText)
         Visible: =false
         X: =931
         Y: =25
         ZIndex: =12
 
-    ComboBoxSkill_1 As combobox:
+    ComboBoxSkillUSEQ As combobox:
         DisplayFields: =["Value"]
         Font: =Font.Verdana
         Height: =35
         InputTextPlaceholder: ="Search Skills"
         Items: =Skills
         SearchFields: =["Value"]
-        SearchItems: =Search(Skills,ComboBoxSkill_1.SearchText,"Value")
+        SearchItems: =Search(Skills,ComboBoxSkillUSEQ.SearchText,"Value")
         Width: =464
         X: =33
         Y: =203
         ZIndex: =13
 
-    AddSkill_3 As button:
+    ButtonAddSkillsUSEQ As button:
         Height: =35
         OnSelect: |-
             =// Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
-            ForAll(ComboBoxSkill_1.SelectedItems, Collect(SkillsCollectionUpdate, {Value: Value}));
-            Reset(ComboBoxSkill_1);
+            ForAll(ComboBoxSkillUSEQ.SelectedItems, Collect(SkillsCollectionUpdate, {Value: Value}));
+            Reset(ComboBoxSkillUSEQ);
         Size: =12
         Text: ="Add Skill(s)"
         Width: =120
@@ -915,7 +915,7 @@
         Y: =203
         ZIndex: =14
 
-    Label5_19 As label:
+    "'Label - QualificationsUSEQ' As label":
         Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -939,7 +939,7 @@
         Y: =246
         ZIndex: =16
 
-        IconToolSEQ_1 As icon.ToolsWrench:
+        IconToolUSEQ As icon.ToolsWrench:
             Color: =RGBA(39, 41, 54, 1)
             Height: =30
             Icon: =Icon.ToolsWrench
@@ -948,7 +948,7 @@
             Y: =5
             ZIndex: =1
 
-        "'Label - SelectedSkillsSEQ_1' As label":
+        "'Label - SelectedSkillsUSEQ' As label":
             Height: =30
             OnSelect: =Select(Parent)
             Text: =ThisItem.Value
@@ -957,7 +957,7 @@
             Y: =5
             ZIndex: =2
 
-        IconTrashSkillsSEQ_1 As icon.Trash:
+        IconTrashSkillsUSEQ As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
             OnSelect: =Remove(SkillsCollectionUpdate, ThisItem)
