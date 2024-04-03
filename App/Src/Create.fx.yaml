@@ -276,6 +276,7 @@ Create As screen:
         Height: =60
         Icon: =Icon.Home
         OnSelect: =Navigate(Home)
+        Tooltip: ="Take me to the homepage"
         Width: =52
         X: =1221
         Y: =30

@@ -886,6 +886,7 @@
         ZIndex: =13
 
     ButtonAddSkillsSEQ As button:
+        BorderThickness: =0
         Height: =35
         OnSelect: |-
             =// Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
