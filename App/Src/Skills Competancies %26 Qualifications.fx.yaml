@@ -652,7 +652,7 @@
         );
         */
 
-    Button4 As button:
+    ButtonBackgroundSkillsBoxSEQ As button:
         BorderColor: =RGBA(39, 41, 54, 1)
         BorderThickness: =3
         DisabledBorderColor: =RGBA(39, 41, 54, 1)
@@ -670,13 +670,13 @@
         Y: =135
         ZIndex: =1
 
-    Rectangle2 As rectangle:
+    RectangleBackgroundTopSEQ As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =116
         Width: =1366
         ZIndex: =2
 
-    Button4_2 As button:
+    ButtonBackgroundQualBoxSEQ As button:
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =3
         DisabledBorderColor: =RGBA(39, 41, 54, 1)
@@ -694,7 +694,7 @@
         Y: =391
         ZIndex: =3
 
-    Button4_1 As button:
+    ButtonBackgroundEdBoxSEQ As button:
         BorderColor: =RGBA(18, 171, 219, 1)
         BorderThickness: =3
         DisabledBorderColor: =RGBA(39, 41, 54, 1)
@@ -712,7 +712,7 @@
         Y: =135
         ZIndex: =4
 
-    Image4 As image:
+    ImageCapIconSEQ As image:
         Height: =60
         Image: ='Logo Blue'
         Width: =52
@@ -720,7 +720,7 @@
         Y: =30
         ZIndex: =5
 
-    Label6 As label:
+    "'Label - SEQTitle' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -732,14 +732,14 @@
         Y: =37
         ZIndex: =6
 
-    Icon1 As icon.Ribbon:
+    IconRibbon As icon.Ribbon:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Ribbon
         X: =20
         Y: =25
         ZIndex: =7
 
-    Label5_4 As label:
+    "'Label - SkillsSEQ' As label":
         Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -751,7 +751,7 @@
         Y: =135
         ZIndex: =8
 
-    Label5_5 As label:
+    "'Label - EducationSEQ' As label":
         Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -763,7 +763,7 @@
         Y: =135
         ZIndex: =9
 
-    Button1_2 As button:
+    ButtonNextPageSEQ As button:
         DisplayMode: |-
             =If(
                 IsEmpty(SkillsCollection) Or IsEmpty(EducationCollection) Or IsEmpty(QualificationsCollection),
@@ -828,7 +828,7 @@
         Y: =710
         ZIndex: =10
 
-    Button1_3 As button:
+    ButtonBackSEQ As button:
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: =Navigate(Create)
         Text: ="Back "
@@ -836,7 +836,7 @@
         Y: =710
         ZIndex: =11
 
-    "'Microsoft Profile' As combobox":
+    "'ComboBoxMicrosoftProfile (Hidden)' As combobox":
         DefaultSelectedItems: |-
             =/*{
                     '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.Client_Data",
@@ -866,31 +866,31 @@
         DisplayFields: =["Claims"]
         Items: =Choices([@'CV Generator'].'Microsoft Profile')
         SearchFields: =["Claims"]
-        SearchItems: =Choices('CV Generator'.'Microsoft Profile','Microsoft Profile'.SearchText)
+        SearchItems: =Choices('CV Generator'.'Microsoft Profile','ComboBoxMicrosoftProfile (Hidden)'.SearchText)
         Visible: =false
         X: =931
         Y: =25
         ZIndex: =12
 
-    ComboBoxSkill As combobox:
+    ComboBoxSkillsSEQ As combobox:
         DisplayFields: =["Value"]
         Font: =Font.Verdana
         Height: =35
         InputTextPlaceholder: ="Search Skills"
         Items: =Skills
         SearchFields: =["Value"]
-        SearchItems: =Search(Skills,ComboBoxSkill.SearchText,"Value")
+        SearchItems: =Search(Skills,ComboBoxSkillsSEQ.SearchText,"Value")
         Width: =464
         X: =33
         Y: =203
         ZIndex: =13
 
-    AddSkill As button:
+    ButtonAddSkillsSEQ As button:
         Height: =35
         OnSelect: |-
             =// Collect(SkillsCollection, {Skill: ComboBoxSkill.Selected.Value});
-            ForAll(ComboBoxSkill.SelectedItems, Collect(SkillsCollection, {Skill: Value}));
-            Reset(ComboBoxSkill);
+            ForAll(ComboBoxSkillsSEQ.SelectedItems, Collect(SkillsCollection, {Skill: Value}));
+            Reset(ComboBoxSkillsSEQ);
         Size: =12
         Text: ="Add Skill(s)"
         Width: =120
@@ -898,7 +898,7 @@
         Y: =203
         ZIndex: =14
 
-    Label5_17 As label:
+    "'Label - QualificationsSEQ' As label":
         Color: =RGBA(39, 41, 54, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -910,7 +910,7 @@
         Y: =389
         ZIndex: =15
 
-    Gallery1 As gallery.galleryVertical:
+    GallerySkillsSEQ As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =420
         Items: =SkillsCollection
@@ -922,14 +922,14 @@
         Y: =258
         ZIndex: =16
 
-        Icon3 As icon.ToolsWrench:
+        IconToolSEQ As icon.ToolsWrench:
             Color: =RGBA(39, 41, 54, 1)
             Height: =30
             Icon: =Icon.ToolsWrench
             OnSelect: =Select(Parent)
             ZIndex: =1
 
-        Label2 As label:
+        "'Label - SelectedSkillsSEQ' As label":
             Height: =30
             OnSelect: =Select(Parent)
             Text: =ThisItem.Skill
@@ -937,26 +937,26 @@
             X: =64
             ZIndex: =2
 
-        Icon5 As icon.Trash:
+        IconTrashSkillsSEQ As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
             OnSelect: =Remove(SkillsCollection, ThisItem)
             X: =511
             ZIndex: =3
 
-    ComboBoxQual As combobox:
+    ComboBoxQualificationsSEQ As combobox:
         DisplayFields: =["Value"]
         Height: =35
         InputTextPlaceholder: ="Search Qualifications"
         Items: =Qualifications
         SearchFields: =["Value"]
-        SearchItems: =Search(Qualifications,ComboBoxQual.SearchText,"Value")
+        SearchItems: =Search(Qualifications,ComboBoxQualificationsSEQ.SearchText,"Value")
         Width: =432
         X: =704
         Y: =459
         ZIndex: =17
 
-    ComboBoxUniversity As combobox:
+    ComboBoxUniversitySEQ As combobox:
         DisplayFields: =["Value"]
         Height: =35
         InputTextPlaceholder: ="Search Universities"
@@ -965,26 +965,26 @@
         SearchFields: =["Value"]
         SearchItems: |-
             =Search(["University of Oxford","University of Bath","University of Cambridge","UCL (University College London)","University of Manchester","University of Bristol","Loughborough University","University of Leeds","The University of Edinburgh","University of Birmingham","Durham University","University of Glasgow","University of St Andrews","University of Warwick","Imperial College London","University of Nottingham","University of Southampton","University of Surrey","University of Strathclyde","University of Exeter","University of Sheffield","King's College London, University of","Lancaster University","Queen's University Belfast","London School of Economics and Political Science (LSE)","Cardiff University","University of Liverpool","University of York","Newcastle University","Ulster University","Heriot-Watt University","Queen Mary University of London","Swansea University","University of Stirling","University of East Anglia UEA","Aston University, Birmingham","University of Reading","City, University of London","Royal Holloway, University of London","Northumbria University, Newcastle","University of Aberdeen","Sheffield Hallam University","University of Sussex","University of Dundee","University of Leicester","University of Derby","Teesside University, Middlesbrough","University of Huddersfield","Birmingham City University","University of South Wales","University of Portsmouth","Liverpool John Moores University","Nottingham Trent University","Leeds Beckett University","University of Greenwich","Coventry University","Manchester Metropolitan University","Brunel University London","University of the West of Scotland","University of Hull","University of Kent","University of Gloucestershire","Solent University (Southampton)","University of East London","University of Plymouth","SOAS University of London","University of Hertfordshire","Aberystwyth University","Bournemouth University","Keele University","University of Brighton","Glasgow Caledonian University","University of Chester","University of Bradford","London South Bank University","Anglia Ruskin University","Middlesex University","London Metropolitan University","De Montfort University","University of Wolverhampton","Oxford Brookes University","University of Chichester","Buckinghamshire New University","Bristol, University of the West of","University of Salford","Cardiff Metropolitan University","University of Lincoln","Edge Hill University","University of Worcester","University of Northampton","University of Central Lancashire","Staffordshire University","Bangor University","University of Essex","Goldsmiths, University of London","University of Roehampton","University of West London","St George's, University of London","University of Sunderland","University of the Arts London","University for the Creative Arts","Robert Gordon University","University of Wales Trinity Saint David","University of Winchester","University of Suffolk","Kingston University","Bath Spa University","University of Bedfordshire","Royal Agricultural University","Edinburgh Napier University","St Mary's University, Twickenham","Ravensbourne University London","Liverpool Hope University","University of Westminster, London","York St John University","Queen Margaret University, Edinburgh","University of Cumbria","Falmouth University","Canterbury Christ Church University","Abertay University","University of the Highlands and Islands","University of Buckingham","Norwich University of the Arts","Newman University, Birmingham","University of Bolton","Leeds Trinity University","Plymouth Marjon University","Bishop Grosseteste University","Royal Conservatoire of Scotland","Glyndwr University, Wrexham"]
-            ,ComboBoxUniversity.SearchText,"Value")
+            ,ComboBoxUniversitySEQ.SearchText,"Value")
         SelectMultiple: =false
         Width: =432
         X: =704
         Y: =203
         ZIndex: =18
 
-    AddSkill_1 As button:
+    ButtonAddEducationSEQ As button:
         DisplayMode: |-
             =If(
-                IsBlank(ComboBoxUniversity.SelectedItems) Or IsBlank(ComboBoxDegreeType.SelectedItems) Or IsBlank(ComboBoxCourse.SelectedItems),
+                IsBlank(ComboBoxUniversitySEQ.SelectedItems) Or IsBlank(ComboBoxDegreeTypeSEQ.SelectedItems) Or IsBlank(ComboBoxCourseSEQ.SelectedItems),
                 DisplayMode.Disabled,
                 DisplayMode.Edit
             )
         Height: =35
         OnSelect: |+
-            =Collect(EducationCollection, {University: ComboBoxUniversity.Selected.Value, Course: ComboBoxCourse.Selected.Value, DegreeType: ComboBoxDegreeType.Selected.Value});
-            Reset(ComboBoxCourse);
-            Reset(ComboBoxUniversity);
-            Reset(ComboBoxDegreeType);
+            =Collect(EducationCollection, {University: ComboBoxUniversitySEQ.Selected.Value, Course: ComboBoxCourseSEQ.Selected.Value, DegreeType: ComboBoxDegreeTypeSEQ.Selected.Value});
+            Reset(ComboBoxCourseSEQ);
+            Reset(ComboBoxUniversitySEQ);
+            Reset(ComboBoxDegreeTypeSEQ);
             
         Size: =12
         Text: ="Add Education"
@@ -992,12 +992,12 @@
         Y: =204
         ZIndex: =19
 
-    AddSkill_2 As button:
+    ButtonAddQualificationSEQ As button:
         Height: =35
         OnSelect: |
             =//Collect(Qualifications, {Qualification: ComboBoxQual.SelectedItems});
-            ForAll(ComboBoxQual.SelectedItems, Collect(QualificationsCollection, {Qualification: Value}));
-            Reset(ComboBoxQual);
+            ForAll(ComboBoxQualificationsSEQ.SelectedItems, Collect(QualificationsCollection, {Qualification: Value}));
+            Reset(ComboBoxQualificationsSEQ);
         Size: =12
         Text: ="Add Qualification(s)"
         Width: =172
@@ -1005,7 +1005,7 @@
         Y: =460
         ZIndex: =20
 
-    Gallery2 As gallery.galleryVertical:
+    GalleryEducationSEQ As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =90
         Items: =EducationCollection
@@ -1016,7 +1016,7 @@
         Y: =283
         ZIndex: =21
 
-        Icon6 As icon.DocumentwithContent:
+        IconDocSEQ As icon.DocumentwithContent:
             Height: =25
             Icon: =Icon.DocumentWithContent
             OnSelect: =Select(Parent)
@@ -1025,14 +1025,14 @@
             Y: =7
             ZIndex: =1
 
-        Label5 As label:
+        "'Label - SelectedEducationSEQ' As label":
             OnSelect: =Select(Parent)
             Text: =ThisItem.DegreeType & " " & ThisItem.Course & ", " & ThisItem.University
             Width: =504
             X: =64
             ZIndex: =2
 
-        Icon5_1 As icon.Trash:
+        IconTrashEducationSEQ As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
             OnSelect: =Remove(EducationCollection, ThisItem)
@@ -1040,33 +1040,33 @@
             Y: =5
             ZIndex: =3
 
-    ComboBoxCourse As combobox:
+    ComboBoxCourseSEQ As combobox:
         DisplayFields: =["Value"]
         Height: =35
         InputTextPlaceholder: ="Search Courses"
         Items: =["Account & Finance","Aeronautical & Aerospace","Biomedical Sciences","Business & Management Studies","Chemical Engineering","Chemistry and/or Chemical Sciences","Civil and/or Environmental Engineering","Computer Science","Economics","Electrical & Electronic Engineering","Geography & Environmental Science","Geology and Geophysics Sciences","Information Technology","Marketing","Mathematics","Mechanical Engineering","Music","Philosophy","Physics","Politics and/or International Relations","Psychology and/or Criminology","Sociology","Materials Science / Engineering","Sport Science and/or Physiotherapy","Education / Teaching / PGCE","Communications & Media Studies","Art History","Creative Writing","Criminology","Data Science","Dentistry","Drama and Theatre Studies","Earth Sciences","English Literature","Environmental Science","Fashion Design","Film Studies","Fine Art","Forensic Science","Genetics","Graphic Design","History","Hospitality Management","Human Resource Management","Linguistics","Management Studies","Modern Languages (e.g., French, German, Spanish)","Music","Nursing","Nutrition","Occupational Therapy","Pharmacy","Photography","Public Health","Quantity Surveying","Radiography","Social Work","Software Engineering","Sports Science","Statistics","Sustainable Development","Textile Design","Theology","Tourism Management","Urban Planning","Veterinary Medicine","Web Development","Zoology","Artificial Intelligence","Robotics","Renewable Energy Engineering","Marine Biology","Aerospace Technology","Nanotechnology","Renewable Energy Systems","Cybersecurity","Game Design","Animation","Renewable Energy Management","Green Chemistry","Petroleum Engineering","International Business","Fashion Marketing","Renewable Energy Policy","Computational Biology","Artificial Neural Networks","Ethical Hacking"]
         SearchFields: =["Value"]
-        SearchItems: =Search(["Account & Finance","Aeronautical & Aerospace","Biomedical Sciences","Business & Management Studies","Chemical Engineering","Chemistry and/or Chemical Sciences","Civil and/or Environmental Engineering","Computer Science","Economics","Electrical & Electronic Engineering","Geography & Environmental Science","Geology and Geophysics Sciences","Information Technology","Marketing","Mathematics","Mechanical Engineering","Music","Philosophy","Physics","Politics and/or International Relations","Psychology and/or Criminology","Sociology","Materials Science / Engineering","Sport Science and/or Physiotherapy","Education / Teaching / PGCE","Communications & Media Studies","Art History","Creative Writing","Criminology","Data Science","Dentistry","Drama and Theatre Studies","Earth Sciences","English Literature","Environmental Science","Fashion Design","Film Studies","Fine Art","Forensic Science","Genetics","Graphic Design","History","Hospitality Management","Human Resource Management","Linguistics","Management Studies","Modern Languages (e.g., French, German, Spanish)","Music","Nursing","Nutrition","Occupational Therapy","Pharmacy","Photography","Public Health","Quantity Surveying","Radiography","Social Work","Software Engineering","Sports Science","Statistics","Sustainable Development","Textile Design","Theology","Tourism Management","Urban Planning","Veterinary Medicine","Web Development","Zoology","Artificial Intelligence","Robotics","Renewable Energy Engineering","Marine Biology","Aerospace Technology","Nanotechnology","Renewable Energy Systems","Cybersecurity","Game Design","Animation","Renewable Energy Management","Green Chemistry","Petroleum Engineering","International Business","Fashion Marketing","Renewable Energy Policy","Computational Biology","Artificial Neural Networks","Ethical Hacking"],ComboBoxCourse.SearchText,"Value")
+        SearchItems: =Search(["Account & Finance","Aeronautical & Aerospace","Biomedical Sciences","Business & Management Studies","Chemical Engineering","Chemistry and/or Chemical Sciences","Civil and/or Environmental Engineering","Computer Science","Economics","Electrical & Electronic Engineering","Geography & Environmental Science","Geology and Geophysics Sciences","Information Technology","Marketing","Mathematics","Mechanical Engineering","Music","Philosophy","Physics","Politics and/or International Relations","Psychology and/or Criminology","Sociology","Materials Science / Engineering","Sport Science and/or Physiotherapy","Education / Teaching / PGCE","Communications & Media Studies","Art History","Creative Writing","Criminology","Data Science","Dentistry","Drama and Theatre Studies","Earth Sciences","English Literature","Environmental Science","Fashion Design","Film Studies","Fine Art","Forensic Science","Genetics","Graphic Design","History","Hospitality Management","Human Resource Management","Linguistics","Management Studies","Modern Languages (e.g., French, German, Spanish)","Music","Nursing","Nutrition","Occupational Therapy","Pharmacy","Photography","Public Health","Quantity Surveying","Radiography","Social Work","Software Engineering","Sports Science","Statistics","Sustainable Development","Textile Design","Theology","Tourism Management","Urban Planning","Veterinary Medicine","Web Development","Zoology","Artificial Intelligence","Robotics","Renewable Energy Engineering","Marine Biology","Aerospace Technology","Nanotechnology","Renewable Energy Systems","Cybersecurity","Game Design","Animation","Renewable Energy Management","Green Chemistry","Petroleum Engineering","International Business","Fashion Marketing","Renewable Energy Policy","Computational Biology","Artificial Neural Networks","Ethical Hacking"],ComboBoxCourseSEQ.SearchText,"Value")
         SelectMultiple: =false
         Width: =204
         X: =931
         Y: =245
         ZIndex: =22
 
-    ComboBoxDegreeType As combobox:
+    ComboBoxDegreeTypeSEQ As combobox:
         DisplayFields: =["Value"]
         Height: =35
         InputTextPlaceholder: ="Search Degree Type"
         Items: =["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MA", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"]
         SearchFields: =["Value"]
-        SearchItems: =Search(["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"],ComboBoxDegreeType.SearchText,"Value")
+        SearchItems: =Search(["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"],ComboBoxDegreeTypeSEQ.SearchText,"Value")
         SelectMultiple: =false
         Width: =214
         X: =704
         Y: =246
         ZIndex: =23
 
-    Gallery3 As gallery.galleryVertical:
+    GalleryQualificationsSEQ As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =176
         Items: =QualificationsCollection
@@ -1077,7 +1077,7 @@
         Y: =495
         ZIndex: =24
 
-        Icon9 As icon.ListScrollWatchlist:
+        IconListScrollSEQ As icon.ListScrollWatchlist:
             Height: =25
             Icon: =Icon.ListScrollWatchlist
             OnSelect: =Select(Parent)
@@ -1085,7 +1085,7 @@
             Y: =9
             ZIndex: =1
 
-        Label7 As label:
+        "'Label - SelectedQualSEQ' As label":
             Height: =44
             OnSelect: =Select(Parent)
             Text: =ThisItem.Qualification
@@ -1093,7 +1093,7 @@
             X: =52
             ZIndex: =2
 
-        Icon5_2 As icon.Trash:
+        IconTrashQualSEQ As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
             OnSelect: =Remove(QualificationsCollection, ThisItem)
@@ -1101,7 +1101,7 @@
             Y: =4
             ZIndex: =3
 
-    Icon13 As icon.Home:
+    IconHomeSEQ As icon.Home:
         Color: =RGBA(255, 255, 255, 1)
         Height: =60
         Icon: =Icon.Home

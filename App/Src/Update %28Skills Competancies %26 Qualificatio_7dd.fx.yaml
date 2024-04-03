@@ -927,7 +927,7 @@
         Y: =389
         ZIndex: =15
 
-    Gallery1_1 As gallery.galleryVertical:
+    GallerySkillsUSEQ As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =420
         Items: =SkillsCollectionUpdate
@@ -961,19 +961,19 @@
             X: =511
             ZIndex: =3
 
-    ComboBoxQual_1 As combobox:
+    ComboBoxQualificationUSEQ As combobox:
         DisplayFields: =["Value"]
         Height: =35
         InputTextPlaceholder: ="Search Qualifications"
         Items: =Qualifications
         SearchFields: =["Value"]
-        SearchItems: =Search(Qualifications,ComboBoxQual_1.SearchText,"Value")
+        SearchItems: =Search(Qualifications,ComboBoxQualificationUSEQ.SearchText,"Value")
         Width: =432
         X: =704
         Y: =459
         ZIndex: =17
 
-    ComboBoxUniversity_1 As combobox:
+    ComboBoxUniversityUSEQ As combobox:
         DisplayFields: =["Value"]
         Height: =35
         InputTextPlaceholder: ="Search Universities"
@@ -982,26 +982,26 @@
         SearchFields: =["Value"]
         SearchItems: |-
             =Search(["University of Oxford","University of Bath","University of Cambridge","UCL (University College London)","University of Manchester","University of Bristol","Loughborough University","University of Leeds","The University of Edinburgh","University of Birmingham","Durham University","University of Glasgow","University of St Andrews","University of Warwick","Imperial College London","University of Nottingham","University of Southampton","University of Surrey","University of Strathclyde","University of Exeter","University of Sheffield","King's College London, University of","Lancaster University","Queen's University Belfast","London School of Economics and Political Science (LSE)","Cardiff University","University of Liverpool","University of York","Newcastle University","Ulster University","Heriot-Watt University","Queen Mary University of London","Swansea University","University of Stirling","University of East Anglia UEA","Aston University, Birmingham","University of Reading","City, University of London","Royal Holloway, University of London","Northumbria University, Newcastle","University of Aberdeen","Sheffield Hallam University","University of Sussex","University of Dundee","University of Leicester","University of Derby","Teesside University, Middlesbrough","University of Huddersfield","Birmingham City University","University of South Wales","University of Portsmouth","Liverpool John Moores University","Nottingham Trent University","Leeds Beckett University","University of Greenwich","Coventry University","Manchester Metropolitan University","Brunel University London","University of the West of Scotland","University of Hull","University of Kent","University of Gloucestershire","Solent University (Southampton)","University of East London","University of Plymouth","SOAS University of London","University of Hertfordshire","Aberystwyth University","Bournemouth University","Keele University","University of Brighton","Glasgow Caledonian University","University of Chester","University of Bradford","London South Bank University","Anglia Ruskin University","Middlesex University","London Metropolitan University","De Montfort University","University of Wolverhampton","Oxford Brookes University","University of Chichester","Buckinghamshire New University","Bristol, University of the West of","University of Salford","Cardiff Metropolitan University","University of Lincoln","Edge Hill University","University of Worcester","University of Northampton","University of Central Lancashire","Staffordshire University","Bangor University","University of Essex","Goldsmiths, University of London","University of Roehampton","University of West London","St George's, University of London","University of Sunderland","University of the Arts London","University for the Creative Arts","Robert Gordon University","University of Wales Trinity Saint David","University of Winchester","University of Suffolk","Kingston University","Bath Spa University","University of Bedfordshire","Royal Agricultural University","Edinburgh Napier University","St Mary's University, Twickenham","Ravensbourne University London","Liverpool Hope University","University of Westminster, London","York St John University","Queen Margaret University, Edinburgh","University of Cumbria","Falmouth University","Canterbury Christ Church University","Abertay University","University of the Highlands and Islands","University of Buckingham","Norwich University of the Arts","Newman University, Birmingham","University of Bolton","Leeds Trinity University","Plymouth Marjon University","Bishop Grosseteste University","Royal Conservatoire of Scotland","Glyndwr University, Wrexham"]
-            ,ComboBoxUniversity_1.SearchText,"Value")
+            ,ComboBoxUniversityUSEQ.SearchText,"Value")
         SelectMultiple: =false
         Width: =432
         X: =704
         Y: =203
         ZIndex: =18
 
-    AddSkill_4 As button:
+    ButtonAddEducationUSEQ As button:
         DisplayMode: |-
             =If(
-                IsBlank(ComboBoxUniversity_1.SelectedItems) Or IsBlank(ComboBoxDegreeType_1.SelectedItems) Or IsBlank(ComboBoxCourse_1.SelectedItems),
+                IsBlank(ComboBoxUniversityUSEQ.SelectedItems) Or IsBlank(ComboBoxDegreeTypeUSEQ.SelectedItems) Or IsBlank(ComboBoxCourseUSEQ.SelectedItems),
                 DisplayMode.Disabled,
                 DisplayMode.Edit
             )
         Height: =35
         OnSelect: |+
-            =Collect(EducationCollectionUpdate, {University: ComboBoxUniversity_1.Selected.Value, Course: ComboBoxCourse_1.Selected.Value, DegreeType: ComboBoxDegreeType_1.Selected.Value});
-            Reset(ComboBoxCourse_1);
-            Reset(ComboBoxUniversity_1);
-            Reset(ComboBoxDegreeType_1);
+            =Collect(EducationCollectionUpdate, {University: ComboBoxUniversityUSEQ.Selected.Value, Course: ComboBoxCourseUSEQ.Selected.Value, DegreeType: ComboBoxDegreeTypeUSEQ.Selected.Value});
+            Reset(ComboBoxCourseUSEQ);
+            Reset(ComboBoxUniversityUSEQ);
+            Reset(ComboBoxDegreeTypeUSEQ);
             
         Size: =12
         Text: ="Add Education"
@@ -1009,12 +1009,12 @@
         Y: =204
         ZIndex: =19
 
-    AddSkill_5 As button:
+    ButtonAddQualificationUSEQ As button:
         Height: =35
         OnSelect: |
             =//Collect(Qualifications, {Qualification: ComboBoxQual.SelectedItems});
-            ForAll(ComboBoxQual_1.SelectedItems, Collect(QualificationsCollectionUpdate, {Value: Value}));
-            Reset(ComboBoxQual_1);
+            ForAll(ComboBoxQualificationUSEQ.SelectedItems, Collect(QualificationsCollectionUpdate, {Value: Value}));
+            Reset(ComboBoxQualificationUSEQ);
         Size: =12
         Text: ="Add Qualification(s)"
         Width: =172
@@ -1022,7 +1022,7 @@
         Y: =460
         ZIndex: =20
 
-    Gallery2_1 As gallery.galleryVertical:
+    GalleryEducationUSEQ As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =90
         Items: =EducationCollectionUpdate
@@ -1033,7 +1033,7 @@
         Y: =283
         ZIndex: =21
 
-        Icon6_1 As icon.DocumentwithContent:
+        IconDocumentUSEQ As icon.DocumentwithContent:
             Height: =25
             Icon: =Icon.DocumentWithContent
             OnSelect: =Select(Parent)
@@ -1042,14 +1042,14 @@
             Y: =7
             ZIndex: =1
 
-        Label5_3 As label:
+        LabelSelectedEducationUSEQ As label:
             OnSelect: =Select(Parent)
             Text: =ThisItem.DegreeType & " " & ThisItem.Course & ", " & ThisItem.University
             Width: =504
             X: =64
             ZIndex: =2
 
-        Icon5_5 As icon.Trash:
+        IconTrashEducationUSEQ As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
             OnSelect: =Remove(EducationCollectionUpdate, ThisItem)
@@ -1057,33 +1057,33 @@
             Y: =5
             ZIndex: =3
 
-    ComboBoxCourse_1 As combobox:
+    ComboBoxCourseUSEQ As combobox:
         DisplayFields: =["Value"]
         Height: =35
         InputTextPlaceholder: ="Search Courses"
         Items: =["Account & Finance","Aeronautical & Aerospace","Biomedical Sciences","Business & Management Studies","Chemical Engineering","Chemistry and/or Chemical Sciences","Civil and/or Environmental Engineering","Computer Science","Economics","Electrical & Electronic Engineering","Geography & Environmental Science","Geology and Geophysics Sciences","Information Technology","Marketing","Mathematics","Mechanical Engineering","Music","Philosophy","Physics","Politics and/or International Relations","Psychology and/or Criminology","Sociology","Materials Science / Engineering","Sport Science and/or Physiotherapy","Education / Teaching / PGCE","Communications & Media Studies","Art History","Creative Writing","Criminology","Data Science","Dentistry","Drama and Theatre Studies","Earth Sciences","English Literature","Environmental Science","Fashion Design","Film Studies","Fine Art","Forensic Science","Genetics","Graphic Design","History","Hospitality Management","Human Resource Management","Linguistics","Management Studies","Modern Languages (e.g., French, German, Spanish)","Music","Nursing","Nutrition","Occupational Therapy","Pharmacy","Photography","Public Health","Quantity Surveying","Radiography","Social Work","Software Engineering","Sports Science","Statistics","Sustainable Development","Textile Design","Theology","Tourism Management","Urban Planning","Veterinary Medicine","Web Development","Zoology","Artificial Intelligence","Robotics","Renewable Energy Engineering","Marine Biology","Aerospace Technology","Nanotechnology","Renewable Energy Systems","Cybersecurity","Game Design","Animation","Renewable Energy Management","Green Chemistry","Petroleum Engineering","International Business","Fashion Marketing","Renewable Energy Policy","Computational Biology","Artificial Neural Networks","Ethical Hacking"]
         SearchFields: =["Value"]
-        SearchItems: =Search(["Account & Finance","Aeronautical & Aerospace","Biomedical Sciences","Business & Management Studies","Chemical Engineering","Chemistry and/or Chemical Sciences","Civil and/or Environmental Engineering","Computer Science","Economics","Electrical & Electronic Engineering","Geography & Environmental Science","Geology and Geophysics Sciences","Information Technology","Marketing","Mathematics","Mechanical Engineering","Music","Philosophy","Physics","Politics and/or International Relations","Psychology and/or Criminology","Sociology","Materials Science / Engineering","Sport Science and/or Physiotherapy","Education / Teaching / PGCE","Communications & Media Studies","Art History","Creative Writing","Criminology","Data Science","Dentistry","Drama and Theatre Studies","Earth Sciences","English Literature","Environmental Science","Fashion Design","Film Studies","Fine Art","Forensic Science","Genetics","Graphic Design","History","Hospitality Management","Human Resource Management","Linguistics","Management Studies","Modern Languages (e.g., French, German, Spanish)","Music","Nursing","Nutrition","Occupational Therapy","Pharmacy","Photography","Public Health","Quantity Surveying","Radiography","Social Work","Software Engineering","Sports Science","Statistics","Sustainable Development","Textile Design","Theology","Tourism Management","Urban Planning","Veterinary Medicine","Web Development","Zoology","Artificial Intelligence","Robotics","Renewable Energy Engineering","Marine Biology","Aerospace Technology","Nanotechnology","Renewable Energy Systems","Cybersecurity","Game Design","Animation","Renewable Energy Management","Green Chemistry","Petroleum Engineering","International Business","Fashion Marketing","Renewable Energy Policy","Computational Biology","Artificial Neural Networks","Ethical Hacking"],ComboBoxCourse_1.SearchText,"Value")
+        SearchItems: =Search(["Account & Finance","Aeronautical & Aerospace","Biomedical Sciences","Business & Management Studies","Chemical Engineering","Chemistry and/or Chemical Sciences","Civil and/or Environmental Engineering","Computer Science","Economics","Electrical & Electronic Engineering","Geography & Environmental Science","Geology and Geophysics Sciences","Information Technology","Marketing","Mathematics","Mechanical Engineering","Music","Philosophy","Physics","Politics and/or International Relations","Psychology and/or Criminology","Sociology","Materials Science / Engineering","Sport Science and/or Physiotherapy","Education / Teaching / PGCE","Communications & Media Studies","Art History","Creative Writing","Criminology","Data Science","Dentistry","Drama and Theatre Studies","Earth Sciences","English Literature","Environmental Science","Fashion Design","Film Studies","Fine Art","Forensic Science","Genetics","Graphic Design","History","Hospitality Management","Human Resource Management","Linguistics","Management Studies","Modern Languages (e.g., French, German, Spanish)","Music","Nursing","Nutrition","Occupational Therapy","Pharmacy","Photography","Public Health","Quantity Surveying","Radiography","Social Work","Software Engineering","Sports Science","Statistics","Sustainable Development","Textile Design","Theology","Tourism Management","Urban Planning","Veterinary Medicine","Web Development","Zoology","Artificial Intelligence","Robotics","Renewable Energy Engineering","Marine Biology","Aerospace Technology","Nanotechnology","Renewable Energy Systems","Cybersecurity","Game Design","Animation","Renewable Energy Management","Green Chemistry","Petroleum Engineering","International Business","Fashion Marketing","Renewable Energy Policy","Computational Biology","Artificial Neural Networks","Ethical Hacking"],ComboBoxCourseUSEQ.SearchText,"Value")
         SelectMultiple: =false
         Width: =204
         X: =931
         Y: =245
         ZIndex: =22
 
-    ComboBoxDegreeType_1 As combobox:
+    ComboBoxDegreeTypeUSEQ As combobox:
         DisplayFields: =["Value"]
         Height: =35
         InputTextPlaceholder: ="Search Degree Type"
         Items: =["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MA", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"]
         SearchFields: =["Value"]
-        SearchItems: =Search(["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"],ComboBoxDegreeType_1.SearchText,"Value")
+        SearchItems: =Search(["BA", "BSc", "BEng", "BCompSc", "BIS", "BIT", "BSE", "MSc", "MEng", "MCompSc", "MIS", "MIT", "MSE", "PhD", "PGDip", "PGCert"],ComboBoxDegreeTypeUSEQ.SearchText,"Value")
         SelectMultiple: =false
         Width: =214
         X: =704
         Y: =246
         ZIndex: =23
 
-    Gallery3_1 As gallery.galleryVertical:
+    GalleryQualificationsUSEQ As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =176
         Items: =QualificationsCollectionUpdate
@@ -1094,7 +1094,7 @@
         Y: =505
         ZIndex: =24
 
-        Icon9_1 As icon.ListScrollWatchlist:
+        IconListScrollUSEQ As icon.ListScrollWatchlist:
             Height: =25
             Icon: =Icon.ListScrollWatchlist
             OnSelect: =Select(Parent)
@@ -1102,7 +1102,7 @@
             Y: =9
             ZIndex: =1
 
-        Label7_1 As label:
+        LabelSelectedQualUSEQ As label:
             Height: =44
             OnSelect: =Select(Parent)
             Text: =ThisItem.Value
@@ -1110,7 +1110,7 @@
             X: =52
             ZIndex: =2
 
-        Icon5_6 As icon.Trash:
+        IconTrashQualUSEQ As icon.Trash:
             Height: =30
             Icon: =Icon.Trash
             OnSelect: =Remove(QualificationsCollectionUpdate, ThisItem)
@@ -1118,7 +1118,7 @@
             Y: =4
             ZIndex: =3
 
-    Icon13_6 As icon.Home:
+    IconHomeUSEQ As icon.Home:
         Color: =RGBA(255, 255, 255, 1)
         Height: =60
         Icon: =Icon.Home

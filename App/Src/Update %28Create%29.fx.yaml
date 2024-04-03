@@ -7,13 +7,13 @@
         {Capability: "Data & AI Enablement", Options: ["Customer & Digital Analytics", "Operation & Enterprise Analytics"]}
         );
 
-    "'Background Rectangle_3' As rectangle":
+    RectangleBackgroundLeftUCreate As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =768
         Width: =641
         ZIndex: =1
 
-    Image3_3 As image:
+    ImageCapSquiggleUCreate As image:
         Height: =671
         Image: ='Cap squiggle'
         Width: =616
@@ -21,7 +21,7 @@
         Y: =96
         ZIndex: =2
 
-    Name_3 As label:
+    "'Label - UserNameUCreate' As label":
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
@@ -34,7 +34,7 @@
         Y: =364
         ZIndex: =3
 
-    Email_3 As label:
+    "'Label - UserEmailUCreate' As label":
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
@@ -45,7 +45,7 @@
         Y: =501
         ZIndex: =4
 
-    ProfilePic_4 As image:
+    ImageUserProfilePicUCreate As image:
         Height: =126
         Image: |
             =User().Image
@@ -59,19 +59,7 @@
         Y: =225
         ZIndex: =5
 
-    Profile_1 As label:
-        Color: =RGBA(39, 41, 54, 1)
-        Font: =Font.Verdana
-        FontWeight: =FontWeight.Semibold
-        Height: =122
-        Size: =36
-        Text: ="Your Profile"
-        Visible: =false
-        Width: =397
-        X: =726
-        ZIndex: =6
-
-    Label5_2 As label:
+    "'Label - AboutYouUCreate' As label":
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Size: =22
@@ -81,7 +69,7 @@
         Y: =367
         ZIndex: =7
 
-    "'Profile box_2' As text":
+    TextInputProfileUCreate As text:
         Default: =LookUp('CV Generator', Email = User().Email).Profile
         EnableSpellCheck: =true
         Font: =Font.Verdana
@@ -96,10 +84,10 @@
         Y: =409
         ZIndex: =8
 
-    Button1_8 As button:
+    ButtonNextPageUCreate As button:
         DisplayMode: |
             = If(
-                IsBlank(DropdownCapabilityUCreate.Selected.Value)Or IsBlank(RadioHubsUCreate) Or IsBlank('Profile box_2'.Text) Or IsBlank(TextInputInterestsUCreate.Text), 
+                IsBlank(DropdownCapabilityUCreate.Selected.Value)Or IsBlank(RadioHubsUCreate) Or IsBlank(TextInputProfileUCreate.Text) Or IsBlank(TextInputInterestsUCreate.Text), 
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |
@@ -113,8 +101,8 @@
                     Email: Office365Users.MyProfile().Mail,
                     'First Name': CurrentUserFirstName,
                     'Last Name': CurrentUserLastName,
-                    Grade: DropdownRoleCreate_1.Selected.Value,
-                    Profile: 'Profile box_2'.Text,
+                    Grade: DropdownGradeUCreate.Selected.Value,
+                    Profile: TextInputProfileUCreate.Text,
                     Interests: TextInputInterestsUCreate.Text,
                     'Security Clearance BPSS': BPSSchecked,
                     'Security Clearance SC': SCchecked,
@@ -144,7 +132,7 @@
         Y: =710
         ZIndex: =9
 
-    Image2_3 As image:
+    ImageTitleTextUCreate As image:
         Height: =184
         Image: ='Screenshot 2024-03-04 120003'
         Width: =415
@@ -152,14 +140,14 @@
         Y: =96
         ZIndex: =10
 
-    Image1_4 As image:
+    ImageCapInventLogoUCreate As image:
         Image: ='White Logo Capgemini Invent'
         Width: =572
         X: =52
         Y: =72
         ZIndex: =11
 
-    DropdownRoleCreate_1 As dropdown:
+    DropdownGradeUCreate As dropdown:
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
@@ -175,7 +163,7 @@
         Y: =604
         ZIndex: =12
 
-    Icon4_2 As icon.LogJournal:
+    IconLogJournalUCreate As icon.LogJournal:
         Height: =143
         Icon: =Icon.LogJournal
         Width: =144
@@ -183,7 +171,7 @@
         Y: =107
         ZIndex: =13
 
-    Label1_1 As label:
+    "'Label - UserDept&UserJobTitileUCreate' As label":
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Height: =63
@@ -193,7 +181,7 @@
         Y: =534
         ZIndex: =14
 
-    Label1_3 As label:
+    "'Label - UserLocationUCreate' As label":
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Height: =63
