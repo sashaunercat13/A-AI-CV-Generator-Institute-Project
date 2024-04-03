@@ -935,8 +935,8 @@
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =35
         Width: =630
-        X: =33
-        Y: =258
+        X: =30
+        Y: =246
         ZIndex: =16
 
         IconToolSEQ_1 As icon.ToolsWrench:
@@ -944,7 +944,7 @@
             Height: =30
             Icon: =Icon.ToolsWrench
             OnSelect: =Select(Parent)
-            X: =40
+            X: =3
             Y: =5
             ZIndex: =1
 
