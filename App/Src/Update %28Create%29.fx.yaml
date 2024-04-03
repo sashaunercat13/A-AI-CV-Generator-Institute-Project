@@ -99,7 +99,7 @@
     Button1_8 As button:
         DisplayMode: |
             = If(
-                IsBlank(DropdownCapability_1.Selected.Value)Or IsBlank(RadioHubs_1) Or IsBlank('Profile box_2'.Text) Or IsBlank(Interests_1.Text), 
+                IsBlank(DropdownCapabilityUCreate.Selected.Value)Or IsBlank(RadioHubsUCreate) Or IsBlank('Profile box_2'.Text) Or IsBlank(TextInputInterestsUCreate.Text), 
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |
@@ -107,15 +107,15 @@
             Patch(
                 'CV Generator', LookUp('CV Generator', Email = User().Email),
                 {
-                    Capability: DropdownCapability_1.Selected.Value,
-                    Hub: RadioHubs_1.SelectedText.Value,
+                    Capability: DropdownCapabilityUCreate.Selected.Value,
+                    Hub: RadioHubsUCreate.SelectedText.Value,
                     Photo: User().Image,
                     Email: Office365Users.MyProfile().Mail,
                     'First Name': CurrentUserFirstName,
                     'Last Name': CurrentUserLastName,
                     Grade: DropdownRoleCreate_1.Selected.Value,
                     Profile: 'Profile box_2'.Text,
-                    Interests: Interests_1.Text,
+                    Interests: TextInputInterestsUCreate.Text,
                     'Security Clearance BPSS': BPSSchecked,
                     'Security Clearance SC': SCchecked,
                     'Microsoft Profile': {
@@ -203,7 +203,7 @@
         Y: =647
         ZIndex: =15
 
-    Label5_7 As label:
+    "'Label - InterestsUCreate' As label":
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Height: =28
@@ -214,7 +214,7 @@
         Y: =554
         ZIndex: =16
 
-    Interests_1 As text:
+    TextInputInterestsUCreate As text:
         Default: =LookUp('CV Generator', Email = User().Email).Interests
         EnableSpellCheck: =true
         Font: =Font.Verdana
@@ -229,7 +229,7 @@
         Y: =592
         ZIndex: =17
 
-    Label9_2 As label:
+    "'Label - CapabilityUCreate' As label":
         DisplayMode: =DisplayMode.View
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -239,21 +239,21 @@
         Y: =42
         ZIndex: =22
 
-    RadioHubs_1 As radio:
+    RadioHubsUCreate As radio:
         BorderThickness: =2
         Default: =LookUp('CV Generator', Email = User().Email).Hub
         Items: |-
             =If(
-                IsBlank(DropdownCapability_1.Selected),
+                IsBlank(DropdownCapabilityUCreate.Selected),
                 [],
-                LookUp(HubOptionSets, Capability = DropdownCapability_1.Selected.Value).Options
+                LookUp(HubOptionSets, Capability = DropdownCapabilityUCreate.Selected.Value).Options
             )
         Width: =371
         X: =710
         Y: =169
         ZIndex: =23
 
-    Label11_1 As label:
+    "'Label - HubUCreate' As label":
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Text: ="Hub"
@@ -261,7 +261,7 @@
         Y: =132
         ZIndex: =24
 
-    Label12_1 As label:
+    "'Label - SecurityClearanceUCreate' As label":
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Text: ="Security Clearance"
@@ -270,7 +270,7 @@
         Y: =288
         ZIndex: =25
 
-    "'Label - Role_1' As label":
+    "'Label - GradeUCreate' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -281,7 +281,7 @@
         Y: =606
         ZIndex: =26
 
-    DropdownCapability_1 As dropdown:
+    DropdownCapabilityUCreate As dropdown:
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
@@ -297,7 +297,7 @@
         Y: =82
         ZIndex: =27
 
-    Icon13_5 As icon.Home:
+    IconHomeUCreate As icon.Home:
         Color: =RGBA(39, 41, 54, 1)
         Height: =60
         Icon: =Icon.Home
@@ -307,7 +307,7 @@
         Y: =30
         ZIndex: =28
 
-    "'Capgemini Logo_5' As image":
+    ImageCapIconUCreate As image:
         Height: =60
         Image: ='Logo Blue'
         Width: =52
@@ -315,14 +315,14 @@
         Y: =29
         ZIndex: =29
 
-    Group6_2 As group:
+    GroupCheckboxUCreate As group:
         Height: =5
         Width: =5
         X: =60
         Y: =60
         ZIndex: =33
 
-        Checkbox_BPSS_1 As checkbox:
+        CheckboxBPSSUCreate As checkbox:
             CheckboxSize: =30
             Default: =LookUp('CV Generator', Email = User().Email).'Security Clearance BPSS'
             Height: =40
@@ -334,7 +334,7 @@
             Y: =317
             ZIndex: =18
 
-        Checkbox_SC_1 As checkbox:
+        CheckboxSCUCreate As checkbox:
             CheckboxSize: =30
             Default: =LookUp('CV Generator', Email = User().Email).'Security Clearance SC'
             Height: =40

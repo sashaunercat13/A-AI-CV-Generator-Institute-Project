@@ -7,13 +7,13 @@ Create As screen:
         {Capability: "Data & AI Enablement", Options: ["Customer & Digital Analytics", "Operation & Enterprise Analytics"]}
         );
 
-    "'Background Rectangle_1' As rectangle":
+    RectangleBackgroundLeftCreate As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =768
         Width: =641
         ZIndex: =1
 
-    Image3_1 As image:
+    ImageCapSquiggleCreate As image:
         Height: =671
         Image: ='Cap squiggle'
         Width: =616
@@ -21,7 +21,7 @@ Create As screen:
         Y: =96
         ZIndex: =2
 
-    Name_1 As label:
+    "'Label - UserName' As label":
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
@@ -34,7 +34,7 @@ Create As screen:
         Y: =364
         ZIndex: =3
 
-    Email_1 As label:
+    "'Label - UserEmail' As label":
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
@@ -45,7 +45,7 @@ Create As screen:
         Y: =501
         ZIndex: =4
 
-    ProfilePic_2 As image:
+    ImageUserProfilePicCreate As image:
         Height: =126
         Image: |
             =User().Image
@@ -59,19 +59,7 @@ Create As screen:
         Y: =225
         ZIndex: =5
 
-    Profile As label:
-        Color: =RGBA(39, 41, 54, 1)
-        Font: =Font.Verdana
-        FontWeight: =FontWeight.Semibold
-        Height: =122
-        Size: =36
-        Text: ="Your Profile"
-        Visible: =false
-        Width: =397
-        X: =726
-        ZIndex: =6
-
-    Label5_1 As label:
+    "'Label - AboutYou' As label":
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Size: =22
@@ -81,7 +69,7 @@ Create As screen:
         Y: =367
         ZIndex: =7
 
-    "'Profile box' As text":
+    TextInputProfile As text:
         Default: =""
         EnableSpellCheck: =true
         Font: =Font.Verdana
@@ -96,10 +84,10 @@ Create As screen:
         Y: =409
         ZIndex: =8
 
-    Button1_1 As button:
+    ButtonNextPageCreate As button:
         DisplayMode: |
             = If(
-                IsBlank(DropdownCapability.Selected.Value)Or IsBlank(RadioHubs.Selected) Or IsBlank('Profile box'.Text) Or IsBlank(Interests.Text), 
+                IsBlank(DropdownCapability.Selected.Value)Or IsBlank(RadioHubs.Selected) Or IsBlank(TextInputProfile.Text) Or IsBlank(TextInputInterests.Text), 
             	DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(39, 41, 54, 1)
         OnSelect: |
@@ -113,9 +101,9 @@ Create As screen:
                     Email: Office365Users.MyProfile().Mail,
                     'First Name': CurrentUserFirstName,
                     'Last Name': CurrentUserLastName,
-                    Grade: DropdownRoleCreate.Selected.Value,
-                    Profile: 'Profile box'.Text,
-                    Interests: Interests.Text,
+                    Grade: DropdownGradeCreate.Selected.Value,
+                    Profile: TextInputProfile.Text,
+                    Interests: TextInputInterests.Text,
                     'Security Clearance BPSS': BPSSchecked,
                     'Security Clearance SC': SCchecked,
                     'Microsoft Profile': {
@@ -144,7 +132,7 @@ Create As screen:
         Y: =710
         ZIndex: =9
 
-    Image2_1 As image:
+    ImageTitleTextCreate As image:
         Height: =184
         Image: ='Screenshot 2024-03-04 120003'
         Width: =415
@@ -152,14 +140,14 @@ Create As screen:
         Y: =96
         ZIndex: =10
 
-    Image1_2 As image:
+    ImageCapInventLogoCreate As image:
         Image: ='White Logo Capgemini Invent'
         Width: =572
         X: =52
         Y: =72
         ZIndex: =11
 
-    DropdownRoleCreate As dropdown:
+    DropdownGradeCreate As dropdown:
         ChevronBackground: =RGBA(215, 223, 240, 1)
         ChevronFill: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 18, 107, 1)
@@ -174,7 +162,7 @@ Create As screen:
         Y: =604
         ZIndex: =12
 
-    Icon4 As icon.LogJournal:
+    IconLogJournal As icon.LogJournal:
         Height: =143
         Icon: =Icon.LogJournal
         Width: =144
@@ -182,7 +170,7 @@ Create As screen:
         Y: =107
         ZIndex: =13
 
-    Label1 As label:
+    "'Label - UserDept&UserJobTitle' As label":
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Height: =63
@@ -192,7 +180,7 @@ Create As screen:
         Y: =534
         ZIndex: =14
 
-    Label1_2 As label:
+    "'Label -UserLocation' As label":
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Height: =63
@@ -202,7 +190,7 @@ Create As screen:
         Y: =647
         ZIndex: =15
 
-    Label5_6 As label:
+    "'Label - Interests' As label":
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Height: =28
@@ -213,7 +201,7 @@ Create As screen:
         Y: =554
         ZIndex: =16
 
-    Interests As text:
+    TextInputInterests As text:
         Default: =""
         EnableSpellCheck: =true
         Font: =Font.Verdana
@@ -228,7 +216,7 @@ Create As screen:
         Y: =592
         ZIndex: =17
 
-    Label9 As label:
+    "'Label - Capability' As label":
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Text: ="Capability"
@@ -250,7 +238,7 @@ Create As screen:
         Y: =169
         ZIndex: =23
 
-    Label11 As label:
+    "'Label - Hub' As label":
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Text: ="Hub"
@@ -258,7 +246,7 @@ Create As screen:
         Y: =132
         ZIndex: =24
 
-    Label12 As label:
+    "'Label - SecurityClearance' As label":
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
         Text: ="Security Clearance"
@@ -283,7 +271,7 @@ Create As screen:
         Y: =82
         ZIndex: =27
 
-    Icon13_1 As icon.Home:
+    IconHomeCreate As icon.Home:
         Color: =RGBA(39, 41, 54, 1)
         Height: =60
         Icon: =Icon.Home
@@ -293,7 +281,7 @@ Create As screen:
         Y: =30
         ZIndex: =28
 
-    "'Capgemini Logo_2' As image":
+    ImageCapIconCreate As image:
         Height: =60
         Image: ='Logo Blue'
         Width: =52
@@ -301,7 +289,7 @@ Create As screen:
         Y: =29
         ZIndex: =29
 
-    "'Label - Role_2' As label":
+    "'Label - Grade' As label":
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Verdana
         FontWeight: =FontWeight.Semibold
@@ -312,14 +300,14 @@ Create As screen:
         Y: =606
         ZIndex: =30
 
-    Group6 As group:
+    GroupCheckbox As group:
         Height: =5
         Width: =5
         X: =60
         Y: =60
         ZIndex: =33
 
-        Checkbox_BPSS As checkbox:
+        CheckboxBPSS As checkbox:
             CheckboxSize: =30
             Height: =40
             OnCheck: =Set(BPSSchecked,true)
@@ -330,7 +318,7 @@ Create As screen:
             Y: =317
             ZIndex: =18
 
-        Checkbox_SC As checkbox:
+        CheckboxSC As checkbox:
             CheckboxSize: =30
             Height: =40
             OnCheck: =Set( SCchecked, true) 
