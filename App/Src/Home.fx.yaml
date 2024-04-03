@@ -95,6 +95,13 @@ Home As screen:
             Y: =278
             ZIndex: =9
 
+    ImageCapInventLogoHome As image:
+        Image: ='White Logo Capgemini Invent'
+        Width: =572
+        X: =52
+        Y: =112
+        ZIndex: =14
+
     "'Container - Search CV Button' As group":
         Height: =5
         Width: =5
@@ -129,13 +136,6 @@ Home As screen:
             X: =803
             Y: =407
             ZIndex: =10
-
-    ImageCapInventLogoHome As image:
-        Image: ='White Logo Capgemini Invent'
-        Width: =572
-        X: =52
-        Y: =112
-        ZIndex: =14
 
     "'Container - View CV Button' As group":
         Height: =5
