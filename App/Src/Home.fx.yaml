@@ -12,13 +12,13 @@ Home As screen:
         Set(UserID, Office365Users.MyProfile().Id);
         Set(UserPhoto, Office365Users.UserPhotoV2(UserID))
 
-    "'Background Rectangle' As rectangle":
+    RectangleBackgroundLeftHome As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
         Height: =768
         Width: =657
         ZIndex: =1
 
-    ImageTitleText As image:
+    ImageTitleTextHome As image:
         Height: =184
         Image: ='Screenshot 2024-03-04 120003'
         Width: =552
@@ -26,7 +26,7 @@ Home As screen:
         Y: =136
         ZIndex: =2
 
-    ImageCapSquiggle As image:
+    ImageCapSquiggleHome As image:
         Height: =615
         Image: ='Cap squiggle'
         Width: =621
@@ -95,13 +95,6 @@ Home As screen:
             Y: =278
             ZIndex: =9
 
-    ImageCapInventLogo As image:
-        Image: ='White Logo Capgemini Invent'
-        Width: =572
-        X: =52
-        Y: =112
-        ZIndex: =14
-
     "'Container - Search CV Button' As group":
         Height: =5
         Width: =5
@@ -136,6 +129,13 @@ Home As screen:
             X: =803
             Y: =407
             ZIndex: =10
+
+    ImageCapInventLogoHome As image:
+        Image: ='White Logo Capgemini Invent'
+        Width: =572
+        X: =52
+        Y: =112
+        ZIndex: =14
 
     "'Container - View CV Button' As group":
         Height: =5
