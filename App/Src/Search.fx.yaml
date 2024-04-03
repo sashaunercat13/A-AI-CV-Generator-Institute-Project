@@ -356,7 +356,7 @@ Search As screen:
             DisplayFields: =["Value"]
             Height: =35
             InputTextPlaceholder: =
-            Items: =["Associate Consultant","Consultant", "Senior Consultant"]
+            Items: =["Associate Consultant", "Consultant", "Senior Consultant", "Managing Director", "Director", "Vice President"]
             OnChange: |-
                 =// Set in the OnChange property of the ComboBox
                 Set(varIsRoleEmpty, IsEmpty(ComboBoxRole.SelectedItems));
