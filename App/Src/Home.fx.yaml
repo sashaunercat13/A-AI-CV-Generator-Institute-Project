@@ -18,7 +18,7 @@ Home As screen:
         Width: =657
         ZIndex: =1
 
-    Image2 As image:
+    ImageTitleText As image:
         Height: =184
         Image: ='Screenshot 2024-03-04 120003'
         Width: =552
@@ -26,7 +26,7 @@ Home As screen:
         Y: =136
         ZIndex: =2
 
-    Image3 As image:
+    ImageCapSquiggle As image:
         Height: =615
         Image: ='Cap squiggle'
         Width: =621
@@ -34,7 +34,7 @@ Home As screen:
         Y: =153
         ZIndex: =3
 
-    Label4 As label:
+    "'Label - Menu' As label":
         Align: =Align.Center
         Font: =Font.Verdana
         FontWeight: =FontWeight.Bold
@@ -46,21 +46,24 @@ Home As screen:
         Y: =153
         ZIndex: =7
 
-    Image1 As image:
-        Image: ='White Logo Capgemini Invent'
-        Width: =572
-        X: =52
-        Y: =112
-        ZIndex: =8
+    "'Label - Description' As label":
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =426
+        Text: ="DESCRIPTION & PURPOSE "
+        Visible: =false
+        Width: =523
+        X: =71
+        Y: =301
+        ZIndex: =13
 
-    "'Update CV Button' As group":
+    "'Container - Update CV Button' As group":
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =13
 
-        Button2_3 As button:
+        ButtonUpdateCV As button:
             Align: =Align.Left
             Color: =RGBA(18, 171, 219, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -81,25 +84,32 @@ Home As screen:
             Width: =325
             X: =882
             Y: =262
-            ZIndex: =9
+            ZIndex: =8
 
-        Icon12 As icon.NextArrow:
+        IconMenu4 As icon.NextArrow:
             Color: =RGBA(18, 171, 219, 1)
             Icon: =Icon.NextArrow
             OnSelect: =Navigate('Update (Create)')
             Visible: =UserExistsInSP
             X: =803
             Y: =278
-            ZIndex: =10
+            ZIndex: =9
 
-    "'Search CV Button' As group":
+    ImageCapInventLogo As image:
+        Image: ='White Logo Capgemini Invent'
+        Width: =572
+        X: =52
+        Y: =112
+        ZIndex: =14
+
+    "'Container - Search CV Button' As group":
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =14
 
-        Button2_2 As button:
+        ButtonSearchCV As button:
             Align: =Align.Left
             BorderThickness: =0
             Color: =RGBA(18, 171, 219, 1)
@@ -120,21 +130,21 @@ Home As screen:
             Y: =394
             ZIndex: =6
 
-        Icon12_1 As icon.NextArrow:
+        IconMenu3 As icon.NextArrow:
             Color: =RGBA(18, 171, 219, 1)
             Icon: =Icon.NextArrow
             X: =803
             Y: =407
-            ZIndex: =11
+            ZIndex: =10
 
-    "'View CV Button' As group":
+    "'Container - View CV Button' As group":
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =15
 
-        Button2_1 As button:
+        ButtonViewVW As button:
             Align: =Align.Left
             Color: =RGBA(18, 171, 219, 1)
             Fill: =RGBA(0, 0, 0, 0)
@@ -142,7 +152,7 @@ Home As screen:
             Height: =96
             HoverColor: =RGBA(39, 41, 54, 1)
             HoverFill: =
-            OnSelect: =Navigate('Screen1')
+            OnSelect: =Navigate(Screen1)
             PressedColor: =RGBA(39, 41, 54, 1)
             PressedFill: =
             Size: =22
@@ -152,32 +162,22 @@ Home As screen:
             Y: =520
             ZIndex: =5
 
-        Icon12_2 As icon.NextArrow:
+        IconMenu2 As icon.NextArrow:
             Color: =RGBA(18, 171, 219, 1)
             Icon: =Icon.NextArrow
-            OnSelect: =Navigate('Screen1')
+            OnSelect: =Navigate(Screen1)
             X: =803
             Y: =536
-            ZIndex: =12
+            ZIndex: =11
 
-    Label3 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =426
-        Text: ="DESCRIPTION & PURPOSE "
-        Visible: =false
-        Width: =523
-        X: =71
-        Y: =301
-        ZIndex: =17
-
-    "'Create CV Button' As group":
+    "'Container - Create CV Button' As group":
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =18
 
-        Button2 As button:
+        ButtonCreateCV As button:
             Align: =Align.Left
             Color: =RGBA(18, 171, 219, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -200,11 +200,11 @@ Home As screen:
             Y: =262
             ZIndex: =4
 
-        Icon12_3 As icon.NextArrow:
+        IconMenu1 As icon.NextArrow:
             Color: =RGBA(18, 171, 219, 1)
             Icon: =Icon.NextArrow
             Visible: =!UserExistsInSP
             X: =803
             Y: =278
-            ZIndex: =16
+            ZIndex: =12
 

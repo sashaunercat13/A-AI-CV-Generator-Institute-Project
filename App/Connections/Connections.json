@@ -29,7 +29,8 @@
     "dataSources": [
       "Client/Industry",
       "CV Generator - Client/Industry",
-      "CV Generator - Project Experience"
+      "CV Generator - Project Experience",
+      "CV Generator"
     ],
     "dependencies": {},
     "dependents": [
