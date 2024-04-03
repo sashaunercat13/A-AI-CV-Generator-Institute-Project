@@ -939,28 +939,6 @@
         Y: =258
         ZIndex: =16
 
-        Icon3_1 As icon.ToolsWrench:
-            Color: =RGBA(39, 41, 54, 1)
-            Height: =30
-            Icon: =Icon.ToolsWrench
-            OnSelect: =Select(Parent)
-            ZIndex: =1
-
-        Label2_1 As label:
-            Height: =30
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.Value
-            Width: =447
-            X: =64
-            ZIndex: =2
-
-        Icon5_4 As icon.Trash:
-            Height: =30
-            Icon: =Icon.Trash
-            OnSelect: =Remove(SkillsCollectionUpdate, ThisItem)
-            X: =511
-            ZIndex: =3
-
     ComboBoxQualificationUSEQ As combobox:
         DisplayFields: =["Value"]
         Height: =35

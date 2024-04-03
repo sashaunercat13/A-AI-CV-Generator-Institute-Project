@@ -1087,19 +1087,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.'ComboBoxMicrosoftProfile (Hidden)'.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.'Microsoft Profile'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.'ComboBoxMicrosoftProfile (Hidden)'.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.'Microsoft Profile'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.'ComboBoxMicrosoftProfile (Hidden)'"
+                "type": "'Skills Competancies & Qualifications'.'Microsoft Profile'"
               }
             }
           ],
@@ -1117,19 +1117,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.IconHomeSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Icon13.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.IconHomeSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Icon13.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.IconHomeSEQ"
+                "type": "'Skills Competancies & Qualifications'.Icon13"
               }
             }
           ],
@@ -1147,19 +1147,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.IconHomeSEQ.TabIndex"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Icon13.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.IconHomeSEQ.TabIndex",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Icon13.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.IconHomeSEQ"
+                "type": "'Skills Competancies & Qualifications'.Icon13"
               }
             }
           ],
@@ -1177,19 +1177,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxSkillsSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxSkill.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxSkillsSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxSkill.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.ComboBoxSkillsSEQ"
+                "type": "'Skills Competancies & Qualifications'.ComboBoxSkill"
               }
             }
           ],
@@ -1207,19 +1207,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxUniversitySEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxUniversity.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxUniversitySEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxUniversity.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.ComboBoxUniversitySEQ"
+                "type": "'Skills Competancies & Qualifications'.ComboBoxUniversity"
               }
             }
           ],
@@ -1237,19 +1237,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxCourseSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxCourse.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxCourseSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxCourse.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.ComboBoxCourseSEQ"
+                "type": "'Skills Competancies & Qualifications'.ComboBoxCourse"
               }
             }
           ],
@@ -1267,19 +1267,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxDegreeTypeSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxDegreeType.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxDegreeTypeSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxDegreeType.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.ComboBoxDegreeTypeSEQ"
+                "type": "'Skills Competancies & Qualifications'.ComboBoxDegreeType"
               }
             }
           ],
@@ -1297,19 +1297,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GallerySkillsSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery1"
               }
             }
           ],
@@ -1327,19 +1327,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.TabIndex"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.TabIndex",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GallerySkillsSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery1"
               }
             }
           ],
@@ -1357,19 +1357,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.IconTrashSkillsSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery1.Icon5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.IconTrashSkillsSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery1.Icon5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.IconTrashSkillsSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery1.Icon5"
               }
             }
           ],
@@ -1387,19 +1387,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.IconTrashSkillsSEQ.TabIndex"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery1.Icon5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.IconTrashSkillsSEQ.TabIndex",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery1.Icon5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GallerySkillsSEQ.IconTrashSkillsSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery1.Icon5"
               }
             }
           ],
@@ -1417,19 +1417,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GalleryEducationSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery2"
               }
             }
           ],
@@ -1447,19 +1447,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.TabIndex"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.TabIndex",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GalleryEducationSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery2"
               }
             }
           ],
@@ -1477,19 +1477,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.IconTrashEducationSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery2.Icon5_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.IconTrashEducationSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery2.Icon5_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.IconTrashEducationSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery2.Icon5_1"
               }
             }
           ],
@@ -1507,19 +1507,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.IconTrashEducationSEQ.TabIndex"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery2.Icon5_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.IconTrashEducationSEQ.TabIndex",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery2.Icon5_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GalleryEducationSEQ.IconTrashEducationSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery2.Icon5_1"
               }
             }
           ],
@@ -1537,19 +1537,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxQualificationsSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxQual.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxQualificationsSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.ComboBoxQual.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.ComboBoxQualificationsSEQ"
+                "type": "'Skills Competancies & Qualifications'.ComboBoxQual"
               }
             }
           ],
@@ -1567,19 +1567,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery3"
               }
             }
           ],
@@ -1597,19 +1597,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.TabIndex"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.TabIndex",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery3"
               }
             }
           ],
@@ -1627,19 +1627,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.IconTrashQualSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.Icon5_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.IconTrashQualSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.Icon5_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.IconTrashQualSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery3.Icon5_2"
               }
             }
           ],
@@ -1657,19 +1657,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.IconTrashQualSEQ.TabIndex"
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.Icon5_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.IconTrashQualSEQ.TabIndex",
+                  "fullyQualifiedName": "'Skills Competancies & Qualifications'.Gallery3.Icon5_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Skills Competancies & Qualifications",
-                "type": "'Skills Competancies & Qualifications'.GalleryQualificationsSEQ.IconTrashQualSEQ"
+                "type": "'Skills Competancies & Qualifications'.Gallery3.Icon5_2"
               }
             }
           ],
@@ -1717,19 +1717,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.IconHomeUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Icon13_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.IconHomeUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Icon13_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.IconHomeUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Icon13_6"
               }
             }
           ],
@@ -1747,19 +1747,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.IconHomeUSEQ.TabIndex"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Icon13_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.IconHomeUSEQ.TabIndex",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Icon13_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.IconHomeUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Icon13_6"
               }
             }
           ],
@@ -1807,19 +1807,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxUniversityUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxUniversity_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxUniversityUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxUniversity_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.ComboBoxUniversityUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.ComboBoxUniversity_1"
               }
             }
           ],
@@ -1837,19 +1837,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxCourseUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxCourse_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxCourseUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxCourse_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.ComboBoxCourseUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.ComboBoxCourse_1"
               }
             }
           ],
@@ -1867,19 +1867,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxDegreeTypeUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxDegreeType_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxDegreeTypeUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxDegreeType_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.ComboBoxDegreeTypeUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.ComboBoxDegreeType_1"
               }
             }
           ],
@@ -1897,19 +1897,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery1_1"
               }
             }
           ],
@@ -1927,19 +1927,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.TabIndex"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.TabIndex",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery1_1"
               }
             }
           ],
@@ -1957,19 +1957,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.Icon5_4.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.Icon5_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.Icon5_4.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.Icon5_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.Icon5_4"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.Icon5_4"
               }
             }
           ],
@@ -1987,19 +1987,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.Icon5_4.TabIndex"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.Icon5_4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.Icon5_4.TabIndex",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.Icon5_4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GallerySkillsUSEQ.Icon5_4"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery1_1.Icon5_4"
               }
             }
           ],
@@ -2017,19 +2017,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery2_1"
               }
             }
           ],
@@ -2047,19 +2047,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.TabIndex"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.TabIndex",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery2_1"
               }
             }
           ],
@@ -2077,19 +2077,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.IconTrashEducationUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.Icon5_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.IconTrashEducationUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.Icon5_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.IconTrashEducationUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.Icon5_5"
               }
             }
           ],
@@ -2107,19 +2107,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.IconTrashEducationUSEQ.TabIndex"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.Icon5_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.IconTrashEducationUSEQ.TabIndex",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.Icon5_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GalleryEducationUSEQ.IconTrashEducationUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery2_1.Icon5_5"
               }
             }
           ],
@@ -2137,19 +2137,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxQualificationUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxQual_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxQualificationUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.ComboBoxQual_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.ComboBoxQualificationUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.ComboBoxQual_1"
               }
             }
           ],
@@ -2167,19 +2167,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery3_1"
               }
             }
           ],
@@ -2197,19 +2197,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.TabIndex"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.TabIndex",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery3_1"
               }
             }
           ],
@@ -2227,19 +2227,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.IconTrashQualUSEQ.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.Icon5_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.IconTrashQualUSEQ.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.Icon5_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.IconTrashQualUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.Icon5_6"
               }
             }
           ],
@@ -2257,19 +2257,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.IconTrashQualUSEQ.TabIndex"
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.Icon5_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.IconTrashQualUSEQ.TabIndex",
+                  "fullyQualifiedName": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.Icon5_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Update (Skills Competancies & Qualifications)",
-                "type": "'Update (Skills Competancies & Qualifications)'.GalleryQualificationsUSEQ.IconTrashQualUSEQ"
+                "type": "'Update (Skills Competancies & Qualifications)'.Gallery3_1.Icon5_6"
               }
             }
           ],
@@ -2587,19 +2587,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Create)'.TextInputProfileUCreate.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Create)'.'Profile box_2'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Create)'.TextInputProfileUCreate.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Create)'.'Profile box_2'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Create)",
-                "type": "'Update (Create)'.TextInputProfileUCreate"
+                "type": "'Update (Create)'.'Profile box_2'"
               }
             }
           ],
@@ -2647,19 +2647,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Update (Create)'.DropdownGradeUCreate.AccessibleLabel"
+                  "fullyQualifiedName": "'Update (Create)'.DropdownRoleCreate_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Update (Create)'.DropdownGradeUCreate.AccessibleLabel",
+                  "fullyQualifiedName": "'Update (Create)'.DropdownRoleCreate_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Update (Create)",
-                "type": "'Update (Create)'.DropdownGradeUCreate"
+                "type": "'Update (Create)'.DropdownRoleCreate_1"
               }
             }
           ],
