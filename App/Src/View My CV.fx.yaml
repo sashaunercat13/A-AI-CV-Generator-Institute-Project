@@ -25,6 +25,7 @@
         Icon: =Icon.DocumentPDF
         OnSelect: |
             =//Set(VarPersonalPDF,PDF(ContainerMyCVTemplate,{Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }));
+        Visible: =false 
         Width: =43
         X: =1309
         Y: =616
@@ -75,48 +76,12 @@
         Y: =30
         ZIndex: =7
 
-    IconDownload_1 As icon.Download:
-        Height: =46
-        Icon: =Icon.Download
-        OnSelect: |
-            =//Set(VarPersonalPDF,PDF(ContainerMyCVTemplate,{Orientation:PaperOrientation.Landscape, Size:PaperSize.A4, Margin:"128px 0px 128px 0px" }));
-            
-            Download('PowerAppV2->Createfile,Compose,RespondtoaPowerApporflow'.Run(
-            
-                                {
-            
-                                    name: "Selected CVs.pdf",
-            
-                                    contentBytes: VarCandidatesPDF
-            
-                                }
-            
-                            ).path 
-            )
-        Width: =67
-        X: =1285
-        Y: =696
-        ZIndex: =10
-
-    "'Label - Download_1' As label":
-        Align: =Align.Center
-        DisplayMode: =DisplayMode.View
-        Font: =Font.Verdana
-        FontWeight: =FontWeight.Semibold
-        Height: =30
-        Size: =10
-        Text: ="Download"
-        Width: =93
-        X: =1273
-        Y: =666
-        ZIndex: =11
-
     "'CV Template_4' As groupContainer":
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =615
-        Width: =1265
-        X: =8
-        Y: =127
+        Height: =616
+        Width: =1317
+        X: =23
+        Y: =120
         ZIndex: =12
 
         Rectangle1_3 As rectangle:
