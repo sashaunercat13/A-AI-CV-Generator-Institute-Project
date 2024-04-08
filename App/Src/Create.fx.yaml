@@ -1,6 +1,7 @@
 Create As screen:
     OnVisible: |-
-        =ClearCollect(HubOptionSets,
+        =// Setup a collection for the two hubs for each capability. This collection is used to supply the right options to the radio buttons
+        ClearCollect(HubOptionSets,
         {Capability: "Data & AI Strategy", Options: ["Data Strategy & Op Model", "Data Science Consulting"]},
         {Capability: "Data & AI Innovation", Options: ["Data Science Consulting", "AI Product Innovation"]},
         {Capability: "Data & AI Factory", Options: ["Business Insights & Storytelling", "Data & AI Architecture"]},

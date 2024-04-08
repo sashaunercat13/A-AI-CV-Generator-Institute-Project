@@ -9,8 +9,8 @@ Home As screen:
         Set(UserExistsInSP, Not(IsBlank(CurrentUser)));
         
         // get the photo
-        Set(UserID, Office365Users.MyProfile().Id);
-        Set(UserPhoto, Office365Users.UserPhotoV2(UserID))
+        //Set(UserID, Office365Users.MyProfile().Id);
+        //Set(UserPhoto, Office365Users.UserPhotoV2(UserID))
 
     RectangleBackgroundLeftHome As rectangle:
         Fill: =RGBA(39, 41, 54, 1)
